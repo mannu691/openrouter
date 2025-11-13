@@ -9,7 +9,7 @@ from ._version import (
 from .httpclient import AsyncHttpClient, HttpClient
 from .utils import Logger, RetryConfig, remove_suffix
 from dataclasses import dataclass
-from openrouter import models
+from openrouter import components
 from openrouter.types import OptionalNullable, UNSET
 from pydantic import Field
 from typing import Callable, Dict, Optional, Tuple, Union
@@ -30,7 +30,9 @@ class SDKConfiguration:
     async_client: Union[AsyncHttpClient, None]
     async_client_supplied: bool
     debug_logger: Logger
-    security: Optional[Union[models.Security, Callable[[], models.Security]]] = None
+    security: Optional[
+        Union[components.Security, Callable[[], components.Security]]
+    ] = None
     server_url: Optional[str] = ""
     server: Optional[str] = ""
     language: str = "python"

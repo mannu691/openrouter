@@ -52,18 +52,18 @@ with OpenRouter(
 
 ### Parameters
 
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `input`                                                                               | [models.Input](../../models/input.md)                                                 | :heavy_check_mark:                                                                    | N/A                                                                                   |
-| `model`                                                                               | *str*                                                                                 | :heavy_check_mark:                                                                    | N/A                                                                                   |
-| `provider`                                                                            | [Optional[models.CreateEmbeddingsProvider]](../../models/createembeddingsprovider.md) | :heavy_minus_sign:                                                                    | N/A                                                                                   |
-| `encoding_format`                                                                     | [Optional[models.EncodingFormat]](../../models/encodingformat.md)                     | :heavy_minus_sign:                                                                    | N/A                                                                                   |
-| `user`                                                                                | *Optional[str]*                                                                       | :heavy_minus_sign:                                                                    | N/A                                                                                   |
-| `retries`                                                                             | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                      | :heavy_minus_sign:                                                                    | Configuration to override the default retry behavior of the client.                   |
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `input`                                                                                       | [operations.Input](../../operations/input.md)                                                 | :heavy_check_mark:                                                                            | N/A                                                                                           |
+| `model`                                                                                       | *str*                                                                                         | :heavy_check_mark:                                                                            | N/A                                                                                           |
+| `provider`                                                                                    | [Optional[operations.CreateEmbeddingsProvider]](../../operations/createembeddingsprovider.md) | :heavy_minus_sign:                                                                            | N/A                                                                                           |
+| `encoding_format`                                                                             | [Optional[operations.EncodingFormat]](../../operations/encodingformat.md)                     | :heavy_minus_sign:                                                                            | N/A                                                                                           |
+| `user`                                                                                        | *Optional[str]*                                                                               | :heavy_minus_sign:                                                                            | N/A                                                                                           |
+| `retries`                                                                                     | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                              | :heavy_minus_sign:                                                                            | Configuration to override the default retry behavior of the client.                           |
 
 ### Response
 
-**[models.CreateEmbeddingsResponse](../../models/createembeddingsresponse.md)**
+**[operations.CreateEmbeddingsResponse](../../operations/createembeddingsresponse.md)**
 
 ### Errors
 
@@ -112,7 +112,7 @@ with OpenRouter(
 
 ### Response
 
-**[models.ModelsListResponse](../../models/modelslistresponse.md)**
+**[components.ModelsListResponse](../../components/modelslistresponse.md)**
 
 ### Errors
 

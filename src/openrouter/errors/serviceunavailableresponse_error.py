@@ -3,18 +3,16 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 import httpx
-from openrouter.errors import OpenRouterError
-from openrouter.models import (
-    serviceunavailableresponseerrordata as models_serviceunavailableresponseerrordata,
+from openrouter.components import (
+    serviceunavailableresponseerrordata as components_serviceunavailableresponseerrordata,
 )
+from openrouter.errors import OpenRouterError
 from openrouter.types import BaseModel, OptionalNullable, UNSET
 from typing import Optional
 
 
 class ServiceUnavailableResponseErrorData(BaseModel):
-    error: (
-        models_serviceunavailableresponseerrordata.ServiceUnavailableResponseErrorData
-    )
+    error: components_serviceunavailableresponseerrordata.ServiceUnavailableResponseErrorData
     r"""Error data for ServiceUnavailableResponse"""
 
     user_id: OptionalNullable[str] = UNSET

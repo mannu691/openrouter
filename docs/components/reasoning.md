@@ -1,0 +1,9 @@
+# Reasoning
+
+
+## Fields
+
+| Field                                                                                                | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `effort`                                                                                             | [OptionalNullable[components.Effort]](../components/effort.md)                                       | :heavy_minus_sign:                                                                                   | N/A                                                                                                  |
+| `summary`                                                                                            | [OptionalNullable[components.ReasoningSummaryVerbosity]](../components/reasoningsummaryverbosity.md) | :heavy_minus_sign:                                                                                   | N/A                                                                                                  |

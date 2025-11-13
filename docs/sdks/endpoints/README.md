@@ -43,7 +43,7 @@ with OpenRouter(
 
 ### Response
 
-**[models.EndpointsListEndpointsResponse](../../models/endpointslistendpointsresponse.md)**
+**[operations.ListEndpointsResponse](../../operations/listendpointsresponse.md)**
 
 ### Errors
 
@@ -84,7 +84,7 @@ with OpenRouter(
 
 ### Response
 
-**[models.ListEndpointsZdrResponse](../../models/listendpointszdrresponse.md)**
+**[operations.ListEndpointsZdrResponse](../../operations/listendpointszdrresponse.md)**
 
 ### Errors
 

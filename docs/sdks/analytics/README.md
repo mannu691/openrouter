@@ -41,7 +41,7 @@ with OpenRouter(
 
 ### Response
 
-**[models.GetUserActivityResponse](../../models/getuseractivityresponse.md)**
+**[operations.GetUserActivityResponse](../../operations/getuseractivityresponse.md)**
 
 ### Errors
 

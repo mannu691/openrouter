@@ -3,16 +3,16 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 import httpx
-from openrouter.errors import OpenRouterError
-from openrouter.models import (
-    badgatewayresponseerrordata as models_badgatewayresponseerrordata,
+from openrouter.components import (
+    badgatewayresponseerrordata as components_badgatewayresponseerrordata,
 )
+from openrouter.errors import OpenRouterError
 from openrouter.types import BaseModel, OptionalNullable, UNSET
 from typing import Optional
 
 
 class BadGatewayResponseErrorData(BaseModel):
-    error: models_badgatewayresponseerrordata.BadGatewayResponseErrorData
+    error: components_badgatewayresponseerrordata.BadGatewayResponseErrorData
     r"""Error data for BadGatewayResponse"""
 
     user_id: OptionalNullable[str] = UNSET

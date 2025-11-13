@@ -2,7 +2,7 @@
 
 from .basesdk import BaseSDK
 from enum import Enum
-from openrouter import errors, models, utils
+from openrouter import components, errors, operations, utils
 from openrouter._hooks import HookContext
 from openrouter.types import OptionalNullable, UNSET
 from openrouter.utils import get_security_from_env
@@ -21,16 +21,16 @@ class Embeddings(BaseSDK):
     def generate(
         self,
         *,
-        input: Union[models.Input, models.InputTypedDict],
+        input: Union[operations.Input, operations.InputTypedDict],
         model: str,
         provider: Optional[
             Union[
-                models.CreateEmbeddingsProvider,
-                models.CreateEmbeddingsProviderTypedDict,
+                operations.CreateEmbeddingsProvider,
+                operations.CreateEmbeddingsProviderTypedDict,
             ]
         ] = None,
         encoding_format: Optional[
-            Union[models.EncodingFormat, models.EncodingFormatTypedDict]
+            Union[operations.EncodingFormat, operations.EncodingFormatTypedDict]
         ] = None,
         user: Optional[str] = None,
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
@@ -38,7 +38,7 @@ class Embeddings(BaseSDK):
         timeout_ms: Optional[int] = None,
         accept_header_override: Optional[GenerateAcceptEnum] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.CreateEmbeddingsResponse:
+    ) -> operations.CreateEmbeddingsResponse:
         r"""Submit an embedding request
 
         Submits an embedding request to the embeddings router
@@ -64,11 +64,11 @@ class Embeddings(BaseSDK):
         else:
             base_url = self._get_url(base_url, url_variables)
 
-        request = models.CreateEmbeddingsRequest(
+        request = operations.CreateEmbeddingsRequest(
             input=input,
             model=model,
             provider=utils.get_pydantic_model(
-                provider, Optional[models.CreateEmbeddingsProvider]
+                provider, Optional[operations.CreateEmbeddingsProvider]
             ),
             encoding_format=encoding_format,
             user=user,
@@ -90,7 +90,7 @@ class Embeddings(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request, False, False, "json", models.CreateEmbeddingsRequest
+                request, False, False, "json", operations.CreateEmbeddingsRequest
             ),
             timeout_ms=timeout_ms,
         )
@@ -110,7 +110,7 @@ class Embeddings(BaseSDK):
                 operation_id="createEmbeddings",
                 oauth2_scopes=None,
                 security_source=get_security_from_env(
-                    self.sdk_configuration.security, models.Security
+                    self.sdk_configuration.security, components.Security
                 ),
             ),
             request=req,
@@ -134,7 +134,7 @@ class Embeddings(BaseSDK):
         response_data: Any = None
         if utils.match_response(http_res, "200", "application/json"):
             return unmarshal_json_response(
-                models.CreateEmbeddingsResponseBody, http_res
+                operations.CreateEmbeddingsResponseBody, http_res
             )
         if utils.match_response(http_res, "200", "text/event-stream"):
             return http_res.text
@@ -204,16 +204,16 @@ class Embeddings(BaseSDK):
     async def generate_async(
         self,
         *,
-        input: Union[models.Input, models.InputTypedDict],
+        input: Union[operations.Input, operations.InputTypedDict],
         model: str,
         provider: Optional[
             Union[
-                models.CreateEmbeddingsProvider,
-                models.CreateEmbeddingsProviderTypedDict,
+                operations.CreateEmbeddingsProvider,
+                operations.CreateEmbeddingsProviderTypedDict,
             ]
         ] = None,
         encoding_format: Optional[
-            Union[models.EncodingFormat, models.EncodingFormatTypedDict]
+            Union[operations.EncodingFormat, operations.EncodingFormatTypedDict]
         ] = None,
         user: Optional[str] = None,
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
@@ -221,7 +221,7 @@ class Embeddings(BaseSDK):
         timeout_ms: Optional[int] = None,
         accept_header_override: Optional[GenerateAcceptEnum] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.CreateEmbeddingsResponse:
+    ) -> operations.CreateEmbeddingsResponse:
         r"""Submit an embedding request
 
         Submits an embedding request to the embeddings router
@@ -247,11 +247,11 @@ class Embeddings(BaseSDK):
         else:
             base_url = self._get_url(base_url, url_variables)
 
-        request = models.CreateEmbeddingsRequest(
+        request = operations.CreateEmbeddingsRequest(
             input=input,
             model=model,
             provider=utils.get_pydantic_model(
-                provider, Optional[models.CreateEmbeddingsProvider]
+                provider, Optional[operations.CreateEmbeddingsProvider]
             ),
             encoding_format=encoding_format,
             user=user,
@@ -273,7 +273,7 @@ class Embeddings(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request, False, False, "json", models.CreateEmbeddingsRequest
+                request, False, False, "json", operations.CreateEmbeddingsRequest
             ),
             timeout_ms=timeout_ms,
         )
@@ -293,7 +293,7 @@ class Embeddings(BaseSDK):
                 operation_id="createEmbeddings",
                 oauth2_scopes=None,
                 security_source=get_security_from_env(
-                    self.sdk_configuration.security, models.Security
+                    self.sdk_configuration.security, components.Security
                 ),
             ),
             request=req,
@@ -317,7 +317,7 @@ class Embeddings(BaseSDK):
         response_data: Any = None
         if utils.match_response(http_res, "200", "application/json"):
             return unmarshal_json_response(
-                models.CreateEmbeddingsResponseBody, http_res
+                operations.CreateEmbeddingsResponseBody, http_res
             )
         if utils.match_response(http_res, "200", "text/event-stream"):
             return http_res.text
@@ -391,7 +391,7 @@ class Embeddings(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> List[models.Model]:
+    ) -> List[components.Model]:
         r"""List all embeddings models
 
         Returns a list of all available embeddings models and their properties
@@ -441,7 +441,7 @@ class Embeddings(BaseSDK):
                 operation_id="listEmbeddingsModels",
                 oauth2_scopes=None,
                 security_source=get_security_from_env(
-                    self.sdk_configuration.security, models.Security
+                    self.sdk_configuration.security, components.Security
                 ),
             ),
             request=req,
@@ -451,7 +451,7 @@ class Embeddings(BaseSDK):
 
         response_data: Any = None
         if utils.match_response(http_res, "200", "application/json"):
-            return unmarshal_json_response(models.ModelsListResponse, http_res)
+            return unmarshal_json_response(components.ModelsListResponse, http_res)
         if utils.match_response(http_res, "400", "application/json"):
             response_data = unmarshal_json_response(
                 errors.BadRequestResponseErrorData, http_res
@@ -482,7 +482,7 @@ class Embeddings(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> List[models.Model]:
+    ) -> List[components.Model]:
         r"""List all embeddings models
 
         Returns a list of all available embeddings models and their properties
@@ -532,7 +532,7 @@ class Embeddings(BaseSDK):
                 operation_id="listEmbeddingsModels",
                 oauth2_scopes=None,
                 security_source=get_security_from_env(
-                    self.sdk_configuration.security, models.Security
+                    self.sdk_configuration.security, components.Security
                 ),
             ),
             request=req,
@@ -542,7 +542,7 @@ class Embeddings(BaseSDK):
 
         response_data: Any = None
         if utils.match_response(http_res, "200", "application/json"):
-            return unmarshal_json_response(models.ModelsListResponse, http_res)
+            return unmarshal_json_response(components.ModelsListResponse, http_res)
         if utils.match_response(http_res, "400", "application/json"):
             response_data = unmarshal_json_response(
                 errors.BadRequestResponseErrorData, http_res

@@ -2,7 +2,7 @@
 
 from .basesdk import BaseSDK
 from datetime import datetime
-from openrouter import errors, models, utils
+from openrouter import components, errors, operations, utils
 from openrouter._hooks import HookContext
 from openrouter.types import OptionalNullable, UNSET
 from openrouter.utils import get_security_from_env
@@ -22,7 +22,7 @@ class APIKeys(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> List[models.ListData]:
+    ) -> List[operations.ListData]:
         r"""List API keys
 
         :param include_disabled: Whether to include disabled API keys in the response
@@ -42,7 +42,7 @@ class APIKeys(BaseSDK):
         else:
             base_url = self._get_url(base_url, url_variables)
 
-        request = models.ListRequest(
+        request = operations.ListRequest(
             include_disabled=include_disabled,
             offset=offset,
         )
@@ -78,7 +78,7 @@ class APIKeys(BaseSDK):
                 operation_id="list",
                 oauth2_scopes=None,
                 security_source=get_security_from_env(
-                    self.sdk_configuration.security, models.Security
+                    self.sdk_configuration.security, components.Security
                 ),
             ),
             request=req,
@@ -88,7 +88,7 @@ class APIKeys(BaseSDK):
 
         response_data: Any = None
         if utils.match_response(http_res, "200", "application/json"):
-            return unmarshal_json_response(models.ListResponse, http_res)
+            return unmarshal_json_response(operations.ListResponse, http_res)
         if utils.match_response(http_res, "401", "application/json"):
             response_data = unmarshal_json_response(
                 errors.UnauthorizedResponseErrorData, http_res
@@ -126,7 +126,7 @@ class APIKeys(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> List[models.ListData]:
+    ) -> List[operations.ListData]:
         r"""List API keys
 
         :param include_disabled: Whether to include disabled API keys in the response
@@ -146,7 +146,7 @@ class APIKeys(BaseSDK):
         else:
             base_url = self._get_url(base_url, url_variables)
 
-        request = models.ListRequest(
+        request = operations.ListRequest(
             include_disabled=include_disabled,
             offset=offset,
         )
@@ -182,7 +182,7 @@ class APIKeys(BaseSDK):
                 operation_id="list",
                 oauth2_scopes=None,
                 security_source=get_security_from_env(
-                    self.sdk_configuration.security, models.Security
+                    self.sdk_configuration.security, components.Security
                 ),
             ),
             request=req,
@@ -192,7 +192,7 @@ class APIKeys(BaseSDK):
 
         response_data: Any = None
         if utils.match_response(http_res, "200", "application/json"):
-            return unmarshal_json_response(models.ListResponse, http_res)
+            return unmarshal_json_response(operations.ListResponse, http_res)
         if utils.match_response(http_res, "401", "application/json"):
             response_data = unmarshal_json_response(
                 errors.UnauthorizedResponseErrorData, http_res
@@ -226,14 +226,14 @@ class APIKeys(BaseSDK):
         *,
         name: str,
         limit: OptionalNullable[float] = UNSET,
-        limit_reset: OptionalNullable[models.CreateKeysLimitReset] = UNSET,
+        limit_reset: OptionalNullable[operations.CreateKeysLimitReset] = UNSET,
         include_byok_in_limit: Optional[bool] = None,
         expires_at: OptionalNullable[datetime] = UNSET,
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.CreateKeysData:
+    ) -> operations.CreateKeysData:
         r"""Create a new API key
 
         :param name: Name for the new API key
@@ -256,7 +256,7 @@ class APIKeys(BaseSDK):
         else:
             base_url = self._get_url(base_url, url_variables)
 
-        request = models.CreateKeysRequest(
+        request = operations.CreateKeysRequest(
             name=name,
             limit=limit,
             limit_reset=limit_reset,
@@ -278,7 +278,7 @@ class APIKeys(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request, False, False, "json", models.CreateKeysRequest
+                request, False, False, "json", operations.CreateKeysRequest
             ),
             timeout_ms=timeout_ms,
         )
@@ -298,7 +298,7 @@ class APIKeys(BaseSDK):
                 operation_id="createKeys",
                 oauth2_scopes=None,
                 security_source=get_security_from_env(
-                    self.sdk_configuration.security, models.Security
+                    self.sdk_configuration.security, components.Security
                 ),
             ),
             request=req,
@@ -308,7 +308,7 @@ class APIKeys(BaseSDK):
 
         response_data: Any = None
         if utils.match_response(http_res, "201", "application/json"):
-            return unmarshal_json_response(models.CreateKeysResponse, http_res)
+            return unmarshal_json_response(operations.CreateKeysResponse, http_res)
         if utils.match_response(http_res, "400", "application/json"):
             response_data = unmarshal_json_response(
                 errors.BadRequestResponseErrorData, http_res
@@ -347,14 +347,14 @@ class APIKeys(BaseSDK):
         *,
         name: str,
         limit: OptionalNullable[float] = UNSET,
-        limit_reset: OptionalNullable[models.CreateKeysLimitReset] = UNSET,
+        limit_reset: OptionalNullable[operations.CreateKeysLimitReset] = UNSET,
         include_byok_in_limit: Optional[bool] = None,
         expires_at: OptionalNullable[datetime] = UNSET,
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.CreateKeysData:
+    ) -> operations.CreateKeysData:
         r"""Create a new API key
 
         :param name: Name for the new API key
@@ -377,7 +377,7 @@ class APIKeys(BaseSDK):
         else:
             base_url = self._get_url(base_url, url_variables)
 
-        request = models.CreateKeysRequest(
+        request = operations.CreateKeysRequest(
             name=name,
             limit=limit,
             limit_reset=limit_reset,
@@ -399,7 +399,7 @@ class APIKeys(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request, False, False, "json", models.CreateKeysRequest
+                request, False, False, "json", operations.CreateKeysRequest
             ),
             timeout_ms=timeout_ms,
         )
@@ -419,7 +419,7 @@ class APIKeys(BaseSDK):
                 operation_id="createKeys",
                 oauth2_scopes=None,
                 security_source=get_security_from_env(
-                    self.sdk_configuration.security, models.Security
+                    self.sdk_configuration.security, components.Security
                 ),
             ),
             request=req,
@@ -429,7 +429,7 @@ class APIKeys(BaseSDK):
 
         response_data: Any = None
         if utils.match_response(http_res, "201", "application/json"):
-            return unmarshal_json_response(models.CreateKeysResponse, http_res)
+            return unmarshal_json_response(operations.CreateKeysResponse, http_res)
         if utils.match_response(http_res, "400", "application/json"):
             response_data = unmarshal_json_response(
                 errors.BadRequestResponseErrorData, http_res
@@ -470,13 +470,13 @@ class APIKeys(BaseSDK):
         name: Optional[str] = None,
         disabled: Optional[bool] = None,
         limit: OptionalNullable[float] = UNSET,
-        limit_reset: OptionalNullable[models.UpdateKeysLimitReset] = UNSET,
+        limit_reset: OptionalNullable[operations.UpdateKeysLimitReset] = UNSET,
         include_byok_in_limit: Optional[bool] = None,
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.UpdateKeysData:
+    ) -> operations.UpdateKeysData:
         r"""Update an API key
 
         :param hash: The hash identifier of the API key to update
@@ -500,9 +500,9 @@ class APIKeys(BaseSDK):
         else:
             base_url = self._get_url(base_url, url_variables)
 
-        request = models.UpdateKeysRequest(
+        request = operations.UpdateKeysRequest(
             hash=hash,
-            body=models.UpdateKeysRequestBody(
+            body=operations.UpdateKeysRequestBody(
                 name=name,
                 disabled=disabled,
                 limit=limit,
@@ -525,7 +525,7 @@ class APIKeys(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.body, False, False, "json", models.UpdateKeysRequestBody
+                request.body, False, False, "json", operations.UpdateKeysRequestBody
             ),
             timeout_ms=timeout_ms,
         )
@@ -545,7 +545,7 @@ class APIKeys(BaseSDK):
                 operation_id="updateKeys",
                 oauth2_scopes=None,
                 security_source=get_security_from_env(
-                    self.sdk_configuration.security, models.Security
+                    self.sdk_configuration.security, components.Security
                 ),
             ),
             request=req,
@@ -555,7 +555,7 @@ class APIKeys(BaseSDK):
 
         response_data: Any = None
         if utils.match_response(http_res, "200", "application/json"):
-            return unmarshal_json_response(models.UpdateKeysResponse, http_res)
+            return unmarshal_json_response(operations.UpdateKeysResponse, http_res)
         if utils.match_response(http_res, "400", "application/json"):
             response_data = unmarshal_json_response(
                 errors.BadRequestResponseErrorData, http_res
@@ -601,13 +601,13 @@ class APIKeys(BaseSDK):
         name: Optional[str] = None,
         disabled: Optional[bool] = None,
         limit: OptionalNullable[float] = UNSET,
-        limit_reset: OptionalNullable[models.UpdateKeysLimitReset] = UNSET,
+        limit_reset: OptionalNullable[operations.UpdateKeysLimitReset] = UNSET,
         include_byok_in_limit: Optional[bool] = None,
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.UpdateKeysData:
+    ) -> operations.UpdateKeysData:
         r"""Update an API key
 
         :param hash: The hash identifier of the API key to update
@@ -631,9 +631,9 @@ class APIKeys(BaseSDK):
         else:
             base_url = self._get_url(base_url, url_variables)
 
-        request = models.UpdateKeysRequest(
+        request = operations.UpdateKeysRequest(
             hash=hash,
-            body=models.UpdateKeysRequestBody(
+            body=operations.UpdateKeysRequestBody(
                 name=name,
                 disabled=disabled,
                 limit=limit,
@@ -656,7 +656,7 @@ class APIKeys(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.body, False, False, "json", models.UpdateKeysRequestBody
+                request.body, False, False, "json", operations.UpdateKeysRequestBody
             ),
             timeout_ms=timeout_ms,
         )
@@ -676,7 +676,7 @@ class APIKeys(BaseSDK):
                 operation_id="updateKeys",
                 oauth2_scopes=None,
                 security_source=get_security_from_env(
-                    self.sdk_configuration.security, models.Security
+                    self.sdk_configuration.security, components.Security
                 ),
             ),
             request=req,
@@ -686,7 +686,7 @@ class APIKeys(BaseSDK):
 
         response_data: Any = None
         if utils.match_response(http_res, "200", "application/json"):
-            return unmarshal_json_response(models.UpdateKeysResponse, http_res)
+            return unmarshal_json_response(operations.UpdateKeysResponse, http_res)
         if utils.match_response(http_res, "400", "application/json"):
             response_data = unmarshal_json_response(
                 errors.BadRequestResponseErrorData, http_res
@@ -733,7 +733,7 @@ class APIKeys(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.DeleteKeysResponse:
+    ) -> operations.DeleteKeysResponse:
         r"""Delete an API key
 
         :param hash: The hash identifier of the API key to delete
@@ -752,7 +752,7 @@ class APIKeys(BaseSDK):
         else:
             base_url = self._get_url(base_url, url_variables)
 
-        request = models.DeleteKeysRequest(
+        request = operations.DeleteKeysRequest(
             hash=hash,
         )
 
@@ -787,7 +787,7 @@ class APIKeys(BaseSDK):
                 operation_id="deleteKeys",
                 oauth2_scopes=None,
                 security_source=get_security_from_env(
-                    self.sdk_configuration.security, models.Security
+                    self.sdk_configuration.security, components.Security
                 ),
             ),
             request=req,
@@ -797,7 +797,7 @@ class APIKeys(BaseSDK):
 
         response_data: Any = None
         if utils.match_response(http_res, "200", "application/json"):
-            return unmarshal_json_response(models.DeleteKeysResponse, http_res)
+            return unmarshal_json_response(operations.DeleteKeysResponse, http_res)
         if utils.match_response(http_res, "401", "application/json"):
             response_data = unmarshal_json_response(
                 errors.UnauthorizedResponseErrorData, http_res
@@ -839,7 +839,7 @@ class APIKeys(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.DeleteKeysResponse:
+    ) -> operations.DeleteKeysResponse:
         r"""Delete an API key
 
         :param hash: The hash identifier of the API key to delete
@@ -858,7 +858,7 @@ class APIKeys(BaseSDK):
         else:
             base_url = self._get_url(base_url, url_variables)
 
-        request = models.DeleteKeysRequest(
+        request = operations.DeleteKeysRequest(
             hash=hash,
         )
 
@@ -893,7 +893,7 @@ class APIKeys(BaseSDK):
                 operation_id="deleteKeys",
                 oauth2_scopes=None,
                 security_source=get_security_from_env(
-                    self.sdk_configuration.security, models.Security
+                    self.sdk_configuration.security, components.Security
                 ),
             ),
             request=req,
@@ -903,7 +903,7 @@ class APIKeys(BaseSDK):
 
         response_data: Any = None
         if utils.match_response(http_res, "200", "application/json"):
-            return unmarshal_json_response(models.DeleteKeysResponse, http_res)
+            return unmarshal_json_response(operations.DeleteKeysResponse, http_res)
         if utils.match_response(http_res, "401", "application/json"):
             response_data = unmarshal_json_response(
                 errors.UnauthorizedResponseErrorData, http_res
@@ -945,7 +945,7 @@ class APIKeys(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.GetKeyData:
+    ) -> operations.GetKeyData:
         r"""Get a single API key
 
         :param hash: The hash identifier of the API key to retrieve
@@ -964,7 +964,7 @@ class APIKeys(BaseSDK):
         else:
             base_url = self._get_url(base_url, url_variables)
 
-        request = models.GetKeyRequest(
+        request = operations.GetKeyRequest(
             hash=hash,
         )
 
@@ -999,7 +999,7 @@ class APIKeys(BaseSDK):
                 operation_id="getKey",
                 oauth2_scopes=None,
                 security_source=get_security_from_env(
-                    self.sdk_configuration.security, models.Security
+                    self.sdk_configuration.security, components.Security
                 ),
             ),
             request=req,
@@ -1009,7 +1009,7 @@ class APIKeys(BaseSDK):
 
         response_data: Any = None
         if utils.match_response(http_res, "200", "application/json"):
-            return unmarshal_json_response(models.GetKeyResponse, http_res)
+            return unmarshal_json_response(operations.GetKeyResponse, http_res)
         if utils.match_response(http_res, "401", "application/json"):
             response_data = unmarshal_json_response(
                 errors.UnauthorizedResponseErrorData, http_res
@@ -1051,7 +1051,7 @@ class APIKeys(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.GetKeyData:
+    ) -> operations.GetKeyData:
         r"""Get a single API key
 
         :param hash: The hash identifier of the API key to retrieve
@@ -1070,7 +1070,7 @@ class APIKeys(BaseSDK):
         else:
             base_url = self._get_url(base_url, url_variables)
 
-        request = models.GetKeyRequest(
+        request = operations.GetKeyRequest(
             hash=hash,
         )
 
@@ -1105,7 +1105,7 @@ class APIKeys(BaseSDK):
                 operation_id="getKey",
                 oauth2_scopes=None,
                 security_source=get_security_from_env(
-                    self.sdk_configuration.security, models.Security
+                    self.sdk_configuration.security, components.Security
                 ),
             ),
             request=req,
@@ -1115,7 +1115,7 @@ class APIKeys(BaseSDK):
 
         response_data: Any = None
         if utils.match_response(http_res, "200", "application/json"):
-            return unmarshal_json_response(models.GetKeyResponse, http_res)
+            return unmarshal_json_response(operations.GetKeyResponse, http_res)
         if utils.match_response(http_res, "401", "application/json"):
             response_data = unmarshal_json_response(
                 errors.UnauthorizedResponseErrorData, http_res
@@ -1156,7 +1156,7 @@ class APIKeys(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.GetCurrentKeyData:
+    ) -> operations.GetCurrentKeyData:
         r"""Get current API key
 
         Get information on the API key associated with the current authentication session
@@ -1206,7 +1206,7 @@ class APIKeys(BaseSDK):
                 operation_id="getCurrentKey",
                 oauth2_scopes=None,
                 security_source=get_security_from_env(
-                    self.sdk_configuration.security, models.Security
+                    self.sdk_configuration.security, components.Security
                 ),
             ),
             request=req,
@@ -1216,7 +1216,7 @@ class APIKeys(BaseSDK):
 
         response_data: Any = None
         if utils.match_response(http_res, "200", "application/json"):
-            return unmarshal_json_response(models.GetCurrentKeyResponse, http_res)
+            return unmarshal_json_response(operations.GetCurrentKeyResponse, http_res)
         if utils.match_response(http_res, "401", "application/json"):
             response_data = unmarshal_json_response(
                 errors.UnauthorizedResponseErrorData, http_res
@@ -1247,7 +1247,7 @@ class APIKeys(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.GetCurrentKeyData:
+    ) -> operations.GetCurrentKeyData:
         r"""Get current API key
 
         Get information on the API key associated with the current authentication session
@@ -1297,7 +1297,7 @@ class APIKeys(BaseSDK):
                 operation_id="getCurrentKey",
                 oauth2_scopes=None,
                 security_source=get_security_from_env(
-                    self.sdk_configuration.security, models.Security
+                    self.sdk_configuration.security, components.Security
                 ),
             ),
             request=req,
@@ -1307,7 +1307,7 @@ class APIKeys(BaseSDK):
 
         response_data: Any = None
         if utils.match_response(http_res, "200", "application/json"):
-            return unmarshal_json_response(models.GetCurrentKeyResponse, http_res)
+            return unmarshal_json_response(operations.GetCurrentKeyResponse, http_res)
         if utils.match_response(http_res, "401", "application/json"):
             response_data = unmarshal_json_response(
                 errors.UnauthorizedResponseErrorData, http_res

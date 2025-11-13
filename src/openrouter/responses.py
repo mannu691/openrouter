@@ -2,7 +2,7 @@
 
 from .basesdk import BaseSDK
 from enum import Enum
-from openrouter import errors, models, utils
+from openrouter import components, errors, operations, utils
 from openrouter._hooks import HookContext
 from openrouter.types import OptionalNullable, UNSET
 from openrouter.utils import eventstreaming, get_security_from_env
@@ -23,20 +23,20 @@ class Responses(BaseSDK):
         self,
         *,
         input: Optional[
-            Union[models.OpenResponsesInput, models.OpenResponsesInputTypedDict]
+            Union[components.OpenResponsesInput, components.OpenResponsesInputTypedDict]
         ] = None,
         instructions: OptionalNullable[str] = UNSET,
         metadata: OptionalNullable[Dict[str, str]] = UNSET,
         tools: Optional[
             Union[
-                List[models.OpenResponsesRequestToolUnion],
-                List[models.OpenResponsesRequestToolUnionTypedDict],
+                List[components.OpenResponsesRequestToolUnion],
+                List[components.OpenResponsesRequestToolUnionTypedDict],
             ]
         ] = None,
         tool_choice: Optional[
             Union[
-                models.OpenAIResponsesToolChoiceUnion,
-                models.OpenAIResponsesToolChoiceUnionTypedDict,
+                components.OpenAIResponsesToolChoiceUnion,
+                components.OpenAIResponsesToolChoiceUnionTypedDict,
             ]
         ] = None,
         parallel_tool_calls: OptionalNullable[bool] = UNSET,
@@ -44,14 +44,14 @@ class Responses(BaseSDK):
         models: Optional[List[str]] = None,
         text: Optional[
             Union[
-                models.OpenResponsesResponseText,
-                models.OpenResponsesResponseTextTypedDict,
+                components.OpenResponsesResponseText,
+                components.OpenResponsesResponseTextTypedDict,
             ]
         ] = None,
         reasoning: OptionalNullable[
             Union[
-                models.OpenResponsesReasoningConfig,
-                models.OpenResponsesReasoningConfigTypedDict,
+                components.OpenResponsesReasoningConfig,
+                components.OpenResponsesReasoningConfigTypedDict,
             ]
         ] = UNSET,
         max_output_tokens: OptionalNullable[float] = UNSET,
@@ -61,27 +61,30 @@ class Responses(BaseSDK):
         prompt_cache_key: OptionalNullable[str] = UNSET,
         previous_response_id: OptionalNullable[str] = UNSET,
         prompt: OptionalNullable[
-            Union[models.OpenAIResponsesPrompt, models.OpenAIResponsesPromptTypedDict]
+            Union[
+                components.OpenAIResponsesPrompt,
+                components.OpenAIResponsesPromptTypedDict,
+            ]
         ] = UNSET,
-        include: OptionalNullable[List[models.OpenAIResponsesIncludable]] = UNSET,
+        include: OptionalNullable[List[components.OpenAIResponsesIncludable]] = UNSET,
         background: OptionalNullable[bool] = UNSET,
         safety_identifier: OptionalNullable[str] = UNSET,
         store: OptionalNullable[bool] = UNSET,
-        service_tier: OptionalNullable[models.ServiceTier] = UNSET,
-        truncation: OptionalNullable[models.Truncation] = UNSET,
+        service_tier: OptionalNullable[components.ServiceTier] = UNSET,
+        truncation: OptionalNullable[components.Truncation] = UNSET,
         stream: Union[Literal[False], None] = None,
         provider: OptionalNullable[
-            Union[models.Provider, models.ProviderTypedDict]
+            Union[components.Provider, components.ProviderTypedDict]
         ] = UNSET,
         plugins: Optional[
-            Union[List[models.Plugin], List[models.PluginTypedDict]]
+            Union[List[components.Plugin], List[components.PluginTypedDict]]
         ] = None,
         user: Optional[str] = None,
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.OpenResponsesNonStreamingResponse:
+    ) -> components.OpenResponsesNonStreamingResponse:
         r"""Create a response
 
         Creates a streaming or non-streaming response using OpenResponses API format
@@ -125,20 +128,20 @@ class Responses(BaseSDK):
         self,
         *,
         input: Optional[
-            Union[models.OpenResponsesInput, models.OpenResponsesInputTypedDict]
+            Union[components.OpenResponsesInput, components.OpenResponsesInputTypedDict]
         ] = None,
         instructions: OptionalNullable[str] = UNSET,
         metadata: OptionalNullable[Dict[str, str]] = UNSET,
         tools: Optional[
             Union[
-                List[models.OpenResponsesRequestToolUnion],
-                List[models.OpenResponsesRequestToolUnionTypedDict],
+                List[components.OpenResponsesRequestToolUnion],
+                List[components.OpenResponsesRequestToolUnionTypedDict],
             ]
         ] = None,
         tool_choice: Optional[
             Union[
-                models.OpenAIResponsesToolChoiceUnion,
-                models.OpenAIResponsesToolChoiceUnionTypedDict,
+                components.OpenAIResponsesToolChoiceUnion,
+                components.OpenAIResponsesToolChoiceUnionTypedDict,
             ]
         ] = None,
         parallel_tool_calls: OptionalNullable[bool] = UNSET,
@@ -146,14 +149,14 @@ class Responses(BaseSDK):
         models: Optional[List[str]] = None,
         text: Optional[
             Union[
-                models.OpenResponsesResponseText,
-                models.OpenResponsesResponseTextTypedDict,
+                components.OpenResponsesResponseText,
+                components.OpenResponsesResponseTextTypedDict,
             ]
         ] = None,
         reasoning: OptionalNullable[
             Union[
-                models.OpenResponsesReasoningConfig,
-                models.OpenResponsesReasoningConfigTypedDict,
+                components.OpenResponsesReasoningConfig,
+                components.OpenResponsesReasoningConfigTypedDict,
             ]
         ] = UNSET,
         max_output_tokens: OptionalNullable[float] = UNSET,
@@ -163,27 +166,30 @@ class Responses(BaseSDK):
         prompt_cache_key: OptionalNullable[str] = UNSET,
         previous_response_id: OptionalNullable[str] = UNSET,
         prompt: OptionalNullable[
-            Union[models.OpenAIResponsesPrompt, models.OpenAIResponsesPromptTypedDict]
+            Union[
+                components.OpenAIResponsesPrompt,
+                components.OpenAIResponsesPromptTypedDict,
+            ]
         ] = UNSET,
-        include: OptionalNullable[List[models.OpenAIResponsesIncludable]] = UNSET,
+        include: OptionalNullable[List[components.OpenAIResponsesIncludable]] = UNSET,
         background: OptionalNullable[bool] = UNSET,
         safety_identifier: OptionalNullable[str] = UNSET,
         store: OptionalNullable[bool] = UNSET,
-        service_tier: OptionalNullable[models.ServiceTier] = UNSET,
-        truncation: OptionalNullable[models.Truncation] = UNSET,
+        service_tier: OptionalNullable[components.ServiceTier] = UNSET,
+        truncation: OptionalNullable[components.Truncation] = UNSET,
         stream: Literal[True],
         provider: OptionalNullable[
-            Union[models.Provider, models.ProviderTypedDict]
+            Union[components.Provider, components.ProviderTypedDict]
         ] = UNSET,
         plugins: Optional[
-            Union[List[models.Plugin], List[models.PluginTypedDict]]
+            Union[List[components.Plugin], List[components.PluginTypedDict]]
         ] = None,
         user: Optional[str] = None,
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> eventstreaming.EventStream[models.OpenResponsesStreamEvent]:
+    ) -> eventstreaming.EventStream[components.OpenResponsesStreamEvent]:
         r"""Create a response
 
         Creates a streaming or non-streaming response using OpenResponses API format
@@ -226,20 +232,20 @@ class Responses(BaseSDK):
         self,
         *,
         input: Optional[
-            Union[models.OpenResponsesInput, models.OpenResponsesInputTypedDict]
+            Union[components.OpenResponsesInput, components.OpenResponsesInputTypedDict]
         ] = None,
         instructions: OptionalNullable[str] = UNSET,
         metadata: OptionalNullable[Dict[str, str]] = UNSET,
         tools: Optional[
             Union[
-                List[models.OpenResponsesRequestToolUnion],
-                List[models.OpenResponsesRequestToolUnionTypedDict],
+                List[components.OpenResponsesRequestToolUnion],
+                List[components.OpenResponsesRequestToolUnionTypedDict],
             ]
         ] = None,
         tool_choice: Optional[
             Union[
-                models.OpenAIResponsesToolChoiceUnion,
-                models.OpenAIResponsesToolChoiceUnionTypedDict,
+                components.OpenAIResponsesToolChoiceUnion,
+                components.OpenAIResponsesToolChoiceUnionTypedDict,
             ]
         ] = None,
         parallel_tool_calls: OptionalNullable[bool] = UNSET,
@@ -247,14 +253,14 @@ class Responses(BaseSDK):
         models: Optional[List[str]] = None,
         text: Optional[
             Union[
-                models.OpenResponsesResponseText,
-                models.OpenResponsesResponseTextTypedDict,
+                components.OpenResponsesResponseText,
+                components.OpenResponsesResponseTextTypedDict,
             ]
         ] = None,
         reasoning: OptionalNullable[
             Union[
-                models.OpenResponsesReasoningConfig,
-                models.OpenResponsesReasoningConfigTypedDict,
+                components.OpenResponsesReasoningConfig,
+                components.OpenResponsesReasoningConfigTypedDict,
             ]
         ] = UNSET,
         max_output_tokens: OptionalNullable[float] = UNSET,
@@ -264,27 +270,30 @@ class Responses(BaseSDK):
         prompt_cache_key: OptionalNullable[str] = UNSET,
         previous_response_id: OptionalNullable[str] = UNSET,
         prompt: OptionalNullable[
-            Union[models.OpenAIResponsesPrompt, models.OpenAIResponsesPromptTypedDict]
+            Union[
+                components.OpenAIResponsesPrompt,
+                components.OpenAIResponsesPromptTypedDict,
+            ]
         ] = UNSET,
-        include: OptionalNullable[List[models.OpenAIResponsesIncludable]] = UNSET,
+        include: OptionalNullable[List[components.OpenAIResponsesIncludable]] = UNSET,
         background: OptionalNullable[bool] = UNSET,
         safety_identifier: OptionalNullable[str] = UNSET,
         store: OptionalNullable[bool] = UNSET,
-        service_tier: OptionalNullable[models.ServiceTier] = UNSET,
-        truncation: OptionalNullable[models.Truncation] = UNSET,
+        service_tier: OptionalNullable[components.ServiceTier] = UNSET,
+        truncation: OptionalNullable[components.Truncation] = UNSET,
         stream: Optional[bool] = False,
         provider: OptionalNullable[
-            Union[models.Provider, models.ProviderTypedDict]
+            Union[components.Provider, components.ProviderTypedDict]
         ] = UNSET,
         plugins: Optional[
-            Union[List[models.Plugin], List[models.PluginTypedDict]]
+            Union[List[components.Plugin], List[components.PluginTypedDict]]
         ] = None,
         user: Optional[str] = None,
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.CreateResponsesResponse:
+    ) -> operations.CreateResponsesResponse:
         r"""Create a response
 
         Creates a streaming or non-streaming response using OpenResponses API format
@@ -332,24 +341,26 @@ class Responses(BaseSDK):
         else:
             base_url = self._get_url(base_url, url_variables)
 
-        request = models.OpenResponsesRequest(
-            input=utils.get_pydantic_model(input, Optional[models.OpenResponsesInput]),
+        request = components.OpenResponsesRequest(
+            input=utils.get_pydantic_model(
+                input, Optional[components.OpenResponsesInput]
+            ),
             instructions=instructions,
             metadata=metadata,
             tools=utils.get_pydantic_model(
-                tools, Optional[List[models.OpenResponsesRequestToolUnion]]
+                tools, Optional[List[components.OpenResponsesRequestToolUnion]]
             ),
             tool_choice=utils.get_pydantic_model(
-                tool_choice, Optional[models.OpenAIResponsesToolChoiceUnion]
+                tool_choice, Optional[components.OpenAIResponsesToolChoiceUnion]
             ),
             parallel_tool_calls=parallel_tool_calls,
             model=model,
             models=models,
             text=utils.get_pydantic_model(
-                text, Optional[models.OpenResponsesResponseText]
+                text, Optional[components.OpenResponsesResponseText]
             ),
             reasoning=utils.get_pydantic_model(
-                reasoning, OptionalNullable[models.OpenResponsesReasoningConfig]
+                reasoning, OptionalNullable[components.OpenResponsesReasoningConfig]
             ),
             max_output_tokens=max_output_tokens,
             temperature=temperature,
@@ -358,7 +369,7 @@ class Responses(BaseSDK):
             prompt_cache_key=prompt_cache_key,
             previous_response_id=previous_response_id,
             prompt=utils.get_pydantic_model(
-                prompt, OptionalNullable[models.OpenAIResponsesPrompt]
+                prompt, OptionalNullable[components.OpenAIResponsesPrompt]
             ),
             include=include,
             background=background,
@@ -368,9 +379,11 @@ class Responses(BaseSDK):
             truncation=truncation,
             stream=stream,
             provider=utils.get_pydantic_model(
-                provider, OptionalNullable[models.Provider]
+                provider, OptionalNullable[components.Provider]
             ),
-            plugins=utils.get_pydantic_model(plugins, Optional[List[models.Plugin]]),
+            plugins=utils.get_pydantic_model(
+                plugins, Optional[List[components.Plugin]]
+            ),
             user=user,
         )
 
@@ -388,7 +401,7 @@ class Responses(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request, False, False, "json", models.OpenResponsesRequest
+                request, False, False, "json", components.OpenResponsesRequest
             ),
             timeout_ms=timeout_ms,
         )
@@ -408,7 +421,7 @@ class Responses(BaseSDK):
                 operation_id="createResponses",
                 oauth2_scopes=None,
                 security_source=get_security_from_env(
-                    self.sdk_configuration.security, models.Security
+                    self.sdk_configuration.security, components.Security
                 ),
             ),
             request=req,
@@ -437,13 +450,13 @@ class Responses(BaseSDK):
         if utils.match_response(http_res, "200", "application/json"):
             http_res_text = utils.stream_to_text(http_res)
             return unmarshal_json_response(
-                models.OpenResponsesNonStreamingResponse, http_res, http_res_text
+                components.OpenResponsesNonStreamingResponse, http_res, http_res_text
             )
         if utils.match_response(http_res, "200", "text/event-stream"):
             return eventstreaming.EventStream(
                 http_res,
                 lambda raw: utils.unmarshal_json(
-                    raw, models.CreateResponsesResponseBody
+                    raw, operations.CreateResponsesResponseBody
                 ).data,
                 sentinel="[DONE]",
                 client_ref=self,
@@ -567,20 +580,20 @@ class Responses(BaseSDK):
         self,
         *,
         input: Optional[
-            Union[models.OpenResponsesInput, models.OpenResponsesInputTypedDict]
+            Union[components.OpenResponsesInput, components.OpenResponsesInputTypedDict]
         ] = None,
         instructions: OptionalNullable[str] = UNSET,
         metadata: OptionalNullable[Dict[str, str]] = UNSET,
         tools: Optional[
             Union[
-                List[models.OpenResponsesRequestToolUnion],
-                List[models.OpenResponsesRequestToolUnionTypedDict],
+                List[components.OpenResponsesRequestToolUnion],
+                List[components.OpenResponsesRequestToolUnionTypedDict],
             ]
         ] = None,
         tool_choice: Optional[
             Union[
-                models.OpenAIResponsesToolChoiceUnion,
-                models.OpenAIResponsesToolChoiceUnionTypedDict,
+                components.OpenAIResponsesToolChoiceUnion,
+                components.OpenAIResponsesToolChoiceUnionTypedDict,
             ]
         ] = None,
         parallel_tool_calls: OptionalNullable[bool] = UNSET,
@@ -588,14 +601,14 @@ class Responses(BaseSDK):
         models: Optional[List[str]] = None,
         text: Optional[
             Union[
-                models.OpenResponsesResponseText,
-                models.OpenResponsesResponseTextTypedDict,
+                components.OpenResponsesResponseText,
+                components.OpenResponsesResponseTextTypedDict,
             ]
         ] = None,
         reasoning: OptionalNullable[
             Union[
-                models.OpenResponsesReasoningConfig,
-                models.OpenResponsesReasoningConfigTypedDict,
+                components.OpenResponsesReasoningConfig,
+                components.OpenResponsesReasoningConfigTypedDict,
             ]
         ] = UNSET,
         max_output_tokens: OptionalNullable[float] = UNSET,
@@ -605,27 +618,30 @@ class Responses(BaseSDK):
         prompt_cache_key: OptionalNullable[str] = UNSET,
         previous_response_id: OptionalNullable[str] = UNSET,
         prompt: OptionalNullable[
-            Union[models.OpenAIResponsesPrompt, models.OpenAIResponsesPromptTypedDict]
+            Union[
+                components.OpenAIResponsesPrompt,
+                components.OpenAIResponsesPromptTypedDict,
+            ]
         ] = UNSET,
-        include: OptionalNullable[List[models.OpenAIResponsesIncludable]] = UNSET,
+        include: OptionalNullable[List[components.OpenAIResponsesIncludable]] = UNSET,
         background: OptionalNullable[bool] = UNSET,
         safety_identifier: OptionalNullable[str] = UNSET,
         store: OptionalNullable[bool] = UNSET,
-        service_tier: OptionalNullable[models.ServiceTier] = UNSET,
-        truncation: OptionalNullable[models.Truncation] = UNSET,
+        service_tier: OptionalNullable[components.ServiceTier] = UNSET,
+        truncation: OptionalNullable[components.Truncation] = UNSET,
         stream: Union[Literal[False], None] = None,
         provider: OptionalNullable[
-            Union[models.Provider, models.ProviderTypedDict]
+            Union[components.Provider, components.ProviderTypedDict]
         ] = UNSET,
         plugins: Optional[
-            Union[List[models.Plugin], List[models.PluginTypedDict]]
+            Union[List[components.Plugin], List[components.PluginTypedDict]]
         ] = None,
         user: Optional[str] = None,
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.OpenResponsesNonStreamingResponse:
+    ) -> components.OpenResponsesNonStreamingResponse:
         r"""Create a response
 
         Creates a streaming or non-streaming response using OpenResponses API format
@@ -669,20 +685,20 @@ class Responses(BaseSDK):
         self,
         *,
         input: Optional[
-            Union[models.OpenResponsesInput, models.OpenResponsesInputTypedDict]
+            Union[components.OpenResponsesInput, components.OpenResponsesInputTypedDict]
         ] = None,
         instructions: OptionalNullable[str] = UNSET,
         metadata: OptionalNullable[Dict[str, str]] = UNSET,
         tools: Optional[
             Union[
-                List[models.OpenResponsesRequestToolUnion],
-                List[models.OpenResponsesRequestToolUnionTypedDict],
+                List[components.OpenResponsesRequestToolUnion],
+                List[components.OpenResponsesRequestToolUnionTypedDict],
             ]
         ] = None,
         tool_choice: Optional[
             Union[
-                models.OpenAIResponsesToolChoiceUnion,
-                models.OpenAIResponsesToolChoiceUnionTypedDict,
+                components.OpenAIResponsesToolChoiceUnion,
+                components.OpenAIResponsesToolChoiceUnionTypedDict,
             ]
         ] = None,
         parallel_tool_calls: OptionalNullable[bool] = UNSET,
@@ -690,14 +706,14 @@ class Responses(BaseSDK):
         models: Optional[List[str]] = None,
         text: Optional[
             Union[
-                models.OpenResponsesResponseText,
-                models.OpenResponsesResponseTextTypedDict,
+                components.OpenResponsesResponseText,
+                components.OpenResponsesResponseTextTypedDict,
             ]
         ] = None,
         reasoning: OptionalNullable[
             Union[
-                models.OpenResponsesReasoningConfig,
-                models.OpenResponsesReasoningConfigTypedDict,
+                components.OpenResponsesReasoningConfig,
+                components.OpenResponsesReasoningConfigTypedDict,
             ]
         ] = UNSET,
         max_output_tokens: OptionalNullable[float] = UNSET,
@@ -707,27 +723,30 @@ class Responses(BaseSDK):
         prompt_cache_key: OptionalNullable[str] = UNSET,
         previous_response_id: OptionalNullable[str] = UNSET,
         prompt: OptionalNullable[
-            Union[models.OpenAIResponsesPrompt, models.OpenAIResponsesPromptTypedDict]
+            Union[
+                components.OpenAIResponsesPrompt,
+                components.OpenAIResponsesPromptTypedDict,
+            ]
         ] = UNSET,
-        include: OptionalNullable[List[models.OpenAIResponsesIncludable]] = UNSET,
+        include: OptionalNullable[List[components.OpenAIResponsesIncludable]] = UNSET,
         background: OptionalNullable[bool] = UNSET,
         safety_identifier: OptionalNullable[str] = UNSET,
         store: OptionalNullable[bool] = UNSET,
-        service_tier: OptionalNullable[models.ServiceTier] = UNSET,
-        truncation: OptionalNullable[models.Truncation] = UNSET,
+        service_tier: OptionalNullable[components.ServiceTier] = UNSET,
+        truncation: OptionalNullable[components.Truncation] = UNSET,
         stream: Literal[True],
         provider: OptionalNullable[
-            Union[models.Provider, models.ProviderTypedDict]
+            Union[components.Provider, components.ProviderTypedDict]
         ] = UNSET,
         plugins: Optional[
-            Union[List[models.Plugin], List[models.PluginTypedDict]]
+            Union[List[components.Plugin], List[components.PluginTypedDict]]
         ] = None,
         user: Optional[str] = None,
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> eventstreaming.EventStreamAsync[models.OpenResponsesStreamEvent]:
+    ) -> eventstreaming.EventStreamAsync[components.OpenResponsesStreamEvent]:
         r"""Create a response
 
         Creates a streaming or non-streaming response using OpenResponses API format
@@ -770,20 +789,20 @@ class Responses(BaseSDK):
         self,
         *,
         input: Optional[
-            Union[models.OpenResponsesInput, models.OpenResponsesInputTypedDict]
+            Union[components.OpenResponsesInput, components.OpenResponsesInputTypedDict]
         ] = None,
         instructions: OptionalNullable[str] = UNSET,
         metadata: OptionalNullable[Dict[str, str]] = UNSET,
         tools: Optional[
             Union[
-                List[models.OpenResponsesRequestToolUnion],
-                List[models.OpenResponsesRequestToolUnionTypedDict],
+                List[components.OpenResponsesRequestToolUnion],
+                List[components.OpenResponsesRequestToolUnionTypedDict],
             ]
         ] = None,
         tool_choice: Optional[
             Union[
-                models.OpenAIResponsesToolChoiceUnion,
-                models.OpenAIResponsesToolChoiceUnionTypedDict,
+                components.OpenAIResponsesToolChoiceUnion,
+                components.OpenAIResponsesToolChoiceUnionTypedDict,
             ]
         ] = None,
         parallel_tool_calls: OptionalNullable[bool] = UNSET,
@@ -791,14 +810,14 @@ class Responses(BaseSDK):
         models: Optional[List[str]] = None,
         text: Optional[
             Union[
-                models.OpenResponsesResponseText,
-                models.OpenResponsesResponseTextTypedDict,
+                components.OpenResponsesResponseText,
+                components.OpenResponsesResponseTextTypedDict,
             ]
         ] = None,
         reasoning: OptionalNullable[
             Union[
-                models.OpenResponsesReasoningConfig,
-                models.OpenResponsesReasoningConfigTypedDict,
+                components.OpenResponsesReasoningConfig,
+                components.OpenResponsesReasoningConfigTypedDict,
             ]
         ] = UNSET,
         max_output_tokens: OptionalNullable[float] = UNSET,
@@ -808,27 +827,30 @@ class Responses(BaseSDK):
         prompt_cache_key: OptionalNullable[str] = UNSET,
         previous_response_id: OptionalNullable[str] = UNSET,
         prompt: OptionalNullable[
-            Union[models.OpenAIResponsesPrompt, models.OpenAIResponsesPromptTypedDict]
+            Union[
+                components.OpenAIResponsesPrompt,
+                components.OpenAIResponsesPromptTypedDict,
+            ]
         ] = UNSET,
-        include: OptionalNullable[List[models.OpenAIResponsesIncludable]] = UNSET,
+        include: OptionalNullable[List[components.OpenAIResponsesIncludable]] = UNSET,
         background: OptionalNullable[bool] = UNSET,
         safety_identifier: OptionalNullable[str] = UNSET,
         store: OptionalNullable[bool] = UNSET,
-        service_tier: OptionalNullable[models.ServiceTier] = UNSET,
-        truncation: OptionalNullable[models.Truncation] = UNSET,
+        service_tier: OptionalNullable[components.ServiceTier] = UNSET,
+        truncation: OptionalNullable[components.Truncation] = UNSET,
         stream: Optional[bool] = False,
         provider: OptionalNullable[
-            Union[models.Provider, models.ProviderTypedDict]
+            Union[components.Provider, components.ProviderTypedDict]
         ] = UNSET,
         plugins: Optional[
-            Union[List[models.Plugin], List[models.PluginTypedDict]]
+            Union[List[components.Plugin], List[components.PluginTypedDict]]
         ] = None,
         user: Optional[str] = None,
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.CreateResponsesResponse:
+    ) -> operations.CreateResponsesResponse:
         r"""Create a response
 
         Creates a streaming or non-streaming response using OpenResponses API format
@@ -876,24 +898,26 @@ class Responses(BaseSDK):
         else:
             base_url = self._get_url(base_url, url_variables)
 
-        request = models.OpenResponsesRequest(
-            input=utils.get_pydantic_model(input, Optional[models.OpenResponsesInput]),
+        request = components.OpenResponsesRequest(
+            input=utils.get_pydantic_model(
+                input, Optional[components.OpenResponsesInput]
+            ),
             instructions=instructions,
             metadata=metadata,
             tools=utils.get_pydantic_model(
-                tools, Optional[List[models.OpenResponsesRequestToolUnion]]
+                tools, Optional[List[components.OpenResponsesRequestToolUnion]]
             ),
             tool_choice=utils.get_pydantic_model(
-                tool_choice, Optional[models.OpenAIResponsesToolChoiceUnion]
+                tool_choice, Optional[components.OpenAIResponsesToolChoiceUnion]
             ),
             parallel_tool_calls=parallel_tool_calls,
             model=model,
             models=models,
             text=utils.get_pydantic_model(
-                text, Optional[models.OpenResponsesResponseText]
+                text, Optional[components.OpenResponsesResponseText]
             ),
             reasoning=utils.get_pydantic_model(
-                reasoning, OptionalNullable[models.OpenResponsesReasoningConfig]
+                reasoning, OptionalNullable[components.OpenResponsesReasoningConfig]
             ),
             max_output_tokens=max_output_tokens,
             temperature=temperature,
@@ -902,7 +926,7 @@ class Responses(BaseSDK):
             prompt_cache_key=prompt_cache_key,
             previous_response_id=previous_response_id,
             prompt=utils.get_pydantic_model(
-                prompt, OptionalNullable[models.OpenAIResponsesPrompt]
+                prompt, OptionalNullable[components.OpenAIResponsesPrompt]
             ),
             include=include,
             background=background,
@@ -912,9 +936,11 @@ class Responses(BaseSDK):
             truncation=truncation,
             stream=stream,
             provider=utils.get_pydantic_model(
-                provider, OptionalNullable[models.Provider]
+                provider, OptionalNullable[components.Provider]
             ),
-            plugins=utils.get_pydantic_model(plugins, Optional[List[models.Plugin]]),
+            plugins=utils.get_pydantic_model(
+                plugins, Optional[List[components.Plugin]]
+            ),
             user=user,
         )
 
@@ -932,7 +958,7 @@ class Responses(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request, False, False, "json", models.OpenResponsesRequest
+                request, False, False, "json", components.OpenResponsesRequest
             ),
             timeout_ms=timeout_ms,
         )
@@ -952,7 +978,7 @@ class Responses(BaseSDK):
                 operation_id="createResponses",
                 oauth2_scopes=None,
                 security_source=get_security_from_env(
-                    self.sdk_configuration.security, models.Security
+                    self.sdk_configuration.security, components.Security
                 ),
             ),
             request=req,
@@ -981,13 +1007,13 @@ class Responses(BaseSDK):
         if utils.match_response(http_res, "200", "application/json"):
             http_res_text = await utils.stream_to_text_async(http_res)
             return unmarshal_json_response(
-                models.OpenResponsesNonStreamingResponse, http_res, http_res_text
+                components.OpenResponsesNonStreamingResponse, http_res, http_res_text
             )
         if utils.match_response(http_res, "200", "text/event-stream"):
             return eventstreaming.EventStreamAsync(
                 http_res,
                 lambda raw: utils.unmarshal_json(
-                    raw, models.CreateResponsesResponseBody
+                    raw, operations.CreateResponsesResponseBody
                 ).data,
                 sentinel="[DONE]",
                 client_ref=self,

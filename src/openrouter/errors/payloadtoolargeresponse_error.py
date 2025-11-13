@@ -3,16 +3,16 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 import httpx
-from openrouter.errors import OpenRouterError
-from openrouter.models import (
-    payloadtoolargeresponseerrordata as models_payloadtoolargeresponseerrordata,
+from openrouter.components import (
+    payloadtoolargeresponseerrordata as components_payloadtoolargeresponseerrordata,
 )
+from openrouter.errors import OpenRouterError
 from openrouter.types import BaseModel, OptionalNullable, UNSET
 from typing import Optional
 
 
 class PayloadTooLargeResponseErrorData(BaseModel):
-    error: models_payloadtoolargeresponseerrordata.PayloadTooLargeResponseErrorData
+    error: components_payloadtoolargeresponseerrordata.PayloadTooLargeResponseErrorData
     r"""Error data for PayloadTooLargeResponse"""
 
     user_id: OptionalNullable[str] = UNSET

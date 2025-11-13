@@ -2,7 +2,7 @@
 
 from .basesdk import BaseSDK
 from datetime import datetime
-from openrouter import errors, models, utils
+from openrouter import components, errors, operations, utils
 from openrouter._hooks import HookContext
 from openrouter.types import OptionalNullable, UNSET
 from openrouter.utils import get_security_from_env
@@ -19,13 +19,13 @@ class OAuth(BaseSDK):
         code: str,
         code_verifier: Optional[str] = None,
         code_challenge_method: OptionalNullable[
-            models.ExchangeAuthCodeForAPIKeyCodeChallengeMethod
+            operations.ExchangeAuthCodeForAPIKeyCodeChallengeMethod
         ] = UNSET,
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.ExchangeAuthCodeForAPIKeyResponse:
+    ) -> operations.ExchangeAuthCodeForAPIKeyResponse:
         r"""Exchange authorization code for API key
 
         Exchange an authorization code from the PKCE flow for a user-controlled API key
@@ -48,7 +48,7 @@ class OAuth(BaseSDK):
         else:
             base_url = self._get_url(base_url, url_variables)
 
-        request = models.ExchangeAuthCodeForAPIKeyRequest(
+        request = operations.ExchangeAuthCodeForAPIKeyRequest(
             code=code,
             code_verifier=code_verifier,
             code_challenge_method=code_challenge_method,
@@ -68,7 +68,11 @@ class OAuth(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request, False, False, "json", models.ExchangeAuthCodeForAPIKeyRequest
+                request,
+                False,
+                False,
+                "json",
+                operations.ExchangeAuthCodeForAPIKeyRequest,
             ),
             timeout_ms=timeout_ms,
         )
@@ -88,7 +92,7 @@ class OAuth(BaseSDK):
                 operation_id="exchangeAuthCodeForAPIKey",
                 oauth2_scopes=None,
                 security_source=get_security_from_env(
-                    self.sdk_configuration.security, models.Security
+                    self.sdk_configuration.security, components.Security
                 ),
             ),
             request=req,
@@ -99,7 +103,7 @@ class OAuth(BaseSDK):
         response_data: Any = None
         if utils.match_response(http_res, "200", "application/json"):
             return unmarshal_json_response(
-                models.ExchangeAuthCodeForAPIKeyResponse, http_res
+                operations.ExchangeAuthCodeForAPIKeyResponse, http_res
             )
         if utils.match_response(http_res, "400", "application/json"):
             response_data = unmarshal_json_response(
@@ -135,13 +139,13 @@ class OAuth(BaseSDK):
         code: str,
         code_verifier: Optional[str] = None,
         code_challenge_method: OptionalNullable[
-            models.ExchangeAuthCodeForAPIKeyCodeChallengeMethod
+            operations.ExchangeAuthCodeForAPIKeyCodeChallengeMethod
         ] = UNSET,
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.ExchangeAuthCodeForAPIKeyResponse:
+    ) -> operations.ExchangeAuthCodeForAPIKeyResponse:
         r"""Exchange authorization code for API key
 
         Exchange an authorization code from the PKCE flow for a user-controlled API key
@@ -164,7 +168,7 @@ class OAuth(BaseSDK):
         else:
             base_url = self._get_url(base_url, url_variables)
 
-        request = models.ExchangeAuthCodeForAPIKeyRequest(
+        request = operations.ExchangeAuthCodeForAPIKeyRequest(
             code=code,
             code_verifier=code_verifier,
             code_challenge_method=code_challenge_method,
@@ -184,7 +188,11 @@ class OAuth(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request, False, False, "json", models.ExchangeAuthCodeForAPIKeyRequest
+                request,
+                False,
+                False,
+                "json",
+                operations.ExchangeAuthCodeForAPIKeyRequest,
             ),
             timeout_ms=timeout_ms,
         )
@@ -204,7 +212,7 @@ class OAuth(BaseSDK):
                 operation_id="exchangeAuthCodeForAPIKey",
                 oauth2_scopes=None,
                 security_source=get_security_from_env(
-                    self.sdk_configuration.security, models.Security
+                    self.sdk_configuration.security, components.Security
                 ),
             ),
             request=req,
@@ -215,7 +223,7 @@ class OAuth(BaseSDK):
         response_data: Any = None
         if utils.match_response(http_res, "200", "application/json"):
             return unmarshal_json_response(
-                models.ExchangeAuthCodeForAPIKeyResponse, http_res
+                operations.ExchangeAuthCodeForAPIKeyResponse, http_res
             )
         if utils.match_response(http_res, "400", "application/json"):
             response_data = unmarshal_json_response(
@@ -251,7 +259,7 @@ class OAuth(BaseSDK):
         callback_url: str,
         code_challenge: Optional[str] = None,
         code_challenge_method: Optional[
-            models.CreateAuthKeysCodeCodeChallengeMethod
+            operations.CreateAuthKeysCodeCodeChallengeMethod
         ] = None,
         limit: Optional[float] = None,
         expires_at: OptionalNullable[datetime] = UNSET,
@@ -259,7 +267,7 @@ class OAuth(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.CreateAuthKeysCodeData:
+    ) -> operations.CreateAuthKeysCodeData:
         r"""Create authorization code
 
         Create an authorization code for the PKCE flow to generate a user-controlled API key
@@ -284,7 +292,7 @@ class OAuth(BaseSDK):
         else:
             base_url = self._get_url(base_url, url_variables)
 
-        request = models.CreateAuthKeysCodeRequest(
+        request = operations.CreateAuthKeysCodeRequest(
             callback_url=callback_url,
             code_challenge=code_challenge,
             code_challenge_method=code_challenge_method,
@@ -306,7 +314,7 @@ class OAuth(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request, False, False, "json", models.CreateAuthKeysCodeRequest
+                request, False, False, "json", operations.CreateAuthKeysCodeRequest
             ),
             timeout_ms=timeout_ms,
         )
@@ -326,7 +334,7 @@ class OAuth(BaseSDK):
                 operation_id="createAuthKeysCode",
                 oauth2_scopes=None,
                 security_source=get_security_from_env(
-                    self.sdk_configuration.security, models.Security
+                    self.sdk_configuration.security, components.Security
                 ),
             ),
             request=req,
@@ -336,7 +344,9 @@ class OAuth(BaseSDK):
 
         response_data: Any = None
         if utils.match_response(http_res, "200", "application/json"):
-            return unmarshal_json_response(models.CreateAuthKeysCodeResponse, http_res)
+            return unmarshal_json_response(
+                operations.CreateAuthKeysCodeResponse, http_res
+            )
         if utils.match_response(http_res, "400", "application/json"):
             response_data = unmarshal_json_response(
                 errors.BadRequestResponseErrorData, http_res
@@ -371,7 +381,7 @@ class OAuth(BaseSDK):
         callback_url: str,
         code_challenge: Optional[str] = None,
         code_challenge_method: Optional[
-            models.CreateAuthKeysCodeCodeChallengeMethod
+            operations.CreateAuthKeysCodeCodeChallengeMethod
         ] = None,
         limit: Optional[float] = None,
         expires_at: OptionalNullable[datetime] = UNSET,
@@ -379,7 +389,7 @@ class OAuth(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.CreateAuthKeysCodeData:
+    ) -> operations.CreateAuthKeysCodeData:
         r"""Create authorization code
 
         Create an authorization code for the PKCE flow to generate a user-controlled API key
@@ -404,7 +414,7 @@ class OAuth(BaseSDK):
         else:
             base_url = self._get_url(base_url, url_variables)
 
-        request = models.CreateAuthKeysCodeRequest(
+        request = operations.CreateAuthKeysCodeRequest(
             callback_url=callback_url,
             code_challenge=code_challenge,
             code_challenge_method=code_challenge_method,
@@ -426,7 +436,7 @@ class OAuth(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request, False, False, "json", models.CreateAuthKeysCodeRequest
+                request, False, False, "json", operations.CreateAuthKeysCodeRequest
             ),
             timeout_ms=timeout_ms,
         )
@@ -446,7 +456,7 @@ class OAuth(BaseSDK):
                 operation_id="createAuthKeysCode",
                 oauth2_scopes=None,
                 security_source=get_security_from_env(
-                    self.sdk_configuration.security, models.Security
+                    self.sdk_configuration.security, components.Security
                 ),
             ),
             request=req,
@@ -456,7 +466,9 @@ class OAuth(BaseSDK):
 
         response_data: Any = None
         if utils.match_response(http_res, "200", "application/json"):
-            return unmarshal_json_response(models.CreateAuthKeysCodeResponse, http_res)
+            return unmarshal_json_response(
+                operations.CreateAuthKeysCodeResponse, http_res
+            )
         if utils.match_response(http_res, "400", "application/json"):
             response_data = unmarshal_json_response(
                 errors.BadRequestResponseErrorData, http_res

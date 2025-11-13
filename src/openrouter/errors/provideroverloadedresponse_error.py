@@ -3,18 +3,16 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 import httpx
-from openrouter.errors import OpenRouterError
-from openrouter.models import (
-    provideroverloadedresponseerrordata as models_provideroverloadedresponseerrordata,
+from openrouter.components import (
+    provideroverloadedresponseerrordata as components_provideroverloadedresponseerrordata,
 )
+from openrouter.errors import OpenRouterError
 from openrouter.types import BaseModel, OptionalNullable, UNSET
 from typing import Optional
 
 
 class ProviderOverloadedResponseErrorData(BaseModel):
-    error: (
-        models_provideroverloadedresponseerrordata.ProviderOverloadedResponseErrorData
-    )
+    error: components_provideroverloadedresponseerrordata.ProviderOverloadedResponseErrorData
     r"""Error data for ProviderOverloadedResponse"""
 
     user_id: OptionalNullable[str] = UNSET

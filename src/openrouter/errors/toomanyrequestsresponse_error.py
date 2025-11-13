@@ -3,16 +3,16 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 import httpx
-from openrouter.errors import OpenRouterError
-from openrouter.models import (
-    toomanyrequestsresponseerrordata as models_toomanyrequestsresponseerrordata,
+from openrouter.components import (
+    toomanyrequestsresponseerrordata as components_toomanyrequestsresponseerrordata,
 )
+from openrouter.errors import OpenRouterError
 from openrouter.types import BaseModel, OptionalNullable, UNSET
 from typing import Optional
 
 
 class TooManyRequestsResponseErrorData(BaseModel):
-    error: models_toomanyrequestsresponseerrordata.TooManyRequestsResponseErrorData
+    error: components_toomanyrequestsresponseerrordata.TooManyRequestsResponseErrorData
     r"""Error data for TooManyRequestsResponse"""
 
     user_id: OptionalNullable[str] = UNSET

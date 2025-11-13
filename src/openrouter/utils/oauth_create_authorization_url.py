@@ -2,7 +2,7 @@
 
 from dataclasses import dataclass
 from typing import TYPE_CHECKING, Literal, Optional, Union
-from urllib.parse import ParseResult, urlencode, urlparse
+from urllib.parse import ParseResult, urlencode
 
 if TYPE_CHECKING:
     from openrouter.sdk import OpenRouter
@@ -16,10 +16,12 @@ class CreateAuthorizationUrlRequestBase:
 
 
 @dataclass
-class CreateAuthorizationUrlRequestWithPKCE(CreateAuthorizationUrlRequestBase):
+class CreateAuthorizationUrlRequestWithPKCE:
     """Request parameters with PKCE for creating an authorization URL"""
+    callback_url: Union[str, ParseResult]
     code_challenge_method: Literal["S256", "plain"]
     code_challenge: str
+    limit: Optional[float] = None
 
 
 # Union type for request - either with PKCE or without

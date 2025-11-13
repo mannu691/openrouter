@@ -3,16 +3,16 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 import httpx
-from openrouter.errors import OpenRouterError
-from openrouter.models import (
-    requesttimeoutresponseerrordata as models_requesttimeoutresponseerrordata,
+from openrouter.components import (
+    requesttimeoutresponseerrordata as components_requesttimeoutresponseerrordata,
 )
+from openrouter.errors import OpenRouterError
 from openrouter.types import BaseModel, OptionalNullable, UNSET
 from typing import Optional
 
 
 class RequestTimeoutResponseErrorData(BaseModel):
-    error: models_requesttimeoutresponseerrordata.RequestTimeoutResponseErrorData
+    error: components_requesttimeoutresponseerrordata.RequestTimeoutResponseErrorData
     r"""Error data for RequestTimeoutResponse"""
 
     user_id: OptionalNullable[str] = UNSET

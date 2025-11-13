@@ -1,0 +1,10 @@
+# ChatMessageToolCall
+
+
+## Fields
+
+| Field                                                                                  | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `id`                                                                                   | *str*                                                                                  | :heavy_check_mark:                                                                     | N/A                                                                                    |
+| `type`                                                                                 | *Literal["function"]*                                                                  | :heavy_check_mark:                                                                     | N/A                                                                                    |
+| `function`                                                                             | [components.ChatMessageToolCallFunction](../components/chatmessagetoolcallfunction.md) | :heavy_check_mark:                                                                     | N/A                                                                                    |

@@ -3,18 +3,16 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 import httpx
-from openrouter.errors import OpenRouterError
-from openrouter.models import (
-    edgenetworktimeoutresponseerrordata as models_edgenetworktimeoutresponseerrordata,
+from openrouter.components import (
+    edgenetworktimeoutresponseerrordata as components_edgenetworktimeoutresponseerrordata,
 )
+from openrouter.errors import OpenRouterError
 from openrouter.types import BaseModel, OptionalNullable, UNSET
 from typing import Optional
 
 
 class EdgeNetworkTimeoutResponseErrorData(BaseModel):
-    error: (
-        models_edgenetworktimeoutresponseerrordata.EdgeNetworkTimeoutResponseErrorData
-    )
+    error: components_edgenetworktimeoutresponseerrordata.EdgeNetworkTimeoutResponseErrorData
     r"""Error data for EdgeNetworkTimeoutResponse"""
 
     user_id: OptionalNullable[str] = UNSET

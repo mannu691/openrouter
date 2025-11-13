@@ -3,16 +3,16 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 import httpx
-from openrouter.errors import OpenRouterError
-from openrouter.models import (
-    paymentrequiredresponseerrordata as models_paymentrequiredresponseerrordata,
+from openrouter.components import (
+    paymentrequiredresponseerrordata as components_paymentrequiredresponseerrordata,
 )
+from openrouter.errors import OpenRouterError
 from openrouter.types import BaseModel, OptionalNullable, UNSET
 from typing import Optional
 
 
 class PaymentRequiredResponseErrorData(BaseModel):
-    error: models_paymentrequiredresponseerrordata.PaymentRequiredResponseErrorData
+    error: components_paymentrequiredresponseerrordata.PaymentRequiredResponseErrorData
     r"""Error data for PaymentRequiredResponse"""
 
     user_id: OptionalNullable[str] = UNSET

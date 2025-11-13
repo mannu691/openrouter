@@ -2,7 +2,7 @@
 
 from .sdkconfiguration import SDKConfiguration
 import httpx
-from openrouter import errors, models, utils
+from openrouter import components, errors, utils
 from openrouter._hooks import (
     AfterErrorContext,
     AfterSuccessContext,
@@ -175,7 +175,7 @@ class BaseSDK:
         if security is not None:
             if callable(security):
                 security = security()
-        security = utils.get_security_from_env(security, models.Security)
+        security = utils.get_security_from_env(security, components.Security)
         if security is not None:
             security_headers, security_query_params = utils.get_security(security)
             headers = {**headers, **security_headers}

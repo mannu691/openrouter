@@ -41,7 +41,7 @@ with OpenRouter(
 
 ### Response
 
-**[models.GetCreditsResponse](../../models/getcreditsresponse.md)**
+**[operations.GetCreditsResponse](../../operations/getcreditsresponse.md)**
 
 ### Errors
 
@@ -60,13 +60,13 @@ Create a Coinbase charge for crypto payment
 
 <!-- UsageSnippet language="python" operationID="createCoinbaseCharge" method="post" path="/credits/coinbase" -->
 ```python
-from openrouter import OpenRouter, models
+from openrouter import OpenRouter, operations
 import os
 
 
 with OpenRouter() as open_router:
 
-    res = open_router.credits.create_coinbase_charge(security=models.CreateCoinbaseChargeSecurity(
+    res = open_router.credits.create_coinbase_charge(security=operations.CreateCoinbaseChargeSecurity(
         bearer=os.getenv("OPENROUTER_BEARER", ""),
     ), amount=100, sender="0x1234567890123456789012345678901234567890", chain_id=1)
 
@@ -77,17 +77,17 @@ with OpenRouter() as open_router:
 
 ### Parameters
 
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `security`                                                                          | [models.CreateCoinbaseChargeSecurity](../../models/createcoinbasechargesecurity.md) | :heavy_check_mark:                                                                  | N/A                                                                                 |
-| `amount`                                                                            | *float*                                                                             | :heavy_check_mark:                                                                  | N/A                                                                                 |
-| `sender`                                                                            | *str*                                                                               | :heavy_check_mark:                                                                  | N/A                                                                                 |
-| `chain_id`                                                                          | [models.ChainID](../../models/chainid.md)                                           | :heavy_check_mark:                                                                  | N/A                                                                                 |
-| `retries`                                                                           | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                    | :heavy_minus_sign:                                                                  | Configuration to override the default retry behavior of the client.                 |
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `security`                                                                                  | [operations.CreateCoinbaseChargeSecurity](../../operations/createcoinbasechargesecurity.md) | :heavy_check_mark:                                                                          | N/A                                                                                         |
+| `amount`                                                                                    | *float*                                                                                     | :heavy_check_mark:                                                                          | N/A                                                                                         |
+| `sender`                                                                                    | *str*                                                                                       | :heavy_check_mark:                                                                          | N/A                                                                                         |
+| `chain_id`                                                                                  | [components.ChainID](../../components/chainid.md)                                           | :heavy_check_mark:                                                                          | N/A                                                                                         |
+| `retries`                                                                                   | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                            | :heavy_minus_sign:                                                                          | Configuration to override the default retry behavior of the client.                         |
 
 ### Response
 
-**[models.CreateCoinbaseChargeResponse](../../models/createcoinbasechargeresponse.md)**
+**[operations.CreateCoinbaseChargeResponse](../../operations/createcoinbasechargeresponse.md)**
 
 ### Errors
 

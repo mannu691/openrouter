@@ -3,16 +3,16 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 import httpx
-from openrouter.errors import OpenRouterError
-from openrouter.models import (
-    notfoundresponseerrordata as models_notfoundresponseerrordata,
+from openrouter.components import (
+    notfoundresponseerrordata as components_notfoundresponseerrordata,
 )
+from openrouter.errors import OpenRouterError
 from openrouter.types import BaseModel, OptionalNullable, UNSET
 from typing import Optional
 
 
 class NotFoundResponseErrorData(BaseModel):
-    error: models_notfoundresponseerrordata.NotFoundResponseErrorData
+    error: components_notfoundresponseerrordata.NotFoundResponseErrorData
     r"""Error data for NotFoundResponse"""
 
     user_id: OptionalNullable[str] = UNSET

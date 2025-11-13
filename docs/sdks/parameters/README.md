@@ -17,13 +17,13 @@ Get a model's supported parameters and data about which are most popular
 
 <!-- UsageSnippet language="python" operationID="getParameters" method="get" path="/parameters/{author}/{slug}" -->
 ```python
-from openrouter import OpenRouter, models
+from openrouter import OpenRouter, operations
 import os
 
 
 with OpenRouter() as open_router:
 
-    res = open_router.parameters.get_parameters(security=models.GetParametersSecurity(
+    res = open_router.parameters.get_parameters(security=operations.GetParametersSecurity(
         bearer=os.getenv("OPENROUTER_BEARER", ""),
     ), author="<value>", slug="<value>")
 
@@ -34,17 +34,17 @@ with OpenRouter() as open_router:
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `security`                                                                      | [models.GetParametersSecurity](../../models/getparameterssecurity.md)           | :heavy_check_mark:                                                              | N/A                                                                             |
-| `author`                                                                        | *str*                                                                           | :heavy_check_mark:                                                              | N/A                                                                             |
-| `slug`                                                                          | *str*                                                                           | :heavy_check_mark:                                                              | N/A                                                                             |
-| `provider`                                                                      | [Optional[models.GetParametersProvider]](../../models/getparametersprovider.md) | :heavy_minus_sign:                                                              | N/A                                                                             |
-| `retries`                                                                       | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                | :heavy_minus_sign:                                                              | Configuration to override the default retry behavior of the client.             |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `security`                                                                              | [operations.GetParametersSecurity](../../operations/getparameterssecurity.md)           | :heavy_check_mark:                                                                      | N/A                                                                                     |
+| `author`                                                                                | *str*                                                                                   | :heavy_check_mark:                                                                      | N/A                                                                                     |
+| `slug`                                                                                  | *str*                                                                                   | :heavy_check_mark:                                                                      | N/A                                                                                     |
+| `provider`                                                                              | [Optional[operations.GetParametersProvider]](../../operations/getparametersprovider.md) | :heavy_minus_sign:                                                                      | N/A                                                                                     |
+| `retries`                                                                               | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                        | :heavy_minus_sign:                                                                      | Configuration to override the default retry behavior of the client.                     |
 
 ### Response
 
-**[models.GetParametersResponse](../../models/getparametersresponse.md)**
+**[operations.GetParametersResponse](../../operations/getparametersresponse.md)**
 
 ### Errors
 

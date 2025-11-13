@@ -7,7 +7,7 @@ from .utils.logger import Logger, get_default_logger
 from .utils.retries import RetryConfig
 import httpx
 import importlib
-from openrouter import models, utils
+from openrouter import components, utils
 from openrouter._hooks import SDKHooks
 from openrouter.types import OptionalNullable, UNSET
 import sys
@@ -121,9 +121,9 @@ class OpenRouter(BaseSDK):
         security: Any = None
         if callable(api_key):
             # pylint: disable=unnecessary-lambda-assignment
-            security = lambda: models.Security(api_key=api_key())
+            security = lambda: components.Security(api_key=api_key())
         else:
-            security = models.Security(api_key=api_key)
+            security = components.Security(api_key=api_key)
 
         if server_url is not None:
             if url_params is not None:

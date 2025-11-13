@@ -3,14 +3,14 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 import httpx
+from openrouter.components import chaterror as components_chaterror
 from openrouter.errors import OpenRouterError
-from openrouter.models import chaterror as models_chaterror
 from openrouter.types import BaseModel
 from typing import Optional
 
 
 class ChatErrorData(BaseModel):
-    error: models_chaterror.ChatErrorError
+    error: components_chaterror.ChatErrorError
 
 
 @dataclass(unsafe_hash=True)

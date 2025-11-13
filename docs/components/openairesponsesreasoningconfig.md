@@ -1,0 +1,9 @@
+# OpenAIResponsesReasoningConfig
+
+
+## Fields
+
+| Field                                                                                                          | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `effort`                                                                                                       | [OptionalNullable[components.OpenAIResponsesReasoningEffort]](../components/openairesponsesreasoningeffort.md) | :heavy_minus_sign:                                                                                             | N/A                                                                                                            |
+| `summary`                                                                                                      | [Optional[components.ReasoningSummaryVerbosity]](../components/reasoningsummaryverbosity.md)                   | :heavy_minus_sign:                                                                                             | N/A                                                                                                            |

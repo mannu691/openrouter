@@ -30,7 +30,7 @@ generation:
     generateNewTests: true
     skipResponseBodyAssertions: false
 python:
-  version: 0.0.8
+  version: 0.0.14
   additionalDependencies:
     dev: {}
     main: {}
@@ -59,8 +59,8 @@ python:
     paths:
       callbacks: ""
       errors: errors
-      operations: "operations"
-      shared: "components"
+      operations: operations
+      shared: components
       webhooks: ""
   inputModelSuffix: input
   legacyPyright: false

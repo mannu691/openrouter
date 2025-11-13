@@ -2,7 +2,7 @@
 
 from .basesdk import BaseSDK
 from enum import Enum
-from openrouter import errors, models, utils
+from openrouter import components, errors, operations, utils
 from openrouter._hooks import HookContext
 from openrouter.types import OptionalNullable, UNSET
 from openrouter.utils import eventstreaming, get_security_from_env
@@ -20,7 +20,7 @@ class Chat(BaseSDK):
     def send(
         self,
         *,
-        messages: Union[List[models.Message], List[models.MessageTypedDict]],
+        messages: Union[List[components.Message], List[components.MessageTypedDict]],
         model: Optional[str] = None,
         models: Optional[List[str]] = None,
         frequency_penalty: OptionalNullable[float] = UNSET,
@@ -31,30 +31,32 @@ class Chat(BaseSDK):
         max_tokens: OptionalNullable[float] = UNSET,
         metadata: Optional[Dict[str, str]] = None,
         presence_penalty: OptionalNullable[float] = UNSET,
-        reasoning: Optional[Union[models.Reasoning, models.ReasoningTypedDict]] = None,
+        reasoning: Optional[
+            Union[components.Reasoning, components.ReasoningTypedDict]
+        ] = None,
         response_format: Optional[
             Union[
-                models.ChatGenerationParamsResponseFormatUnion,
-                models.ChatGenerationParamsResponseFormatUnionTypedDict,
+                components.ChatGenerationParamsResponseFormatUnion,
+                components.ChatGenerationParamsResponseFormatUnionTypedDict,
             ]
         ] = None,
         seed: OptionalNullable[int] = UNSET,
         stop: OptionalNullable[
             Union[
-                models.ChatGenerationParamsStop,
-                models.ChatGenerationParamsStopTypedDict,
+                components.ChatGenerationParamsStop,
+                components.ChatGenerationParamsStopTypedDict,
             ]
         ] = UNSET,
         stream: Union[Literal[False], None] = None,
         stream_options: OptionalNullable[
-            Union[models.ChatStreamOptions, models.ChatStreamOptionsTypedDict]
+            Union[components.ChatStreamOptions, components.ChatStreamOptionsTypedDict]
         ] = UNSET,
         temperature: OptionalNullable[float] = UNSET,
         tool_choice: Optional[Any] = None,
         tools: Optional[
             Union[
-                List[models.ToolDefinitionJSON],
-                List[models.ToolDefinitionJSONTypedDict],
+                List[components.ToolDefinitionJSON],
+                List[components.ToolDefinitionJSONTypedDict],
             ]
         ] = None,
         top_p: OptionalNullable[float] = UNSET,
@@ -63,7 +65,7 @@ class Chat(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.ChatResponse:
+    ) -> components.ChatResponse:
         r"""Create a chat completion
 
         Sends a request for a model response for the given chat conversation. Supports both streaming and non-streaming modes.
@@ -101,7 +103,7 @@ class Chat(BaseSDK):
     def send(
         self,
         *,
-        messages: Union[List[models.Message], List[models.MessageTypedDict]],
+        messages: Union[List[components.Message], List[components.MessageTypedDict]],
         model: Optional[str] = None,
         models: Optional[List[str]] = None,
         frequency_penalty: OptionalNullable[float] = UNSET,
@@ -112,30 +114,32 @@ class Chat(BaseSDK):
         max_tokens: OptionalNullable[float] = UNSET,
         metadata: Optional[Dict[str, str]] = None,
         presence_penalty: OptionalNullable[float] = UNSET,
-        reasoning: Optional[Union[models.Reasoning, models.ReasoningTypedDict]] = None,
+        reasoning: Optional[
+            Union[components.Reasoning, components.ReasoningTypedDict]
+        ] = None,
         response_format: Optional[
             Union[
-                models.ChatGenerationParamsResponseFormatUnion,
-                models.ChatGenerationParamsResponseFormatUnionTypedDict,
+                components.ChatGenerationParamsResponseFormatUnion,
+                components.ChatGenerationParamsResponseFormatUnionTypedDict,
             ]
         ] = None,
         seed: OptionalNullable[int] = UNSET,
         stop: OptionalNullable[
             Union[
-                models.ChatGenerationParamsStop,
-                models.ChatGenerationParamsStopTypedDict,
+                components.ChatGenerationParamsStop,
+                components.ChatGenerationParamsStopTypedDict,
             ]
         ] = UNSET,
         stream: Literal[True],
         stream_options: OptionalNullable[
-            Union[models.ChatStreamOptions, models.ChatStreamOptionsTypedDict]
+            Union[components.ChatStreamOptions, components.ChatStreamOptionsTypedDict]
         ] = UNSET,
         temperature: OptionalNullable[float] = UNSET,
         tool_choice: Optional[Any] = None,
         tools: Optional[
             Union[
-                List[models.ToolDefinitionJSON],
-                List[models.ToolDefinitionJSONTypedDict],
+                List[components.ToolDefinitionJSON],
+                List[components.ToolDefinitionJSONTypedDict],
             ]
         ] = None,
         top_p: OptionalNullable[float] = UNSET,
@@ -144,7 +148,7 @@ class Chat(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> eventstreaming.EventStream[models.ChatStreamingResponseChunkData]:
+    ) -> eventstreaming.EventStream[components.ChatStreamingResponseChunkData]:
         r"""Create a chat completion
 
         Sends a request for a model response for the given chat conversation. Supports both streaming and non-streaming modes.
@@ -181,7 +185,7 @@ class Chat(BaseSDK):
     def send(
         self,
         *,
-        messages: Union[List[models.Message], List[models.MessageTypedDict]],
+        messages: Union[List[components.Message], List[components.MessageTypedDict]],
         model: Optional[str] = None,
         models: Optional[List[str]] = None,
         frequency_penalty: OptionalNullable[float] = UNSET,
@@ -192,30 +196,32 @@ class Chat(BaseSDK):
         max_tokens: OptionalNullable[float] = UNSET,
         metadata: Optional[Dict[str, str]] = None,
         presence_penalty: OptionalNullable[float] = UNSET,
-        reasoning: Optional[Union[models.Reasoning, models.ReasoningTypedDict]] = None,
+        reasoning: Optional[
+            Union[components.Reasoning, components.ReasoningTypedDict]
+        ] = None,
         response_format: Optional[
             Union[
-                models.ChatGenerationParamsResponseFormatUnion,
-                models.ChatGenerationParamsResponseFormatUnionTypedDict,
+                components.ChatGenerationParamsResponseFormatUnion,
+                components.ChatGenerationParamsResponseFormatUnionTypedDict,
             ]
         ] = None,
         seed: OptionalNullable[int] = UNSET,
         stop: OptionalNullable[
             Union[
-                models.ChatGenerationParamsStop,
-                models.ChatGenerationParamsStopTypedDict,
+                components.ChatGenerationParamsStop,
+                components.ChatGenerationParamsStopTypedDict,
             ]
         ] = UNSET,
         stream: Optional[bool] = False,
         stream_options: OptionalNullable[
-            Union[models.ChatStreamOptions, models.ChatStreamOptionsTypedDict]
+            Union[components.ChatStreamOptions, components.ChatStreamOptionsTypedDict]
         ] = UNSET,
         temperature: OptionalNullable[float] = UNSET,
         tool_choice: Optional[Any] = None,
         tools: Optional[
             Union[
-                List[models.ToolDefinitionJSON],
-                List[models.ToolDefinitionJSONTypedDict],
+                List[components.ToolDefinitionJSON],
+                List[components.ToolDefinitionJSONTypedDict],
             ]
         ] = None,
         top_p: OptionalNullable[float] = UNSET,
@@ -224,7 +230,7 @@ class Chat(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.SendChatCompletionRequestResponse:
+    ) -> operations.SendChatCompletionRequestResponse:
         r"""Create a chat completion
 
         Sends a request for a model response for the given chat conversation. Supports both streaming and non-streaming modes.
@@ -267,8 +273,8 @@ class Chat(BaseSDK):
         else:
             base_url = self._get_url(base_url, url_variables)
 
-        request = models.ChatGenerationParams(
-            messages=utils.get_pydantic_model(messages, List[models.Message]),
+        request = components.ChatGenerationParams(
+            messages=utils.get_pydantic_model(messages, List[components.Message]),
             model=model,
             models=models,
             frequency_penalty=frequency_penalty,
@@ -279,21 +285,23 @@ class Chat(BaseSDK):
             max_tokens=max_tokens,
             metadata=metadata,
             presence_penalty=presence_penalty,
-            reasoning=utils.get_pydantic_model(reasoning, Optional[models.Reasoning]),
+            reasoning=utils.get_pydantic_model(
+                reasoning, Optional[components.Reasoning]
+            ),
             response_format=utils.get_pydantic_model(
                 response_format,
-                Optional[models.ChatGenerationParamsResponseFormatUnion],
+                Optional[components.ChatGenerationParamsResponseFormatUnion],
             ),
             seed=seed,
             stop=stop,
             stream=stream,
             stream_options=utils.get_pydantic_model(
-                stream_options, OptionalNullable[models.ChatStreamOptions]
+                stream_options, OptionalNullable[components.ChatStreamOptions]
             ),
             temperature=temperature,
             tool_choice=tool_choice,
             tools=utils.get_pydantic_model(
-                tools, Optional[List[models.ToolDefinitionJSON]]
+                tools, Optional[List[components.ToolDefinitionJSON]]
             ),
             top_p=top_p,
             user=user,
@@ -313,7 +321,7 @@ class Chat(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request, False, False, "json", models.ChatGenerationParams
+                request, False, False, "json", components.ChatGenerationParams
             ),
             timeout_ms=timeout_ms,
         )
@@ -333,7 +341,7 @@ class Chat(BaseSDK):
                 operation_id="sendChatCompletionRequest",
                 oauth2_scopes=None,
                 security_source=get_security_from_env(
-                    self.sdk_configuration.security, models.Security
+                    self.sdk_configuration.security, components.Security
                 ),
             ),
             request=req,
@@ -345,12 +353,14 @@ class Chat(BaseSDK):
         response_data: Any = None
         if utils.match_response(http_res, "200", "application/json"):
             http_res_text = utils.stream_to_text(http_res)
-            return unmarshal_json_response(models.ChatResponse, http_res, http_res_text)
+            return unmarshal_json_response(
+                components.ChatResponse, http_res, http_res_text
+            )
         if utils.match_response(http_res, "200", "text/event-stream"):
             return eventstreaming.EventStream(
                 http_res,
                 lambda raw: utils.unmarshal_json(
-                    raw, models.ChatStreamingResponseChunk
+                    raw, components.ChatStreamingResponseChunk
                 ).data,
                 sentinel="[DONE]",
                 client_ref=self,
@@ -387,7 +397,7 @@ class Chat(BaseSDK):
     async def send_async(
         self,
         *,
-        messages: Union[List[models.Message], List[models.MessageTypedDict]],
+        messages: Union[List[components.Message], List[components.MessageTypedDict]],
         model: Optional[str] = None,
         models: Optional[List[str]] = None,
         frequency_penalty: OptionalNullable[float] = UNSET,
@@ -398,30 +408,32 @@ class Chat(BaseSDK):
         max_tokens: OptionalNullable[float] = UNSET,
         metadata: Optional[Dict[str, str]] = None,
         presence_penalty: OptionalNullable[float] = UNSET,
-        reasoning: Optional[Union[models.Reasoning, models.ReasoningTypedDict]] = None,
+        reasoning: Optional[
+            Union[components.Reasoning, components.ReasoningTypedDict]
+        ] = None,
         response_format: Optional[
             Union[
-                models.ChatGenerationParamsResponseFormatUnion,
-                models.ChatGenerationParamsResponseFormatUnionTypedDict,
+                components.ChatGenerationParamsResponseFormatUnion,
+                components.ChatGenerationParamsResponseFormatUnionTypedDict,
             ]
         ] = None,
         seed: OptionalNullable[int] = UNSET,
         stop: OptionalNullable[
             Union[
-                models.ChatGenerationParamsStop,
-                models.ChatGenerationParamsStopTypedDict,
+                components.ChatGenerationParamsStop,
+                components.ChatGenerationParamsStopTypedDict,
             ]
         ] = UNSET,
         stream: Union[Literal[False], None] = None,
         stream_options: OptionalNullable[
-            Union[models.ChatStreamOptions, models.ChatStreamOptionsTypedDict]
+            Union[components.ChatStreamOptions, components.ChatStreamOptionsTypedDict]
         ] = UNSET,
         temperature: OptionalNullable[float] = UNSET,
         tool_choice: Optional[Any] = None,
         tools: Optional[
             Union[
-                List[models.ToolDefinitionJSON],
-                List[models.ToolDefinitionJSONTypedDict],
+                List[components.ToolDefinitionJSON],
+                List[components.ToolDefinitionJSONTypedDict],
             ]
         ] = None,
         top_p: OptionalNullable[float] = UNSET,
@@ -430,7 +442,7 @@ class Chat(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.ChatResponse:
+    ) -> components.ChatResponse:
         r"""Create a chat completion
 
         Sends a request for a model response for the given chat conversation. Supports both streaming and non-streaming modes.
@@ -468,7 +480,7 @@ class Chat(BaseSDK):
     async def send_async(
         self,
         *,
-        messages: Union[List[models.Message], List[models.MessageTypedDict]],
+        messages: Union[List[components.Message], List[components.MessageTypedDict]],
         model: Optional[str] = None,
         models: Optional[List[str]] = None,
         frequency_penalty: OptionalNullable[float] = UNSET,
@@ -479,30 +491,32 @@ class Chat(BaseSDK):
         max_tokens: OptionalNullable[float] = UNSET,
         metadata: Optional[Dict[str, str]] = None,
         presence_penalty: OptionalNullable[float] = UNSET,
-        reasoning: Optional[Union[models.Reasoning, models.ReasoningTypedDict]] = None,
+        reasoning: Optional[
+            Union[components.Reasoning, components.ReasoningTypedDict]
+        ] = None,
         response_format: Optional[
             Union[
-                models.ChatGenerationParamsResponseFormatUnion,
-                models.ChatGenerationParamsResponseFormatUnionTypedDict,
+                components.ChatGenerationParamsResponseFormatUnion,
+                components.ChatGenerationParamsResponseFormatUnionTypedDict,
             ]
         ] = None,
         seed: OptionalNullable[int] = UNSET,
         stop: OptionalNullable[
             Union[
-                models.ChatGenerationParamsStop,
-                models.ChatGenerationParamsStopTypedDict,
+                components.ChatGenerationParamsStop,
+                components.ChatGenerationParamsStopTypedDict,
             ]
         ] = UNSET,
         stream: Literal[True],
         stream_options: OptionalNullable[
-            Union[models.ChatStreamOptions, models.ChatStreamOptionsTypedDict]
+            Union[components.ChatStreamOptions, components.ChatStreamOptionsTypedDict]
         ] = UNSET,
         temperature: OptionalNullable[float] = UNSET,
         tool_choice: Optional[Any] = None,
         tools: Optional[
             Union[
-                List[models.ToolDefinitionJSON],
-                List[models.ToolDefinitionJSONTypedDict],
+                List[components.ToolDefinitionJSON],
+                List[components.ToolDefinitionJSONTypedDict],
             ]
         ] = None,
         top_p: OptionalNullable[float] = UNSET,
@@ -511,7 +525,7 @@ class Chat(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> eventstreaming.EventStreamAsync[models.ChatStreamingResponseChunkData]:
+    ) -> eventstreaming.EventStreamAsync[components.ChatStreamingResponseChunkData]:
         r"""Create a chat completion
 
         Sends a request for a model response for the given chat conversation. Supports both streaming and non-streaming modes.
@@ -548,7 +562,7 @@ class Chat(BaseSDK):
     async def send_async(
         self,
         *,
-        messages: Union[List[models.Message], List[models.MessageTypedDict]],
+        messages: Union[List[components.Message], List[components.MessageTypedDict]],
         model: Optional[str] = None,
         models: Optional[List[str]] = None,
         frequency_penalty: OptionalNullable[float] = UNSET,
@@ -559,30 +573,32 @@ class Chat(BaseSDK):
         max_tokens: OptionalNullable[float] = UNSET,
         metadata: Optional[Dict[str, str]] = None,
         presence_penalty: OptionalNullable[float] = UNSET,
-        reasoning: Optional[Union[models.Reasoning, models.ReasoningTypedDict]] = None,
+        reasoning: Optional[
+            Union[components.Reasoning, components.ReasoningTypedDict]
+        ] = None,
         response_format: Optional[
             Union[
-                models.ChatGenerationParamsResponseFormatUnion,
-                models.ChatGenerationParamsResponseFormatUnionTypedDict,
+                components.ChatGenerationParamsResponseFormatUnion,
+                components.ChatGenerationParamsResponseFormatUnionTypedDict,
             ]
         ] = None,
         seed: OptionalNullable[int] = UNSET,
         stop: OptionalNullable[
             Union[
-                models.ChatGenerationParamsStop,
-                models.ChatGenerationParamsStopTypedDict,
+                components.ChatGenerationParamsStop,
+                components.ChatGenerationParamsStopTypedDict,
             ]
         ] = UNSET,
         stream: Optional[bool] = False,
         stream_options: OptionalNullable[
-            Union[models.ChatStreamOptions, models.ChatStreamOptionsTypedDict]
+            Union[components.ChatStreamOptions, components.ChatStreamOptionsTypedDict]
         ] = UNSET,
         temperature: OptionalNullable[float] = UNSET,
         tool_choice: Optional[Any] = None,
         tools: Optional[
             Union[
-                List[models.ToolDefinitionJSON],
-                List[models.ToolDefinitionJSONTypedDict],
+                List[components.ToolDefinitionJSON],
+                List[components.ToolDefinitionJSONTypedDict],
             ]
         ] = None,
         top_p: OptionalNullable[float] = UNSET,
@@ -591,7 +607,7 @@ class Chat(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.SendChatCompletionRequestResponse:
+    ) -> operations.SendChatCompletionRequestResponse:
         r"""Create a chat completion
 
         Sends a request for a model response for the given chat conversation. Supports both streaming and non-streaming modes.
@@ -634,8 +650,8 @@ class Chat(BaseSDK):
         else:
             base_url = self._get_url(base_url, url_variables)
 
-        request = models.ChatGenerationParams(
-            messages=utils.get_pydantic_model(messages, List[models.Message]),
+        request = components.ChatGenerationParams(
+            messages=utils.get_pydantic_model(messages, List[components.Message]),
             model=model,
             models=models,
             frequency_penalty=frequency_penalty,
@@ -646,21 +662,23 @@ class Chat(BaseSDK):
             max_tokens=max_tokens,
             metadata=metadata,
             presence_penalty=presence_penalty,
-            reasoning=utils.get_pydantic_model(reasoning, Optional[models.Reasoning]),
+            reasoning=utils.get_pydantic_model(
+                reasoning, Optional[components.Reasoning]
+            ),
             response_format=utils.get_pydantic_model(
                 response_format,
-                Optional[models.ChatGenerationParamsResponseFormatUnion],
+                Optional[components.ChatGenerationParamsResponseFormatUnion],
             ),
             seed=seed,
             stop=stop,
             stream=stream,
             stream_options=utils.get_pydantic_model(
-                stream_options, OptionalNullable[models.ChatStreamOptions]
+                stream_options, OptionalNullable[components.ChatStreamOptions]
             ),
             temperature=temperature,
             tool_choice=tool_choice,
             tools=utils.get_pydantic_model(
-                tools, Optional[List[models.ToolDefinitionJSON]]
+                tools, Optional[List[components.ToolDefinitionJSON]]
             ),
             top_p=top_p,
             user=user,
@@ -680,7 +698,7 @@ class Chat(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request, False, False, "json", models.ChatGenerationParams
+                request, False, False, "json", components.ChatGenerationParams
             ),
             timeout_ms=timeout_ms,
         )
@@ -700,7 +718,7 @@ class Chat(BaseSDK):
                 operation_id="sendChatCompletionRequest",
                 oauth2_scopes=None,
                 security_source=get_security_from_env(
-                    self.sdk_configuration.security, models.Security
+                    self.sdk_configuration.security, components.Security
                 ),
             ),
             request=req,
@@ -712,12 +730,14 @@ class Chat(BaseSDK):
         response_data: Any = None
         if utils.match_response(http_res, "200", "application/json"):
             http_res_text = await utils.stream_to_text_async(http_res)
-            return unmarshal_json_response(models.ChatResponse, http_res, http_res_text)
+            return unmarshal_json_response(
+                components.ChatResponse, http_res, http_res_text
+            )
         if utils.match_response(http_res, "200", "text/event-stream"):
             return eventstreaming.EventStreamAsync(
                 http_res,
                 lambda raw: utils.unmarshal_json(
-                    raw, models.ChatStreamingResponseChunk
+                    raw, components.ChatStreamingResponseChunk
                 ).data,
                 sentinel="[DONE]",
                 client_ref=self,

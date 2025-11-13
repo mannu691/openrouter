@@ -41,7 +41,7 @@ with OpenRouter(
 
 ### Response
 
-**[models.GetGenerationResponse](../../models/getgenerationresponse.md)**
+**[operations.GetGenerationResponse](../../operations/getgenerationresponse.md)**
 
 ### Errors
 

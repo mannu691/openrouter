@@ -42,7 +42,7 @@ with OpenRouter(
 
 ### Response
 
-**[models.ModelsCountResponse](../../models/modelscountresponse.md)**
+**[components.ModelsCountResponse](../../components/modelscountresponse.md)**
 
 ### Errors
 
@@ -84,7 +84,7 @@ with OpenRouter(
 
 ### Response
 
-**[models.ModelsListResponse](../../models/modelslistresponse.md)**
+**[components.ModelsListResponse](../../components/modelslistresponse.md)**
 
 ### Errors
 
@@ -102,13 +102,13 @@ List models filtered by user provider preferences
 
 <!-- UsageSnippet language="python" operationID="listModelsUser" method="get" path="/models/user" -->
 ```python
-from openrouter import OpenRouter, models
+from openrouter import OpenRouter, operations
 import os
 
 
 with OpenRouter() as open_router:
 
-    res = open_router.models.list_for_user(security=models.ListModelsUserSecurity(
+    res = open_router.models.list_for_user(security=operations.ListModelsUserSecurity(
         bearer=os.getenv("OPENROUTER_BEARER", ""),
     ))
 
@@ -119,14 +119,14 @@ with OpenRouter() as open_router:
 
 ### Parameters
 
-| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `security`                                                          | [models.ListModelsUserSecurity](../../listmodelsusersecurity.md)    | :heavy_check_mark:                                                  | The security requirements to use for the request.                   |
-| `retries`                                                           | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)    | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `security`                                                                      | [operations.ListModelsUserSecurity](../../operations/listmodelsusersecurity.md) | :heavy_check_mark:                                                              | The security requirements to use for the request.                               |
+| `retries`                                                                       | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                | :heavy_minus_sign:                                                              | Configuration to override the default retry behavior of the client.             |
 
 ### Response
 
-**[models.ModelsListResponse](../../models/modelslistresponse.md)**
+**[components.ModelsListResponse](../../components/modelslistresponse.md)**
 
 ### Errors
 

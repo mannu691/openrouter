@@ -3,18 +3,16 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 import httpx
-from openrouter.errors import OpenRouterError
-from openrouter.models import (
-    unprocessableentityresponseerrordata as models_unprocessableentityresponseerrordata,
+from openrouter.components import (
+    unprocessableentityresponseerrordata as components_unprocessableentityresponseerrordata,
 )
+from openrouter.errors import OpenRouterError
 from openrouter.types import BaseModel, OptionalNullable, UNSET
 from typing import Optional
 
 
 class UnprocessableEntityResponseErrorData(BaseModel):
-    error: (
-        models_unprocessableentityresponseerrordata.UnprocessableEntityResponseErrorData
-    )
+    error: components_unprocessableentityresponseerrordata.UnprocessableEntityResponseErrorData
     r"""Error data for UnprocessableEntityResponse"""
 
     user_id: OptionalNullable[str] = UNSET

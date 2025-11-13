@@ -40,7 +40,7 @@ with OpenRouter(
 
 ### Response
 
-**[models.ListProvidersResponse](../../models/listprovidersresponse.md)**
+**[operations.ListProvidersResponse](../../operations/listprovidersresponse.md)**
 
 ### Errors
 
