@@ -3,6 +3,7 @@
 from .basesdk import BaseSDK
 from openrouter import errors, models, utils
 from openrouter._hooks import HookContext
+from openrouter.models import listmodelsuserop as models_listmodelsuserop
 from openrouter.types import OptionalNullable, UNSET
 from openrouter.utils import get_security_from_env
 from openrouter.utils.unmarshal_json_response import unmarshal_json_response
@@ -382,7 +383,8 @@ class Models(BaseSDK):
         self,
         *,
         security: Union[
-            models.ListModelsUserSecurity, models.ListModelsUserSecurityTypedDict
+            models_listmodelsuserop.ListModelsUserSecurity,
+            models_listmodelsuserop.ListModelsUserSecurityTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
@@ -473,7 +475,8 @@ class Models(BaseSDK):
         self,
         *,
         security: Union[
-            models.ListModelsUserSecurity, models.ListModelsUserSecurityTypedDict
+            models_listmodelsuserop.ListModelsUserSecurity,
+            models_listmodelsuserop.ListModelsUserSecurityTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
