@@ -3,6 +3,7 @@
 from .basesdk import BaseSDK
 from openrouter import errors, models, utils
 from openrouter._hooks import HookContext
+from openrouter.models import completioncreateparams as models_completioncreateparams
 from openrouter.types import OptionalNullable, UNSET
 from openrouter.utils import get_security_from_env
 from openrouter.utils.unmarshal_json_response import unmarshal_json_response
@@ -13,7 +14,10 @@ class Completions(BaseSDK):
     def generate(
         self,
         *,
-        prompt: Union[models.Prompt, models.PromptTypedDict],
+        prompt: Union[
+            models_completioncreateparams.Prompt,
+            models_completioncreateparams.PromptTypedDict,
+        ],
         model: Optional[str] = None,
         models: Optional[List[str]] = None,
         best_of: OptionalNullable[int] = UNSET,
@@ -27,13 +31,16 @@ class Completions(BaseSDK):
         seed: OptionalNullable[int] = UNSET,
         stop: OptionalNullable[
             Union[
-                models.CompletionCreateParamsStop,
-                models.CompletionCreateParamsStopTypedDict,
+                models_completioncreateparams.CompletionCreateParamsStop,
+                models_completioncreateparams.CompletionCreateParamsStopTypedDict,
             ]
         ] = UNSET,
         stream: Optional[bool] = False,
         stream_options: OptionalNullable[
-            Union[models.StreamOptions, models.StreamOptionsTypedDict]
+            Union[
+                models_completioncreateparams.StreamOptions,
+                models_completioncreateparams.StreamOptionsTypedDict,
+            ]
         ] = UNSET,
         suffix: OptionalNullable[str] = UNSET,
         temperature: OptionalNullable[float] = UNSET,
@@ -42,8 +49,8 @@ class Completions(BaseSDK):
         metadata: OptionalNullable[Dict[str, str]] = UNSET,
         response_format: OptionalNullable[
             Union[
-                models.CompletionCreateParamsResponseFormatUnion,
-                models.CompletionCreateParamsResponseFormatUnionTypedDict,
+                models_completioncreateparams.CompletionCreateParamsResponseFormatUnion,
+                models_completioncreateparams.CompletionCreateParamsResponseFormatUnionTypedDict,
             ]
         ] = UNSET,
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
@@ -187,7 +194,10 @@ class Completions(BaseSDK):
     async def generate_async(
         self,
         *,
-        prompt: Union[models.Prompt, models.PromptTypedDict],
+        prompt: Union[
+            models_completioncreateparams.Prompt,
+            models_completioncreateparams.PromptTypedDict,
+        ],
         model: Optional[str] = None,
         models: Optional[List[str]] = None,
         best_of: OptionalNullable[int] = UNSET,
@@ -201,13 +211,16 @@ class Completions(BaseSDK):
         seed: OptionalNullable[int] = UNSET,
         stop: OptionalNullable[
             Union[
-                models.CompletionCreateParamsStop,
-                models.CompletionCreateParamsStopTypedDict,
+                models_completioncreateparams.CompletionCreateParamsStop,
+                models_completioncreateparams.CompletionCreateParamsStopTypedDict,
             ]
         ] = UNSET,
         stream: Optional[bool] = False,
         stream_options: OptionalNullable[
-            Union[models.StreamOptions, models.StreamOptionsTypedDict]
+            Union[
+                models_completioncreateparams.StreamOptions,
+                models_completioncreateparams.StreamOptionsTypedDict,
+            ]
         ] = UNSET,
         suffix: OptionalNullable[str] = UNSET,
         temperature: OptionalNullable[float] = UNSET,
@@ -216,8 +229,8 @@ class Completions(BaseSDK):
         metadata: OptionalNullable[Dict[str, str]] = UNSET,
         response_format: OptionalNullable[
             Union[
-                models.CompletionCreateParamsResponseFormatUnion,
-                models.CompletionCreateParamsResponseFormatUnionTypedDict,
+                models_completioncreateparams.CompletionCreateParamsResponseFormatUnion,
+                models_completioncreateparams.CompletionCreateParamsResponseFormatUnionTypedDict,
             ]
         ] = UNSET,
         retries: OptionalNullable[utils.RetryConfig] = UNSET,

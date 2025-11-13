@@ -4,10 +4,6 @@ from .basesdk import BaseSDK
 from datetime import datetime
 from openrouter import errors, models, utils
 from openrouter._hooks import HookContext
-from openrouter.models import (
-    createauthkeyscodeop as models_createauthkeyscodeop,
-    exchangeauthcodeforapikeyop as models_exchangeauthcodeforapikeyop,
-)
 from openrouter.types import OptionalNullable, UNSET
 from openrouter.utils import get_security_from_env
 from openrouter.utils.unmarshal_json_response import unmarshal_json_response
@@ -23,7 +19,7 @@ class OAuth(BaseSDK):
         code: str,
         code_verifier: Optional[str] = None,
         code_challenge_method: OptionalNullable[
-            models_exchangeauthcodeforapikeyop.ExchangeAuthCodeForAPIKeyCodeChallengeMethod
+            models.ExchangeAuthCodeForAPIKeyCodeChallengeMethod
         ] = UNSET,
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
@@ -139,7 +135,7 @@ class OAuth(BaseSDK):
         code: str,
         code_verifier: Optional[str] = None,
         code_challenge_method: OptionalNullable[
-            models_exchangeauthcodeforapikeyop.ExchangeAuthCodeForAPIKeyCodeChallengeMethod
+            models.ExchangeAuthCodeForAPIKeyCodeChallengeMethod
         ] = UNSET,
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
@@ -255,7 +251,7 @@ class OAuth(BaseSDK):
         callback_url: str,
         code_challenge: Optional[str] = None,
         code_challenge_method: Optional[
-            models_createauthkeyscodeop.CreateAuthKeysCodeCodeChallengeMethod
+            models.CreateAuthKeysCodeCodeChallengeMethod
         ] = None,
         limit: Optional[float] = None,
         expires_at: OptionalNullable[datetime] = UNSET,
@@ -375,7 +371,7 @@ class OAuth(BaseSDK):
         callback_url: str,
         code_challenge: Optional[str] = None,
         code_challenge_method: Optional[
-            models_createauthkeyscodeop.CreateAuthKeysCodeCodeChallengeMethod
+            models.CreateAuthKeysCodeCodeChallengeMethod
         ] = None,
         limit: Optional[float] = None,
         expires_at: OptionalNullable[datetime] = UNSET,

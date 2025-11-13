@@ -5,8 +5,8 @@ management:
   docVersion: 1.0.0
   speakeasyVersion: 1.656.2
   generationVersion: 2.753.6
-  releaseVersion: 0.0.6
-  configChecksum: 2607f78b7a882a4284d44b8d6f35b3f4
+  releaseVersion: 0.0.8
+  configChecksum: 7991d65ded64f0f90accf6ad3c8a2e7d
   published: true
 features:
   python:
@@ -522,7 +522,6 @@ generatedFiles:
   - docs/sdks/providers/README.md
   - docs/sdks/responses/README.md
   - py.typed
-  - pylintrc
   - pyproject.toml
   - scripts/publish.sh
   - src/openrouter/__init__.py
