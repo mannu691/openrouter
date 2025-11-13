@@ -1,0 +1,11 @@
+# ChatStreamingChoice
+
+
+## Fields
+
+| Field                                                                                      | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `delta`                                                                                    | [models.ChatStreamingMessageChunk](../models/chatstreamingmessagechunk.md)                 | :heavy_check_mark:                                                                         | N/A                                                                                        |
+| `finish_reason`                                                                            | [Nullable[models.ChatCompletionFinishReason]](../models/chatcompletionfinishreason.md)     | :heavy_check_mark:                                                                         | N/A                                                                                        |
+| `index`                                                                                    | *float*                                                                                    | :heavy_check_mark:                                                                         | N/A                                                                                        |
+| `logprobs`                                                                                 | [OptionalNullable[models.ChatMessageTokenLogprobs]](../models/chatmessagetokenlogprobs.md) | :heavy_minus_sign:                                                                         | N/A                                                                                        |

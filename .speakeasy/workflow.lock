@@ -1,0 +1,34 @@
+speakeasyVersion: 1.656.2
+sources:
+    -OAS:
+        sourceNamespace: open-router-chat-completions-api
+        sourceRevisionDigest: sha256:08647b466c00989914e3a2436175152270f771f0a57d055f5bab14cc2d4be89e
+        sourceBlobDigest: sha256:53027ec57392d9617cc001ece83c2fe1aa6e5dbfd52d170381c34c33c6042c23
+        tags:
+            - latest
+targets:
+    open-router:
+        source: -OAS
+        sourceNamespace: open-router-chat-completions-api
+        sourceRevisionDigest: sha256:08647b466c00989914e3a2436175152270f771f0a57d055f5bab14cc2d4be89e
+        sourceBlobDigest: sha256:53027ec57392d9617cc001ece83c2fe1aa6e5dbfd52d170381c34c33c6042c23
+workflow:
+    workflowVersion: 1.0.0
+    speakeasyVersion: latest
+    sources:
+        -OAS:
+            inputs:
+                - location: registry.speakeasyapi.dev/openrouter/sdk/open-router-chat-completions-api:main
+            output: .speakeasy/out.openapi.yaml
+            registry:
+                location: registry.speakeasyapi.dev/openrouter/sdk/-oas
+    targets:
+        open-router:
+            target: python
+            source: -OAS
+            codeSamples:
+                registry:
+                    location: registry.speakeasyapi.dev/openrouter/sdk/-oas-python-code-samples
+                labelOverride:
+                    fixedValue: Python (SDK)
+                blocking: false

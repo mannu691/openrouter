@@ -1,0 +1,1096 @@
+lockVersion: 2.0.0
+id: cfd52247-6a25-4c6d-bbce-fe6fce0cd69d
+management:
+  docChecksum: b1b97e85c6e3464e1fd6e2163c4ebc87
+  docVersion: 1.0.0
+  speakeasyVersion: 1.656.2
+  generationVersion: 2.753.6
+  releaseVersion: 0.0.1
+  configChecksum: 1d12f047ab1c8a906d4cd3f99af8d8f3
+features:
+  python:
+    acceptHeaders: 3.0.0
+    additionalDependencies: 1.0.0
+    constsAndDefaults: 1.0.5
+    core: 5.23.6
+    defaultEnabledRetries: 0.2.0
+    deprecations: 3.0.2
+    devContainers: 3.0.0
+    enumUnions: 0.1.0
+    envVarSecurityUsage: 0.3.2
+    flatRequests: 1.0.1
+    flattening: 3.1.1
+    globalSecurity: 3.0.4
+    globalSecurityCallbacks: 1.0.0
+    globalSecurityFlattening: 1.0.0
+    globalServerURLs: 3.2.0
+    groups: 3.0.1
+    methodArguments: 1.0.2
+    methodSecurity: 3.0.1
+    nameOverrides: 3.0.1
+    nullables: 1.0.1
+    openEnums: 1.0.1
+    responseFormat: 1.0.1
+    retries: 3.0.2
+    sdkHooks: 1.1.0
+    serverEvents: 1.0.11
+    serverEventsSentinels: 0.1.0
+    serverIDs: 3.0.0
+    unions: 3.1.0
+generatedFiles:
+  - .devcontainer/README.md
+  - .devcontainer/devcontainer.json
+  - .devcontainer/setup.sh
+  - .gitattributes
+  - .vscode/settings.json
+  - USAGE.md
+  - docs/errors/badgatewayresponseerror.md
+  - docs/errors/badrequestresponseerror.md
+  - docs/errors/chaterror.md
+  - docs/errors/edgenetworktimeoutresponseerror.md
+  - docs/errors/forbiddenresponseerror.md
+  - docs/errors/internalserverresponseerror.md
+  - docs/errors/notfoundresponseerror.md
+  - docs/errors/payloadtoolargeresponseerror.md
+  - docs/errors/paymentrequiredresponseerror.md
+  - docs/errors/provideroverloadedresponseerror.md
+  - docs/errors/requesttimeoutresponseerror.md
+  - docs/errors/serviceunavailableresponseerror.md
+  - docs/errors/toomanyrequestsresponseerror.md
+  - docs/errors/unauthorizedresponseerror.md
+  - docs/errors/unprocessableentityresponseerror.md
+  - docs/models/activityitem.md
+  - docs/models/apitype.md
+  - docs/models/architecture.md
+  - docs/models/assistantmessage.md
+  - docs/models/assistantmessagecontent.md
+  - docs/models/badgatewayresponseerrordata.md
+  - docs/models/badrequestresponseerrordata.md
+  - docs/models/calldata.md
+  - docs/models/chainid.md
+  - docs/models/chatcompletionfinishreason.md
+  - docs/models/chaterrorerror.md
+  - docs/models/chatgenerationparams.md
+  - docs/models/chatgenerationparamsresponseformatjsonobject.md
+  - docs/models/chatgenerationparamsresponseformatpython.md
+  - docs/models/chatgenerationparamsresponseformattext.md
+  - docs/models/chatgenerationparamsresponseformatunion.md
+  - docs/models/chatgenerationparamsstop.md
+  - docs/models/chatgenerationtokenusage.md
+  - docs/models/chatmessagecontentitem.md
+  - docs/models/chatmessagecontentitemaudio.md
+  - docs/models/chatmessagecontentitemaudioformat.md
+  - docs/models/chatmessagecontentitemaudioinputaudio.md
+  - docs/models/chatmessagecontentitemimage.md
+  - docs/models/chatmessagecontentitemimagedetail.md
+  - docs/models/chatmessagecontentitemtext.md
+  - docs/models/chatmessagecontentitemvideo.md
+  - docs/models/chatmessagetokenlogprob.md
+  - docs/models/chatmessagetokenlogprobs.md
+  - docs/models/chatmessagetoolcall.md
+  - docs/models/chatmessagetoolcallfunction.md
+  - docs/models/chatresponse.md
+  - docs/models/chatresponsechoice.md
+  - docs/models/chatstreamingchoice.md
+  - docs/models/chatstreamingmessagechunk.md
+  - docs/models/chatstreamingmessagechunkrole.md
+  - docs/models/chatstreamingmessagetoolcall.md
+  - docs/models/chatstreamingmessagetoolcallfunction.md
+  - docs/models/chatstreamingresponsechunk.md
+  - docs/models/chatstreamingresponsechunkdata.md
+  - docs/models/chatstreamingresponsechunkerror.md
+  - docs/models/chatstreamoptions.md
+  - docs/models/code.md
+  - docs/models/codeenum.md
+  - docs/models/completionchoice.md
+  - docs/models/completioncreateparams.md
+  - docs/models/completioncreateparamsresponseformatjsonobject.md
+  - docs/models/completioncreateparamsresponseformatpython.md
+  - docs/models/completioncreateparamsresponseformattext.md
+  - docs/models/completioncreateparamsresponseformatunion.md
+  - docs/models/completioncreateparamsstop.md
+  - docs/models/completionfinishreason.md
+  - docs/models/completionlogprobs.md
+  - docs/models/completionresponse.md
+  - docs/models/completiontokensdetails.md
+  - docs/models/completionusage.md
+  - docs/models/costdetails.md
+  - docs/models/createauthkeyscodecodechallengemethod.md
+  - docs/models/createauthkeyscodedata.md
+  - docs/models/createauthkeyscoderequest.md
+  - docs/models/createauthkeyscoderesponse.md
+  - docs/models/createchargerequest.md
+  - docs/models/createcoinbasechargedata.md
+  - docs/models/createcoinbasechargeresponse.md
+  - docs/models/createcoinbasechargesecurity.md
+  - docs/models/createembeddingsdata.md
+  - docs/models/createembeddingsdatacollection.md
+  - docs/models/createembeddingsignore.md
+  - docs/models/createembeddingsmaxprice.md
+  - docs/models/createembeddingsobject.md
+  - docs/models/createembeddingsonly.md
+  - docs/models/createembeddingsorder.md
+  - docs/models/createembeddingsprovider.md
+  - docs/models/createembeddingsrequest.md
+  - docs/models/createembeddingsresponse.md
+  - docs/models/createembeddingsresponsebody.md
+  - docs/models/createembeddingssort.md
+  - docs/models/createkeysdata.md
+  - docs/models/createkeyslimitreset.md
+  - docs/models/createkeysrequest.md
+  - docs/models/createkeysresponse.md
+  - docs/models/createresponsesresponse.md
+  - docs/models/createresponsesresponsebody.md
+  - docs/models/datacollection.md
+  - docs/models/defaultparameters.md
+  - docs/models/deletekeysrequest.md
+  - docs/models/deletekeysresponse.md
+  - docs/models/edgenetworktimeoutresponseerrordata.md
+  - docs/models/effort.md
+  - docs/models/embedding.md
+  - docs/models/encodingformat.md
+  - docs/models/encodingformatbase64.md
+  - docs/models/encodingformatfloat.md
+  - docs/models/endpointslistendpointsresponse.md
+  - docs/models/endpointstatus.md
+  - docs/models/engine.md
+  - docs/models/exchangeauthcodeforapikeycodechallengemethod.md
+  - docs/models/exchangeauthcodeforapikeyrequest.md
+  - docs/models/exchangeauthcodeforapikeyresponse.md
+  - docs/models/filecitation.md
+  - docs/models/filecitationtype.md
+  - docs/models/filepath.md
+  - docs/models/filepathtype.md
+  - docs/models/forbiddenresponseerrordata.md
+  - docs/models/getcreditsresponse.md
+  - docs/models/getcurrentkeydata.md
+  - docs/models/getcurrentkeyresponse.md
+  - docs/models/getgenerationdata.md
+  - docs/models/getgenerationrequest.md
+  - docs/models/getgenerationresponse.md
+  - docs/models/getkeydata.md
+  - docs/models/getkeyrequest.md
+  - docs/models/getkeyresponse.md
+  - docs/models/getmodelsrequest.md
+  - docs/models/getparametersdata.md
+  - docs/models/getparametersprovider.md
+  - docs/models/getparametersrequest.md
+  - docs/models/getparametersresponse.md
+  - docs/models/getparameterssecurity.md
+  - docs/models/getuseractivityrequest.md
+  - docs/models/getuseractivityresponse.md
+  - docs/models/idfileparser.md
+  - docs/models/idmoderation.md
+  - docs/models/idweb.md
+  - docs/models/ignore.md
+  - docs/models/imagegenerationstatus.md
+  - docs/models/imageurl.md
+  - docs/models/input.md
+  - docs/models/inputmodality.md
+  - docs/models/inputtokensdetails.md
+  - docs/models/instructtype.md
+  - docs/models/internalserverresponseerrordata.md
+  - docs/models/jsonschemaconfig.md
+  - docs/models/listdata.md
+  - docs/models/listendpointsrequest.md
+  - docs/models/listendpointsresponse.md
+  - docs/models/listendpointszdrresponse.md
+  - docs/models/listmodelsusersecurity.md
+  - docs/models/listprovidersdata.md
+  - docs/models/listprovidersresponse.md
+  - docs/models/listrequest.md
+  - docs/models/listresponse.md
+  - docs/models/maxprice.md
+  - docs/models/message.md
+  - docs/models/messagecontent.md
+  - docs/models/messagedeveloper.md
+  - docs/models/metadata.md
+  - docs/models/model.md
+  - docs/models/modelarchitecture.md
+  - docs/models/modelarchitectureinstructtype.md
+  - docs/models/modelgroup.md
+  - docs/models/modelscountresponse.md
+  - docs/models/modelscountresponsedata.md
+  - docs/models/modelslistresponse.md
+  - docs/models/namedtoolchoice.md
+  - docs/models/namedtoolchoicefunction.md
+  - docs/models/notfoundresponseerrordata.md
+  - docs/models/object.md
+  - docs/models/objectembedding.md
+  - docs/models/only.md
+  - docs/models/openairesponsesannotation.md
+  - docs/models/openairesponsesincludable.md
+  - docs/models/openairesponsesincompletedetails.md
+  - docs/models/openairesponsesinputcontent1.md
+  - docs/models/openairesponsesinputcontent2.md
+  - docs/models/openairesponsesinputcontent3.md
+  - docs/models/openairesponsesinputfunctioncall.md
+  - docs/models/openairesponsesinputfunctioncalloutput.md
+  - docs/models/openairesponsesinputmessage1.md
+  - docs/models/openairesponsesinputmessage2.md
+  - docs/models/openairesponsesinputroleassistant.md
+  - docs/models/openairesponsesinputroledeveloper1.md
+  - docs/models/openairesponsesinputroledeveloper2.md
+  - docs/models/openairesponsesinputrolesystem1.md
+  - docs/models/openairesponsesinputrolesystem2.md
+  - docs/models/openairesponsesinputroleunion1.md
+  - docs/models/openairesponsesinputroleunion2.md
+  - docs/models/openairesponsesinputroleuser1.md
+  - docs/models/openairesponsesinputroleuser2.md
+  - docs/models/openairesponsesinputtypefunctioncall.md
+  - docs/models/openairesponsesinputtypefunctioncalloutput.md
+  - docs/models/openairesponsesinputtypemessage1.md
+  - docs/models/openairesponsesinputtypemessage2.md
+  - docs/models/openairesponsesinputunion.md
+  - docs/models/openairesponsesinputunion1.md
+  - docs/models/openairesponsesprompt.md
+  - docs/models/openairesponsesreasoningconfig.md
+  - docs/models/openairesponsesreasoningeffort.md
+  - docs/models/openairesponsesrefusalcontent.md
+  - docs/models/openairesponsesrefusalcontenttype.md
+  - docs/models/openairesponsesresponsestatus.md
+  - docs/models/openairesponsesservicetier.md
+  - docs/models/openairesponsestoolchoice.md
+  - docs/models/openairesponsestoolchoiceauto.md
+  - docs/models/openairesponsestoolchoicefunction.md
+  - docs/models/openairesponsestoolchoicenone.md
+  - docs/models/openairesponsestoolchoicerequired.md
+  - docs/models/openairesponsestoolchoicetypefunction.md
+  - docs/models/openairesponsestoolchoicetypewebsearchpreview.md
+  - docs/models/openairesponsestoolchoicetypewebsearchpreview20250311.md
+  - docs/models/openairesponsestoolchoiceunion.md
+  - docs/models/openairesponsestruncation.md
+  - docs/models/openresponseseasyinputmessage.md
+  - docs/models/openresponseseasyinputmessagecontent1.md
+  - docs/models/openresponseseasyinputmessagecontent2.md
+  - docs/models/openresponseseasyinputmessageroleassistant.md
+  - docs/models/openresponseseasyinputmessageroledeveloper.md
+  - docs/models/openresponseseasyinputmessagerolesystem.md
+  - docs/models/openresponseseasyinputmessageroleunion.md
+  - docs/models/openresponseseasyinputmessageroleuser.md
+  - docs/models/openresponseseasyinputmessagetype.md
+  - docs/models/openresponseserrorevent.md
+  - docs/models/openresponseserroreventtype.md
+  - docs/models/openresponsesfunctioncalloutput.md
+  - docs/models/openresponsesfunctioncalloutputtype.md
+  - docs/models/openresponsesfunctiontoolcall.md
+  - docs/models/openresponsesfunctiontoolcalltype.md
+  - docs/models/openresponsesimagegencallcompleted.md
+  - docs/models/openresponsesimagegencallcompletedtype.md
+  - docs/models/openresponsesimagegencallgenerating.md
+  - docs/models/openresponsesimagegencallgeneratingtype.md
+  - docs/models/openresponsesimagegencallinprogress.md
+  - docs/models/openresponsesimagegencallinprogresstype.md
+  - docs/models/openresponsesimagegencallpartialimage.md
+  - docs/models/openresponsesimagegencallpartialimagetype.md
+  - docs/models/openresponsesinput.md
+  - docs/models/openresponsesinput1.md
+  - docs/models/openresponsesinputmessageitem.md
+  - docs/models/openresponsesinputmessageitemcontent.md
+  - docs/models/openresponsesinputmessageitemroledeveloper.md
+  - docs/models/openresponsesinputmessageitemrolesystem.md
+  - docs/models/openresponsesinputmessageitemroleunion.md
+  - docs/models/openresponsesinputmessageitemroleuser.md
+  - docs/models/openresponsesinputmessageitemtype.md
+  - docs/models/openresponseslogprobs.md
+  - docs/models/openresponsesnonstreamingresponse.md
+  - docs/models/openresponsesnonstreamingresponsetoolfunction.md
+  - docs/models/openresponsesnonstreamingresponsetoolunion.md
+  - docs/models/openresponsesnonstreamingresponsetype.md
+  - docs/models/openresponsesreasoning.md
+  - docs/models/openresponsesreasoningconfig.md
+  - docs/models/openresponsesreasoningdeltaevent.md
+  - docs/models/openresponsesreasoningdeltaeventtype.md
+  - docs/models/openresponsesreasoningdoneevent.md
+  - docs/models/openresponsesreasoningdoneeventtype.md
+  - docs/models/openresponsesreasoningformat.md
+  - docs/models/openresponsesreasoningstatuscompleted.md
+  - docs/models/openresponsesreasoningstatusincomplete.md
+  - docs/models/openresponsesreasoningstatusinprogress.md
+  - docs/models/openresponsesreasoningstatusunion.md
+  - docs/models/openresponsesreasoningsummarypartaddedevent.md
+  - docs/models/openresponsesreasoningsummarypartaddedeventtype.md
+  - docs/models/openresponsesreasoningsummarytextdeltaevent.md
+  - docs/models/openresponsesreasoningsummarytextdeltaeventtype.md
+  - docs/models/openresponsesreasoningsummarytextdoneevent.md
+  - docs/models/openresponsesreasoningsummarytextdoneeventtype.md
+  - docs/models/openresponsesreasoningtype.md
+  - docs/models/openresponsesrequest.md
+  - docs/models/openresponsesrequesttoolfunction.md
+  - docs/models/openresponsesrequesttoolunion.md
+  - docs/models/openresponsesrequesttype.md
+  - docs/models/openresponsesresponsetext.md
+  - docs/models/openresponsesresponsetextverbosity.md
+  - docs/models/openresponsesstreamevent.md
+  - docs/models/openresponsesstreameventresponsecompleted.md
+  - docs/models/openresponsesstreameventresponsecontentpartadded.md
+  - docs/models/openresponsesstreameventresponsecontentpartdone.md
+  - docs/models/openresponsesstreameventresponsecreated.md
+  - docs/models/openresponsesstreameventresponsefailed.md
+  - docs/models/openresponsesstreameventresponsefunctioncallargumentsdelta.md
+  - docs/models/openresponsesstreameventresponsefunctioncallargumentsdone.md
+  - docs/models/openresponsesstreameventresponseincomplete.md
+  - docs/models/openresponsesstreameventresponseinprogress.md
+  - docs/models/openresponsesstreameventresponseoutputitemadded.md
+  - docs/models/openresponsesstreameventresponseoutputitemdone.md
+  - docs/models/openresponsesstreameventresponseoutputtextannotationadded.md
+  - docs/models/openresponsesstreameventresponseoutputtextdelta.md
+  - docs/models/openresponsesstreameventresponseoutputtextdone.md
+  - docs/models/openresponsesstreameventresponsereasoningsummarypartdone.md
+  - docs/models/openresponsesstreameventresponserefusaldelta.md
+  - docs/models/openresponsesstreameventresponserefusaldone.md
+  - docs/models/openresponsestoplogprobs.md
+  - docs/models/openresponsesusage.md
+  - docs/models/openresponseswebsearch20250826tool.md
+  - docs/models/openresponseswebsearch20250826toolfilters.md
+  - docs/models/openresponseswebsearch20250826tooltype.md
+  - docs/models/openresponseswebsearchpreview20250311tool.md
+  - docs/models/openresponseswebsearchpreview20250311tooltype.md
+  - docs/models/openresponseswebsearchpreviewtool.md
+  - docs/models/openresponseswebsearchpreviewtooltype.md
+  - docs/models/openresponseswebsearchtool.md
+  - docs/models/openresponseswebsearchtoolfilters.md
+  - docs/models/openresponseswebsearchtooltype.md
+  - docs/models/order.md
+  - docs/models/outputitemimagegenerationcall.md
+  - docs/models/outputitemimagegenerationcalltype.md
+  - docs/models/outputmessage.md
+  - docs/models/outputmessagecontent.md
+  - docs/models/outputmessagerole.md
+  - docs/models/outputmessagestatuscompleted.md
+  - docs/models/outputmessagestatusincomplete.md
+  - docs/models/outputmessagestatusinprogress.md
+  - docs/models/outputmessagestatusunion.md
+  - docs/models/outputmessagetype.md
+  - docs/models/outputmodality.md
+  - docs/models/outputtokensdetails.md
+  - docs/models/parameter.md
+  - docs/models/part1.md
+  - docs/models/part2.md
+  - docs/models/payloadtoolargeresponseerrordata.md
+  - docs/models/paymentrequiredresponseerrordata.md
+  - docs/models/pdf.md
+  - docs/models/pdfengine.md
+  - docs/models/perrequestlimits.md
+  - docs/models/plugin.md
+  - docs/models/pluginfileparser.md
+  - docs/models/pluginmoderation.md
+  - docs/models/pluginweb.md
+  - docs/models/pricing.md
+  - docs/models/prompt.md
+  - docs/models/prompttokensdetails.md
+  - docs/models/provider.md
+  - docs/models/providername.md
+  - docs/models/provideroverloadedresponseerrordata.md
+  - docs/models/publicendpoint.md
+  - docs/models/publicendpointquantization.md
+  - docs/models/publicpricing.md
+  - docs/models/quantization.md
+  - docs/models/ratelimit.md
+  - docs/models/reason.md
+  - docs/models/reasoning.md
+  - docs/models/reasoningsummarytext.md
+  - docs/models/reasoningsummarytexttype.md
+  - docs/models/reasoningsummaryverbosity.md
+  - docs/models/reasoningtextcontent.md
+  - docs/models/reasoningtextcontenttype.md
+  - docs/models/requesttimeoutresponseerrordata.md
+  - docs/models/responseformatjsonschema.md
+  - docs/models/responseformattextconfig.md
+  - docs/models/responseformattextgrammar.md
+  - docs/models/responseinputaudio.md
+  - docs/models/responseinputaudioformat.md
+  - docs/models/responseinputaudioinputaudio.md
+  - docs/models/responseinputaudiotype.md
+  - docs/models/responseinputfile.md
+  - docs/models/responseinputfiletype.md
+  - docs/models/responseinputimage.md
+  - docs/models/responseinputimagedetail.md
+  - docs/models/responseinputimagetype.md
+  - docs/models/responseinputtext.md
+  - docs/models/responseinputtexttype.md
+  - docs/models/responseoutputtext.md
+  - docs/models/responseoutputtexttype.md
+  - docs/models/responseserrorfield.md
+  - docs/models/responsesformatjsonobject.md
+  - docs/models/responsesformatjsonobjecttype.md
+  - docs/models/responsesformattext.md
+  - docs/models/responsesformattextjsonschemaconfig.md
+  - docs/models/responsesformattextjsonschemaconfigtype.md
+  - docs/models/responsesformattexttype.md
+  - docs/models/responsesimagegenerationcall.md
+  - docs/models/responsesimagegenerationcalltype.md
+  - docs/models/responsesoutputitem.md
+  - docs/models/responsesoutputitemfilesearchcall.md
+  - docs/models/responsesoutputitemfilesearchcalltype.md
+  - docs/models/responsesoutputitemfunctioncall.md
+  - docs/models/responsesoutputitemfunctioncallstatuscompleted.md
+  - docs/models/responsesoutputitemfunctioncallstatusincomplete.md
+  - docs/models/responsesoutputitemfunctioncallstatusinprogress.md
+  - docs/models/responsesoutputitemfunctioncallstatusunion.md
+  - docs/models/responsesoutputitemfunctioncalltype.md
+  - docs/models/responsesoutputitemreasoning.md
+  - docs/models/responsesoutputitemreasoningstatuscompleted.md
+  - docs/models/responsesoutputitemreasoningstatusincomplete.md
+  - docs/models/responsesoutputitemreasoningstatusinprogress.md
+  - docs/models/responsesoutputitemreasoningstatusunion.md
+  - docs/models/responsesoutputitemreasoningtype.md
+  - docs/models/responsesoutputmessage.md
+  - docs/models/responsesoutputmessagecontent.md
+  - docs/models/responsesoutputmessagerole.md
+  - docs/models/responsesoutputmessagestatuscompleted.md
+  - docs/models/responsesoutputmessagestatusincomplete.md
+  - docs/models/responsesoutputmessagestatusinprogress.md
+  - docs/models/responsesoutputmessagestatusunion.md
+  - docs/models/responsesoutputmessagetype.md
+  - docs/models/responsessearchcontextsize.md
+  - docs/models/responseswebsearchcalloutput.md
+  - docs/models/responseswebsearchcalloutputtype.md
+  - docs/models/responseswebsearchuserlocation.md
+  - docs/models/responseswebsearchuserlocationtype.md
+  - docs/models/responsetextconfig.md
+  - docs/models/responsetextconfigverbosity.md
+  - docs/models/security.md
+  - docs/models/sendchatcompletionrequestresponse.md
+  - docs/models/servicetier.md
+  - docs/models/serviceunavailableresponseerrordata.md
+  - docs/models/sort.md
+  - docs/models/streamoptions.md
+  - docs/models/supportedparameter.md
+  - docs/models/systemmessage.md
+  - docs/models/systemmessagecontent.md
+  - docs/models/tokenizer.md
+  - docs/models/toolcallstatus.md
+  - docs/models/tooldefinitionjson.md
+  - docs/models/tooldefinitionjsonfunction.md
+  - docs/models/toolresponsemessage.md
+  - docs/models/toolresponsemessagecontent.md
+  - docs/models/toomanyrequestsresponseerrordata.md
+  - docs/models/toplogprob.md
+  - docs/models/topproviderinfo.md
+  - docs/models/transferintent.md
+  - docs/models/truncation.md
+  - docs/models/type.md
+  - docs/models/typeresponsecompleted.md
+  - docs/models/typeresponsecontentpartadded.md
+  - docs/models/typeresponsecontentpartdone.md
+  - docs/models/typeresponsecreated.md
+  - docs/models/typeresponsefailed.md
+  - docs/models/typeresponsefunctioncallargumentsdelta.md
+  - docs/models/typeresponsefunctioncallargumentsdone.md
+  - docs/models/typeresponseincomplete.md
+  - docs/models/typeresponseinprogress.md
+  - docs/models/typeresponseoutputitemadded.md
+  - docs/models/typeresponseoutputitemdone.md
+  - docs/models/typeresponseoutputtextannotationadded.md
+  - docs/models/typeresponseoutputtextdelta.md
+  - docs/models/typeresponseoutputtextdone.md
+  - docs/models/typeresponsereasoningsummarypartdone.md
+  - docs/models/typeresponserefusaldelta.md
+  - docs/models/typeresponserefusaldone.md
+  - docs/models/unauthorizedresponseerrordata.md
+  - docs/models/unprocessableentityresponseerrordata.md
+  - docs/models/updatekeysdata.md
+  - docs/models/updatekeyslimitreset.md
+  - docs/models/updatekeysrequest.md
+  - docs/models/updatekeysrequestbody.md
+  - docs/models/updatekeysresponse.md
+  - docs/models/urlcitation.md
+  - docs/models/urlcitationtype.md
+  - docs/models/usage.md
+  - docs/models/usermessage.md
+  - docs/models/usermessagecontent.md
+  - docs/models/utils/retryconfig.md
+  - docs/models/variables.md
+  - docs/models/videourl.md
+  - docs/models/web3data.md
+  - docs/models/websearchpreviewtooluserlocation.md
+  - docs/models/websearchpreviewtooluserlocationtype.md
+  - docs/models/websearchstatus.md
+  - docs/sdks/analytics/README.md
+  - docs/sdks/apikeys/README.md
+  - docs/sdks/chat/README.md
+  - docs/sdks/completions/README.md
+  - docs/sdks/credits/README.md
+  - docs/sdks/embeddings/README.md
+  - docs/sdks/endpoints/README.md
+  - docs/sdks/generations/README.md
+  - docs/sdks/models/README.md
+  - docs/sdks/oauth/README.md
+  - docs/sdks/parameters/README.md
+  - docs/sdks/providers/README.md
+  - docs/sdks/responses/README.md
+  - py.typed
+  - pylintrc
+  - pyproject.toml
+  - scripts/publish.sh
+  - src/openrouter/__init__.py
+  - src/openrouter/_hooks/__init__.py
+  - src/openrouter/_hooks/sdkhooks.py
+  - src/openrouter/_hooks/types.py
+  - src/openrouter/_version.py
+  - src/openrouter/analytics.py
+  - src/openrouter/api_keys.py
+  - src/openrouter/basesdk.py
+  - src/openrouter/beta.py
+  - src/openrouter/chat.py
+  - src/openrouter/completions.py
+  - src/openrouter/credits.py
+  - src/openrouter/embeddings.py
+  - src/openrouter/endpoints.py
+  - src/openrouter/errors/__init__.py
+  - src/openrouter/errors/badgatewayresponse_error.py
+  - src/openrouter/errors/badrequestresponse_error.py
+  - src/openrouter/errors/chaterror.py
+  - src/openrouter/errors/edgenetworktimeoutresponse_error.py
+  - src/openrouter/errors/forbiddenresponse_error.py
+  - src/openrouter/errors/internalserverresponse_error.py
+  - src/openrouter/errors/no_response_error.py
+  - src/openrouter/errors/notfoundresponse_error.py
+  - src/openrouter/errors/openrouterdefaulterror.py
+  - src/openrouter/errors/openroutererror.py
+  - src/openrouter/errors/payloadtoolargeresponse_error.py
+  - src/openrouter/errors/paymentrequiredresponse_error.py
+  - src/openrouter/errors/provideroverloadedresponse_error.py
+  - src/openrouter/errors/requesttimeoutresponse_error.py
+  - src/openrouter/errors/responsevalidationerror.py
+  - src/openrouter/errors/serviceunavailableresponse_error.py
+  - src/openrouter/errors/toomanyrequestsresponse_error.py
+  - src/openrouter/errors/unauthorizedresponse_error.py
+  - src/openrouter/errors/unprocessableentityresponse_error.py
+  - src/openrouter/generations.py
+  - src/openrouter/httpclient.py
+  - src/openrouter/models/__init__.py
+  - src/openrouter/models/activityitem.py
+  - src/openrouter/models/assistantmessage.py
+  - src/openrouter/models/badgatewayresponseerrordata.py
+  - src/openrouter/models/badrequestresponseerrordata.py
+  - src/openrouter/models/chatcompletionfinishreason.py
+  - src/openrouter/models/chaterror.py
+  - src/openrouter/models/chatgenerationparams.py
+  - src/openrouter/models/chatgenerationtokenusage.py
+  - src/openrouter/models/chatmessagecontentitem.py
+  - src/openrouter/models/chatmessagecontentitemaudio.py
+  - src/openrouter/models/chatmessagecontentitemimage.py
+  - src/openrouter/models/chatmessagecontentitemtext.py
+  - src/openrouter/models/chatmessagecontentitemvideo.py
+  - src/openrouter/models/chatmessagetokenlogprob.py
+  - src/openrouter/models/chatmessagetokenlogprobs.py
+  - src/openrouter/models/chatmessagetoolcall.py
+  - src/openrouter/models/chatresponse.py
+  - src/openrouter/models/chatresponsechoice.py
+  - src/openrouter/models/chatstreamingchoice.py
+  - src/openrouter/models/chatstreamingmessagechunk.py
+  - src/openrouter/models/chatstreamingmessagetoolcall.py
+  - src/openrouter/models/chatstreamingresponsechunk.py
+  - src/openrouter/models/chatstreamoptions.py
+  - src/openrouter/models/completionchoice.py
+  - src/openrouter/models/completioncreateparams.py
+  - src/openrouter/models/completionlogprobs.py
+  - src/openrouter/models/completionresponse.py
+  - src/openrouter/models/completionusage.py
+  - src/openrouter/models/createauthkeyscodeop.py
+  - src/openrouter/models/createchargerequest.py
+  - src/openrouter/models/createcoinbasechargeop.py
+  - src/openrouter/models/createembeddingsop.py
+  - src/openrouter/models/createkeysop.py
+  - src/openrouter/models/createresponsesop.py
+  - src/openrouter/models/defaultparameters.py
+  - src/openrouter/models/deletekeysop.py
+  - src/openrouter/models/edgenetworktimeoutresponseerrordata.py
+  - src/openrouter/models/endpointstatus.py
+  - src/openrouter/models/exchangeauthcodeforapikeyop.py
+  - src/openrouter/models/filecitation.py
+  - src/openrouter/models/filepath.py
+  - src/openrouter/models/forbiddenresponseerrordata.py
+  - src/openrouter/models/getcreditsop.py
+  - src/openrouter/models/getcurrentkeyop.py
+  - src/openrouter/models/getgenerationop.py
+  - src/openrouter/models/getkeyop.py
+  - src/openrouter/models/getmodelsop.py
+  - src/openrouter/models/getparametersop.py
+  - src/openrouter/models/getuseractivityop.py
+  - src/openrouter/models/imagegenerationstatus.py
+  - src/openrouter/models/inputmodality.py
+  - src/openrouter/models/instructtype.py
+  - src/openrouter/models/internalserverresponseerrordata.py
+  - src/openrouter/models/jsonschemaconfig.py
+  - src/openrouter/models/listendpointsop.py
+  - src/openrouter/models/listendpointsresponse.py
+  - src/openrouter/models/listendpointszdrop.py
+  - src/openrouter/models/listmodelsuserop.py
+  - src/openrouter/models/listop.py
+  - src/openrouter/models/listprovidersop.py
+  - src/openrouter/models/message.py
+  - src/openrouter/models/model.py
+  - src/openrouter/models/modelarchitecture.py
+  - src/openrouter/models/modelgroup.py
+  - src/openrouter/models/modelscountresponse.py
+  - src/openrouter/models/modelslistresponse.py
+  - src/openrouter/models/namedtoolchoice.py
+  - src/openrouter/models/notfoundresponseerrordata.py
+  - src/openrouter/models/openairesponsesannotation.py
+  - src/openrouter/models/openairesponsesincludable.py
+  - src/openrouter/models/openairesponsesincompletedetails.py
+  - src/openrouter/models/openairesponsesinput_union.py
+  - src/openrouter/models/openairesponsesprompt.py
+  - src/openrouter/models/openairesponsesreasoningconfig.py
+  - src/openrouter/models/openairesponsesreasoningeffort.py
+  - src/openrouter/models/openairesponsesrefusalcontent.py
+  - src/openrouter/models/openairesponsesresponsestatus.py
+  - src/openrouter/models/openairesponsesservicetier.py
+  - src/openrouter/models/openairesponsestoolchoice_union.py
+  - src/openrouter/models/openairesponsestruncation.py
+  - src/openrouter/models/openresponseseasyinputmessage.py
+  - src/openrouter/models/openresponseserrorevent.py
+  - src/openrouter/models/openresponsesfunctioncalloutput.py
+  - src/openrouter/models/openresponsesfunctiontoolcall.py
+  - src/openrouter/models/openresponsesimagegencallcompleted.py
+  - src/openrouter/models/openresponsesimagegencallgenerating.py
+  - src/openrouter/models/openresponsesimagegencallinprogress.py
+  - src/openrouter/models/openresponsesimagegencallpartialimage.py
+  - src/openrouter/models/openresponsesinput.py
+  - src/openrouter/models/openresponsesinputmessageitem.py
+  - src/openrouter/models/openresponseslogprobs.py
+  - src/openrouter/models/openresponsesnonstreamingresponse.py
+  - src/openrouter/models/openresponsesreasoning.py
+  - src/openrouter/models/openresponsesreasoningconfig.py
+  - src/openrouter/models/openresponsesreasoningdeltaevent.py
+  - src/openrouter/models/openresponsesreasoningdoneevent.py
+  - src/openrouter/models/openresponsesreasoningsummarypartaddedevent.py
+  - src/openrouter/models/openresponsesreasoningsummarytextdeltaevent.py
+  - src/openrouter/models/openresponsesreasoningsummarytextdoneevent.py
+  - src/openrouter/models/openresponsesrequest.py
+  - src/openrouter/models/openresponsesresponsetext.py
+  - src/openrouter/models/openresponsesstreamevent.py
+  - src/openrouter/models/openresponsestoplogprobs.py
+  - src/openrouter/models/openresponsesusage.py
+  - src/openrouter/models/openresponseswebsearch20250826tool.py
+  - src/openrouter/models/openresponseswebsearchpreview20250311tool.py
+  - src/openrouter/models/openresponseswebsearchpreviewtool.py
+  - src/openrouter/models/openresponseswebsearchtool.py
+  - src/openrouter/models/outputitemimagegenerationcall.py
+  - src/openrouter/models/outputmessage.py
+  - src/openrouter/models/outputmodality.py
+  - src/openrouter/models/parameter.py
+  - src/openrouter/models/payloadtoolargeresponseerrordata.py
+  - src/openrouter/models/paymentrequiredresponseerrordata.py
+  - src/openrouter/models/perrequestlimits.py
+  - src/openrouter/models/providername.py
+  - src/openrouter/models/provideroverloadedresponseerrordata.py
+  - src/openrouter/models/publicendpoint.py
+  - src/openrouter/models/publicpricing.py
+  - src/openrouter/models/quantization.py
+  - src/openrouter/models/reasoningsummarytext.py
+  - src/openrouter/models/reasoningsummaryverbosity.py
+  - src/openrouter/models/reasoningtextcontent.py
+  - src/openrouter/models/requesttimeoutresponseerrordata.py
+  - src/openrouter/models/responseformatjsonschema.py
+  - src/openrouter/models/responseformattextconfig.py
+  - src/openrouter/models/responseformattextgrammar.py
+  - src/openrouter/models/responseinputaudio.py
+  - src/openrouter/models/responseinputfile.py
+  - src/openrouter/models/responseinputimage.py
+  - src/openrouter/models/responseinputtext.py
+  - src/openrouter/models/responseoutputtext.py
+  - src/openrouter/models/responseserrorfield.py
+  - src/openrouter/models/responsesformatjsonobject.py
+  - src/openrouter/models/responsesformattext.py
+  - src/openrouter/models/responsesformattextjsonschemaconfig.py
+  - src/openrouter/models/responsesimagegenerationcall.py
+  - src/openrouter/models/responsesoutputitem.py
+  - src/openrouter/models/responsesoutputitemfilesearchcall.py
+  - src/openrouter/models/responsesoutputitemfunctioncall.py
+  - src/openrouter/models/responsesoutputitemreasoning.py
+  - src/openrouter/models/responsesoutputmessage.py
+  - src/openrouter/models/responsessearchcontextsize.py
+  - src/openrouter/models/responseswebsearchcalloutput.py
+  - src/openrouter/models/responseswebsearchuserlocation.py
+  - src/openrouter/models/responsetextconfig.py
+  - src/openrouter/models/security.py
+  - src/openrouter/models/sendchatcompletionrequestop.py
+  - src/openrouter/models/serviceunavailableresponseerrordata.py
+  - src/openrouter/models/systemmessage.py
+  - src/openrouter/models/toolcallstatus.py
+  - src/openrouter/models/tooldefinitionjson.py
+  - src/openrouter/models/toolresponsemessage.py
+  - src/openrouter/models/toomanyrequestsresponseerrordata.py
+  - src/openrouter/models/topproviderinfo.py
+  - src/openrouter/models/unauthorizedresponseerrordata.py
+  - src/openrouter/models/unprocessableentityresponseerrordata.py
+  - src/openrouter/models/updatekeysop.py
+  - src/openrouter/models/urlcitation.py
+  - src/openrouter/models/usermessage.py
+  - src/openrouter/models/websearchpreviewtooluserlocation.py
+  - src/openrouter/models/websearchstatus.py
+  - src/openrouter/models_.py
+  - src/openrouter/oauth.py
+  - src/openrouter/parameters.py
+  - src/openrouter/providers.py
+  - src/openrouter/py.typed
+  - src/openrouter/responses.py
+  - src/openrouter/sdk.py
+  - src/openrouter/sdkconfiguration.py
+  - src/openrouter/types/__init__.py
+  - src/openrouter/types/basemodel.py
+  - src/openrouter/utils/__init__.py
+  - src/openrouter/utils/annotations.py
+  - src/openrouter/utils/datetimes.py
+  - src/openrouter/utils/enums.py
+  - src/openrouter/utils/eventstreaming.py
+  - src/openrouter/utils/forms.py
+  - src/openrouter/utils/headers.py
+  - src/openrouter/utils/logger.py
+  - src/openrouter/utils/metadata.py
+  - src/openrouter/utils/queryparams.py
+  - src/openrouter/utils/requestbodies.py
+  - src/openrouter/utils/retries.py
+  - src/openrouter/utils/security.py
+  - src/openrouter/utils/serializers.py
+  - src/openrouter/utils/unmarshal_json_response.py
+  - src/openrouter/utils/url.py
+  - src/openrouter/utils/values.py
+examples:
+  createResponses:
+    speakeasy-default-create-responses:
+      requestBody:
+        application/json: {"input": [{"type": "message", "role": "user", "content": "Hello, how are you?"}], "tools": [{"type": "function", "name": "get_current_weather", "description": "Get the current weather in a given location", "parameters": {"type": "object", "properties": {"location": {"type": "string"}}}}], "model": "anthropic/claude-4.5-sonnet-20250929", "temperature": 0.7, "top_p": 0.9, "stream": false}
+      responses:
+        "200":
+          application/json: {"id": "resp-abc123", "object": "response", "created_at": 1704067200, "model": "gpt-4", "status": "completed", "output": [{"id": "msg-abc123", "role": "assistant", "type": "message", "status": "completed", "content": [{"type": "output_text", "text": "Hello! How can I help you today?", "annotations": []}]}], "error": null, "incomplete_details": null, "usage": {"input_tokens": 10, "input_tokens_details": {"cached_tokens": 0}, "output_tokens": 25, "output_tokens_details": {"reasoning_tokens": 0}, "total_tokens": 35}, "max_output_tokens": null, "temperature": null, "top_p": null, "instructions": null, "metadata": null, "tools": [], "tool_choice": "auto", "parallel_tool_calls": true}
+        "400":
+          application/json: {"error": {"code": 400, "message": "Invalid request parameters"}}
+        "401":
+          application/json: {"error": {"code": 401, "message": "Missing Authentication header"}}
+        "402":
+          application/json: {"error": {"code": 402, "message": "Insufficient credits. Add more using https://openrouter.ai/credits"}}
+        "404":
+          application/json: {"error": {"code": 404, "message": "Resource not found"}}
+        "408":
+          application/json: {"error": {"code": 408, "message": "Operation timed out. Please try again later."}}
+        "413":
+          application/json: {"error": {"code": 413, "message": "Request payload too large"}}
+        "422":
+          application/json: {"error": {"code": 422, "message": "Invalid argument"}}
+        "429":
+          application/json: {"error": {"code": 429, "message": "Rate limit exceeded"}}
+        "500":
+          application/json: {"error": {"code": 500, "message": "Internal Server Error"}}
+        "502":
+          application/json: {"error": {"code": 502, "message": "Provider returned error"}}
+        "503":
+          application/json: {"error": {"code": 503, "message": "Service temporarily unavailable"}}
+        "524":
+          application/json: {"error": {"code": 524, "message": "Request timed out. Please try again later."}}
+        "529":
+          application/json: {"error": {"code": 529, "message": "Provider returned error"}}
+  getUserActivity:
+    speakeasy-default-get-user-activity:
+      parameters:
+        query:
+          date: "2025-08-24"
+      responses:
+        "200":
+          application/json: {"data": [{"date": "2025-08-24", "model": "openai/gpt-4.1", "model_permaslug": "openai/gpt-4.1-2025-04-14", "endpoint_id": "550e8400-e29b-41d4-a716-446655440000", "provider_name": "OpenAI", "usage": 0.015, "byok_usage_inference": 0.012, "requests": 5, "prompt_tokens": 50, "completion_tokens": 125, "reasoning_tokens": 25}]}
+        "400":
+          application/json: {"error": {"code": 400, "message": "Invalid request parameters"}}
+        "401":
+          application/json: {"error": {"code": 401, "message": "Missing Authentication header"}}
+        "403":
+          application/json: {"error": {"code": 403, "message": "Only provisioning keys can perform this operation"}}
+        "500":
+          application/json: {"error": {"code": 500, "message": "Internal Server Error"}}
+  getCredits:
+    speakeasy-default-get-credits:
+      responses:
+        "200":
+          application/json: {}
+        "401":
+          application/json: {"error": {"code": 401, "message": "Missing Authentication header"}}
+        "403":
+          application/json: {"error": {"code": 403, "message": "Only provisioning keys can perform this operation"}}
+        "500":
+          application/json: {"error": {"code": 500, "message": "Internal Server Error"}}
+  createCoinbaseCharge:
+    speakeasy-default-create-coinbase-charge:
+      requestBody:
+        application/json: {"amount": 100, "sender": "0x1234567890123456789012345678901234567890", "chain_id": 1}
+      responses:
+        "200":
+          application/json: {"data": {"id": "<id>", "created_at": "1706396327532", "expires_at": "1739956049454", "web3_data": {"transfer_intent": {"call_data": {"deadline": "<value>", "fee_amount": "<value>", "id": "<id>", "operator": "<value>", "prefix": "<value>", "recipient": "<value>", "recipient_amount": "<value>", "recipient_currency": "<value>", "refund_destination": "<value>", "signature": "<value>"}, "metadata": {"chain_id": 3470.69, "contract_address": "<value>", "sender": "<value>"}}}}}
+        "400":
+          application/json: {"error": {"code": 400, "message": "Invalid request parameters"}}
+        "401":
+          application/json: {"error": {"code": 401, "message": "Missing Authentication header"}}
+        "429":
+          application/json: {"error": {"code": 429, "message": "Rate limit exceeded"}}
+        "500":
+          application/json: {"error": {"code": 500, "message": "Internal Server Error"}}
+  createEmbeddings:
+    speakeasy-default-create-embeddings:
+      requestBody:
+        application/json: {"input": "<value>", "model": "Taurus", "provider": {"data_collection": "deny", "zdr": true, "enforce_distillable_text": true, "order": ["OpenAI"], "only": ["OpenAI"], "ignore": ["OpenAI"], "quantizations": ["fp16"], "sort": "price"}}
+      responses:
+        "200":
+          application/json: {"object": "list", "data": [], "model": "Land Cruiser"}
+          text/event-stream: "<value>"
+        "400":
+          application/json: {"error": {"code": 400, "message": "Invalid request parameters"}}
+        "401":
+          application/json: {"error": {"code": 401, "message": "Missing Authentication header"}}
+        "402":
+          application/json: {"error": {"code": 402, "message": "Insufficient credits. Add more using https://openrouter.ai/credits"}}
+        "404":
+          application/json: {"error": {"code": 404, "message": "Resource not found"}}
+        "429":
+          application/json: {"error": {"code": 429, "message": "Rate limit exceeded"}}
+        "500":
+          application/json: {"error": {"code": 500, "message": "Internal Server Error"}}
+        "502":
+          application/json: {"error": {"code": 502, "message": "Provider returned error"}}
+        "503":
+          application/json: {"error": {"code": 503, "message": "Service temporarily unavailable"}}
+        "524":
+          application/json: {"error": {"code": 524, "message": "Request timed out. Please try again later."}}
+        "529":
+          application/json: {"error": {"code": 529, "message": "Provider returned error"}}
+  listEmbeddingsModels:
+    speakeasy-default-list-embeddings-models:
+      responses:
+        "200":
+          application/json: {"data": [{"id": "openai/gpt-4", "canonical_slug": "openai/gpt-4", "name": "GPT-4", "created": 1692901234, "description": "GPT-4 is a large multimodal model that can solve difficult problems with greater accuracy.", "pricing": {"prompt": "0.00003", "completion": "0.00006", "request": "0", "image": "0"}, "context_length": 8192, "architecture": {"tokenizer": "GPT", "instruct_type": "chatml", "modality": "text->text", "input_modalities": ["text"], "output_modalities": ["text"]}, "top_provider": {"context_length": 8192, "max_completion_tokens": 4096, "is_moderated": true}, "per_request_limits": null, "supported_parameters": ["temperature", "top_p", "max_tokens", "frequency_penalty", "presence_penalty"], "default_parameters": null}]}
+        "400":
+          application/json: {"error": {"code": 400, "message": "Invalid request parameters"}}
+        "500":
+          application/json: {"error": {"code": 500, "message": "Internal Server Error"}}
+  getGeneration:
+    speakeasy-default-get-generation:
+      parameters:
+        query:
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {"data": {"id": "gen-3bhGkxlo4XFrqiabUM7NDtwDzWwG", "upstream_id": "chatcmpl-791bcf62-080e-4568-87d0-94c72e3b4946", "total_cost": 0.0015, "cache_discount": 0.0002, "upstream_inference_cost": 0.0012, "created_at": "2024-07-15T23:33:19.433273+00:00", "model": "sao10k/l3-stheno-8b", "app_id": 12345, "streamed": true, "cancelled": false, "provider_name": "Infermatic", "latency": 1250, "moderation_latency": 50, "generation_time": 1200, "finish_reason": "stop", "tokens_prompt": 10, "tokens_completion": 25, "native_tokens_prompt": 10, "native_tokens_completion": 25, "native_tokens_completion_images": 0, "native_tokens_reasoning": 5, "native_tokens_cached": 3, "num_media_prompt": 1, "num_input_audio_prompt": 0, "num_media_completion": 0, "num_search_results": 5, "origin": "https://openrouter.ai/", "usage": 0.0015, "is_byok": false, "native_finish_reason": "stop", "external_user": "user-123", "api_type": "completions"}}
+        "401":
+          application/json: {"error": {"code": 401, "message": "Missing Authentication header"}}
+        "402":
+          application/json: {"error": {"code": 402, "message": "Insufficient credits. Add more using https://openrouter.ai/credits"}}
+        "404":
+          application/json: {"error": {"code": 404, "message": "Resource not found"}}
+        "429":
+          application/json: {"error": {"code": 429, "message": "Rate limit exceeded"}}
+        "500":
+          application/json: {"error": {"code": 500, "message": "Internal Server Error"}}
+        "502":
+          application/json: {"error": {"code": 502, "message": "Provider returned error"}}
+        "524":
+          application/json: {"error": {"code": 524, "message": "Request timed out. Please try again later."}}
+        "529":
+          application/json: {"error": {"code": 529, "message": "Provider returned error"}}
+  listModelsCount:
+    speakeasy-default-list-models-count:
+      responses:
+        "200":
+          application/json: {"data": {"count": 150}}
+        "500":
+          application/json: {"error": {"code": 500, "message": "Internal Server Error"}}
+  getModels:
+    speakeasy-default-get-models:
+      responses:
+        "200":
+          application/json: {"data": [{"id": "openai/gpt-4", "canonical_slug": "openai/gpt-4", "name": "GPT-4", "created": 1692901234, "description": "GPT-4 is a large multimodal model that can solve difficult problems with greater accuracy.", "pricing": {"prompt": "0.00003", "completion": "0.00006", "request": "0", "image": "0"}, "context_length": 8192, "architecture": {"tokenizer": "GPT", "instruct_type": "chatml", "modality": "text->text", "input_modalities": ["text"], "output_modalities": ["text"]}, "top_provider": {"context_length": 8192, "max_completion_tokens": 4096, "is_moderated": true}, "per_request_limits": null, "supported_parameters": ["temperature", "top_p", "max_tokens", "frequency_penalty", "presence_penalty"], "default_parameters": null}]}
+        "400":
+          application/json: {"error": {"code": 400, "message": "Invalid request parameters"}}
+        "500":
+          application/json: {"error": {"code": 500, "message": "Internal Server Error"}}
+  listModelsUser:
+    speakeasy-default-list-models-user:
+      responses:
+        "200":
+          application/json: {"data": [{"id": "openai/gpt-4", "canonical_slug": "openai/gpt-4", "name": "GPT-4", "created": 1692901234, "description": "GPT-4 is a large multimodal model that can solve difficult problems with greater accuracy.", "pricing": {"prompt": "0.00003", "completion": "0.00006", "request": "0", "image": "0"}, "context_length": 8192, "architecture": {"tokenizer": "GPT", "instruct_type": "chatml", "modality": "text->text", "input_modalities": ["text"], "output_modalities": ["text"]}, "top_provider": {"context_length": 8192, "max_completion_tokens": 4096, "is_moderated": true}, "per_request_limits": null, "supported_parameters": ["temperature", "top_p", "max_tokens", "frequency_penalty", "presence_penalty"], "default_parameters": null}]}
+        "401":
+          application/json: {"error": {"code": 401, "message": "Missing Authentication header"}}
+        "500":
+          application/json: {"error": {"code": 500, "message": "Internal Server Error"}}
+  listEndpoints:
+    speakeasy-default-list-endpoints:
+      parameters:
+        path:
+          author: "<value>"
+          slug: "<value>"
+      responses:
+        "200":
+          application/json: {"data": {"id": "openai/gpt-4", "name": "GPT-4", "created": 1692901234, "description": "GPT-4 is a large multimodal model that can solve difficult problems with greater accuracy.", "architecture": {"tokenizer": "GPT", "instruct_type": "chatml", "modality": "text->text", "input_modalities": ["text"], "output_modalities": ["text"]}, "endpoints": [{"name": "OpenAI: GPT-4", "model_name": "GPT-4", "context_length": 8192, "pricing": {"prompt": "0.00003", "completion": "0.00006", "request": "0", "image": "0"}, "provider_name": "OpenAI", "tag": "openai", "quantization": "fp16", "max_completion_tokens": 4096, "max_prompt_tokens": 8192, "supported_parameters": ["temperature", "top_p", "max_tokens", "frequency_penalty", "presence_penalty"], "status": -3, "uptime_last_30m": 99.5, "supports_implicit_caching": true}]}}
+        "404":
+          application/json: {"error": {"code": 404, "message": "Resource not found"}}
+        "500":
+          application/json: {"error": {"code": 500, "message": "Internal Server Error"}}
+  listEndpointsZdr:
+    speakeasy-default-list-endpoints-zdr:
+      responses:
+        "200":
+          application/json: {"data": [{"name": "OpenAI: GPT-4", "model_name": "GPT-4", "context_length": 8192, "pricing": {"prompt": "0.00003", "completion": "0.00006", "request": "0", "image": "0"}, "provider_name": "OpenAI", "tag": "openai", "quantization": "fp16", "max_completion_tokens": 4096, "max_prompt_tokens": 8192, "supported_parameters": ["temperature", "top_p", "max_tokens"], "status": 0, "uptime_last_30m": 99.5, "supports_implicit_caching": true}]}
+        "500":
+          application/json: {"error": {"code": 500, "message": "Internal Server Error"}}
+  getParameters:
+    speakeasy-default-get-parameters:
+      parameters:
+        path:
+          author: "<value>"
+          slug: "<value>"
+      responses:
+        "200":
+          application/json: {"data": {"model": "openai/gpt-4", "supported_parameters": ["temperature", "top_p", "max_tokens"]}}
+        "401":
+          application/json: {"error": {"code": 401, "message": "Missing Authentication header"}}
+        "404":
+          application/json: {"error": {"code": 404, "message": "Resource not found"}}
+        "500":
+          application/json: {"error": {"code": 500, "message": "Internal Server Error"}}
+  listProviders:
+    speakeasy-default-list-providers:
+      responses:
+        "200":
+          application/json: {"data": [{"name": "OpenAI", "slug": "openai", "privacy_policy_url": "https://openai.com/privacy", "terms_of_service_url": "https://openai.com/terms", "status_page_url": "https://status.openai.com"}]}
+        "500":
+          application/json: {"error": {"code": 500, "message": "Internal Server Error"}}
+  list:
+    speakeasy-default-list:
+      parameters:
+        query:
+          include_disabled: "false"
+          offset: "0"
+      responses:
+        "200":
+          application/json: {"data": [{"hash": "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", "name": "My Production Key", "label": "Production API Key", "disabled": false, "limit": 100, "limit_remaining": 74.5, "limit_reset": "monthly", "include_byok_in_limit": false, "usage": 25.5, "usage_daily": 25.5, "usage_weekly": 25.5, "usage_monthly": 25.5, "byok_usage": 17.38, "byok_usage_daily": 17.38, "byok_usage_weekly": 17.38, "byok_usage_monthly": 17.38, "created_at": "2025-08-24T10:30:00Z", "updated_at": "2025-08-24T15:45:00Z", "expires_at": "2027-12-31T23:59:59Z"}]}
+        "401":
+          application/json: {"error": {"code": 401, "message": "Missing Authentication header"}}
+        "429":
+          application/json: {"error": {"code": 429, "message": "Rate limit exceeded"}}
+        "500":
+          application/json: {"error": {"code": 500, "message": "Internal Server Error"}}
+  createKeys:
+    speakeasy-default-create-keys:
+      requestBody:
+        application/json: {"name": "My New API Key", "limit": 50, "limit_reset": "monthly", "include_byok_in_limit": true, "expires_at": "2027-12-31T23:59:59Z"}
+      responses:
+        "201":
+          application/json: {"data": {"hash": "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", "name": "My New API Key", "label": "My New API Key", "disabled": false, "limit": 50, "limit_remaining": 50, "limit_reset": "monthly", "include_byok_in_limit": true, "usage": 0, "usage_daily": 0, "usage_weekly": 0, "usage_monthly": 0, "byok_usage": 0, "byok_usage_daily": 0, "byok_usage_weekly": 0, "byok_usage_monthly": 0, "created_at": "2025-08-24T10:30:00Z", "updated_at": null, "expires_at": "2027-12-31T23:59:59Z"}, "key": "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"}
+        "400":
+          application/json: {"error": {"code": 400, "message": "Invalid request parameters"}}
+        "401":
+          application/json: {"error": {"code": 401, "message": "Missing Authentication header"}}
+        "429":
+          application/json: {"error": {"code": 429, "message": "Rate limit exceeded"}}
+        "500":
+          application/json: {"error": {"code": 500, "message": "Internal Server Error"}}
+  updateKeys:
+    speakeasy-default-update-keys:
+      parameters:
+        path:
+          hash: "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"
+      requestBody:
+        application/json: {"name": "Updated API Key Name", "disabled": false, "limit": 75, "limit_reset": "daily", "include_byok_in_limit": true}
+      responses:
+        "200":
+          application/json: {"data": {"hash": "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", "name": "Updated API Key Name", "label": "Updated API Key Name", "disabled": false, "limit": 75, "limit_remaining": 49.5, "limit_reset": "daily", "include_byok_in_limit": true, "usage": 25.5, "usage_daily": 25.5, "usage_weekly": 25.5, "usage_monthly": 25.5, "byok_usage": 17.38, "byok_usage_daily": 17.38, "byok_usage_weekly": 17.38, "byok_usage_monthly": 17.38, "created_at": "2025-08-24T10:30:00Z", "updated_at": "2025-08-24T16:00:00Z", "expires_at": null}}
+        "400":
+          application/json: {"error": {"code": 400, "message": "Invalid request parameters"}}
+        "401":
+          application/json: {"error": {"code": 401, "message": "Missing Authentication header"}}
+        "404":
+          application/json: {"error": {"code": 404, "message": "Resource not found"}}
+        "429":
+          application/json: {"error": {"code": 429, "message": "Rate limit exceeded"}}
+        "500":
+          application/json: {"error": {"code": 500, "message": "Internal Server Error"}}
+  deleteKeys:
+    speakeasy-default-delete-keys:
+      parameters:
+        path:
+          hash: "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"
+      responses:
+        "200":
+          application/json: {"deleted": true}
+        "401":
+          application/json: {"error": {"code": 401, "message": "Missing Authentication header"}}
+        "404":
+          application/json: {"error": {"code": 404, "message": "Resource not found"}}
+        "429":
+          application/json: {"error": {"code": 429, "message": "Rate limit exceeded"}}
+        "500":
+          application/json: {"error": {"code": 500, "message": "Internal Server Error"}}
+  getKey:
+    speakeasy-default-get-key:
+      parameters:
+        path:
+          hash: "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"
+      responses:
+        "200":
+          application/json: {"data": {"hash": "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", "name": "My Production Key", "label": "Production API Key", "disabled": false, "limit": 100, "limit_remaining": 74.5, "limit_reset": "monthly", "include_byok_in_limit": false, "usage": 25.5, "usage_daily": 25.5, "usage_weekly": 25.5, "usage_monthly": 25.5, "byok_usage": 17.38, "byok_usage_daily": 17.38, "byok_usage_weekly": 17.38, "byok_usage_monthly": 17.38, "created_at": "2025-08-24T10:30:00Z", "updated_at": "2025-08-24T15:45:00Z", "expires_at": "2027-12-31T23:59:59Z"}}
+        "401":
+          application/json: {"error": {"code": 401, "message": "Missing Authentication header"}}
+        "404":
+          application/json: {"error": {"code": 404, "message": "Resource not found"}}
+        "429":
+          application/json: {"error": {"code": 429, "message": "Rate limit exceeded"}}
+        "500":
+          application/json: {"error": {"code": 500, "message": "Internal Server Error"}}
+  getCurrentKey:
+    speakeasy-default-get-current-key:
+      responses:
+        "200":
+          application/json: {"data": {"label": "sk-or-v1-au78b3456789012345678901234567890", "limit": 100, "usage": 25.5, "usage_daily": 25.5, "usage_weekly": 25.5, "usage_monthly": 25.5, "byok_usage": 17.38, "byok_usage_daily": 17.38, "byok_usage_weekly": 17.38, "byok_usage_monthly": 17.38, "is_free_tier": false, "is_provisioning_key": false, "limit_remaining": 74.5, "limit_reset": "monthly", "include_byok_in_limit": false, "expires_at": "2027-12-31T23:59:59Z", "rate_limit": {"requests": 1000, "interval": "1h", "note": "This field is deprecated and safe to ignore."}}}
+        "401":
+          application/json: {"error": {"code": 401, "message": "Missing Authentication header"}}
+        "500":
+          application/json: {"error": {"code": 500, "message": "Internal Server Error"}}
+  exchangeAuthCodeForAPIKey:
+    speakeasy-default-exchange-auth-code-for-API-key:
+      requestBody:
+        application/json: {"code": "auth_code_abc123def456", "code_verifier": "dBjftJeZ4CVP-mB92K27uhbUJU1p1r_wW1gFWFOEjXk", "code_challenge_method": "S256"}
+      responses:
+        "200":
+          application/json: {"key": "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", "user_id": "user_2yOPcMpKoQhcd4bVgSMlELRaIah"}
+        "400":
+          application/json: {"error": {"code": 400, "message": "Invalid request parameters"}}
+        "403":
+          application/json: {"error": {"code": 403, "message": "Only provisioning keys can perform this operation"}}
+        "500":
+          application/json: {"error": {"code": 500, "message": "Internal Server Error"}}
+  createAuthKeysCode:
+    speakeasy-default-create-auth-keys-code:
+      requestBody:
+        application/json: {"callback_url": "https://myapp.com/auth/callback", "code_challenge": "E9Melhoa2OwvFrEMTJguCHaoeK1t8URWbuGJSstw-cM", "code_challenge_method": "S256", "limit": 100}
+      responses:
+        "200":
+          application/json: {"data": {"id": "auth_code_xyz789", "app_id": 12345, "created_at": "2025-08-24T10:30:00Z"}}
+        "400":
+          application/json: {"error": {"code": 400, "message": "Invalid request parameters"}}
+        "401":
+          application/json: {"error": {"code": 401, "message": "Missing Authentication header"}}
+        "500":
+          application/json: {"error": {"code": 500, "message": "Internal Server Error"}}
+  sendChatCompletionRequest:
+    speakeasy-default-send-chat-completion-request:
+      requestBody:
+        application/json: {"messages": [], "stream": false}
+      responses:
+        "200":
+          application/json: {"id": "<id>", "choices": [], "created": 6524.91, "model": "Silverado", "object": "chat.completion"}
+        "400":
+          application/json: {"error": {"code": "<value>", "message": "<value>"}}
+        "500":
+          application/json: {"error": {"code": "<value>", "message": "<value>"}}
+  createCompletions:
+    speakeasy-default-create-completions:
+      requestBody:
+        application/json: {"prompt": [], "stream": false}
+      responses:
+        "200":
+          application/json: {"id": "<id>", "object": "text_completion", "created": 7524.07, "model": "Aventador", "choices": [{"text": "<value>", "index": 4622.44, "logprobs": {"tokens": [], "token_logprobs": [], "top_logprobs": [{"key": 6481.8, "key1": 6211.86, "key2": 4822.58}, {}, {"key": 6295.32, "key1": 8110.56, "key2": 5430.28}], "text_offset": [8533.93, 4728.06, 5798.08]}, "finish_reason": "length"}]}
+        "400":
+          application/json: {"error": {"code": "<value>", "message": "<value>"}}
+        "500":
+          application/json: {"error": {"code": "<value>", "message": "<value>"}}
+examplesVersion: 1.0.2

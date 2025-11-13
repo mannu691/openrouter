@@ -1,0 +1,12 @@
+# CreateEmbeddingsRequest
+
+
+## Fields
+
+| Field                                                                              | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `input`                                                                            | [models.Input](../models/input.md)                                                 | :heavy_check_mark:                                                                 | N/A                                                                                |
+| `model`                                                                            | *str*                                                                              | :heavy_check_mark:                                                                 | N/A                                                                                |
+| `provider`                                                                         | [Optional[models.CreateEmbeddingsProvider]](../models/createembeddingsprovider.md) | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `encoding_format`                                                                  | [Optional[models.EncodingFormat]](../models/encodingformat.md)                     | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `user`                                                                             | *Optional[str]*                                                                    | :heavy_minus_sign:                                                                 | N/A                                                                                |

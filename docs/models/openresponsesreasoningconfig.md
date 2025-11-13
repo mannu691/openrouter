@@ -1,0 +1,13 @@
+# OpenResponsesReasoningConfig
+
+Configuration for reasoning mode in the response
+
+
+## Fields
+
+| Field                                                                                                  | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `effort`                                                                                               | [OptionalNullable[models.OpenAIResponsesReasoningEffort]](../models/openairesponsesreasoningeffort.md) | :heavy_minus_sign:                                                                                     | N/A                                                                                                    |
+| `summary`                                                                                              | [Optional[models.ReasoningSummaryVerbosity]](../models/reasoningsummaryverbosity.md)                   | :heavy_minus_sign:                                                                                     | N/A                                                                                                    |
+| `max_tokens`                                                                                           | *OptionalNullable[float]*                                                                              | :heavy_minus_sign:                                                                                     | N/A                                                                                                    |
+| `enabled`                                                                                              | *OptionalNullable[bool]*                                                                               | :heavy_minus_sign:                                                                                     | N/A                                                                                                    |

@@ -1,0 +1,73 @@
+# Chat
+(*chat*)
+
+## Overview
+
+### Available Operations
+
+* [send](#send) - Create a chat completion
+
+## send
+
+Sends a request for a model response for the given chat conversation. Supports both streaming and non-streaming modes.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="sendChatCompletionRequest" method="post" path="/chat/completions" -->
+```python
+from openrouter import OpenRouter
+import os
+
+
+with OpenRouter(
+    api_key=os.getenv("OPENROUTER_API_KEY", ""),
+) as open_router:
+
+    res = open_router.chat.send(messages=[], stream=False)
+
+    with res as event_stream:
+        for event in event_stream:
+            # handle event
+            print(event, flush=True)
+
+```
+
+### Parameters
+
+| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `messages`                                                                                                          | List[[models.Message](../../models/message.md)]                                                                     | :heavy_check_mark:                                                                                                  | N/A                                                                                                                 |
+| `model`                                                                                                             | *Optional[str]*                                                                                                     | :heavy_minus_sign:                                                                                                  | N/A                                                                                                                 |
+| `models`                                                                                                            | List[*str*]                                                                                                         | :heavy_minus_sign:                                                                                                  | N/A                                                                                                                 |
+| `frequency_penalty`                                                                                                 | *OptionalNullable[float]*                                                                                           | :heavy_minus_sign:                                                                                                  | N/A                                                                                                                 |
+| `logit_bias`                                                                                                        | Dict[str, *float*]                                                                                                  | :heavy_minus_sign:                                                                                                  | N/A                                                                                                                 |
+| `logprobs`                                                                                                          | *OptionalNullable[bool]*                                                                                            | :heavy_minus_sign:                                                                                                  | N/A                                                                                                                 |
+| `top_logprobs`                                                                                                      | *OptionalNullable[float]*                                                                                           | :heavy_minus_sign:                                                                                                  | N/A                                                                                                                 |
+| `max_completion_tokens`                                                                                             | *OptionalNullable[float]*                                                                                           | :heavy_minus_sign:                                                                                                  | N/A                                                                                                                 |
+| `max_tokens`                                                                                                        | *OptionalNullable[float]*                                                                                           | :heavy_minus_sign:                                                                                                  | N/A                                                                                                                 |
+| `metadata`                                                                                                          | Dict[str, *str*]                                                                                                    | :heavy_minus_sign:                                                                                                  | N/A                                                                                                                 |
+| `presence_penalty`                                                                                                  | *OptionalNullable[float]*                                                                                           | :heavy_minus_sign:                                                                                                  | N/A                                                                                                                 |
+| `reasoning`                                                                                                         | [Optional[models.Reasoning]](../../models/reasoning.md)                                                             | :heavy_minus_sign:                                                                                                  | N/A                                                                                                                 |
+| `response_format`                                                                                                   | [Optional[models.ChatGenerationParamsResponseFormatUnion]](../../models/chatgenerationparamsresponseformatunion.md) | :heavy_minus_sign:                                                                                                  | N/A                                                                                                                 |
+| `seed`                                                                                                              | *OptionalNullable[int]*                                                                                             | :heavy_minus_sign:                                                                                                  | N/A                                                                                                                 |
+| `stop`                                                                                                              | [OptionalNullable[models.ChatGenerationParamsStop]](../../models/chatgenerationparamsstop.md)                       | :heavy_minus_sign:                                                                                                  | N/A                                                                                                                 |
+| `stream`                                                                                                            | *Optional[bool]*                                                                                                    | :heavy_minus_sign:                                                                                                  | N/A                                                                                                                 |
+| `stream_options`                                                                                                    | [OptionalNullable[models.ChatStreamOptions]](../../models/chatstreamoptions.md)                                     | :heavy_minus_sign:                                                                                                  | N/A                                                                                                                 |
+| `temperature`                                                                                                       | *OptionalNullable[float]*                                                                                           | :heavy_minus_sign:                                                                                                  | N/A                                                                                                                 |
+| `tool_choice`                                                                                                       | *Optional[Any]*                                                                                                     | :heavy_minus_sign:                                                                                                  | N/A                                                                                                                 |
+| `tools`                                                                                                             | List[[models.ToolDefinitionJSON](../../models/tooldefinitionjson.md)]                                               | :heavy_minus_sign:                                                                                                  | N/A                                                                                                                 |
+| `top_p`                                                                                                             | *OptionalNullable[float]*                                                                                           | :heavy_minus_sign:                                                                                                  | N/A                                                                                                                 |
+| `user`                                                                                                              | *Optional[str]*                                                                                                     | :heavy_minus_sign:                                                                                                  | N/A                                                                                                                 |
+| `retries`                                                                                                           | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                                    | :heavy_minus_sign:                                                                                                  | Configuration to override the default retry behavior of the client.                                                 |
+
+### Response
+
+**[models.SendChatCompletionRequestResponse](../../models/sendchatcompletionrequestresponse.md)**
+
+### Errors
+
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| errors.ChatError              | 400, 401, 429                 | application/json              |
+| errors.ChatError              | 500                           | application/json              |
+| errors.OpenRouterDefaultError | 4XX, 5XX                      | \*/\*                         |

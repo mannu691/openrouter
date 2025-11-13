@@ -1,0 +1,11 @@
+# OpenResponsesResponseText
+
+Text output configuration including format and verbosity
+
+
+## Fields
+
+| Field                                                                                                          | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    | Example                                                                                                        |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `format_`                                                                                                      | [Optional[models.ResponseFormatTextConfig]](../models/responseformattextconfig.md)                             | :heavy_minus_sign:                                                                                             | Text response format configuration                                                                             | {<br/>"type": "text"<br/>}                                                                                     |
+| `verbosity`                                                                                                    | [OptionalNullable[models.OpenResponsesResponseTextVerbosity]](../models/openresponsesresponsetextverbosity.md) | :heavy_minus_sign:                                                                                             | N/A                                                                                                            |                                                                                                                |
