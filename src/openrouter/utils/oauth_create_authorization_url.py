@@ -2,7 +2,7 @@
 
 from dataclasses import dataclass
 from typing import TYPE_CHECKING, Literal, Optional, Union
-from urllib.parse import urlencode, urlparse
+from urllib.parse import ParseResult, urlencode, urlparse
 
 if TYPE_CHECKING:
     from openrouter.sdk import OpenRouter
@@ -11,7 +11,7 @@ if TYPE_CHECKING:
 @dataclass
 class CreateAuthorizationUrlRequestBase:
     """Base request parameters for creating an authorization URL"""
-    callback_url: Union[str, "urlparse"]
+    callback_url: Union[str, ParseResult]
     limit: Optional[float] = None
 
 
