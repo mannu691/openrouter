@@ -53,9 +53,25 @@ if TYPE_CHECKING:
         cast_partial,
     )
     from .logger import Logger, get_body_content, get_default_logger
+    from .oauth_create_sha256_code_challenge import (
+        oauth_create_sha256_code_challenge,
+        CreateSHA256CodeChallengeRequest,
+        CreateSHA256CodeChallengeResponse,
+    )
+    from .oauth_create_authorization_url import (
+        oauth_create_authorization_url,
+        CreateAuthorizationUrlRequest,
+        CreateAuthorizationUrlRequestBase,
+        CreateAuthorizationUrlRequestWithPKCE,
+    )
 
 __all__ = [
     "BackoffStrategy",
+    "CreateAuthorizationUrlRequest",
+    "CreateAuthorizationUrlRequestBase",
+    "CreateAuthorizationUrlRequestWithPKCE",
+    "CreateSHA256CodeChallengeRequest",
+    "CreateSHA256CodeChallengeResponse",
     "FieldMetadata",
     "find_metadata",
     "FormMetadata",
@@ -78,6 +94,8 @@ __all__ = [
     "match_status_codes",
     "match_response",
     "MultipartFormMetadata",
+    "oauth_create_authorization_url",
+    "oauth_create_sha256_code_challenge",
     "OpenEnumMeta",
     "PathParamMetadata",
     "QueryParamMetadata",
@@ -110,6 +128,11 @@ __all__ = [
 
 _dynamic_imports: dict[str, str] = {
     "BackoffStrategy": ".retries",
+    "CreateAuthorizationUrlRequest": ".oauth_create_authorization_url",
+    "CreateAuthorizationUrlRequestBase": ".oauth_create_authorization_url",
+    "CreateAuthorizationUrlRequestWithPKCE": ".oauth_create_authorization_url",
+    "CreateSHA256CodeChallengeRequest": ".oauth_create_sha256_code_challenge",
+    "CreateSHA256CodeChallengeResponse": ".oauth_create_sha256_code_challenge",
     "FieldMetadata": ".metadata",
     "find_metadata": ".metadata",
     "FormMetadata": ".metadata",
@@ -132,6 +155,8 @@ _dynamic_imports: dict[str, str] = {
     "match_status_codes": ".values",
     "match_response": ".values",
     "MultipartFormMetadata": ".metadata",
+    "oauth_create_authorization_url": ".oauth_create_authorization_url",
+    "oauth_create_sha256_code_challenge": ".oauth_create_sha256_code_challenge",
     "OpenEnumMeta": ".enums",
     "PathParamMetadata": ".metadata",
     "QueryParamMetadata": ".metadata",
