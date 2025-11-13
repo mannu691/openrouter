@@ -1,5 +1,3 @@
-![hero illustration](./assets/banner.png)
-
 # OpenRouter SDK (Beta)
 
 The [OpenRouter SDK](https://openrouter.ai/docs/sdks/python) is a Python toolkit designed to help you build AI-powered features and solutions. Giving you easy access to over 300 models across providers in an easy and type-safe way.
