@@ -59,8 +59,8 @@ python:
     paths:
       callbacks: ""
       errors: errors
-      operations: ""
-      shared: ""
+      operations: "operations"
+      shared: "components"
       webhooks: ""
   inputModelSuffix: input
   legacyPyright: false
