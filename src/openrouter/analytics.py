@@ -6,7 +6,7 @@ from openrouter._hooks import HookContext
 from openrouter.types import OptionalNullable, UNSET
 from openrouter.utils import get_security_from_env
 from openrouter.utils.unmarshal_json_response import unmarshal_json_response
-from typing import Any, Mapping, Optional
+from typing import Any, List, Mapping, Optional
 
 
 class Analytics(BaseSDK):
@@ -20,7 +20,7 @@ class Analytics(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.GetUserActivityResponse:
+    ) -> List[models.ActivityItem]:
         r"""Get user activity grouped by endpoint
 
         Returns user activity data grouped by endpoint for the last 30 (completed) UTC days
@@ -128,7 +128,7 @@ class Analytics(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.GetUserActivityResponse:
+    ) -> List[models.ActivityItem]:
         r"""Get user activity grouped by endpoint
 
         Returns user activity data grouped by endpoint for the last 30 (completed) UTC days

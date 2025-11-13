@@ -144,7 +144,7 @@ class Chat(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> eventstreaming.EventStream[models.ChatStreamingResponseChunk]:
+    ) -> eventstreaming.EventStream[models.ChatStreamingResponseChunkData]:
         r"""Create a chat completion
 
         Sends a request for a model response for the given chat conversation. Supports both streaming and non-streaming modes.
@@ -351,7 +351,7 @@ class Chat(BaseSDK):
                 http_res,
                 lambda raw: utils.unmarshal_json(
                     raw, models.ChatStreamingResponseChunk
-                ),
+                ).data,
                 sentinel="[DONE]",
                 client_ref=self,
             )
@@ -511,7 +511,7 @@ class Chat(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> eventstreaming.EventStreamAsync[models.ChatStreamingResponseChunk]:
+    ) -> eventstreaming.EventStreamAsync[models.ChatStreamingResponseChunkData]:
         r"""Create a chat completion
 
         Sends a request for a model response for the given chat conversation. Supports both streaming and non-streaming modes.
@@ -718,7 +718,7 @@ class Chat(BaseSDK):
                 http_res,
                 lambda raw: utils.unmarshal_json(
                     raw, models.ChatStreamingResponseChunk
-                ),
+                ).data,
                 sentinel="[DONE]",
                 client_ref=self,
             )

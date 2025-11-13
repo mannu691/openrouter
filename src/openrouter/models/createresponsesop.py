@@ -34,8 +34,8 @@ CreateResponsesResponseTypedDict = TypeAliasType(
     Union[
         OpenResponsesNonStreamingResponseTypedDict,
         Union[
-            eventstreaming.EventStream[CreateResponsesResponseBodyTypedDict],
-            eventstreaming.EventStreamAsync[CreateResponsesResponseBodyTypedDict],
+            eventstreaming.EventStream[OpenResponsesStreamEventTypedDict],
+            eventstreaming.EventStreamAsync[OpenResponsesStreamEventTypedDict],
         ],
     ],
 )
@@ -46,8 +46,8 @@ CreateResponsesResponse = TypeAliasType(
     Union[
         OpenResponsesNonStreamingResponse,
         Union[
-            eventstreaming.EventStream[CreateResponsesResponseBody],
-            eventstreaming.EventStreamAsync[CreateResponsesResponseBody],
+            eventstreaming.EventStream[OpenResponsesStreamEvent],
+            eventstreaming.EventStreamAsync[OpenResponsesStreamEvent],
         ],
     ],
 )

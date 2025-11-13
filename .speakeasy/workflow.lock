@@ -26,6 +26,9 @@ workflow:
         open-router:
             target: python
             source: -OAS
+            publish:
+                pypi:
+                    token: $pypi_token
             codeSamples:
                 registry:
                     location: registry.speakeasyapi.dev/openrouter/sdk/-oas-python-code-samples

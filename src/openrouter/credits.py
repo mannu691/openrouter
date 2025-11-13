@@ -218,7 +218,7 @@ class Credits(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.CreateCoinbaseChargeResponse:
+    ) -> models.CreateCoinbaseChargeData:
         r"""Create a Coinbase charge for crypto payment
 
         Create a Coinbase charge for crypto payment
@@ -342,7 +342,7 @@ class Credits(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.CreateCoinbaseChargeResponse:
+    ) -> models.CreateCoinbaseChargeData:
         r"""Create a Coinbase charge for crypto payment
 
         Create a Coinbase charge for crypto payment

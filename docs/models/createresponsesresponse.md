@@ -9,9 +9,9 @@
 value: models.OpenResponsesNonStreamingResponse = /* values here */
 ```
 
-### `Union[eventstreaming.EventStream[models.CreateResponsesResponseBody], eventstreaming.EventStreamAsync[models.CreateResponsesResponseBody]]`
+### `Union[eventstreaming.EventStream[models.OpenResponsesStreamEvent], eventstreaming.EventStreamAsync[models.OpenResponsesStreamEvent]]`
 
 ```python
-value: Union[eventstreaming.EventStream[models.CreateResponsesResponseBody], eventstreaming.EventStreamAsync[models.CreateResponsesResponseBody]] = /* values here */
+value: Union[eventstreaming.EventStream[models.OpenResponsesStreamEvent], eventstreaming.EventStreamAsync[models.OpenResponsesStreamEvent]] = /* values here */
 ```
 

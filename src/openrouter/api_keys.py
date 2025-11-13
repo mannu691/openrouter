@@ -7,7 +7,7 @@ from openrouter._hooks import HookContext
 from openrouter.types import OptionalNullable, UNSET
 from openrouter.utils import get_security_from_env
 from openrouter.utils.unmarshal_json_response import unmarshal_json_response
-from typing import Any, Mapping, Optional
+from typing import Any, List, Mapping, Optional
 
 
 class APIKeys(BaseSDK):
@@ -22,7 +22,7 @@ class APIKeys(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.ListResponse:
+    ) -> List[models.ListData]:
         r"""List API keys
 
         :param include_disabled: Whether to include disabled API keys in the response
@@ -126,7 +126,7 @@ class APIKeys(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.ListResponse:
+    ) -> List[models.ListData]:
         r"""List API keys
 
         :param include_disabled: Whether to include disabled API keys in the response
@@ -233,7 +233,7 @@ class APIKeys(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.CreateKeysResponse:
+    ) -> models.CreateKeysData:
         r"""Create a new API key
 
         :param name: Name for the new API key
@@ -354,7 +354,7 @@ class APIKeys(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.CreateKeysResponse:
+    ) -> models.CreateKeysData:
         r"""Create a new API key
 
         :param name: Name for the new API key
@@ -476,7 +476,7 @@ class APIKeys(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.UpdateKeysResponse:
+    ) -> models.UpdateKeysData:
         r"""Update an API key
 
         :param hash: The hash identifier of the API key to update
@@ -607,7 +607,7 @@ class APIKeys(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.UpdateKeysResponse:
+    ) -> models.UpdateKeysData:
         r"""Update an API key
 
         :param hash: The hash identifier of the API key to update
@@ -945,7 +945,7 @@ class APIKeys(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.GetKeyResponse:
+    ) -> models.GetKeyData:
         r"""Get a single API key
 
         :param hash: The hash identifier of the API key to retrieve
@@ -1051,7 +1051,7 @@ class APIKeys(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.GetKeyResponse:
+    ) -> models.GetKeyData:
         r"""Get a single API key
 
         :param hash: The hash identifier of the API key to retrieve
@@ -1156,7 +1156,7 @@ class APIKeys(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.GetCurrentKeyResponse:
+    ) -> models.GetCurrentKeyData:
         r"""Get current API key
 
         Get information on the API key associated with the current authentication session
@@ -1247,7 +1247,7 @@ class APIKeys(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.GetCurrentKeyResponse:
+    ) -> models.GetCurrentKeyData:
         r"""Get current API key
 
         Get information on the API key associated with the current authentication session

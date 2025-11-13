@@ -3,8 +3,8 @@
 from __future__ import annotations
 from .chatresponse import ChatResponse, ChatResponseTypedDict
 from .chatstreamingresponsechunk import (
-    ChatStreamingResponseChunk,
-    ChatStreamingResponseChunkTypedDict,
+    ChatStreamingResponseChunkData,
+    ChatStreamingResponseChunkDataTypedDict,
 )
 from openrouter.utils import eventstreaming
 from typing import Union
@@ -16,8 +16,8 @@ SendChatCompletionRequestResponseTypedDict = TypeAliasType(
     Union[
         ChatResponseTypedDict,
         Union[
-            eventstreaming.EventStream[ChatStreamingResponseChunkTypedDict],
-            eventstreaming.EventStreamAsync[ChatStreamingResponseChunkTypedDict],
+            eventstreaming.EventStream[ChatStreamingResponseChunkDataTypedDict],
+            eventstreaming.EventStreamAsync[ChatStreamingResponseChunkDataTypedDict],
         ],
     ],
 )
@@ -28,8 +28,8 @@ SendChatCompletionRequestResponse = TypeAliasType(
     Union[
         ChatResponse,
         Union[
-            eventstreaming.EventStream[ChatStreamingResponseChunk],
-            eventstreaming.EventStreamAsync[ChatStreamingResponseChunk],
+            eventstreaming.EventStream[ChatStreamingResponseChunkData],
+            eventstreaming.EventStreamAsync[ChatStreamingResponseChunkData],
         ],
     ],
 )

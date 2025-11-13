@@ -7,7 +7,7 @@ from openrouter._hooks import HookContext
 from openrouter.types import OptionalNullable, UNSET
 from openrouter.utils import get_security_from_env
 from openrouter.utils.unmarshal_json_response import unmarshal_json_response
-from typing import Any, Mapping, Optional, Union
+from typing import Any, List, Mapping, Optional, Union
 
 
 class GenerateAcceptEnum(str, Enum):
@@ -391,7 +391,7 @@ class Embeddings(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.ModelsListResponse:
+    ) -> List[models.Model]:
         r"""List all embeddings models
 
         Returns a list of all available embeddings models and their properties
@@ -482,7 +482,7 @@ class Embeddings(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.ModelsListResponse:
+    ) -> List[models.Model]:
         r"""List all embeddings models
 
         Returns a list of all available embeddings models and their properties

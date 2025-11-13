@@ -20,7 +20,7 @@ class Generations(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.GetGenerationResponse:
+    ) -> models.GetGenerationData:
         r"""Get request & usage metadata for a generation
 
         :param id:
@@ -157,7 +157,7 @@ class Generations(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.GetGenerationResponse:
+    ) -> models.GetGenerationData:
         r"""Get request & usage metadata for a generation
 
         :param id:

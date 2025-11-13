@@ -9,9 +9,9 @@
 value: models.ChatResponse = /* values here */
 ```
 
-### `Union[eventstreaming.EventStream[models.ChatStreamingResponseChunk], eventstreaming.EventStreamAsync[models.ChatStreamingResponseChunk]]`
+### `Union[eventstreaming.EventStream[models.ChatStreamingResponseChunkData], eventstreaming.EventStreamAsync[models.ChatStreamingResponseChunkData]]`
 
 ```python
-value: Union[eventstreaming.EventStream[models.ChatStreamingResponseChunk], eventstreaming.EventStreamAsync[models.ChatStreamingResponseChunk]] = /* values here */
+value: Union[eventstreaming.EventStream[models.ChatStreamingResponseChunkData], eventstreaming.EventStreamAsync[models.ChatStreamingResponseChunkData]] = /* values here */
 ```
 

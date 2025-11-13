@@ -183,7 +183,7 @@ class Responses(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> eventstreaming.EventStream[models.CreateResponsesResponseBody]:
+    ) -> eventstreaming.EventStream[models.OpenResponsesStreamEvent]:
         r"""Create a response
 
         Creates a streaming or non-streaming response using OpenResponses API format
@@ -444,7 +444,7 @@ class Responses(BaseSDK):
                 http_res,
                 lambda raw: utils.unmarshal_json(
                     raw, models.CreateResponsesResponseBody
-                ),
+                ).data,
                 sentinel="[DONE]",
                 client_ref=self,
             )
@@ -727,7 +727,7 @@ class Responses(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> eventstreaming.EventStreamAsync[models.CreateResponsesResponseBody]:
+    ) -> eventstreaming.EventStreamAsync[models.OpenResponsesStreamEvent]:
         r"""Create a response
 
         Creates a streaming or non-streaming response using OpenResponses API format
@@ -988,7 +988,7 @@ class Responses(BaseSDK):
                 http_res,
                 lambda raw: utils.unmarshal_json(
                     raw, models.CreateResponsesResponseBody
-                ),
+                ).data,
                 sentinel="[DONE]",
                 client_ref=self,
             )

@@ -6,7 +6,7 @@ from openrouter._hooks import HookContext
 from openrouter.types import OptionalNullable, UNSET
 from openrouter.utils import get_security_from_env
 from openrouter.utils.unmarshal_json_response import unmarshal_json_response
-from typing import Any, Mapping, Optional
+from typing import Any, List, Mapping, Optional
 
 
 class Providers(BaseSDK):
@@ -19,7 +19,7 @@ class Providers(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.ListProvidersResponse:
+    ) -> List[models.ListProvidersData]:
         r"""List all providers
 
         :param retries: Override the default retry configuration for this method
@@ -103,7 +103,7 @@ class Providers(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.ListProvidersResponse:
+    ) -> List[models.ListProvidersData]:
         r"""List all providers
 
         :param retries: Override the default retry configuration for this method
