@@ -25,7 +25,7 @@ class Parameters(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetParametersData:
+    ) -> operations.GetParametersResponse:
         r"""Get a model's supported parameters and data about which are most popular
 
         :param security:
@@ -136,7 +136,7 @@ class Parameters(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetParametersData:
+    ) -> operations.GetParametersResponse:
         r"""Get a model's supported parameters and data about which are most popular
 
         :param security:

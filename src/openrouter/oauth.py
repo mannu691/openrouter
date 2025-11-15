@@ -267,7 +267,7 @@ class OAuth(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAuthKeysCodeData:
+    ) -> operations.CreateAuthKeysCodeResponse:
         r"""Create authorization code
 
         Create an authorization code for the PKCE flow to generate a user-controlled API key
@@ -389,7 +389,7 @@ class OAuth(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAuthKeysCodeData:
+    ) -> operations.CreateAuthKeysCodeResponse:
         r"""Create authorization code
 
         Create an authorization code for the PKCE flow to generate a user-controlled API key
