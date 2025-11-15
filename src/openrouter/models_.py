@@ -6,7 +6,7 @@ from openrouter._hooks import HookContext
 from openrouter.types import OptionalNullable, UNSET
 from openrouter.utils import get_security_from_env
 from openrouter.utils.unmarshal_json_response import unmarshal_json_response
-from typing import Any, List, Mapping, Optional, Union
+from typing import Any, Mapping, Optional, Union
 
 
 class Models(BaseSDK):
@@ -19,7 +19,7 @@ class Models(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> components.ModelsCountResponseData:
+    ) -> components.ModelsCountResponse:
         r"""Get total count of available models
 
         :param retries: Override the default retry configuration for this method
@@ -103,7 +103,7 @@ class Models(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> components.ModelsCountResponseData:
+    ) -> components.ModelsCountResponse:
         r"""Get total count of available models
 
         :param retries: Override the default retry configuration for this method
@@ -189,7 +189,7 @@ class Models(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> List[components.Model]:
+    ) -> components.ModelsListResponse:
         r"""List all models and their properties
 
         :param category:
@@ -288,7 +288,7 @@ class Models(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> List[components.Model]:
+    ) -> components.ModelsListResponse:
         r"""List all models and their properties
 
         :param category:
@@ -389,7 +389,7 @@ class Models(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> List[components.Model]:
+    ) -> components.ModelsListResponse:
         r"""List models filtered by user provider preferences
 
         :param security:
@@ -483,7 +483,7 @@ class Models(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> List[components.Model]:
+    ) -> components.ModelsListResponse:
         r"""List models filtered by user provider preferences
 
         :param security:

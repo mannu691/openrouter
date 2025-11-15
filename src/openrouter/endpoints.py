@@ -6,7 +6,7 @@ from openrouter._hooks import HookContext
 from openrouter.types import OptionalNullable, UNSET
 from openrouter.utils import get_security_from_env
 from openrouter.utils.unmarshal_json_response import unmarshal_json_response
-from typing import Any, List, Mapping, Optional
+from typing import Any, Mapping, Optional
 
 
 class Endpoints(BaseSDK):
@@ -21,7 +21,7 @@ class Endpoints(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> components.ListEndpointsResponse:
+    ) -> operations.ListEndpointsResponse:
         r"""List all endpoints for a model
 
         :param author:
@@ -120,7 +120,7 @@ class Endpoints(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> components.ListEndpointsResponse:
+    ) -> operations.ListEndpointsResponse:
         r"""List all endpoints for a model
 
         :param author:
@@ -217,7 +217,7 @@ class Endpoints(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> List[components.PublicEndpoint]:
+    ) -> operations.ListEndpointsZdrResponse:
         r"""Preview the impact of ZDR on the available endpoints
 
         :param retries: Override the default retry configuration for this method
@@ -303,7 +303,7 @@ class Endpoints(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> List[components.PublicEndpoint]:
+    ) -> operations.ListEndpointsZdrResponse:
         r"""Preview the impact of ZDR on the available endpoints
 
         :param retries: Override the default retry configuration for this method

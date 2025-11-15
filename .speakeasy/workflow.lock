@@ -1,4 +1,4 @@
-speakeasyVersion: 1.656.2
+speakeasyVersion: 1.658.1
 sources:
     -OAS:
         sourceNamespace: open-router-chat-completions-api
@@ -6,6 +6,7 @@ sources:
         sourceBlobDigest: sha256:53027ec57392d9617cc001ece83c2fe1aa6e5dbfd52d170381c34c33c6042c23
         tags:
             - latest
+            - speakeasy-sdk-regen-1763230596
 targets:
     open-router:
         source: -OAS
