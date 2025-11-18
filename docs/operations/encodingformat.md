@@ -1,17 +1,9 @@
 # EncodingFormat
 
 
-## Supported Types
+## Values
 
-### `operations.EncodingFormatFloat`
-
-```python
-value: operations.EncodingFormatFloat = /* values here */
-```
-
-### `operations.EncodingFormatBase64`
-
-```python
-value: operations.EncodingFormatBase64 = /* values here */
-```
-
+| Name     | Value    |
+| -------- | -------- |
+| `FLOAT`  | float    |
+| `BASE64` | base64   |

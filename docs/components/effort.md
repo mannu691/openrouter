@@ -5,6 +5,7 @@
 
 | Name      | Value     |
 | --------- | --------- |
+| `NONE`    | none      |
 | `MINIMAL` | minimal   |
 | `LOW`     | low       |
 | `MEDIUM`  | medium    |

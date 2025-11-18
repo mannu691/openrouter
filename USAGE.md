@@ -49,7 +49,7 @@ with OpenRouter(
             },
         },
     }, service_tier="auto", truncation="auto", stream=False, provider={
-        "data_collection": "deny",
+        "data_collection": "allow",
         "zdr": True,
         "enforce_distillable_text": True,
         "order": [
@@ -127,7 +127,7 @@ async def main():
                 },
             },
         }, service_tier="auto", truncation="auto", stream=False, provider={
-            "data_collection": "deny",
+            "data_collection": "allow",
             "zdr": True,
             "enforce_distillable_text": True,
             "order": [

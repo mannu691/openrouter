@@ -11,6 +11,7 @@ OpenAIResponsesReasoningEffort = Union[
         "medium",
         "low",
         "minimal",
+        "none",
     ],
     UnrecognizedStr,
 ]

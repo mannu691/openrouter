@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfd52247-6a25-4c6d-bbce-fe6fce0cd69d
 management:
-  docChecksum: b1b97e85c6e3464e1fd6e2163c4ebc87
+  docChecksum: 4cc4a9d9115d0eca9a5eb4786505579d
   docVersion: 1.0.0
-  speakeasyVersion: 1.658.1
-  generationVersion: 2.755.6
-  releaseVersion: 0.0.16
-  configChecksum: bccceb456c96a46bcbe65fdff6bd5e1f
+  speakeasyVersion: 1.658.2
+  generationVersion: 2.755.9
+  releaseVersion: 0.0.19
+  configChecksum: 834d5c1cea368e35ab6535ffb2bf9e7a
   repoURL: https://github.com/OpenRouterTeam/python-sdk.git
   installationURL: https://github.com/OpenRouterTeam/python-sdk.git
   published: true
@@ -15,7 +15,7 @@ features:
     acceptHeaders: 3.0.0
     additionalDependencies: 1.0.0
     constsAndDefaults: 1.0.5
-    core: 5.23.8
+    core: 5.23.9
     defaultEnabledRetries: 0.2.0
     deprecations: 3.0.2
     devContainers: 3.0.0
@@ -71,6 +71,8 @@ generatedFiles:
   - docs/components/chatmessagecontentitemimagedetail.md
   - docs/components/chatmessagecontentitemtext.md
   - docs/components/chatmessagecontentitemvideo.md
+  - docs/components/chatmessagecontentitemvideoinputvideo.md
+  - docs/components/chatmessagecontentitemvideovideourl.md
   - docs/components/chatmessagetokenlogprob.md
   - docs/components/chatmessagetokenlogprobs.md
   - docs/components/chatmessagetoolcall.md
@@ -305,6 +307,7 @@ generatedFiles:
   - docs/components/provider.md
   - docs/components/providername.md
   - docs/components/provideroverloadedresponseerrordata.md
+  - docs/components/providersort.md
   - docs/components/publicendpoint.md
   - docs/components/publicendpointquantization.md
   - docs/components/publicpricing.md
@@ -375,7 +378,6 @@ generatedFiles:
   - docs/components/security.md
   - docs/components/servicetier.md
   - docs/components/serviceunavailableresponseerrordata.md
-  - docs/components/sort.md
   - docs/components/streamoptions.md
   - docs/components/systemmessage.md
   - docs/components/systemmessagecontent.md
@@ -414,7 +416,8 @@ generatedFiles:
   - docs/components/usermessage.md
   - docs/components/usermessagecontent.md
   - docs/components/variables.md
-  - docs/components/videourl.md
+  - docs/components/videourl1.md
+  - docs/components/videourl2.md
   - docs/components/websearchpreviewtooluserlocation.md
   - docs/components/websearchpreviewtooluserlocationtype.md
   - docs/components/websearchstatus.md
@@ -436,6 +439,9 @@ generatedFiles:
   - docs/models/utils/retryconfig.md
   - docs/operations/apitype.md
   - docs/operations/calldata.md
+  - docs/operations/content.md
+  - docs/operations/contentimageurl.md
+  - docs/operations/contenttext.md
   - docs/operations/createauthkeyscodecodechallengemethod.md
   - docs/operations/createauthkeyscodedata.md
   - docs/operations/createauthkeyscoderequest.md
@@ -454,13 +460,10 @@ generatedFiles:
   - docs/operations/createkeysresponse.md
   - docs/operations/createresponsesresponse.md
   - docs/operations/createresponsesresponsebody.md
-  - docs/operations/datacollection.md
   - docs/operations/deletekeysrequest.md
   - docs/operations/deletekeysresponse.md
   - docs/operations/embedding.md
   - docs/operations/encodingformat.md
-  - docs/operations/encodingformatbase64.md
-  - docs/operations/encodingformatfloat.md
   - docs/operations/exchangeauthcodeforapikeycodechallengemethod.md
   - docs/operations/exchangeauthcodeforapikeyrequest.md
   - docs/operations/exchangeauthcodeforapikeyresponse.md
@@ -482,7 +485,9 @@ generatedFiles:
   - docs/operations/getuseractivityrequest.md
   - docs/operations/getuseractivityresponse.md
   - docs/operations/ignore.md
+  - docs/operations/imageurl.md
   - docs/operations/input.md
+  - docs/operations/inputunion.md
   - docs/operations/listdata.md
   - docs/operations/listendpointsrequest.md
   - docs/operations/listendpointsresponse.md
@@ -500,9 +505,10 @@ generatedFiles:
   - docs/operations/order.md
   - docs/operations/ratelimit.md
   - docs/operations/sendchatcompletionrequestresponse.md
-  - docs/operations/sort.md
   - docs/operations/supportedparameter.md
   - docs/operations/transferintent.md
+  - docs/operations/typeimageurl.md
+  - docs/operations/typetext.md
   - docs/operations/updatekeysdata.md
   - docs/operations/updatekeyslimitreset.md
   - docs/operations/updatekeysrequest.md
@@ -543,7 +549,6 @@ generatedFiles:
   - src/openrouter/components/assistantmessage.py
   - src/openrouter/components/badgatewayresponseerrordata.py
   - src/openrouter/components/badrequestresponseerrordata.py
-  - src/openrouter/components/chatcompletionfinishreason.py
   - src/openrouter/components/chaterror.py
   - src/openrouter/components/chatgenerationparams.py
   - src/openrouter/components/chatgenerationtokenusage.py
@@ -557,7 +562,6 @@ generatedFiles:
   - src/openrouter/components/chatmessagetoolcall.py
   - src/openrouter/components/chatresponse.py
   - src/openrouter/components/chatresponsechoice.py
-  - src/openrouter/components/chatstreamingchoice.py
   - src/openrouter/components/chatstreamingmessagechunk.py
   - src/openrouter/components/chatstreamingmessagetoolcall.py
   - src/openrouter/components/chatstreamingresponsechunk.py
@@ -568,6 +572,7 @@ generatedFiles:
   - src/openrouter/components/completionresponse.py
   - src/openrouter/components/completionusage.py
   - src/openrouter/components/createchargerequest.py
+  - src/openrouter/components/datacollection.py
   - src/openrouter/components/defaultparameters.py
   - src/openrouter/components/edgenetworktimeoutresponseerrordata.py
   - src/openrouter/components/endpointstatus.py
@@ -637,6 +642,7 @@ generatedFiles:
   - src/openrouter/components/perrequestlimits.py
   - src/openrouter/components/providername.py
   - src/openrouter/components/provideroverloadedresponseerrordata.py
+  - src/openrouter/components/providersort.py
   - src/openrouter/components/publicendpoint.py
   - src/openrouter/components/publicpricing.py
   - src/openrouter/components/quantization.py
@@ -833,7 +839,7 @@ examples:
   createEmbeddings:
     speakeasy-default-create-embeddings:
       requestBody:
-        application/json: {"input": "<value>", "model": "Taurus", "provider": {"data_collection": "deny", "zdr": true, "enforce_distillable_text": true, "order": ["OpenAI"], "only": ["OpenAI"], "ignore": ["OpenAI"], "quantizations": ["fp16"], "sort": "price"}}
+        application/json: {"input": "<value>", "model": "Taurus", "provider": {"data_collection": "allow", "zdr": true, "enforce_distillable_text": true, "order": ["OpenAI"], "only": ["OpenAI"], "ignore": ["OpenAI"], "quantizations": ["fp16"], "sort": "price"}}
       responses:
         "200":
           application/json: {"object": "list", "data": [], "model": "Land Cruiser"}

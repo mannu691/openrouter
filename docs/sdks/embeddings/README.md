@@ -27,7 +27,7 @@ with OpenRouter(
 ) as open_router:
 
     res = open_router.embeddings.generate(input="<value>", model="Taurus", provider={
-        "data_collection": "deny",
+        "data_collection": "allow",
         "zdr": True,
         "enforce_distillable_text": True,
         "order": [
@@ -54,11 +54,13 @@ with OpenRouter(
 
 | Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
 | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| `input`                                                                                       | [operations.Input](../../operations/input.md)                                                 | :heavy_check_mark:                                                                            | N/A                                                                                           |
+| `input`                                                                                       | [operations.InputUnion](../../operations/inputunion.md)                                       | :heavy_check_mark:                                                                            | N/A                                                                                           |
 | `model`                                                                                       | *str*                                                                                         | :heavy_check_mark:                                                                            | N/A                                                                                           |
-| `provider`                                                                                    | [Optional[operations.CreateEmbeddingsProvider]](../../operations/createembeddingsprovider.md) | :heavy_minus_sign:                                                                            | N/A                                                                                           |
 | `encoding_format`                                                                             | [Optional[operations.EncodingFormat]](../../operations/encodingformat.md)                     | :heavy_minus_sign:                                                                            | N/A                                                                                           |
+| `dimensions`                                                                                  | *Optional[int]*                                                                               | :heavy_minus_sign:                                                                            | N/A                                                                                           |
 | `user`                                                                                        | *Optional[str]*                                                                               | :heavy_minus_sign:                                                                            | N/A                                                                                           |
+| `provider`                                                                                    | [Optional[operations.CreateEmbeddingsProvider]](../../operations/createembeddingsprovider.md) | :heavy_minus_sign:                                                                            | N/A                                                                                           |
+| `input_type`                                                                                  | *Optional[str]*                                                                               | :heavy_minus_sign:                                                                            | N/A                                                                                           |
 | `retries`                                                                                     | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                              | :heavy_minus_sign:                                                                            | Configuration to override the default retry behavior of the client.                           |
 
 ### Response
