@@ -21,18 +21,18 @@ class Embeddings(BaseSDK):
     def generate(
         self,
         *,
-        input: Union[operations.Input, operations.InputTypedDict],
+        input: Union[operations.InputUnion, operations.InputUnionTypedDict],
         model: str,
+        encoding_format: Optional[operations.EncodingFormat] = None,
+        dimensions: Optional[int] = None,
+        user: Optional[str] = None,
         provider: Optional[
             Union[
                 operations.CreateEmbeddingsProvider,
                 operations.CreateEmbeddingsProviderTypedDict,
             ]
         ] = None,
-        encoding_format: Optional[
-            Union[operations.EncodingFormat, operations.EncodingFormatTypedDict]
-        ] = None,
-        user: Optional[str] = None,
+        input_type: Optional[str] = None,
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
@@ -45,9 +45,11 @@ class Embeddings(BaseSDK):
 
         :param input:
         :param model:
-        :param provider:
         :param encoding_format:
+        :param dimensions:
         :param user:
+        :param provider:
+        :param input_type:
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
         :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
@@ -65,13 +67,15 @@ class Embeddings(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         request = operations.CreateEmbeddingsRequest(
-            input=input,
+            input=utils.get_pydantic_model(input, operations.InputUnion),
             model=model,
+            encoding_format=encoding_format,
+            dimensions=dimensions,
+            user=user,
             provider=utils.get_pydantic_model(
                 provider, Optional[operations.CreateEmbeddingsProvider]
             ),
-            encoding_format=encoding_format,
-            user=user,
+            input_type=input_type,
         )
 
         req = self._build_request(
@@ -204,18 +208,18 @@ class Embeddings(BaseSDK):
     async def generate_async(
         self,
         *,
-        input: Union[operations.Input, operations.InputTypedDict],
+        input: Union[operations.InputUnion, operations.InputUnionTypedDict],
         model: str,
+        encoding_format: Optional[operations.EncodingFormat] = None,
+        dimensions: Optional[int] = None,
+        user: Optional[str] = None,
         provider: Optional[
             Union[
                 operations.CreateEmbeddingsProvider,
                 operations.CreateEmbeddingsProviderTypedDict,
             ]
         ] = None,
-        encoding_format: Optional[
-            Union[operations.EncodingFormat, operations.EncodingFormatTypedDict]
-        ] = None,
-        user: Optional[str] = None,
+        input_type: Optional[str] = None,
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
@@ -228,9 +232,11 @@ class Embeddings(BaseSDK):
 
         :param input:
         :param model:
-        :param provider:
         :param encoding_format:
+        :param dimensions:
         :param user:
+        :param provider:
+        :param input_type:
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
         :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
@@ -248,13 +254,15 @@ class Embeddings(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         request = operations.CreateEmbeddingsRequest(
-            input=input,
+            input=utils.get_pydantic_model(input, operations.InputUnion),
             model=model,
+            encoding_format=encoding_format,
+            dimensions=dimensions,
+            user=user,
             provider=utils.get_pydantic_model(
                 provider, Optional[operations.CreateEmbeddingsProvider]
             ),
-            encoding_format=encoding_format,
-            user=user,
+            input_type=input_type,
         )
 
         req = self._build_request_async(

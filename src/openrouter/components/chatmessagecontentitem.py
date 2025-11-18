@@ -40,6 +40,7 @@ ChatMessageContentItem = Annotated[
         Annotated[ChatMessageContentItemImage, Tag("image_url")],
         Annotated[ChatMessageContentItemAudio, Tag("input_audio")],
         Annotated[ChatMessageContentItemVideo, Tag("input_video")],
+        Annotated[ChatMessageContentItemVideo, Tag("video_url")],
     ],
     Discriminator(lambda m: get_discriminator(m, "type", "type")),
 ]

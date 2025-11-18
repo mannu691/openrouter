@@ -5,25 +5,47 @@ from openrouter.types import BaseModel
 from openrouter.utils import validate_const
 import pydantic
 from pydantic.functional_validators import AfterValidator
-from typing import Literal
-from typing_extensions import Annotated, TypedDict
+from typing import Literal, Union
+from typing_extensions import Annotated, TypeAliasType, TypedDict
 
 
-class VideoURLTypedDict(TypedDict):
+class VideoURL2TypedDict(TypedDict):
     url: str
 
 
-class VideoURL(BaseModel):
+class VideoURL2(BaseModel):
     url: str
 
 
-class ChatMessageContentItemVideoTypedDict(TypedDict):
-    video_url: VideoURLTypedDict
+class ChatMessageContentItemVideoVideoURLTypedDict(TypedDict):
+    video_url: VideoURL2TypedDict
+    type: Literal["video_url"]
+
+
+class ChatMessageContentItemVideoVideoURL(BaseModel):
+    video_url: VideoURL2
+
+    TYPE: Annotated[
+        Annotated[Literal["video_url"], AfterValidator(validate_const("video_url"))],
+        pydantic.Field(alias="type"),
+    ] = "video_url"
+
+
+class VideoURL1TypedDict(TypedDict):
+    url: str
+
+
+class VideoURL1(BaseModel):
+    url: str
+
+
+class ChatMessageContentItemVideoInputVideoTypedDict(TypedDict):
+    video_url: VideoURL1TypedDict
     type: Literal["input_video"]
 
 
-class ChatMessageContentItemVideo(BaseModel):
-    video_url: VideoURL
+class ChatMessageContentItemVideoInputVideo(BaseModel):
+    video_url: VideoURL1
 
     TYPE: Annotated[
         Annotated[
@@ -31,3 +53,18 @@ class ChatMessageContentItemVideo(BaseModel):
         ],
         pydantic.Field(alias="type"),
     ] = "input_video"
+
+
+ChatMessageContentItemVideoTypedDict = TypeAliasType(
+    "ChatMessageContentItemVideoTypedDict",
+    Union[
+        ChatMessageContentItemVideoInputVideoTypedDict,
+        ChatMessageContentItemVideoVideoURLTypedDict,
+    ],
+)
+
+
+ChatMessageContentItemVideo = TypeAliasType(
+    "ChatMessageContentItemVideo",
+    Union[ChatMessageContentItemVideoInputVideo, ChatMessageContentItemVideoVideoURL],
+)

@@ -57,6 +57,7 @@ OpenResponsesReasoningFormat = Union[
         "openai-responses-v1",
         "xai-responses-v1",
         "anthropic-claude-v1",
+        "google-gemini-v1",
     ],
     UnrecognizedStr,
 ]

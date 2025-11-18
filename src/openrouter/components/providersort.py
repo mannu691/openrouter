@@ -5,13 +5,12 @@ from openrouter.types import UnrecognizedStr
 from typing import Literal, Union
 
 
-ChatCompletionFinishReason = Union[
+ProviderSort = Union[
     Literal[
-        "tool_calls",
-        "stop",
-        "length",
-        "content_filter",
-        "error",
+        "price",
+        "throughput",
+        "latency",
     ],
     UnrecognizedStr,
 ]
+r"""The sorting strategy to use for this request, if \"order\" is not specified. When set, no load balancing is performed."""

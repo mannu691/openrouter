@@ -1,29 +1,8 @@
 # Input
 
 
-## Supported Types
+## Fields
 
-### `str`
-
-```python
-value: str = /* values here */
-```
-
-### `List[str]`
-
-```python
-value: List[str] = /* values here */
-```
-
-### `List[float]`
-
-```python
-value: List[float] = /* values here */
-```
-
-### `List[List[float]]`
-
-```python
-value: List[List[float]] = /* values here */
-```
-
+| Field                                                | Type                                                 | Required                                             | Description                                          |
+| ---------------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------- |
+| `content`                                            | List[[operations.Content](../operations/content.md)] | :heavy_check_mark:                                   | N/A                                                  |

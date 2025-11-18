@@ -21,7 +21,6 @@ if TYPE_CHECKING:
         BadRequestResponseErrorData,
         BadRequestResponseErrorDataTypedDict,
     )
-    from .chatcompletionfinishreason import ChatCompletionFinishReason
     from .chaterror import ChatErrorError, ChatErrorErrorTypedDict, Code, CodeTypedDict
     from .chatgenerationparams import (
         ChatGenerationParams,
@@ -72,9 +71,15 @@ if TYPE_CHECKING:
     )
     from .chatmessagecontentitemvideo import (
         ChatMessageContentItemVideo,
+        ChatMessageContentItemVideoInputVideo,
+        ChatMessageContentItemVideoInputVideoTypedDict,
         ChatMessageContentItemVideoTypedDict,
-        VideoURL,
-        VideoURLTypedDict,
+        ChatMessageContentItemVideoVideoURL,
+        ChatMessageContentItemVideoVideoURLTypedDict,
+        VideoURL1,
+        VideoURL1TypedDict,
+        VideoURL2,
+        VideoURL2TypedDict,
     )
     from .chatmessagetokenlogprob import (
         ChatMessageTokenLogprob,
@@ -93,8 +98,13 @@ if TYPE_CHECKING:
         ChatMessageToolCallTypedDict,
     )
     from .chatresponse import ChatResponse, ChatResponseTypedDict
-    from .chatresponsechoice import ChatResponseChoice, ChatResponseChoiceTypedDict
-    from .chatstreamingchoice import ChatStreamingChoice, ChatStreamingChoiceTypedDict
+    from .chatresponsechoice import (
+        ChatCompletionFinishReason,
+        ChatResponseChoice,
+        ChatResponseChoiceTypedDict,
+        ChatStreamingChoice,
+        ChatStreamingChoiceTypedDict,
+    )
     from .chatstreamingmessagechunk import (
         ChatStreamingMessageChunk,
         ChatStreamingMessageChunkRole,
@@ -146,6 +156,7 @@ if TYPE_CHECKING:
         CreateChargeRequest,
         CreateChargeRequestTypedDict,
     )
+    from .datacollection import DataCollection
     from .defaultparameters import DefaultParameters, DefaultParametersTypedDict
     from .edgenetworktimeoutresponseerrordata import (
         EdgeNetworkTimeoutResponseErrorData,
@@ -408,7 +419,6 @@ if TYPE_CHECKING:
         OpenResponsesReasoningSummaryTextDoneEventTypedDict,
     )
     from .openresponsesrequest import (
-        DataCollection,
         Engine,
         IDFileParser,
         IDModeration,
@@ -442,7 +452,6 @@ if TYPE_CHECKING:
         Provider,
         ProviderTypedDict,
         ServiceTier,
-        Sort,
         Truncation,
     )
     from .openresponsesresponsetext import (
@@ -581,6 +590,7 @@ if TYPE_CHECKING:
         ProviderOverloadedResponseErrorData,
         ProviderOverloadedResponseErrorDataTypedDict,
     )
+    from .providersort import ProviderSort
     from .publicendpoint import (
         Pricing,
         PricingTypedDict,
@@ -821,7 +831,11 @@ __all__ = [
     "ChatMessageContentItemTextTypedDict",
     "ChatMessageContentItemTypedDict",
     "ChatMessageContentItemVideo",
+    "ChatMessageContentItemVideoInputVideo",
+    "ChatMessageContentItemVideoInputVideoTypedDict",
     "ChatMessageContentItemVideoTypedDict",
+    "ChatMessageContentItemVideoVideoURL",
+    "ChatMessageContentItemVideoVideoURLTypedDict",
     "ChatMessageTokenLogprob",
     "ChatMessageTokenLogprobTypedDict",
     "ChatMessageTokenLogprobs",
@@ -1205,6 +1219,7 @@ __all__ = [
     "ProviderName",
     "ProviderOverloadedResponseErrorData",
     "ProviderOverloadedResponseErrorDataTypedDict",
+    "ProviderSort",
     "ProviderTypedDict",
     "PublicEndpoint",
     "PublicEndpointQuantization",
@@ -1310,7 +1325,6 @@ __all__ = [
     "ServiceTier",
     "ServiceUnavailableResponseErrorData",
     "ServiceUnavailableResponseErrorDataTypedDict",
-    "Sort",
     "StreamOptions",
     "StreamOptionsTypedDict",
     "SystemMessage",
@@ -1366,8 +1380,10 @@ __all__ = [
     "UserMessageTypedDict",
     "Variables",
     "VariablesTypedDict",
-    "VideoURL",
-    "VideoURLTypedDict",
+    "VideoURL1",
+    "VideoURL1TypedDict",
+    "VideoURL2",
+    "VideoURL2TypedDict",
     "WebSearchPreviewToolUserLocation",
     "WebSearchPreviewToolUserLocationType",
     "WebSearchPreviewToolUserLocationTypedDict",
@@ -1385,7 +1401,6 @@ _dynamic_imports: dict[str, str] = {
     "BadGatewayResponseErrorDataTypedDict": ".badgatewayresponseerrordata",
     "BadRequestResponseErrorData": ".badrequestresponseerrordata",
     "BadRequestResponseErrorDataTypedDict": ".badrequestresponseerrordata",
-    "ChatCompletionFinishReason": ".chatcompletionfinishreason",
     "ChatErrorError": ".chaterror",
     "ChatErrorErrorTypedDict": ".chaterror",
     "Code": ".chaterror",
@@ -1426,9 +1441,15 @@ _dynamic_imports: dict[str, str] = {
     "ChatMessageContentItemText": ".chatmessagecontentitemtext",
     "ChatMessageContentItemTextTypedDict": ".chatmessagecontentitemtext",
     "ChatMessageContentItemVideo": ".chatmessagecontentitemvideo",
+    "ChatMessageContentItemVideoInputVideo": ".chatmessagecontentitemvideo",
+    "ChatMessageContentItemVideoInputVideoTypedDict": ".chatmessagecontentitemvideo",
     "ChatMessageContentItemVideoTypedDict": ".chatmessagecontentitemvideo",
-    "VideoURL": ".chatmessagecontentitemvideo",
-    "VideoURLTypedDict": ".chatmessagecontentitemvideo",
+    "ChatMessageContentItemVideoVideoURL": ".chatmessagecontentitemvideo",
+    "ChatMessageContentItemVideoVideoURLTypedDict": ".chatmessagecontentitemvideo",
+    "VideoURL1": ".chatmessagecontentitemvideo",
+    "VideoURL1TypedDict": ".chatmessagecontentitemvideo",
+    "VideoURL2": ".chatmessagecontentitemvideo",
+    "VideoURL2TypedDict": ".chatmessagecontentitemvideo",
     "ChatMessageTokenLogprob": ".chatmessagetokenlogprob",
     "ChatMessageTokenLogprobTypedDict": ".chatmessagetokenlogprob",
     "TopLogprob": ".chatmessagetokenlogprob",
@@ -1441,10 +1462,11 @@ _dynamic_imports: dict[str, str] = {
     "ChatMessageToolCallTypedDict": ".chatmessagetoolcall",
     "ChatResponse": ".chatresponse",
     "ChatResponseTypedDict": ".chatresponse",
+    "ChatCompletionFinishReason": ".chatresponsechoice",
     "ChatResponseChoice": ".chatresponsechoice",
     "ChatResponseChoiceTypedDict": ".chatresponsechoice",
-    "ChatStreamingChoice": ".chatstreamingchoice",
-    "ChatStreamingChoiceTypedDict": ".chatstreamingchoice",
+    "ChatStreamingChoice": ".chatresponsechoice",
+    "ChatStreamingChoiceTypedDict": ".chatresponsechoice",
     "ChatStreamingMessageChunk": ".chatstreamingmessagechunk",
     "ChatStreamingMessageChunkRole": ".chatstreamingmessagechunk",
     "ChatStreamingMessageChunkTypedDict": ".chatstreamingmessagechunk",
@@ -1488,6 +1510,7 @@ _dynamic_imports: dict[str, str] = {
     "ChainID": ".createchargerequest",
     "CreateChargeRequest": ".createchargerequest",
     "CreateChargeRequestTypedDict": ".createchargerequest",
+    "DataCollection": ".datacollection",
     "DefaultParameters": ".defaultparameters",
     "DefaultParametersTypedDict": ".defaultparameters",
     "EdgeNetworkTimeoutResponseErrorData": ".edgenetworktimeoutresponseerrordata",
@@ -1687,7 +1710,6 @@ _dynamic_imports: dict[str, str] = {
     "OpenResponsesReasoningSummaryTextDoneEvent": ".openresponsesreasoningsummarytextdoneevent",
     "OpenResponsesReasoningSummaryTextDoneEventType": ".openresponsesreasoningsummarytextdoneevent",
     "OpenResponsesReasoningSummaryTextDoneEventTypedDict": ".openresponsesreasoningsummarytextdoneevent",
-    "DataCollection": ".openresponsesrequest",
     "Engine": ".openresponsesrequest",
     "IDFileParser": ".openresponsesrequest",
     "IDModeration": ".openresponsesrequest",
@@ -1721,7 +1743,6 @@ _dynamic_imports: dict[str, str] = {
     "Provider": ".openresponsesrequest",
     "ProviderTypedDict": ".openresponsesrequest",
     "ServiceTier": ".openresponsesrequest",
-    "Sort": ".openresponsesrequest",
     "Truncation": ".openresponsesrequest",
     "OpenResponsesResponseText": ".openresponsesresponsetext",
     "OpenResponsesResponseTextTypedDict": ".openresponsesresponsetext",
@@ -1834,6 +1855,7 @@ _dynamic_imports: dict[str, str] = {
     "ProviderName": ".providername",
     "ProviderOverloadedResponseErrorData": ".provideroverloadedresponseerrordata",
     "ProviderOverloadedResponseErrorDataTypedDict": ".provideroverloadedresponseerrordata",
+    "ProviderSort": ".providersort",
     "Pricing": ".publicendpoint",
     "PricingTypedDict": ".publicendpoint",
     "PublicEndpoint": ".publicendpoint",

@@ -9,3 +9,4 @@
 | `MEDIUM`  | medium    |
 | `LOW`     | low       |
 | `MINIMAL` | minimal   |
+| `NONE`    | none      |

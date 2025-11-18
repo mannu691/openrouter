@@ -2,7 +2,9 @@
 
 from __future__ import annotations
 from openrouter.components import (
+    datacollection as components_datacollection,
     providername as components_providername,
+    providersort as components_providersort,
     quantization as components_quantization,
 )
 from openrouter.types import (
@@ -20,26 +22,76 @@ from typing import Any, List, Literal, Optional, Union
 from typing_extensions import Annotated, NotRequired, TypeAliasType, TypedDict
 
 
-InputTypedDict = TypeAliasType(
-    "InputTypedDict", Union[str, List[str], List[float], List[List[float]]]
+TypeImageURL = Literal["image_url",]
+
+
+class ImageURLTypedDict(TypedDict):
+    url: str
+
+
+class ImageURL(BaseModel):
+    url: str
+
+
+class ContentImageURLTypedDict(TypedDict):
+    type: TypeImageURL
+    image_url: ImageURLTypedDict
+
+
+class ContentImageURL(BaseModel):
+    type: TypeImageURL
+
+    image_url: ImageURL
+
+
+TypeText = Literal["text",]
+
+
+class ContentTextTypedDict(TypedDict):
+    type: TypeText
+    text: str
+
+
+class ContentText(BaseModel):
+    type: TypeText
+
+    text: str
+
+
+ContentTypedDict = TypeAliasType(
+    "ContentTypedDict", Union[ContentTextTypedDict, ContentImageURLTypedDict]
 )
 
 
-Input = TypeAliasType("Input", Union[str, List[str], List[float], List[List[float]]])
+Content = TypeAliasType("Content", Union[ContentText, ContentImageURL])
 
 
-DataCollection = Union[
+class InputTypedDict(TypedDict):
+    content: List[ContentTypedDict]
+
+
+class Input(BaseModel):
+    content: List[Content]
+
+
+InputUnionTypedDict = TypeAliasType(
+    "InputUnionTypedDict",
+    Union[str, List[str], List[float], List[List[float]], List[InputTypedDict]],
+)
+
+
+InputUnion = TypeAliasType(
+    "InputUnion", Union[str, List[str], List[float], List[List[float]], List[Input]]
+)
+
+
+EncodingFormat = Union[
     Literal[
-        "deny",
-        "allow",
+        "float",
+        "base64",
     ],
     UnrecognizedStr,
 ]
-r"""Data collection setting. If no available model provider meets the requirement, your request will return an error.
-- allow: (default) allow providers which store user data non-transiently and may train on it
-- deny: use only providers which do not collect user data.
-
-"""
 
 
 OrderTypedDict = TypeAliasType(
@@ -93,17 +145,6 @@ Ignore = TypeAliasType(
 )
 
 
-Sort = Union[
-    Literal[
-        "price",
-        "throughput",
-        "latency",
-    ],
-    UnrecognizedStr,
-]
-r"""The sorting strategy to use for this request, if \"order\" is not specified. When set, no load balancing is performed."""
-
-
 class MaxPriceTypedDict(TypedDict):
     r"""The object specifying the maximum price you want to pay for this request. USD price per million tokens, for prompt and completion."""
 
@@ -147,11 +188,11 @@ class CreateEmbeddingsProviderTypedDict(TypedDict):
     """
     require_parameters: NotRequired[Nullable[bool]]
     r"""Whether to filter providers to only those that support the parameters you've provided. If this setting is omitted or set to false, then providers will receive only the parameters they support, and ignore the rest."""
-    data_collection: NotRequired[Nullable[DataCollection]]
+    data_collection: NotRequired[Nullable[components_datacollection.DataCollection]]
     r"""Data collection setting. If no available model provider meets the requirement, your request will return an error.
     - allow: (default) allow providers which store user data non-transiently and may train on it
-    - deny: use only providers which do not collect user data.
 
+    - deny: use only providers which do not collect user data.
     """
     zdr: NotRequired[Nullable[bool]]
     r"""Whether to restrict routing to only ZDR (Zero Data Retention) endpoints. When true, only endpoints that do not retain prompts will be used."""
@@ -165,7 +206,7 @@ class CreateEmbeddingsProviderTypedDict(TypedDict):
     r"""List of provider slugs to ignore. If provided, this list is merged with your account-wide ignored provider settings for this request."""
     quantizations: NotRequired[Nullable[List[components_quantization.Quantization]]]
     r"""A list of quantization levels to filter the provider by."""
-    sort: NotRequired[Nullable[Sort]]
+    sort: NotRequired[Nullable[components_providersort.ProviderSort]]
     r"""The sorting strategy to use for this request, if \"order\" is not specified. When set, no load balancing is performed."""
     max_price: NotRequired[MaxPriceTypedDict]
     r"""The object specifying the maximum price you want to pay for this request. USD price per million tokens, for prompt and completion."""
@@ -183,12 +224,13 @@ class CreateEmbeddingsProvider(BaseModel):
     r"""Whether to filter providers to only those that support the parameters you've provided. If this setting is omitted or set to false, then providers will receive only the parameters they support, and ignore the rest."""
 
     data_collection: Annotated[
-        OptionalNullable[DataCollection], PlainValidator(validate_open_enum(False))
+        OptionalNullable[components_datacollection.DataCollection],
+        PlainValidator(validate_open_enum(False)),
     ] = UNSET
     r"""Data collection setting. If no available model provider meets the requirement, your request will return an error.
     - allow: (default) allow providers which store user data non-transiently and may train on it
-    - deny: use only providers which do not collect user data.
 
+    - deny: use only providers which do not collect user data.
     """
 
     zdr: OptionalNullable[bool] = UNSET
@@ -217,7 +259,8 @@ class CreateEmbeddingsProvider(BaseModel):
     r"""A list of quantization levels to filter the provider by."""
 
     sort: Annotated[
-        OptionalNullable[Sort], PlainValidator(validate_open_enum(False))
+        OptionalNullable[components_providersort.ProviderSort],
+        PlainValidator(validate_open_enum(False)),
     ] = UNSET
     r"""The sorting strategy to use for this request, if \"order\" is not specified. When set, no load balancing is performed."""
 
@@ -278,40 +321,32 @@ class CreateEmbeddingsProvider(BaseModel):
         return m
 
 
-EncodingFormatBase64 = Literal["base64",]
-
-
-EncodingFormatFloat = Literal["float",]
-
-
-EncodingFormatTypedDict = TypeAliasType(
-    "EncodingFormatTypedDict", Union[EncodingFormatFloat, EncodingFormatBase64]
-)
-
-
-EncodingFormat = TypeAliasType(
-    "EncodingFormat", Union[EncodingFormatFloat, EncodingFormatBase64]
-)
-
-
 class CreateEmbeddingsRequestTypedDict(TypedDict):
-    input: InputTypedDict
+    input: InputUnionTypedDict
     model: str
-    provider: NotRequired[CreateEmbeddingsProviderTypedDict]
-    encoding_format: NotRequired[EncodingFormatTypedDict]
+    encoding_format: NotRequired[EncodingFormat]
+    dimensions: NotRequired[int]
     user: NotRequired[str]
+    provider: NotRequired[CreateEmbeddingsProviderTypedDict]
+    input_type: NotRequired[str]
 
 
 class CreateEmbeddingsRequest(BaseModel):
-    input: Input
+    input: InputUnion
 
     model: str
 
-    provider: Optional[CreateEmbeddingsProvider] = None
+    encoding_format: Annotated[
+        Optional[EncodingFormat], PlainValidator(validate_open_enum(False))
+    ] = None
 
-    encoding_format: Optional[EncodingFormat] = None
+    dimensions: Optional[int] = None
 
     user: Optional[str] = None
+
+    provider: Optional[CreateEmbeddingsProvider] = None
+
+    input_type: Optional[str] = None
 
 
 Object = Literal["list",]

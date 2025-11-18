@@ -5,7 +5,7 @@ from .chatgenerationtokenusage import (
     ChatGenerationTokenUsage,
     ChatGenerationTokenUsageTypedDict,
 )
-from .chatstreamingchoice import ChatStreamingChoice, ChatStreamingChoiceTypedDict
+from .chatresponsechoice import ChatStreamingChoice, ChatStreamingChoiceTypedDict
 from openrouter.types import (
     BaseModel,
     Nullable,

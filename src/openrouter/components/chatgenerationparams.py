@@ -31,6 +31,7 @@ from typing_extensions import Annotated, NotRequired, TypeAliasType, TypedDict
 
 Effort = Union[
     Literal[
+        "none",
         "minimal",
         "low",
         "medium",

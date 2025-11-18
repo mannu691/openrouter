@@ -17,6 +17,8 @@ class PublicPricingTypedDict(TypedDict):
     r"""A value in string or number format that is a large number"""
     image: NotRequired[Any]
     r"""A value in string or number format that is a large number"""
+    image_token: NotRequired[Any]
+    r"""A value in string or number format that is a large number"""
     image_output: NotRequired[Any]
     r"""A value in string or number format that is a large number"""
     audio: NotRequired[Any]
@@ -47,6 +49,9 @@ class PublicPricing(BaseModel):
     r"""A value in string or number format that is a large number"""
 
     image: Optional[Any] = None
+    r"""A value in string or number format that is a large number"""
+
+    image_token: Optional[Any] = None
     r"""A value in string or number format that is a large number"""
 
     image_output: Optional[Any] = None
