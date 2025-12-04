@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfd52247-6a25-4c6d-bbce-fe6fce0cd69d
 management:
-  docChecksum: bcccd1abd05f6654a822386f2eefbd8a
+  docChecksum: 01481f11e87a18cf1daa583fee2c88fb
   docVersion: 1.0.0
   speakeasyVersion: 1.666.0
   generationVersion: 2.768.0
-  releaseVersion: 0.0.16
-  configChecksum: cd00e781b0ef78cfcb3fe812f51e93ff
+  releaseVersion: 0.0.21
+  configChecksum: 52c13d7fdf159611bf5d900363e322ac
   repoURL: https://github.com/OpenRouterTeam/python-sdk.git
   installationURL: https://github.com/OpenRouterTeam/python-sdk.git
   published: true
@@ -66,16 +66,14 @@ generatedFiles:
   - docs/components/chatgenerationtokenusage.md
   - docs/components/chatmessagecontentitem.md
   - docs/components/chatmessagecontentitemaudio.md
-  - docs/components/chatmessagecontentitemaudioformat.md
   - docs/components/chatmessagecontentitemaudioinputaudio.md
-  - docs/components/chatmessagecontentitemfile.md
+  - docs/components/chatmessagecontentitemcachecontrol.md
   - docs/components/chatmessagecontentitemimage.md
   - docs/components/chatmessagecontentitemimagedetail.md
   - docs/components/chatmessagecontentitemtext.md
   - docs/components/chatmessagecontentitemvideo.md
   - docs/components/chatmessagecontentitemvideoinputvideo.md
   - docs/components/chatmessagecontentitemvideovideourl.md
-  - docs/components/chatmessagecontentitemvideovideourlvideourl.md
   - docs/components/chatmessagetokenlogprob.md
   - docs/components/chatmessagetokenlogprobs.md
   - docs/components/chatmessagetoolcall.md
@@ -108,12 +106,12 @@ generatedFiles:
   - docs/components/costdetails.md
   - docs/components/createchargerequest.md
   - docs/components/datacollection.md
+  - docs/components/debug.md
   - docs/components/defaultparameters.md
   - docs/components/edgenetworktimeoutresponseerrordata.md
   - docs/components/effort.md
   - docs/components/endpointstatus.md
   - docs/components/engine.md
-  - docs/components/file.md
   - docs/components/filecitation.md
   - docs/components/filecitationtype.md
   - docs/components/filepath.md
@@ -121,6 +119,7 @@ generatedFiles:
   - docs/components/forbiddenresponseerrordata.md
   - docs/components/idfileparser.md
   - docs/components/idmoderation.md
+  - docs/components/idresponsehealing.md
   - docs/components/idweb.md
   - docs/components/ignore.md
   - docs/components/imagegenerationstatus.md
@@ -304,6 +303,7 @@ generatedFiles:
   - docs/components/plugin.md
   - docs/components/pluginfileparser.md
   - docs/components/pluginmoderation.md
+  - docs/components/pluginresponsehealing.md
   - docs/components/pluginweb.md
   - docs/components/pricing.md
   - docs/components/prompt.md
@@ -395,6 +395,7 @@ generatedFiles:
   - docs/components/toplogprob.md
   - docs/components/topproviderinfo.md
   - docs/components/truncation.md
+  - docs/components/ttl.md
   - docs/components/type.md
   - docs/components/typeresponsecompleted.md
   - docs/components/typeresponsecontentpartadded.md
@@ -420,7 +421,8 @@ generatedFiles:
   - docs/components/usermessage.md
   - docs/components/usermessagecontent.md
   - docs/components/variables.md
-  - docs/components/videourl.md
+  - docs/components/videourl1.md
+  - docs/components/videourl2.md
   - docs/components/websearchpreviewtooluserlocation.md
   - docs/components/websearchpreviewtooluserlocationtype.md
   - docs/components/websearchstatus.md
@@ -471,6 +473,7 @@ generatedFiles:
   - docs/operations/exchangeauthcodeforapikeycodechallengemethod.md
   - docs/operations/exchangeauthcodeforapikeyrequest.md
   - docs/operations/exchangeauthcodeforapikeyresponse.md
+  - docs/operations/getcreditsdata.md
   - docs/operations/getcreditsresponse.md
   - docs/operations/getcurrentkeydata.md
   - docs/operations/getcurrentkeyresponse.md
@@ -553,12 +556,13 @@ generatedFiles:
   - src/openrouter/components/assistantmessage.py
   - src/openrouter/components/badgatewayresponseerrordata.py
   - src/openrouter/components/badrequestresponseerrordata.py
+  - src/openrouter/components/chatcompletionfinishreason.py
   - src/openrouter/components/chaterror.py
   - src/openrouter/components/chatgenerationparams.py
   - src/openrouter/components/chatgenerationtokenusage.py
   - src/openrouter/components/chatmessagecontentitem.py
   - src/openrouter/components/chatmessagecontentitemaudio.py
-  - src/openrouter/components/chatmessagecontentitemfile.py
+  - src/openrouter/components/chatmessagecontentitemcachecontrol.py
   - src/openrouter/components/chatmessagecontentitemimage.py
   - src/openrouter/components/chatmessagecontentitemtext.py
   - src/openrouter/components/chatmessagecontentitemvideo.py
@@ -567,6 +571,7 @@ generatedFiles:
   - src/openrouter/components/chatmessagetoolcall.py
   - src/openrouter/components/chatresponse.py
   - src/openrouter/components/chatresponsechoice.py
+  - src/openrouter/components/chatstreamingchoice.py
   - src/openrouter/components/chatstreamingmessagechunk.py
   - src/openrouter/components/chatstreamingmessagetoolcall.py
   - src/openrouter/components/chatstreamingresponsechunk.py
@@ -689,7 +694,6 @@ generatedFiles:
   - src/openrouter/components/unprocessableentityresponseerrordata.py
   - src/openrouter/components/urlcitation.py
   - src/openrouter/components/usermessage.py
-  - src/openrouter/components/videourl.py
   - src/openrouter/components/websearchpreviewtooluserlocation.py
   - src/openrouter/components/websearchstatus.py
   - src/openrouter/credits.py
@@ -773,7 +777,7 @@ examples:
   createResponses:
     speakeasy-default-create-responses:
       requestBody:
-        application/json: {"stream": false}
+        application/json: {"store": false, "service_tier": "auto", "stream": false}
       responses:
         "200":
           application/json: {"id": "resp-abc123", "object": "response", "created_at": 1704067200, "model": "gpt-4", "output": [{"id": "msg-abc123", "role": "assistant", "type": "message", "content": [{"type": "output_text", "text": "Hello! How can I help you today?"}]}], "error": null, "incomplete_details": null, "temperature": null, "top_p": null, "instructions": null, "metadata": null, "tools": [], "tool_choice": "auto", "parallel_tool_calls": true}
@@ -823,7 +827,7 @@ examples:
     speakeasy-default-get-credits:
       responses:
         "200":
-          application/json: {}
+          application/json: {"data": {"total_credits": 100.5, "total_usage": 25.75}}
         "401":
           application/json: {"error": {"code": 401, "message": "Missing Authentication header"}}
         "403":

@@ -9,12 +9,14 @@
 | `AION_LABS`         | AionLabs            |
 | `ALIBABA`           | Alibaba             |
 | `AMAZON_BEDROCK`    | Amazon Bedrock      |
+| `AMAZON_NOVA`       | Amazon Nova         |
 | `ANTHROPIC`         | Anthropic           |
-| `ARCEE`             | Arcee               |
+| `ARCEE_AI`          | Arcee AI            |
 | `ATLAS_CLOUD`       | AtlasCloud          |
 | `AVIAN`             | Avian               |
 | `AZURE`             | Azure               |
 | `BASE_TEN`          | BaseTen             |
+| `BYTE_PLUS`         | BytePlus            |
 | `BLACK_FOREST_LABS` | Black Forest Labs   |
 | `CEREBRAS`          | Cerebras            |
 | `CHUTES`            | Chutes              |
@@ -29,6 +31,7 @@
 | `FIREWORKS`         | Fireworks           |
 | `FRIENDLI`          | Friendli            |
 | `GMI_CLOUD`         | GMICloud            |
+| `GO_POMELO`         | GoPomelo            |
 | `GOOGLE`            | Google              |
 | `GOOGLE_AI_STUDIO`  | Google AI Studio    |
 | `GROQ`              | Groq                |
@@ -58,7 +61,9 @@
 | `RELACE`            | Relace              |
 | `SAMBA_NOVA`        | SambaNova           |
 | `SILICON_FLOW`      | SiliconFlow         |
+| `SOURCEFUL`         | Sourceful           |
 | `STEALTH`           | Stealth             |
+| `STREAM_LAKE`       | StreamLake          |
 | `SWITCHPOINT`       | Switchpoint         |
 | `TARGON`            | Targon              |
 | `TOGETHER`          | Together            |

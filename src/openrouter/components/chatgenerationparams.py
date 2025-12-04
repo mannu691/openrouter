@@ -156,6 +156,14 @@ ChatGenerationParamsStop = TypeAliasType(
 )
 
 
+class DebugTypedDict(TypedDict):
+    echo_upstream_body: NotRequired[bool]
+
+
+class Debug(BaseModel):
+    echo_upstream_body: Optional[bool] = None
+
+
 class ChatGenerationParamsTypedDict(TypedDict):
     messages: List[MessageTypedDict]
     model: NotRequired[str]
@@ -179,6 +187,7 @@ class ChatGenerationParamsTypedDict(TypedDict):
     tools: NotRequired[List[ToolDefinitionJSONTypedDict]]
     top_p: NotRequired[Nullable[float]]
     user: NotRequired[str]
+    debug: NotRequired[DebugTypedDict]
 
 
 class ChatGenerationParams(BaseModel):
@@ -226,6 +235,8 @@ class ChatGenerationParams(BaseModel):
 
     user: Optional[str] = None
 
+    debug: Optional[Debug] = None
+
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
         optional_fields = [
@@ -250,6 +261,7 @@ class ChatGenerationParams(BaseModel):
             "tools",
             "top_p",
             "user",
+            "debug",
         ]
         nullable_fields = [
             "frequency_penalty",

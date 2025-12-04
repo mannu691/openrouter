@@ -44,9 +44,10 @@ from openrouter.types import (
     UNSET_SENTINEL,
     UnrecognizedStr,
 )
-from openrouter.utils import get_discriminator, validate_open_enum
+from openrouter.utils import get_discriminator, validate_const, validate_open_enum
+import pydantic
 from pydantic import Discriminator, Tag, model_serializer
-from pydantic.functional_validators import PlainValidator
+from pydantic.functional_validators import AfterValidator, PlainValidator
 from typing import Any, Dict, List, Literal, Optional, Union
 from typing_extensions import Annotated, NotRequired, TypeAliasType, TypedDict
 
@@ -135,16 +136,7 @@ OpenResponsesRequestToolUnion = Annotated[
 ]
 
 
-ServiceTier = Union[
-    Literal[
-        "auto",
-        "default",
-        "flex",
-        "priority",
-        "scale",
-    ],
-    UnrecognizedStr,
-]
+ServiceTier = Literal["auto",]
 
 
 Truncation = Union[
@@ -356,6 +348,17 @@ class Provider(BaseModel):
         return m
 
 
+IDResponseHealing = Literal["response-healing",]
+
+
+class PluginResponseHealingTypedDict(TypedDict):
+    id: IDResponseHealing
+
+
+class PluginResponseHealing(BaseModel):
+    id: IDResponseHealing
+
+
 IDFileParser = Literal["file-parser",]
 
 
@@ -437,7 +440,12 @@ class PluginModeration(BaseModel):
 
 PluginTypedDict = TypeAliasType(
     "PluginTypedDict",
-    Union[PluginModerationTypedDict, PluginFileParserTypedDict, PluginWebTypedDict],
+    Union[
+        PluginModerationTypedDict,
+        PluginResponseHealingTypedDict,
+        PluginFileParserTypedDict,
+        PluginWebTypedDict,
+    ],
 )
 
 
@@ -446,6 +454,7 @@ Plugin = Annotated[
         Annotated[PluginModeration, Tag("moderation")],
         Annotated[PluginWeb, Tag("web")],
         Annotated[PluginFileParser, Tag("file-parser")],
+        Annotated[PluginResponseHealing, Tag("response-healing")],
     ],
     Discriminator(lambda m: get_discriminator(m, "id", "id")),
 ]
@@ -478,8 +487,8 @@ class OpenResponsesRequestTypedDict(TypedDict):
     include: NotRequired[Nullable[List[OpenAIResponsesIncludable]]]
     background: NotRequired[Nullable[bool]]
     safety_identifier: NotRequired[Nullable[str]]
-    store: NotRequired[Nullable[bool]]
-    service_tier: NotRequired[Nullable[ServiceTier]]
+    store: Literal[False]
+    service_tier: NotRequired[ServiceTier]
     truncation: NotRequired[Nullable[Truncation]]
     stream: NotRequired[bool]
     provider: NotRequired[Nullable[ProviderTypedDict]]
@@ -488,6 +497,8 @@ class OpenResponsesRequestTypedDict(TypedDict):
     r"""Plugins you want to enable for this request, including their settings."""
     user: NotRequired[str]
     r"""A unique identifier representing your end-user, which helps distinguish between different users of your app. This allows your app to identify specific users in case of abuse reports, preventing your entire app from being affected by the actions of individual users. Maximum of 128 characters."""
+    session_id: NotRequired[str]
+    r"""A unique identifier for grouping related requests (e.g., a conversation or agent workflow) for observability. If provided in both the request body and the x-session-id header, the body value takes precedence. Maximum of 128 characters."""
 
 
 class OpenResponsesRequest(BaseModel):
@@ -543,11 +554,12 @@ class OpenResponsesRequest(BaseModel):
 
     safety_identifier: OptionalNullable[str] = UNSET
 
-    store: OptionalNullable[bool] = UNSET
+    STORE: Annotated[
+        Annotated[Optional[Literal[False]], AfterValidator(validate_const(False))],
+        pydantic.Field(alias="store"),
+    ] = False
 
-    service_tier: Annotated[
-        OptionalNullable[ServiceTier], PlainValidator(validate_open_enum(False))
-    ] = UNSET
+    service_tier: Optional[ServiceTier] = "auto"
 
     truncation: Annotated[
         OptionalNullable[Truncation], PlainValidator(validate_open_enum(False))
@@ -563,6 +575,9 @@ class OpenResponsesRequest(BaseModel):
 
     user: Optional[str] = None
     r"""A unique identifier representing your end-user, which helps distinguish between different users of your app. This allows your app to identify specific users in case of abuse reports, preventing your entire app from being affected by the actions of individual users. Maximum of 128 characters."""
+
+    session_id: Optional[str] = None
+    r"""A unique identifier for grouping related requests (e.g., a conversation or agent workflow) for observability. If provided in both the request body and the x-session-id header, the body value takes precedence. Maximum of 128 characters."""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
@@ -594,6 +609,7 @@ class OpenResponsesRequest(BaseModel):
             "provider",
             "plugins",
             "user",
+            "session_id",
         ]
         nullable_fields = [
             "instructions",
@@ -609,8 +625,6 @@ class OpenResponsesRequest(BaseModel):
             "include",
             "background",
             "safety_identifier",
-            "store",
-            "service_tier",
             "truncation",
             "provider",
         ]

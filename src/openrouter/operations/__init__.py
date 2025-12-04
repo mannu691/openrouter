@@ -100,7 +100,12 @@ if TYPE_CHECKING:
         ExchangeAuthCodeForAPIKeyResponse,
         ExchangeAuthCodeForAPIKeyResponseTypedDict,
     )
-    from .getcredits import GetCreditsResponse, GetCreditsResponseTypedDict
+    from .getcredits import (
+        GetCreditsData,
+        GetCreditsDataTypedDict,
+        GetCreditsResponse,
+        GetCreditsResponseTypedDict,
+    )
     from .getcurrentkey import (
         GetCurrentKeyData,
         GetCurrentKeyDataTypedDict,
@@ -242,6 +247,8 @@ __all__ = [
     "ExchangeAuthCodeForAPIKeyRequestTypedDict",
     "ExchangeAuthCodeForAPIKeyResponse",
     "ExchangeAuthCodeForAPIKeyResponseTypedDict",
+    "GetCreditsData",
+    "GetCreditsDataTypedDict",
     "GetCreditsResponse",
     "GetCreditsResponseTypedDict",
     "GetCurrentKeyData",
@@ -416,6 +423,8 @@ _dynamic_imports: dict[str, str] = {
     "ExchangeAuthCodeForAPIKeyRequestTypedDict": ".exchangeauthcodeforapikey",
     "ExchangeAuthCodeForAPIKeyResponse": ".exchangeauthcodeforapikey",
     "ExchangeAuthCodeForAPIKeyResponseTypedDict": ".exchangeauthcodeforapikey",
+    "GetCreditsData": ".getcredits",
+    "GetCreditsDataTypedDict": ".getcredits",
     "GetCreditsResponse": ".getcredits",
     "GetCreditsResponseTypedDict": ".getcredits",
     "GetCurrentKeyData": ".getcurrentkey",

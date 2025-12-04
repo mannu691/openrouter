@@ -61,6 +61,7 @@ class Chat(BaseSDK):
         ] = None,
         top_p: OptionalNullable[float] = UNSET,
         user: Optional[str] = None,
+        debug: Optional[Union[components.Debug, components.DebugTypedDict]] = None,
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
@@ -92,6 +93,7 @@ class Chat(BaseSDK):
         :param tools:
         :param top_p:
         :param user:
+        :param debug:
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
         :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
@@ -144,6 +146,7 @@ class Chat(BaseSDK):
         ] = None,
         top_p: OptionalNullable[float] = UNSET,
         user: Optional[str] = None,
+        debug: Optional[Union[components.Debug, components.DebugTypedDict]] = None,
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
@@ -175,6 +178,7 @@ class Chat(BaseSDK):
         :param tools:
         :param top_p:
         :param user:
+        :param debug:
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
         :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
@@ -226,6 +230,7 @@ class Chat(BaseSDK):
         ] = None,
         top_p: OptionalNullable[float] = UNSET,
         user: Optional[str] = None,
+        debug: Optional[Union[components.Debug, components.DebugTypedDict]] = None,
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
@@ -257,6 +262,7 @@ class Chat(BaseSDK):
         :param tools:
         :param top_p:
         :param user:
+        :param debug:
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
         :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
@@ -305,6 +311,7 @@ class Chat(BaseSDK):
             ),
             top_p=top_p,
             user=user,
+            debug=utils.get_pydantic_model(debug, Optional[components.Debug]),
         )
 
         req = self._build_request(
@@ -439,6 +446,7 @@ class Chat(BaseSDK):
         ] = None,
         top_p: OptionalNullable[float] = UNSET,
         user: Optional[str] = None,
+        debug: Optional[Union[components.Debug, components.DebugTypedDict]] = None,
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
@@ -470,6 +478,7 @@ class Chat(BaseSDK):
         :param tools:
         :param top_p:
         :param user:
+        :param debug:
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
         :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
@@ -522,6 +531,7 @@ class Chat(BaseSDK):
         ] = None,
         top_p: OptionalNullable[float] = UNSET,
         user: Optional[str] = None,
+        debug: Optional[Union[components.Debug, components.DebugTypedDict]] = None,
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
@@ -553,6 +563,7 @@ class Chat(BaseSDK):
         :param tools:
         :param top_p:
         :param user:
+        :param debug:
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
         :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
@@ -604,6 +615,7 @@ class Chat(BaseSDK):
         ] = None,
         top_p: OptionalNullable[float] = UNSET,
         user: Optional[str] = None,
+        debug: Optional[Union[components.Debug, components.DebugTypedDict]] = None,
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
@@ -635,6 +647,7 @@ class Chat(BaseSDK):
         :param tools:
         :param top_p:
         :param user:
+        :param debug:
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
         :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
@@ -683,6 +696,7 @@ class Chat(BaseSDK):
             ),
             top_p=top_p,
             user=user,
+            debug=utils.get_pydantic_model(debug, Optional[components.Debug]),
         )
 
         req = self._build_request_async(

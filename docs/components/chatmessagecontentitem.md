@@ -33,9 +33,3 @@ value: components.ChatMessageContentItemVideo = /* values here */
 value: components.ChatMessageContentItemVideo = /* values here */
 ```
 
-### `components.ChatMessageContentItemFile`
-
-```python
-value: components.ChatMessageContentItemFile = /* values here */
-```
-
