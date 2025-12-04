@@ -3447,12 +3447,14 @@ components:
         - AionLabs
         - Alibaba
         - Amazon Bedrock
+        - Amazon Nova
         - Anthropic
-        - Arcee
+        - Arcee AI
         - AtlasCloud
         - Avian
         - Azure
         - BaseTen
+        - BytePlus
         - Black Forest Labs
         - Cerebras
         - Chutes
@@ -3467,6 +3469,7 @@ components:
         - Fireworks
         - Friendli
         - GMICloud
+        - GoPomelo
         - Google
         - Google AI Studio
         - Groq
@@ -3496,7 +3499,9 @@ components:
         - Relace
         - SambaNova
         - SiliconFlow
+        - Sourceful
         - Stealth
+        - StreamLake
         - Switchpoint
         - Targon
         - Together
@@ -3628,17 +3633,13 @@ components:
           nullable: true
         store:
           type: boolean
-          nullable: true
+          const: false
+          default: false
         service_tier:
-          allOf:
-            - $ref: '#/components/schemas/OpenAIResponsesServiceTier'
-            - enum:
-                - auto
-                - default
-                - flex
-                - scale
-                - priority
-              example: auto
+          type: string
+          enum:
+            - auto
+          default: auto
         truncation:
           allOf:
             - $ref: '#/components/schemas/OpenAIResponsesTruncation'
@@ -3789,6 +3790,14 @@ components:
                           - native
                 required:
                   - id
+              - type: object
+                properties:
+                  id:
+                    type: string
+                    enum:
+                      - response-healing
+                required:
+                  - id
           description: Plugins you want to enable for this request, including their settings.
         user:
           type: string
@@ -3797,6 +3806,13 @@ components:
             A unique identifier representing your end-user, which helps distinguish between different users of your app.
             This allows your app to identify specific users in case of abuse reports, preventing your entire app from
             being affected by the actions of individual users. Maximum of 128 characters.
+        session_id:
+          type: string
+          maxLength: 128
+          description: >-
+            A unique identifier for grouping related requests (e.g., a conversation or agent workflow) for
+            observability. If provided in both the request body and the x-session-id header, the body value takes
+            precedence. Maximum of 128 characters.
       description: Request schema for Responses endpoint
       example:
         model: anthropic/claude-4.5-sonnet-20250929
@@ -4577,6 +4593,10 @@ components:
             status: default
             uptime_last_30m: 99.5
             supports_implicit_caching: true
+    __schema0:
+      anyOf:
+        - $ref: '#/components/schemas/ChatCompletionFinishReason'
+        - type: 'null'
     ModelName:
       type: string
     ChatMessageContentItemText:
@@ -4587,6 +4607,8 @@ components:
           const: text
         text:
           type: string
+        cache_control:
+          $ref: '#/components/schemas/ChatMessageContentItemCacheControl'
       required:
         - type
         - text
@@ -4625,14 +4647,6 @@ components:
               type: string
             format:
               type: string
-              enum:
-                - wav
-                - mp3
-                - flac
-                - m4a
-                - ogg
-                - pcm16
-                - pcm24
           required:
             - data
             - format
@@ -4810,15 +4824,13 @@ components:
         - prompt_tokens
         - total_tokens
     ChatCompletionFinishReason:
-      anyOf:
-        - type: string
-          enum:
-            - tool_calls
-            - stop
-            - length
-            - content_filter
-            - error
-        - type: 'null'
+      type: string
+      enum:
+        - tool_calls
+        - stop
+        - length
+        - content_filter
+        - error
     JSONSchemaConfig:
       type: object
       properties:
@@ -4860,6 +4872,19 @@ components:
       required:
         - type
         - grammar
+    ChatMessageContentItemCacheControl:
+      type: object
+      properties:
+        type:
+          type: string
+          const: ephemeral
+        ttl:
+          type: string
+          enum:
+            - 5m
+            - 1h
+      required:
+        - type
     SystemMessage:
       type: object
       properties:
@@ -5170,13 +5195,18 @@ components:
             - type: 'null'
         user:
           type: string
+        debug:
+          type: object
+          properties:
+            echo_upstream_body:
+              type: boolean
       required:
         - messages
     ChatResponseChoice:
       type: object
       properties:
         finish_reason:
-          $ref: '#/components/schemas/ChatCompletionFinishReason'
+          $ref: '#/components/schemas/__schema0'
         index:
           type: number
         message:
@@ -5237,7 +5267,7 @@ components:
         delta:
           $ref: '#/components/schemas/ChatStreamingMessageChunk'
         finish_reason:
-          $ref: '#/components/schemas/ChatCompletionFinishReason'
+          $ref: '#/components/schemas/__schema0'
         index:
           type: number
         logprobs:
@@ -5569,6 +5599,12 @@ components:
             - type: 'null'
         finish_reason:
           $ref: '#/components/schemas/CompletionFinishReason'
+        native_finish_reason:
+          type: string
+        reasoning:
+          anyOf:
+            - type: string
+            - type: 'null'
       required:
         - text
         - index
@@ -5585,6 +5621,8 @@ components:
         created:
           type: number
         model:
+          type: string
+        provider:
           type: string
         system_fingerprint:
           type: string
@@ -5804,6 +5842,26 @@ paths:
             application/json:
               schema:
                 type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      total_credits:
+                        type: number
+                        description: Total credits purchased
+                        example: 100.5
+                      total_usage:
+                        type: number
+                        description: Total credits used
+                        example: 25.75
+                    required:
+                      - total_credits
+                      - total_usage
+                    example:
+                      total_credits: 100.5
+                      total_usage: 25.75
+                required:
+                  - data
                 description: Total credits purchased and used
                 example:
                   data:
@@ -6726,12 +6784,14 @@ paths:
               - AionLabs
               - Alibaba
               - Amazon Bedrock
+              - Amazon Nova
               - Anthropic
-              - Arcee
+              - Arcee AI
               - AtlasCloud
               - Avian
               - Azure
               - BaseTen
+              - BytePlus
               - Black Forest Labs
               - Cerebras
               - Chutes
@@ -6746,6 +6806,7 @@ paths:
               - Fireworks
               - Friendli
               - GMICloud
+              - GoPomelo
               - Google
               - Google AI Studio
               - Groq
@@ -6775,7 +6836,9 @@ paths:
               - Relace
               - SambaNova
               - SiliconFlow
+              - Sourceful
               - Stealth
+              - StreamLake
               - Switchpoint
               - Targon
               - Together

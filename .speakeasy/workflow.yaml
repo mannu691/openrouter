@@ -1,9 +1,13 @@
 workflowVersion: 1.0.0
-speakeasyVersion: latest
+speakeasyVersion: 1.666.0
 sources:
     -OAS:
         inputs:
             - location: registry.speakeasyapi.dev/openrouter/sdk/open-router-chat-completions-api:main
+        overlays:
+            - location: .speakeasy/overlays/open-enums.overlay.yaml
+            - location: .speakeasy/overlays/remove-rss-responses.overlay.yaml
+            - location: .speakeasy/overlays/add-headers.overlay.yaml
         output: .speakeasy/out.openapi.yaml
         registry:
             location: registry.speakeasyapi.dev/openrouter/sdk/-oas
