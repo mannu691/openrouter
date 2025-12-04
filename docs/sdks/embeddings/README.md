@@ -26,24 +26,7 @@ with OpenRouter(
     api_key=os.getenv("OPENROUTER_API_KEY", ""),
 ) as open_router:
 
-    res = open_router.embeddings.generate(input="<value>", model="Taurus", provider={
-        "data_collection": "allow",
-        "zdr": True,
-        "enforce_distillable_text": True,
-        "order": [
-            "OpenAI",
-        ],
-        "only": [
-            "OpenAI",
-        ],
-        "ignore": [
-            "OpenAI",
-        ],
-        "quantizations": [
-            "fp16",
-        ],
-        "sort": "price",
-    })
+    res = open_router.embeddings.generate(input="<value>", model="Taurus")
 
     # Handle response
     print(res)

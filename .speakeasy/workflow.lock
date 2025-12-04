@@ -6,30 +6,37 @@ sources:
         sourceBlobDigest: sha256:ee1f2422281b3ed5b38951c74636ad192c9bb160f216069c1f7931ccc4e52553
         tags:
             - latest
+    OpenRouter API:
+        sourceNamespace: open-router-chat-completions-api
+        sourceRevisionDigest: sha256:9b410c8cfafe475dc6d9550f97a1e755b9a02b54513d3a85efe606e9bb05ca57
+        sourceBlobDigest: sha256:61a2d897cc5ddd893a5131bfacad7fcc311fe5b2eaaa5641fbb0a5b3321bfde7
+        tags:
+            - latest
+            - 1.0.0
 targets:
     open-router:
-        source: -OAS
+        source: OpenRouter API
         sourceNamespace: open-router-chat-completions-api
-        sourceRevisionDigest: sha256:f1b59b9b643de5e20d6e3299a8274783d8c0854615876f5d7f6f081814842695
-        sourceBlobDigest: sha256:ee1f2422281b3ed5b38951c74636ad192c9bb160f216069c1f7931ccc4e52553
+        sourceRevisionDigest: sha256:9b410c8cfafe475dc6d9550f97a1e755b9a02b54513d3a85efe606e9bb05ca57
+        sourceBlobDigest: sha256:61a2d897cc5ddd893a5131bfacad7fcc311fe5b2eaaa5641fbb0a5b3321bfde7
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: 1.666.0
     sources:
-        -OAS:
+        OpenRouter API:
             inputs:
-                - location: registry.speakeasyapi.dev/openrouter/sdk/open-router-chat-completions-api:main
+                - location: .speakeasy/in.openapi.yaml
             overlays:
                 - location: .speakeasy/overlays/open-enums.overlay.yaml
                 - location: .speakeasy/overlays/remove-rss-responses.overlay.yaml
                 - location: .speakeasy/overlays/add-headers.overlay.yaml
             output: .speakeasy/out.openapi.yaml
             registry:
-                location: registry.speakeasyapi.dev/openrouter/sdk/-oas
+                location: registry.speakeasyapi.dev/openrouter/sdk/open-router-chat-completions-api
     targets:
         open-router:
             target: python
-            source: -OAS
+            source: OpenRouter API
             publish:
                 pypi:
                     token: $pypi_token

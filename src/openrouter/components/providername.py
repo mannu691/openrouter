@@ -63,6 +63,7 @@ ProviderName = Union[
         "Relace",
         "SambaNova",
         "SiliconFlow",
+        "Sourceful",
         "Stealth",
         "StreamLake",
         "Switchpoint",

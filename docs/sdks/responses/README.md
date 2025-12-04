@@ -25,61 +25,7 @@ with OpenRouter(
     api_key=os.getenv("OPENROUTER_API_KEY", ""),
 ) as open_router:
 
-    res = open_router.beta.responses.send(input=[
-        {
-            "type": "message",
-            "role": "user",
-            "content": "Hello, how are you?",
-        },
-    ], metadata={
-        "user_id": "123",
-        "session_id": "abc-def-ghi",
-    }, tools=[
-        {
-            "type": "function",
-            "name": "get_current_weather",
-            "description": "Get the current weather in a given location",
-            "parameters": {
-                "type": "object",
-                "properties": {
-                    "location": {
-                        "type": "string",
-                    },
-                },
-            },
-        },
-    ], model="anthropic/claude-4.5-sonnet-20250929", text={
-        "format_": {
-            "type": "text",
-        },
-        "verbosity": "medium",
-    }, reasoning={
-        "summary": "auto",
-        "enabled": True,
-    }, temperature=0.7, top_p=0.9, prompt={
-        "id": "<id>",
-        "variables": {
-            "key": {
-                "type": "input_text",
-                "text": "Hello, how can I help you?",
-            },
-        },
-    }, service_tier="auto", truncation="auto", stream=False, provider={
-        "data_collection": "allow",
-        "zdr": True,
-        "enforce_distillable_text": True,
-        "order": [
-            "OpenAI",
-        ],
-        "only": [
-            "OpenAI",
-        ],
-        "ignore": [
-            "OpenAI",
-        ],
-        "quantizations": None,
-        "sort": "price",
-    })
+    res = open_router.beta.responses.send(service_tier="auto", stream=False)
 
     with res as event_stream:
         for event in event_stream:
@@ -118,6 +64,7 @@ with OpenRouter(
 | `provider`                                                                                                                                                                                                                                                                                           | [OptionalNullable[components.Provider]](../../components/provider.md)                                                                                                                                                                                                                                | :heavy_minus_sign:                                                                                                                                                                                                                                                                                   | When multiple model providers are available, optionally indicate your routing preference.                                                                                                                                                                                                            |                                                                                                                                                                                                                                                                                                      |
 | `plugins`                                                                                                                                                                                                                                                                                            | List[[components.Plugin](../../components/plugin.md)]                                                                                                                                                                                                                                                | :heavy_minus_sign:                                                                                                                                                                                                                                                                                   | Plugins you want to enable for this request, including their settings.                                                                                                                                                                                                                               |                                                                                                                                                                                                                                                                                                      |
 | `user`                                                                                                                                                                                                                                                                                               | *Optional[str]*                                                                                                                                                                                                                                                                                      | :heavy_minus_sign:                                                                                                                                                                                                                                                                                   | A unique identifier representing your end-user, which helps distinguish between different users of your app. This allows your app to identify specific users in case of abuse reports, preventing your entire app from being affected by the actions of individual users. Maximum of 128 characters. |                                                                                                                                                                                                                                                                                                      |
+| `session_id`                                                                                                                                                                                                                                                                                         | *Optional[str]*                                                                                                                                                                                                                                                                                      | :heavy_minus_sign:                                                                                                                                                                                                                                                                                   | A unique identifier for grouping related requests (e.g., a conversation or agent workflow) for observability. If provided in both the request body and the x-session-id header, the body value takes precedence. Maximum of 128 characters.                                                          |                                                                                                                                                                                                                                                                                                      |
 | `retries`                                                                                                                                                                                                                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                                                                                                                                                                                                                     | :heavy_minus_sign:                                                                                                                                                                                                                                                                                   | Configuration to override the default retry behavior of the client.                                                                                                                                                                                                                                  |                                                                                                                                                                                                                                                                                                      |
 
 ### Response

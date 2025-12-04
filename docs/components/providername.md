@@ -61,6 +61,7 @@
 | `RELACE`            | Relace              |
 | `SAMBA_NOVA`        | SambaNova           |
 | `SILICON_FLOW`      | SiliconFlow         |
+| `SOURCEFUL`         | Sourceful           |
 | `STEALTH`           | Stealth             |
 | `STREAM_LAKE`       | StreamLake          |
 | `SWITCHPOINT`       | Switchpoint         |

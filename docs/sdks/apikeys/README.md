@@ -67,7 +67,6 @@ Create a new API key
 <!-- UsageSnippet language="python" operationID="createKeys" method="post" path="/keys" -->
 ```python
 from openrouter import OpenRouter
-from openrouter.utils import parse_datetime
 import os
 
 
@@ -75,7 +74,7 @@ with OpenRouter(
     api_key=os.getenv("OPENROUTER_API_KEY", ""),
 ) as open_router:
 
-    res = open_router.api_keys.create(name="My New API Key", limit=50, limit_reset="monthly", include_byok_in_limit=True, expires_at=parse_datetime("2027-12-31T23:59:59Z"))
+    res = open_router.api_keys.create(name="My New API Key")
 
     # Handle response
     print(res)
@@ -123,7 +122,7 @@ with OpenRouter(
     api_key=os.getenv("OPENROUTER_API_KEY", ""),
 ) as open_router:
 
-    res = open_router.api_keys.update(hash="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", name="Updated API Key Name", disabled=False, limit=75, limit_reset="daily", include_byok_in_limit=True)
+    res = open_router.api_keys.update(hash="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")
 
     # Handle response
     print(res)

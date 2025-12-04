@@ -497,6 +497,8 @@ class OpenResponsesRequestTypedDict(TypedDict):
     r"""Plugins you want to enable for this request, including their settings."""
     user: NotRequired[str]
     r"""A unique identifier representing your end-user, which helps distinguish between different users of your app. This allows your app to identify specific users in case of abuse reports, preventing your entire app from being affected by the actions of individual users. Maximum of 128 characters."""
+    session_id: NotRequired[str]
+    r"""A unique identifier for grouping related requests (e.g., a conversation or agent workflow) for observability. If provided in both the request body and the x-session-id header, the body value takes precedence. Maximum of 128 characters."""
 
 
 class OpenResponsesRequest(BaseModel):
@@ -574,6 +576,9 @@ class OpenResponsesRequest(BaseModel):
     user: Optional[str] = None
     r"""A unique identifier representing your end-user, which helps distinguish between different users of your app. This allows your app to identify specific users in case of abuse reports, preventing your entire app from being affected by the actions of individual users. Maximum of 128 characters."""
 
+    session_id: Optional[str] = None
+    r"""A unique identifier for grouping related requests (e.g., a conversation or agent workflow) for observability. If provided in both the request body and the x-session-id header, the body value takes precedence. Maximum of 128 characters."""
+
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
         optional_fields = [
@@ -604,6 +609,7 @@ class OpenResponsesRequest(BaseModel):
             "provider",
             "plugins",
             "user",
+            "session_id",
         ]
         nullable_fields = [
             "instructions",

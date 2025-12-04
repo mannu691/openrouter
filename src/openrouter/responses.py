@@ -79,6 +79,7 @@ class Responses(BaseSDK):
             Union[List[components.Plugin], List[components.PluginTypedDict]]
         ] = None,
         user: Optional[str] = None,
+        session_id: Optional[str] = None,
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
@@ -114,6 +115,7 @@ class Responses(BaseSDK):
         :param provider: When multiple model providers are available, optionally indicate your routing preference.
         :param plugins: Plugins you want to enable for this request, including their settings.
         :param user: A unique identifier representing your end-user, which helps distinguish between different users of your app. This allows your app to identify specific users in case of abuse reports, preventing your entire app from being affected by the actions of individual users. Maximum of 128 characters.
+        :param session_id: A unique identifier for grouping related requests (e.g., a conversation or agent workflow) for observability. If provided in both the request body and the x-session-id header, the body value takes precedence. Maximum of 128 characters.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
         :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
@@ -182,6 +184,7 @@ class Responses(BaseSDK):
             Union[List[components.Plugin], List[components.PluginTypedDict]]
         ] = None,
         user: Optional[str] = None,
+        session_id: Optional[str] = None,
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
@@ -217,6 +220,7 @@ class Responses(BaseSDK):
         :param provider: When multiple model providers are available, optionally indicate your routing preference.
         :param plugins: Plugins you want to enable for this request, including their settings.
         :param user: A unique identifier representing your end-user, which helps distinguish between different users of your app. This allows your app to identify specific users in case of abuse reports, preventing your entire app from being affected by the actions of individual users. Maximum of 128 characters.
+        :param session_id: A unique identifier for grouping related requests (e.g., a conversation or agent workflow) for observability. If provided in both the request body and the x-session-id header, the body value takes precedence. Maximum of 128 characters.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
         :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
@@ -284,6 +288,7 @@ class Responses(BaseSDK):
             Union[List[components.Plugin], List[components.PluginTypedDict]]
         ] = None,
         user: Optional[str] = None,
+        session_id: Optional[str] = None,
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
@@ -319,6 +324,7 @@ class Responses(BaseSDK):
         :param provider: When multiple model providers are available, optionally indicate your routing preference.
         :param plugins: Plugins you want to enable for this request, including their settings.
         :param user: A unique identifier representing your end-user, which helps distinguish between different users of your app. This allows your app to identify specific users in case of abuse reports, preventing your entire app from being affected by the actions of individual users. Maximum of 128 characters.
+        :param session_id: A unique identifier for grouping related requests (e.g., a conversation or agent workflow) for observability. If provided in both the request body and the x-session-id header, the body value takes precedence. Maximum of 128 characters.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
         :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
@@ -378,6 +384,7 @@ class Responses(BaseSDK):
                 plugins, Optional[List[components.Plugin]]
             ),
             user=user,
+            session_id=session_id,
         )
 
         req = self._build_request(
@@ -630,6 +637,7 @@ class Responses(BaseSDK):
             Union[List[components.Plugin], List[components.PluginTypedDict]]
         ] = None,
         user: Optional[str] = None,
+        session_id: Optional[str] = None,
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
@@ -665,6 +673,7 @@ class Responses(BaseSDK):
         :param provider: When multiple model providers are available, optionally indicate your routing preference.
         :param plugins: Plugins you want to enable for this request, including their settings.
         :param user: A unique identifier representing your end-user, which helps distinguish between different users of your app. This allows your app to identify specific users in case of abuse reports, preventing your entire app from being affected by the actions of individual users. Maximum of 128 characters.
+        :param session_id: A unique identifier for grouping related requests (e.g., a conversation or agent workflow) for observability. If provided in both the request body and the x-session-id header, the body value takes precedence. Maximum of 128 characters.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
         :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
@@ -733,6 +742,7 @@ class Responses(BaseSDK):
             Union[List[components.Plugin], List[components.PluginTypedDict]]
         ] = None,
         user: Optional[str] = None,
+        session_id: Optional[str] = None,
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
@@ -768,6 +778,7 @@ class Responses(BaseSDK):
         :param provider: When multiple model providers are available, optionally indicate your routing preference.
         :param plugins: Plugins you want to enable for this request, including their settings.
         :param user: A unique identifier representing your end-user, which helps distinguish between different users of your app. This allows your app to identify specific users in case of abuse reports, preventing your entire app from being affected by the actions of individual users. Maximum of 128 characters.
+        :param session_id: A unique identifier for grouping related requests (e.g., a conversation or agent workflow) for observability. If provided in both the request body and the x-session-id header, the body value takes precedence. Maximum of 128 characters.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
         :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
@@ -835,6 +846,7 @@ class Responses(BaseSDK):
             Union[List[components.Plugin], List[components.PluginTypedDict]]
         ] = None,
         user: Optional[str] = None,
+        session_id: Optional[str] = None,
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
@@ -870,6 +882,7 @@ class Responses(BaseSDK):
         :param provider: When multiple model providers are available, optionally indicate your routing preference.
         :param plugins: Plugins you want to enable for this request, including their settings.
         :param user: A unique identifier representing your end-user, which helps distinguish between different users of your app. This allows your app to identify specific users in case of abuse reports, preventing your entire app from being affected by the actions of individual users. Maximum of 128 characters.
+        :param session_id: A unique identifier for grouping related requests (e.g., a conversation or agent workflow) for observability. If provided in both the request body and the x-session-id header, the body value takes precedence. Maximum of 128 characters.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
         :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
@@ -929,6 +942,7 @@ class Responses(BaseSDK):
                 plugins, Optional[List[components.Plugin]]
             ),
             user=user,
+            session_id=session_id,
         )
 
         req = self._build_request_async(

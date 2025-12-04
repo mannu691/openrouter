@@ -105,7 +105,7 @@ class UpdateKeysRequestBody(BaseModel):
 class UpdateKeysRequestTypedDict(TypedDict):
     hash: str
     r"""The hash identifier of the API key to update"""
-    body: UpdateKeysRequestBodyTypedDict
+    request_body: UpdateKeysRequestBodyTypedDict
 
 
 class UpdateKeysRequest(BaseModel):
@@ -114,7 +114,7 @@ class UpdateKeysRequest(BaseModel):
     ]
     r"""The hash identifier of the API key to update"""
 
-    body: Annotated[
+    request_body: Annotated[
         UpdateKeysRequestBody,
         FieldMetadata(request=RequestMetadata(media_type="application/json")),
     ]

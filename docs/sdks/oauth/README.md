@@ -26,7 +26,7 @@ with OpenRouter(
     api_key=os.getenv("OPENROUTER_API_KEY", ""),
 ) as open_router:
 
-    res = open_router.o_auth.exchange_auth_code_for_api_key(code="auth_code_abc123def456", code_verifier="dBjftJeZ4CVP-mB92K27uhbUJU1p1r_wW1gFWFOEjXk", code_challenge_method="S256")
+    res = open_router.o_auth.exchange_auth_code_for_api_key(code="auth_code_abc123def456")
 
     # Handle response
     print(res)
@@ -71,7 +71,7 @@ with OpenRouter(
     api_key=os.getenv("OPENROUTER_API_KEY", ""),
 ) as open_router:
 
-    res = open_router.o_auth.create_auth_code(callback_url="https://myapp.com/auth/callback", code_challenge="E9Melhoa2OwvFrEMTJguCHaoeK1t8URWbuGJSstw-cM", code_challenge_method="S256", limit=100)
+    res = open_router.o_auth.create_auth_code(callback_url="https://myapp.com/auth/callback")
 
     # Handle response
     print(res)
