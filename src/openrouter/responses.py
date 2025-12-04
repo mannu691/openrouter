@@ -69,7 +69,8 @@ class Responses(BaseSDK):
         include: OptionalNullable[List[components.OpenAIResponsesIncludable]] = UNSET,
         background: OptionalNullable[bool] = UNSET,
         safety_identifier: OptionalNullable[str] = UNSET,
-        service_tier: Optional[components.ServiceTier] = "auto",
+        store: OptionalNullable[bool] = UNSET,
+        service_tier: OptionalNullable[components.ServiceTier] = UNSET,
         truncation: OptionalNullable[components.Truncation] = UNSET,
         stream: Union[Literal[False], None] = None,
         provider: OptionalNullable[
@@ -108,6 +109,7 @@ class Responses(BaseSDK):
         :param include:
         :param background:
         :param safety_identifier:
+        :param store:
         :param service_tier:
         :param truncation:
         :param stream:
@@ -172,7 +174,8 @@ class Responses(BaseSDK):
         include: OptionalNullable[List[components.OpenAIResponsesIncludable]] = UNSET,
         background: OptionalNullable[bool] = UNSET,
         safety_identifier: OptionalNullable[str] = UNSET,
-        service_tier: Optional[components.ServiceTier] = "auto",
+        store: OptionalNullable[bool] = UNSET,
+        service_tier: OptionalNullable[components.ServiceTier] = UNSET,
         truncation: OptionalNullable[components.Truncation] = UNSET,
         stream: Literal[True],
         provider: OptionalNullable[
@@ -211,6 +214,7 @@ class Responses(BaseSDK):
         :param include:
         :param background:
         :param safety_identifier:
+        :param store:
         :param service_tier:
         :param truncation:
         :param stream:
@@ -274,7 +278,8 @@ class Responses(BaseSDK):
         include: OptionalNullable[List[components.OpenAIResponsesIncludable]] = UNSET,
         background: OptionalNullable[bool] = UNSET,
         safety_identifier: OptionalNullable[str] = UNSET,
-        service_tier: Optional[components.ServiceTier] = "auto",
+        store: OptionalNullable[bool] = UNSET,
+        service_tier: OptionalNullable[components.ServiceTier] = UNSET,
         truncation: OptionalNullable[components.Truncation] = UNSET,
         stream: Optional[bool] = False,
         provider: OptionalNullable[
@@ -313,6 +318,7 @@ class Responses(BaseSDK):
         :param include:
         :param background:
         :param safety_identifier:
+        :param store:
         :param service_tier:
         :param truncation:
         :param stream:
@@ -368,6 +374,7 @@ class Responses(BaseSDK):
             include=include,
             background=background,
             safety_identifier=safety_identifier,
+            store=store,
             service_tier=service_tier,
             truncation=truncation,
             stream=stream,
@@ -620,7 +627,8 @@ class Responses(BaseSDK):
         include: OptionalNullable[List[components.OpenAIResponsesIncludable]] = UNSET,
         background: OptionalNullable[bool] = UNSET,
         safety_identifier: OptionalNullable[str] = UNSET,
-        service_tier: Optional[components.ServiceTier] = "auto",
+        store: OptionalNullable[bool] = UNSET,
+        service_tier: OptionalNullable[components.ServiceTier] = UNSET,
         truncation: OptionalNullable[components.Truncation] = UNSET,
         stream: Union[Literal[False], None] = None,
         provider: OptionalNullable[
@@ -659,6 +667,7 @@ class Responses(BaseSDK):
         :param include:
         :param background:
         :param safety_identifier:
+        :param store:
         :param service_tier:
         :param truncation:
         :param stream:
@@ -723,7 +732,8 @@ class Responses(BaseSDK):
         include: OptionalNullable[List[components.OpenAIResponsesIncludable]] = UNSET,
         background: OptionalNullable[bool] = UNSET,
         safety_identifier: OptionalNullable[str] = UNSET,
-        service_tier: Optional[components.ServiceTier] = "auto",
+        store: OptionalNullable[bool] = UNSET,
+        service_tier: OptionalNullable[components.ServiceTier] = UNSET,
         truncation: OptionalNullable[components.Truncation] = UNSET,
         stream: Literal[True],
         provider: OptionalNullable[
@@ -762,6 +772,7 @@ class Responses(BaseSDK):
         :param include:
         :param background:
         :param safety_identifier:
+        :param store:
         :param service_tier:
         :param truncation:
         :param stream:
@@ -825,7 +836,8 @@ class Responses(BaseSDK):
         include: OptionalNullable[List[components.OpenAIResponsesIncludable]] = UNSET,
         background: OptionalNullable[bool] = UNSET,
         safety_identifier: OptionalNullable[str] = UNSET,
-        service_tier: Optional[components.ServiceTier] = "auto",
+        store: OptionalNullable[bool] = UNSET,
+        service_tier: OptionalNullable[components.ServiceTier] = UNSET,
         truncation: OptionalNullable[components.Truncation] = UNSET,
         stream: Optional[bool] = False,
         provider: OptionalNullable[
@@ -864,6 +876,7 @@ class Responses(BaseSDK):
         :param include:
         :param background:
         :param safety_identifier:
+        :param store:
         :param service_tier:
         :param truncation:
         :param stream:
@@ -919,6 +932,7 @@ class Responses(BaseSDK):
             include=include,
             background=background,
             safety_identifier=safety_identifier,
+            store=store,
             service_tier=service_tier,
             truncation=truncation,
             stream=stream,

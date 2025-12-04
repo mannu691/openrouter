@@ -395,7 +395,7 @@ class Usage(BaseModel):
     cost: Optional[float] = None
 
 
-class CreateEmbeddingsResponseTypedDict(TypedDict):
+class CreateEmbeddingsResponseBodyTypedDict(TypedDict):
     r"""Embedding response"""
 
     object: Object
@@ -405,7 +405,7 @@ class CreateEmbeddingsResponseTypedDict(TypedDict):
     usage: NotRequired[UsageTypedDict]
 
 
-class CreateEmbeddingsResponse(BaseModel):
+class CreateEmbeddingsResponseBody(BaseModel):
     r"""Embedding response"""
 
     object: Object
@@ -417,3 +417,14 @@ class CreateEmbeddingsResponse(BaseModel):
     id: Optional[str] = None
 
     usage: Optional[Usage] = None
+
+
+CreateEmbeddingsResponseTypedDict = TypeAliasType(
+    "CreateEmbeddingsResponseTypedDict",
+    Union[CreateEmbeddingsResponseBodyTypedDict, str],
+)
+
+
+CreateEmbeddingsResponse = TypeAliasType(
+    "CreateEmbeddingsResponse", Union[CreateEmbeddingsResponseBody, str]
+)

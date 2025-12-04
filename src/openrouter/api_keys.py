@@ -506,7 +506,7 @@ class APIKeys(BaseSDK):
 
         request = operations.UpdateKeysRequest(
             hash=hash,
-            body=operations.UpdateKeysRequestBody(
+            request_body=operations.UpdateKeysRequestBody(
                 name=name,
                 disabled=disabled,
                 limit=limit,
@@ -529,7 +529,11 @@ class APIKeys(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.body, False, False, "json", operations.UpdateKeysRequestBody
+                request.request_body,
+                False,
+                False,
+                "json",
+                operations.UpdateKeysRequestBody,
             ),
             allow_empty_value=None,
             timeout_ms=timeout_ms,
@@ -638,7 +642,7 @@ class APIKeys(BaseSDK):
 
         request = operations.UpdateKeysRequest(
             hash=hash,
-            body=operations.UpdateKeysRequestBody(
+            request_body=operations.UpdateKeysRequestBody(
                 name=name,
                 disabled=disabled,
                 limit=limit,
@@ -661,7 +665,11 @@ class APIKeys(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.body, False, False, "json", operations.UpdateKeysRequestBody
+                request.request_body,
+                False,
+                False,
+                "json",
+                operations.UpdateKeysRequestBody,
             ),
             allow_empty_value=None,
             timeout_ms=timeout_ms,

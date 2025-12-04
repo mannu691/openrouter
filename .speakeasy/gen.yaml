@@ -6,7 +6,7 @@ generation:
   sdkClassName: OpenRouter
   maintainOpenAPIOrder: true
   usageSnippets:
-    optionalPropertyRendering: withExample
+    optionalPropertyRendering: never
     sdkInitStyle: constructor
   useClassNamesForArrayFields: true
   fixes:
@@ -24,13 +24,14 @@ generation:
   sdkHooksConfigAccess: true
   schemas:
     allOfMergeStrategy: shallowMerge
-  requestBodyFieldName: body
+  requestBodyFieldName: ""
   tests:
     generateTests: false
     generateNewTests: true
     skipResponseBodyAssertions: false
+  preApplyUnionDiscriminators: true
 python:
-  version: 0.1.1
+  version: 0.0.16
   additionalDependencies:
     dev: {}
     main: {}
@@ -57,11 +58,12 @@ python:
   imports:
     option: openapi
     paths:
-      callbacks: ""
+      callbacks: callbacks
       errors: errors
       operations: operations
       shared: components
-      webhooks: ""
+      webhooks: webhooks
+  inferSSEOverload: true
   inferUnionDiscriminators: true
   inputModelSuffix: input
   legacyPyright: false

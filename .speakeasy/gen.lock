@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfd52247-6a25-4c6d-bbce-fe6fce0cd69d
 management:
-  docChecksum: 7c3a22e3f6b8d7c91ff063e2951aed2f
+  docChecksum: bcccd1abd05f6654a822386f2eefbd8a
   docVersion: 1.0.0
   speakeasyVersion: 1.666.0
   generationVersion: 2.768.0
-  releaseVersion: 0.1.1
-  configChecksum: 1206f35a1f0802441ea1b8674cd04f00
+  releaseVersion: 0.0.16
+  configChecksum: cd00e781b0ef78cfcb3fe812f51e93ff
   repoURL: https://github.com/OpenRouterTeam/python-sdk.git
   installationURL: https://github.com/OpenRouterTeam/python-sdk.git
   published: true
@@ -66,14 +66,16 @@ generatedFiles:
   - docs/components/chatgenerationtokenusage.md
   - docs/components/chatmessagecontentitem.md
   - docs/components/chatmessagecontentitemaudio.md
+  - docs/components/chatmessagecontentitemaudioformat.md
   - docs/components/chatmessagecontentitemaudioinputaudio.md
-  - docs/components/chatmessagecontentitemcachecontrol.md
+  - docs/components/chatmessagecontentitemfile.md
   - docs/components/chatmessagecontentitemimage.md
   - docs/components/chatmessagecontentitemimagedetail.md
   - docs/components/chatmessagecontentitemtext.md
   - docs/components/chatmessagecontentitemvideo.md
   - docs/components/chatmessagecontentitemvideoinputvideo.md
   - docs/components/chatmessagecontentitemvideovideourl.md
+  - docs/components/chatmessagecontentitemvideovideourlvideourl.md
   - docs/components/chatmessagetokenlogprob.md
   - docs/components/chatmessagetokenlogprobs.md
   - docs/components/chatmessagetoolcall.md
@@ -106,12 +108,12 @@ generatedFiles:
   - docs/components/costdetails.md
   - docs/components/createchargerequest.md
   - docs/components/datacollection.md
-  - docs/components/debug.md
   - docs/components/defaultparameters.md
   - docs/components/edgenetworktimeoutresponseerrordata.md
   - docs/components/effort.md
   - docs/components/endpointstatus.md
   - docs/components/engine.md
+  - docs/components/file.md
   - docs/components/filecitation.md
   - docs/components/filecitationtype.md
   - docs/components/filepath.md
@@ -119,7 +121,6 @@ generatedFiles:
   - docs/components/forbiddenresponseerrordata.md
   - docs/components/idfileparser.md
   - docs/components/idmoderation.md
-  - docs/components/idresponsehealing.md
   - docs/components/idweb.md
   - docs/components/ignore.md
   - docs/components/imagegenerationstatus.md
@@ -303,7 +304,6 @@ generatedFiles:
   - docs/components/plugin.md
   - docs/components/pluginfileparser.md
   - docs/components/pluginmoderation.md
-  - docs/components/pluginresponsehealing.md
   - docs/components/pluginweb.md
   - docs/components/pricing.md
   - docs/components/prompt.md
@@ -395,7 +395,6 @@ generatedFiles:
   - docs/components/toplogprob.md
   - docs/components/topproviderinfo.md
   - docs/components/truncation.md
-  - docs/components/ttl.md
   - docs/components/type.md
   - docs/components/typeresponsecompleted.md
   - docs/components/typeresponsecontentpartadded.md
@@ -421,8 +420,7 @@ generatedFiles:
   - docs/components/usermessage.md
   - docs/components/usermessagecontent.md
   - docs/components/variables.md
-  - docs/components/videourl1.md
-  - docs/components/videourl2.md
+  - docs/components/videourl.md
   - docs/components/websearchpreviewtooluserlocation.md
   - docs/components/websearchpreviewtooluserlocationtype.md
   - docs/components/websearchstatus.md
@@ -459,6 +457,7 @@ generatedFiles:
   - docs/operations/createembeddingsprovider.md
   - docs/operations/createembeddingsrequest.md
   - docs/operations/createembeddingsresponse.md
+  - docs/operations/createembeddingsresponsebody.md
   - docs/operations/createkeysdata.md
   - docs/operations/createkeyslimitreset.md
   - docs/operations/createkeysrequest.md
@@ -472,7 +471,6 @@ generatedFiles:
   - docs/operations/exchangeauthcodeforapikeycodechallengemethod.md
   - docs/operations/exchangeauthcodeforapikeyrequest.md
   - docs/operations/exchangeauthcodeforapikeyresponse.md
-  - docs/operations/getcreditsdata.md
   - docs/operations/getcreditsresponse.md
   - docs/operations/getcurrentkeydata.md
   - docs/operations/getcurrentkeyresponse.md
@@ -555,13 +553,12 @@ generatedFiles:
   - src/openrouter/components/assistantmessage.py
   - src/openrouter/components/badgatewayresponseerrordata.py
   - src/openrouter/components/badrequestresponseerrordata.py
-  - src/openrouter/components/chatcompletionfinishreason.py
   - src/openrouter/components/chaterror.py
   - src/openrouter/components/chatgenerationparams.py
   - src/openrouter/components/chatgenerationtokenusage.py
   - src/openrouter/components/chatmessagecontentitem.py
   - src/openrouter/components/chatmessagecontentitemaudio.py
-  - src/openrouter/components/chatmessagecontentitemcachecontrol.py
+  - src/openrouter/components/chatmessagecontentitemfile.py
   - src/openrouter/components/chatmessagecontentitemimage.py
   - src/openrouter/components/chatmessagecontentitemtext.py
   - src/openrouter/components/chatmessagecontentitemvideo.py
@@ -570,7 +567,6 @@ generatedFiles:
   - src/openrouter/components/chatmessagetoolcall.py
   - src/openrouter/components/chatresponse.py
   - src/openrouter/components/chatresponsechoice.py
-  - src/openrouter/components/chatstreamingchoice.py
   - src/openrouter/components/chatstreamingmessagechunk.py
   - src/openrouter/components/chatstreamingmessagetoolcall.py
   - src/openrouter/components/chatstreamingresponsechunk.py
@@ -693,6 +689,7 @@ generatedFiles:
   - src/openrouter/components/unprocessableentityresponseerrordata.py
   - src/openrouter/components/urlcitation.py
   - src/openrouter/components/usermessage.py
+  - src/openrouter/components/videourl.py
   - src/openrouter/components/websearchpreviewtooluserlocation.py
   - src/openrouter/components/websearchstatus.py
   - src/openrouter/credits.py
@@ -776,10 +773,10 @@ examples:
   createResponses:
     speakeasy-default-create-responses:
       requestBody:
-        application/json: {"input": [{"type": "message", "role": "user", "content": "Hello, how are you?"}], "tools": [{"type": "function", "name": "get_current_weather", "description": "Get the current weather in a given location", "parameters": {"type": "object", "properties": {"location": {"type": "string"}}}}], "model": "anthropic/claude-4.5-sonnet-20250929", "temperature": 0.7, "top_p": 0.9, "store": false, "service_tier": "auto", "stream": false}
+        application/json: {"stream": false}
       responses:
         "200":
-          application/json: {"id": "resp-abc123", "object": "response", "created_at": 1704067200, "model": "gpt-4", "status": "completed", "output": [{"id": "msg-abc123", "role": "assistant", "type": "message", "status": "completed", "content": [{"type": "output_text", "text": "Hello! How can I help you today?", "annotations": []}]}], "error": null, "incomplete_details": null, "usage": {"input_tokens": 10, "input_tokens_details": {"cached_tokens": 0}, "output_tokens": 25, "output_tokens_details": {"reasoning_tokens": 0}, "total_tokens": 35}, "max_output_tokens": null, "temperature": null, "top_p": null, "instructions": null, "metadata": null, "tools": [], "tool_choice": "auto", "parallel_tool_calls": true}
+          application/json: {"id": "resp-abc123", "object": "response", "created_at": 1704067200, "model": "gpt-4", "output": [{"id": "msg-abc123", "role": "assistant", "type": "message", "content": [{"type": "output_text", "text": "Hello! How can I help you today?"}]}], "error": null, "incomplete_details": null, "temperature": null, "top_p": null, "instructions": null, "metadata": null, "tools": [], "tool_choice": "auto", "parallel_tool_calls": true}
         "400":
           application/json: {"error": {"code": 400, "message": "Invalid request parameters"}}
         "401":
@@ -826,7 +823,7 @@ examples:
     speakeasy-default-get-credits:
       responses:
         "200":
-          application/json: {"data": {"total_credits": 100.5, "total_usage": 25.75}}
+          application/json: {}
         "401":
           application/json: {"error": {"code": 401, "message": "Missing Authentication header"}}
         "403":
@@ -851,7 +848,7 @@ examples:
   createEmbeddings:
     speakeasy-default-create-embeddings:
       requestBody:
-        application/json: {"input": "<value>", "model": "Taurus", "provider": {"data_collection": "allow", "zdr": true, "enforce_distillable_text": true, "order": ["OpenAI"], "only": ["OpenAI"], "ignore": ["OpenAI"], "quantizations": ["fp16"], "sort": "price"}}
+        application/json: {"input": "<value>", "model": "Taurus"}
       responses:
         "200":
           application/json: {"object": "list", "data": [], "model": "Land Cruiser"}
@@ -880,7 +877,7 @@ examples:
     speakeasy-default-list-embeddings-models:
       responses:
         "200":
-          application/json: {"data": [{"id": "openai/gpt-4", "canonical_slug": "openai/gpt-4", "name": "GPT-4", "created": 1692901234, "description": "GPT-4 is a large multimodal model that can solve difficult problems with greater accuracy.", "pricing": {"prompt": "0.00003", "completion": "0.00006", "request": "0", "image": "0"}, "context_length": 8192, "architecture": {"tokenizer": "GPT", "instruct_type": "chatml", "modality": "text->text", "input_modalities": ["text"], "output_modalities": ["text"]}, "top_provider": {"context_length": 8192, "max_completion_tokens": 4096, "is_moderated": true}, "per_request_limits": null, "supported_parameters": ["temperature", "top_p", "max_tokens", "frequency_penalty", "presence_penalty"], "default_parameters": null}]}
+          application/json: {"data": [{"id": "openai/gpt-4", "canonical_slug": "openai/gpt-4", "name": "GPT-4", "created": 1692901234, "pricing": {"prompt": "0.00003", "completion": "0.00006"}, "context_length": 8192, "architecture": {"modality": "text->text", "input_modalities": ["text"], "output_modalities": ["text"]}, "top_provider": {"is_moderated": true}, "per_request_limits": null, "supported_parameters": ["temperature", "top_p", "max_tokens", "frequency_penalty", "presence_penalty"], "default_parameters": null}]}
         "400":
           application/json: {"error": {"code": 400, "message": "Invalid request parameters"}}
         "500":
@@ -920,7 +917,7 @@ examples:
     speakeasy-default-get-models:
       responses:
         "200":
-          application/json: {"data": [{"id": "openai/gpt-4", "canonical_slug": "openai/gpt-4", "name": "GPT-4", "created": 1692901234, "description": "GPT-4 is a large multimodal model that can solve difficult problems with greater accuracy.", "pricing": {"prompt": "0.00003", "completion": "0.00006", "request": "0", "image": "0"}, "context_length": 8192, "architecture": {"tokenizer": "GPT", "instruct_type": "chatml", "modality": "text->text", "input_modalities": ["text"], "output_modalities": ["text"]}, "top_provider": {"context_length": 8192, "max_completion_tokens": 4096, "is_moderated": true}, "per_request_limits": null, "supported_parameters": ["temperature", "top_p", "max_tokens", "frequency_penalty", "presence_penalty"], "default_parameters": null}]}
+          application/json: {"data": [{"id": "openai/gpt-4", "canonical_slug": "openai/gpt-4", "name": "GPT-4", "created": 1692901234, "pricing": {"prompt": "0.00003", "completion": "0.00006"}, "context_length": 8192, "architecture": {"modality": "text->text", "input_modalities": ["text"], "output_modalities": ["text"]}, "top_provider": {"is_moderated": true}, "per_request_limits": null, "supported_parameters": ["temperature", "top_p", "max_tokens", "frequency_penalty", "presence_penalty"], "default_parameters": null}]}
         "400":
           application/json: {"error": {"code": 400, "message": "Invalid request parameters"}}
         "500":
@@ -929,7 +926,7 @@ examples:
     speakeasy-default-list-models-user:
       responses:
         "200":
-          application/json: {"data": [{"id": "openai/gpt-4", "canonical_slug": "openai/gpt-4", "name": "GPT-4", "created": 1692901234, "description": "GPT-4 is a large multimodal model that can solve difficult problems with greater accuracy.", "pricing": {"prompt": "0.00003", "completion": "0.00006", "request": "0", "image": "0"}, "context_length": 8192, "architecture": {"tokenizer": "GPT", "instruct_type": "chatml", "modality": "text->text", "input_modalities": ["text"], "output_modalities": ["text"]}, "top_provider": {"context_length": 8192, "max_completion_tokens": 4096, "is_moderated": true}, "per_request_limits": null, "supported_parameters": ["temperature", "top_p", "max_tokens", "frequency_penalty", "presence_penalty"], "default_parameters": null}]}
+          application/json: {"data": [{"id": "openai/gpt-4", "canonical_slug": "openai/gpt-4", "name": "GPT-4", "created": 1692901234, "pricing": {"prompt": "0.00003", "completion": "0.00006"}, "context_length": 8192, "architecture": {"modality": "text->text", "input_modalities": ["text"], "output_modalities": ["text"]}, "top_provider": {"is_moderated": true}, "per_request_limits": null, "supported_parameters": ["temperature", "top_p", "max_tokens", "frequency_penalty", "presence_penalty"], "default_parameters": null}]}
         "401":
           application/json: {"error": {"code": 401, "message": "Missing Authentication header"}}
         "500":
@@ -942,7 +939,7 @@ examples:
           slug: "<value>"
       responses:
         "200":
-          application/json: {"data": {"id": "openai/gpt-4", "name": "GPT-4", "created": 1692901234, "description": "GPT-4 is a large multimodal model that can solve difficult problems with greater accuracy.", "architecture": {"tokenizer": "GPT", "instruct_type": "chatml", "modality": "text->text", "input_modalities": ["text"], "output_modalities": ["text"]}, "endpoints": [{"name": "OpenAI: GPT-4", "model_name": "GPT-4", "context_length": 8192, "pricing": {"prompt": "0.00003", "completion": "0.00006", "request": "0", "image": "0"}, "provider_name": "OpenAI", "tag": "openai", "quantization": "fp16", "max_completion_tokens": 4096, "max_prompt_tokens": 8192, "supported_parameters": ["temperature", "top_p", "max_tokens", "frequency_penalty", "presence_penalty"], "status": -3, "uptime_last_30m": 99.5, "supports_implicit_caching": true}]}}
+          application/json: {"data": {"id": "openai/gpt-4", "name": "GPT-4", "created": 1692901234, "description": "GPT-4 is a large multimodal model that can solve difficult problems with greater accuracy.", "architecture": {"tokenizer": "GPT", "instruct_type": "chatml", "modality": "text->text", "input_modalities": ["text"], "output_modalities": ["text"]}, "endpoints": [{"name": "OpenAI: GPT-4", "model_name": "GPT-4", "context_length": 8192, "pricing": {"prompt": "0.00003", "completion": "0.00006"}, "provider_name": "OpenAI", "tag": "openai", "quantization": "fp16", "max_completion_tokens": 4096, "max_prompt_tokens": 8192, "supported_parameters": ["temperature", "top_p", "max_tokens", "frequency_penalty", "presence_penalty"], "uptime_last_30m": 99.5, "supports_implicit_caching": true}]}}
         "404":
           application/json: {"error": {"code": 404, "message": "Resource not found"}}
         "500":
@@ -951,7 +948,7 @@ examples:
     speakeasy-default-list-endpoints-zdr:
       responses:
         "200":
-          application/json: {"data": [{"name": "OpenAI: GPT-4", "model_name": "GPT-4", "context_length": 8192, "pricing": {"prompt": "0.00003", "completion": "0.00006", "request": "0", "image": "0"}, "provider_name": "OpenAI", "tag": "openai", "quantization": "fp16", "max_completion_tokens": 4096, "max_prompt_tokens": 8192, "supported_parameters": ["temperature", "top_p", "max_tokens"], "status": 0, "uptime_last_30m": 99.5, "supports_implicit_caching": true}]}
+          application/json: {"data": [{"name": "OpenAI: GPT-4", "model_name": "GPT-4", "context_length": 8192, "pricing": {"prompt": "0.00003", "completion": "0.00006"}, "provider_name": "OpenAI", "tag": "openai", "quantization": "fp16", "max_completion_tokens": 4096, "max_prompt_tokens": 8192, "supported_parameters": ["temperature", "top_p", "max_tokens"], "uptime_last_30m": 99.5, "supports_implicit_caching": true}]}
         "500":
           application/json: {"error": {"code": 500, "message": "Internal Server Error"}}
   getParameters:
@@ -973,7 +970,7 @@ examples:
     speakeasy-default-list-providers:
       responses:
         "200":
-          application/json: {"data": [{"name": "OpenAI", "slug": "openai", "privacy_policy_url": "https://openai.com/privacy", "terms_of_service_url": "https://openai.com/terms", "status_page_url": "https://status.openai.com"}]}
+          application/json: {"data": [{"name": "OpenAI", "slug": "openai", "privacy_policy_url": "https://openai.com/privacy"}]}
         "500":
           application/json: {"error": {"code": 500, "message": "Internal Server Error"}}
   list:
@@ -984,7 +981,7 @@ examples:
           offset: "0"
       responses:
         "200":
-          application/json: {"data": [{"hash": "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", "name": "My Production Key", "label": "Production API Key", "disabled": false, "limit": 100, "limit_remaining": 74.5, "limit_reset": "monthly", "include_byok_in_limit": false, "usage": 25.5, "usage_daily": 25.5, "usage_weekly": 25.5, "usage_monthly": 25.5, "byok_usage": 17.38, "byok_usage_daily": 17.38, "byok_usage_weekly": 17.38, "byok_usage_monthly": 17.38, "created_at": "2025-08-24T10:30:00Z", "updated_at": "2025-08-24T15:45:00Z", "expires_at": "2027-12-31T23:59:59Z"}]}
+          application/json: {"data": [{"hash": "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", "name": "My Production Key", "label": "Production API Key", "disabled": false, "limit": 100, "limit_remaining": 74.5, "limit_reset": "monthly", "include_byok_in_limit": false, "usage": 25.5, "usage_daily": 25.5, "usage_weekly": 25.5, "usage_monthly": 25.5, "byok_usage": 17.38, "byok_usage_daily": 17.38, "byok_usage_weekly": 17.38, "byok_usage_monthly": 17.38, "created_at": "2025-08-24T10:30:00Z", "updated_at": "2025-08-24T15:45:00Z"}]}
         "401":
           application/json: {"error": {"code": 401, "message": "Missing Authentication header"}}
         "429":
@@ -994,10 +991,10 @@ examples:
   createKeys:
     speakeasy-default-create-keys:
       requestBody:
-        application/json: {"name": "My New API Key", "limit": 50, "limit_reset": "monthly", "include_byok_in_limit": true, "expires_at": "2027-12-31T23:59:59Z"}
+        application/json: {"name": "My New API Key"}
       responses:
         "201":
-          application/json: {"data": {"hash": "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", "name": "My New API Key", "label": "My New API Key", "disabled": false, "limit": 50, "limit_remaining": 50, "limit_reset": "monthly", "include_byok_in_limit": true, "usage": 0, "usage_daily": 0, "usage_weekly": 0, "usage_monthly": 0, "byok_usage": 0, "byok_usage_daily": 0, "byok_usage_weekly": 0, "byok_usage_monthly": 0, "created_at": "2025-08-24T10:30:00Z", "updated_at": null, "expires_at": "2027-12-31T23:59:59Z"}, "key": "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"}
+          application/json: {"data": {"hash": "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", "name": "My New API Key", "label": "My New API Key", "disabled": false, "limit": 50, "limit_remaining": 50, "limit_reset": "monthly", "include_byok_in_limit": true, "usage": 0, "usage_daily": 0, "usage_weekly": 0, "usage_monthly": 0, "byok_usage": 0, "byok_usage_daily": 0, "byok_usage_weekly": 0, "byok_usage_monthly": 0, "created_at": "2025-08-24T10:30:00Z", "updated_at": null}, "key": "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"}
         "400":
           application/json: {"error": {"code": 400, "message": "Invalid request parameters"}}
         "401":
@@ -1012,10 +1009,10 @@ examples:
         path:
           hash: "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"
       requestBody:
-        application/json: {"name": "Updated API Key Name", "disabled": false, "limit": 75, "limit_reset": "daily", "include_byok_in_limit": true}
+        application/json: {}
       responses:
         "200":
-          application/json: {"data": {"hash": "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", "name": "Updated API Key Name", "label": "Updated API Key Name", "disabled": false, "limit": 75, "limit_remaining": 49.5, "limit_reset": "daily", "include_byok_in_limit": true, "usage": 25.5, "usage_daily": 25.5, "usage_weekly": 25.5, "usage_monthly": 25.5, "byok_usage": 17.38, "byok_usage_daily": 17.38, "byok_usage_weekly": 17.38, "byok_usage_monthly": 17.38, "created_at": "2025-08-24T10:30:00Z", "updated_at": "2025-08-24T16:00:00Z", "expires_at": null}}
+          application/json: {"data": {"hash": "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", "name": "Updated API Key Name", "label": "Updated API Key Name", "disabled": false, "limit": 75, "limit_remaining": 49.5, "limit_reset": "daily", "include_byok_in_limit": true, "usage": 25.5, "usage_daily": 25.5, "usage_weekly": 25.5, "usage_monthly": 25.5, "byok_usage": 17.38, "byok_usage_daily": 17.38, "byok_usage_weekly": 17.38, "byok_usage_monthly": 17.38, "created_at": "2025-08-24T10:30:00Z", "updated_at": "2025-08-24T16:00:00Z"}}
         "400":
           application/json: {"error": {"code": 400, "message": "Invalid request parameters"}}
         "401":
@@ -1049,7 +1046,7 @@ examples:
           hash: "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"
       responses:
         "200":
-          application/json: {"data": {"hash": "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", "name": "My Production Key", "label": "Production API Key", "disabled": false, "limit": 100, "limit_remaining": 74.5, "limit_reset": "monthly", "include_byok_in_limit": false, "usage": 25.5, "usage_daily": 25.5, "usage_weekly": 25.5, "usage_monthly": 25.5, "byok_usage": 17.38, "byok_usage_daily": 17.38, "byok_usage_weekly": 17.38, "byok_usage_monthly": 17.38, "created_at": "2025-08-24T10:30:00Z", "updated_at": "2025-08-24T15:45:00Z", "expires_at": "2027-12-31T23:59:59Z"}}
+          application/json: {"data": {"hash": "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", "name": "My Production Key", "label": "Production API Key", "disabled": false, "limit": 100, "limit_remaining": 74.5, "limit_reset": "monthly", "include_byok_in_limit": false, "usage": 25.5, "usage_daily": 25.5, "usage_weekly": 25.5, "usage_monthly": 25.5, "byok_usage": 17.38, "byok_usage_daily": 17.38, "byok_usage_weekly": 17.38, "byok_usage_monthly": 17.38, "created_at": "2025-08-24T10:30:00Z", "updated_at": "2025-08-24T15:45:00Z"}}
         "401":
           application/json: {"error": {"code": 401, "message": "Missing Authentication header"}}
         "404":
@@ -1062,7 +1059,7 @@ examples:
     speakeasy-default-get-current-key:
       responses:
         "200":
-          application/json: {"data": {"label": "sk-or-v1-au78b3456789012345678901234567890", "limit": 100, "usage": 25.5, "usage_daily": 25.5, "usage_weekly": 25.5, "usage_monthly": 25.5, "byok_usage": 17.38, "byok_usage_daily": 17.38, "byok_usage_weekly": 17.38, "byok_usage_monthly": 17.38, "is_free_tier": false, "is_provisioning_key": false, "limit_remaining": 74.5, "limit_reset": "monthly", "include_byok_in_limit": false, "expires_at": "2027-12-31T23:59:59Z", "rate_limit": {"requests": 1000, "interval": "1h", "note": "This field is deprecated and safe to ignore."}}}
+          application/json: {"data": {"label": "sk-or-v1-au78b3456789012345678901234567890", "limit": 100, "usage": 25.5, "usage_daily": 25.5, "usage_weekly": 25.5, "usage_monthly": 25.5, "byok_usage": 17.38, "byok_usage_daily": 17.38, "byok_usage_weekly": 17.38, "byok_usage_monthly": 17.38, "is_free_tier": false, "is_provisioning_key": false, "limit_remaining": 74.5, "limit_reset": "monthly", "include_byok_in_limit": false, "rate_limit": {"requests": 1000, "interval": "1h", "note": "This field is deprecated and safe to ignore."}}}
         "401":
           application/json: {"error": {"code": 401, "message": "Missing Authentication header"}}
         "500":
@@ -1070,7 +1067,7 @@ examples:
   exchangeAuthCodeForAPIKey:
     speakeasy-default-exchange-auth-code-for-API-key:
       requestBody:
-        application/json: {"code": "auth_code_abc123def456", "code_verifier": "dBjftJeZ4CVP-mB92K27uhbUJU1p1r_wW1gFWFOEjXk", "code_challenge_method": "S256"}
+        application/json: {"code": "auth_code_abc123def456"}
       responses:
         "200":
           application/json: {"key": "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", "user_id": "user_2yOPcMpKoQhcd4bVgSMlELRaIah"}
@@ -1083,7 +1080,7 @@ examples:
   createAuthKeysCode:
     speakeasy-default-create-auth-keys-code:
       requestBody:
-        application/json: {"callback_url": "https://myapp.com/auth/callback", "code_challenge": "E9Melhoa2OwvFrEMTJguCHaoeK1t8URWbuGJSstw-cM", "code_challenge_method": "S256", "limit": 100}
+        application/json: {"callback_url": "https://myapp.com/auth/callback"}
       responses:
         "200":
           application/json: {"data": {"id": "auth_code_xyz789", "app_id": 12345, "created_at": "2025-08-24T10:30:00Z"}}

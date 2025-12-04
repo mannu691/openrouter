@@ -5,9 +5,9 @@ from openrouter.types import BaseModel
 from typing_extensions import TypedDict
 
 
-class GetCreditsResponseTypedDict(TypedDict):
-    r"""Total credits purchased and used"""
+class VideoURLTypedDict(TypedDict):
+    url: str
 
 
-class GetCreditsResponse(BaseModel):
-    r"""Total credits purchased and used"""
+class VideoURL(BaseModel):
+    url: str
