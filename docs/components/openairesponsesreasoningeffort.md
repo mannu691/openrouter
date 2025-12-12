@@ -5,6 +5,7 @@
 
 | Name      | Value     |
 | --------- | --------- |
+| `XHIGH`   | xhigh     |
 | `HIGH`    | high      |
 | `MEDIUM`  | medium    |
 | `LOW`     | low       |

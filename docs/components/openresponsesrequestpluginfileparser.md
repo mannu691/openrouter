@@ -1,0 +1,11 @@
+# OpenResponsesRequestPluginFileParser
+
+
+## Fields
+
+| Field                                                                                    | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `id`                                                                                     | [components.IDFileParser](../components/idfileparser.md)                                 | :heavy_check_mark:                                                                       | N/A                                                                                      |
+| `enabled`                                                                                | *Optional[bool]*                                                                         | :heavy_minus_sign:                                                                       | Set to false to disable the file-parser plugin for this request. Defaults to true.       |
+| `max_files`                                                                              | *Optional[float]*                                                                        | :heavy_minus_sign:                                                                       | N/A                                                                                      |
+| `pdf`                                                                                    | [Optional[components.OpenResponsesRequestPdf]](../components/openresponsesrequestpdf.md) | :heavy_minus_sign:                                                                       | N/A                                                                                      |

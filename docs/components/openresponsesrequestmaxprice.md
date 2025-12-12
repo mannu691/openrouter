@@ -1,4 +1,4 @@
-# MaxPrice
+# OpenResponsesRequestMaxPrice
 
 The object specifying the maximum price you want to pay for this request. USD price per million tokens, for prompt and completion.
 

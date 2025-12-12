@@ -8,74 +8,74 @@ from openrouter.types import BaseModel, Nullable, UNSET_SENTINEL, UnrecognizedSt
 from openrouter.utils import validate_open_enum
 from pydantic import model_serializer
 from pydantic.functional_validators import PlainValidator
-from typing import Any, List, Literal, Optional, Union
+from typing import List, Literal, Optional, Union
 from typing_extensions import Annotated, NotRequired, TypedDict
 
 
 class PricingTypedDict(TypedDict):
-    prompt: Any
-    r"""A value in string or number format that is a large number"""
-    completion: Any
-    r"""A value in string or number format that is a large number"""
-    request: NotRequired[Any]
-    r"""A value in string or number format that is a large number"""
-    image: NotRequired[Any]
-    r"""A value in string or number format that is a large number"""
-    image_token: NotRequired[Any]
-    r"""A value in string or number format that is a large number"""
-    image_output: NotRequired[Any]
-    r"""A value in string or number format that is a large number"""
-    audio: NotRequired[Any]
-    r"""A value in string or number format that is a large number"""
-    input_audio_cache: NotRequired[Any]
-    r"""A value in string or number format that is a large number"""
-    web_search: NotRequired[Any]
-    r"""A value in string or number format that is a large number"""
-    internal_reasoning: NotRequired[Any]
-    r"""A value in string or number format that is a large number"""
-    input_cache_read: NotRequired[Any]
-    r"""A value in string or number format that is a large number"""
-    input_cache_write: NotRequired[Any]
-    r"""A value in string or number format that is a large number"""
+    prompt: str
+    r"""A value in string format that is a large number"""
+    completion: str
+    r"""A value in string format that is a large number"""
+    request: NotRequired[str]
+    r"""A value in string format that is a large number"""
+    image: NotRequired[str]
+    r"""A value in string format that is a large number"""
+    image_token: NotRequired[str]
+    r"""A value in string format that is a large number"""
+    image_output: NotRequired[str]
+    r"""A value in string format that is a large number"""
+    audio: NotRequired[str]
+    r"""A value in string format that is a large number"""
+    input_audio_cache: NotRequired[str]
+    r"""A value in string format that is a large number"""
+    web_search: NotRequired[str]
+    r"""A value in string format that is a large number"""
+    internal_reasoning: NotRequired[str]
+    r"""A value in string format that is a large number"""
+    input_cache_read: NotRequired[str]
+    r"""A value in string format that is a large number"""
+    input_cache_write: NotRequired[str]
+    r"""A value in string format that is a large number"""
     discount: NotRequired[float]
 
 
 class Pricing(BaseModel):
-    prompt: Any
-    r"""A value in string or number format that is a large number"""
+    prompt: str
+    r"""A value in string format that is a large number"""
 
-    completion: Any
-    r"""A value in string or number format that is a large number"""
+    completion: str
+    r"""A value in string format that is a large number"""
 
-    request: Optional[Any] = None
-    r"""A value in string or number format that is a large number"""
+    request: Optional[str] = None
+    r"""A value in string format that is a large number"""
 
-    image: Optional[Any] = None
-    r"""A value in string or number format that is a large number"""
+    image: Optional[str] = None
+    r"""A value in string format that is a large number"""
 
-    image_token: Optional[Any] = None
-    r"""A value in string or number format that is a large number"""
+    image_token: Optional[str] = None
+    r"""A value in string format that is a large number"""
 
-    image_output: Optional[Any] = None
-    r"""A value in string or number format that is a large number"""
+    image_output: Optional[str] = None
+    r"""A value in string format that is a large number"""
 
-    audio: Optional[Any] = None
-    r"""A value in string or number format that is a large number"""
+    audio: Optional[str] = None
+    r"""A value in string format that is a large number"""
 
-    input_audio_cache: Optional[Any] = None
-    r"""A value in string or number format that is a large number"""
+    input_audio_cache: Optional[str] = None
+    r"""A value in string format that is a large number"""
 
-    web_search: Optional[Any] = None
-    r"""A value in string or number format that is a large number"""
+    web_search: Optional[str] = None
+    r"""A value in string format that is a large number"""
 
-    internal_reasoning: Optional[Any] = None
-    r"""A value in string or number format that is a large number"""
+    internal_reasoning: Optional[str] = None
+    r"""A value in string format that is a large number"""
 
-    input_cache_read: Optional[Any] = None
-    r"""A value in string or number format that is a large number"""
+    input_cache_read: Optional[str] = None
+    r"""A value in string format that is a large number"""
 
-    input_cache_write: Optional[Any] = None
-    r"""A value in string or number format that is a large number"""
+    input_cache_write: Optional[str] = None
+    r"""A value in string format that is a large number"""
 
     discount: Optional[float] = None
 

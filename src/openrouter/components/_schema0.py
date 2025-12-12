@@ -2,10 +2,13 @@
 
 from __future__ import annotations
 from openrouter.types import UnrecognizedStr
+from openrouter.utils import validate_open_enum
+from pydantic.functional_validators import PlainValidator
 from typing import Literal, Union
+from typing_extensions import Annotated, TypeAliasType
 
 
-ProviderName = Union[
+Schema0Enum = Union[
     Literal[
         "AI21",
         "AionLabs",
@@ -79,3 +82,12 @@ ProviderName = Union[
     ],
     UnrecognizedStr,
 ]
+
+
+Schema0TypedDict = TypeAliasType("Schema0TypedDict", Union[Schema0Enum, str])
+
+
+Schema0 = TypeAliasType(
+    "Schema0",
+    Union[Annotated[Schema0Enum, PlainValidator(validate_open_enum(False))], str],
+)

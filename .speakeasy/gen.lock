@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfd52247-6a25-4c6d-bbce-fe6fce0cd69d
 management:
-  docChecksum: 01481f11e87a18cf1daa583fee2c88fb
+  docChecksum: e929ecf569d79ab96a315332a4855566
   docVersion: 1.0.0
   speakeasyVersion: 1.666.0
   generationVersion: 2.768.0
-  releaseVersion: 0.0.21
-  configChecksum: 52c13d7fdf159611bf5d900363e322ac
+  releaseVersion: 0.0.22
+  configChecksum: 0afda3910a58a8d797ac6674fa858711
   repoURL: https://github.com/OpenRouterTeam/python-sdk.git
   installationURL: https://github.com/OpenRouterTeam/python-sdk.git
   published: true
@@ -58,10 +58,22 @@ generatedFiles:
   - docs/components/chatcompletionfinishreason.md
   - docs/components/chaterrorerror.md
   - docs/components/chatgenerationparams.md
+  - docs/components/chatgenerationparamsdatacollection.md
+  - docs/components/chatgenerationparamsengine.md
+  - docs/components/chatgenerationparamsmaxprice.md
+  - docs/components/chatgenerationparamspdf.md
+  - docs/components/chatgenerationparamspdfengine.md
+  - docs/components/chatgenerationparamspluginfileparser.md
+  - docs/components/chatgenerationparamspluginmoderation.md
+  - docs/components/chatgenerationparamspluginresponsehealing.md
+  - docs/components/chatgenerationparamspluginunion.md
+  - docs/components/chatgenerationparamspluginweb.md
+  - docs/components/chatgenerationparamsprovider.md
   - docs/components/chatgenerationparamsresponseformatjsonobject.md
   - docs/components/chatgenerationparamsresponseformatpython.md
   - docs/components/chatgenerationparamsresponseformattext.md
   - docs/components/chatgenerationparamsresponseformatunion.md
+  - docs/components/chatgenerationparamsroute.md
   - docs/components/chatgenerationparamsstop.md
   - docs/components/chatgenerationtokenusage.md
   - docs/components/chatmessagecontentitem.md
@@ -111,7 +123,6 @@ generatedFiles:
   - docs/components/edgenetworktimeoutresponseerrordata.md
   - docs/components/effort.md
   - docs/components/endpointstatus.md
-  - docs/components/engine.md
   - docs/components/filecitation.md
   - docs/components/filecitationtype.md
   - docs/components/filepath.md
@@ -130,7 +141,6 @@ generatedFiles:
   - docs/components/internalserverresponseerrordata.md
   - docs/components/jsonschemaconfig.md
   - docs/components/listendpointsresponse.md
-  - docs/components/maxprice.md
   - docs/components/message.md
   - docs/components/messagecontent.md
   - docs/components/messagedeveloper.md
@@ -244,6 +254,17 @@ generatedFiles:
   - docs/components/openresponsesreasoningsummarytextdoneeventtype.md
   - docs/components/openresponsesreasoningtype.md
   - docs/components/openresponsesrequest.md
+  - docs/components/openresponsesrequestengine.md
+  - docs/components/openresponsesrequestmaxprice.md
+  - docs/components/openresponsesrequestpdf.md
+  - docs/components/openresponsesrequestpdfengine.md
+  - docs/components/openresponsesrequestpluginfileparser.md
+  - docs/components/openresponsesrequestpluginmoderation.md
+  - docs/components/openresponsesrequestpluginresponsehealing.md
+  - docs/components/openresponsesrequestpluginunion.md
+  - docs/components/openresponsesrequestpluginweb.md
+  - docs/components/openresponsesrequestprovider.md
+  - docs/components/openresponsesrequestroute.md
   - docs/components/openresponsesrequesttoolfunction.md
   - docs/components/openresponsesrequesttoolunion.md
   - docs/components/openresponsesrequesttype.md
@@ -297,18 +318,10 @@ generatedFiles:
   - docs/components/part2.md
   - docs/components/payloadtoolargeresponseerrordata.md
   - docs/components/paymentrequiredresponseerrordata.md
-  - docs/components/pdf.md
-  - docs/components/pdfengine.md
   - docs/components/perrequestlimits.md
-  - docs/components/plugin.md
-  - docs/components/pluginfileparser.md
-  - docs/components/pluginmoderation.md
-  - docs/components/pluginresponsehealing.md
-  - docs/components/pluginweb.md
   - docs/components/pricing.md
   - docs/components/prompt.md
   - docs/components/prompttokensdetails.md
-  - docs/components/provider.md
   - docs/components/providername.md
   - docs/components/provideroverloadedresponseerrordata.md
   - docs/components/providersort.md
@@ -316,6 +329,7 @@ generatedFiles:
   - docs/components/publicendpointquantization.md
   - docs/components/publicpricing.md
   - docs/components/quantization.md
+  - docs/components/quantizations.md
   - docs/components/reason.md
   - docs/components/reasoning.md
   - docs/components/reasoningsummarytext.md
@@ -379,9 +393,12 @@ generatedFiles:
   - docs/components/responseswebsearchuserlocationtype.md
   - docs/components/responsetextconfig.md
   - docs/components/responsetextconfigverbosity.md
+  - docs/components/schema0.md
+  - docs/components/schema0enum.md
   - docs/components/security.md
   - docs/components/servicetier.md
   - docs/components/serviceunavailableresponseerrordata.md
+  - docs/components/sort.md
   - docs/components/streamoptions.md
   - docs/components/systemmessage.md
   - docs/components/systemmessagecontent.md
@@ -552,6 +569,7 @@ generatedFiles:
   - src/openrouter/chat.py
   - src/openrouter/completions.py
   - src/openrouter/components/__init__.py
+  - src/openrouter/components/_schema0.py
   - src/openrouter/components/activityitem.py
   - src/openrouter/components/assistantmessage.py
   - src/openrouter/components/badgatewayresponseerrordata.py

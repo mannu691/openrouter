@@ -21,6 +21,21 @@ class Chat(BaseSDK):
         self,
         *,
         messages: Union[List[components.Message], List[components.MessageTypedDict]],
+        provider: OptionalNullable[
+            Union[
+                components.ChatGenerationParamsProvider,
+                components.ChatGenerationParamsProviderTypedDict,
+            ]
+        ] = UNSET,
+        plugins: Optional[
+            Union[
+                List[components.ChatGenerationParamsPluginUnion],
+                List[components.ChatGenerationParamsPluginUnionTypedDict],
+            ]
+        ] = None,
+        route: OptionalNullable[components.ChatGenerationParamsRoute] = UNSET,
+        user: Optional[str] = None,
+        session_id: Optional[str] = None,
         model: Optional[str] = None,
         models: Optional[List[str]] = None,
         frequency_penalty: OptionalNullable[float] = UNSET,
@@ -60,7 +75,6 @@ class Chat(BaseSDK):
             ]
         ] = None,
         top_p: OptionalNullable[float] = UNSET,
-        user: Optional[str] = None,
         debug: Optional[Union[components.Debug, components.DebugTypedDict]] = None,
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
@@ -72,6 +86,11 @@ class Chat(BaseSDK):
         Sends a request for a model response for the given chat conversation. Supports both streaming and non-streaming modes.
 
         :param messages:
+        :param provider: When multiple model providers are available, optionally indicate your routing preference.
+        :param plugins: Plugins you want to enable for this request, including their settings.
+        :param route: Routing strategy for multiple models: \"fallback\" (default) uses secondary models as backups, \"sort\" sorts all endpoints together by routing criteria.
+        :param user:
+        :param session_id: A unique identifier for grouping related requests (e.g., a conversation or agent workflow) for observability. If provided in both the request body and the x-session-id header, the body value takes precedence. Maximum of 128 characters.
         :param model:
         :param models:
         :param frequency_penalty:
@@ -92,7 +111,6 @@ class Chat(BaseSDK):
         :param tool_choice:
         :param tools:
         :param top_p:
-        :param user:
         :param debug:
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -106,6 +124,21 @@ class Chat(BaseSDK):
         self,
         *,
         messages: Union[List[components.Message], List[components.MessageTypedDict]],
+        provider: OptionalNullable[
+            Union[
+                components.ChatGenerationParamsProvider,
+                components.ChatGenerationParamsProviderTypedDict,
+            ]
+        ] = UNSET,
+        plugins: Optional[
+            Union[
+                List[components.ChatGenerationParamsPluginUnion],
+                List[components.ChatGenerationParamsPluginUnionTypedDict],
+            ]
+        ] = None,
+        route: OptionalNullable[components.ChatGenerationParamsRoute] = UNSET,
+        user: Optional[str] = None,
+        session_id: Optional[str] = None,
         model: Optional[str] = None,
         models: Optional[List[str]] = None,
         frequency_penalty: OptionalNullable[float] = UNSET,
@@ -145,7 +178,6 @@ class Chat(BaseSDK):
             ]
         ] = None,
         top_p: OptionalNullable[float] = UNSET,
-        user: Optional[str] = None,
         debug: Optional[Union[components.Debug, components.DebugTypedDict]] = None,
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
@@ -157,6 +189,11 @@ class Chat(BaseSDK):
         Sends a request for a model response for the given chat conversation. Supports both streaming and non-streaming modes.
 
         :param messages:
+        :param provider: When multiple model providers are available, optionally indicate your routing preference.
+        :param plugins: Plugins you want to enable for this request, including their settings.
+        :param route: Routing strategy for multiple models: \"fallback\" (default) uses secondary models as backups, \"sort\" sorts all endpoints together by routing criteria.
+        :param user:
+        :param session_id: A unique identifier for grouping related requests (e.g., a conversation or agent workflow) for observability. If provided in both the request body and the x-session-id header, the body value takes precedence. Maximum of 128 characters.
         :param model:
         :param models:
         :param frequency_penalty:
@@ -177,7 +214,6 @@ class Chat(BaseSDK):
         :param tool_choice:
         :param tools:
         :param top_p:
-        :param user:
         :param debug:
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -190,6 +226,21 @@ class Chat(BaseSDK):
         self,
         *,
         messages: Union[List[components.Message], List[components.MessageTypedDict]],
+        provider: OptionalNullable[
+            Union[
+                components.ChatGenerationParamsProvider,
+                components.ChatGenerationParamsProviderTypedDict,
+            ]
+        ] = UNSET,
+        plugins: Optional[
+            Union[
+                List[components.ChatGenerationParamsPluginUnion],
+                List[components.ChatGenerationParamsPluginUnionTypedDict],
+            ]
+        ] = None,
+        route: OptionalNullable[components.ChatGenerationParamsRoute] = UNSET,
+        user: Optional[str] = None,
+        session_id: Optional[str] = None,
         model: Optional[str] = None,
         models: Optional[List[str]] = None,
         frequency_penalty: OptionalNullable[float] = UNSET,
@@ -229,7 +280,6 @@ class Chat(BaseSDK):
             ]
         ] = None,
         top_p: OptionalNullable[float] = UNSET,
-        user: Optional[str] = None,
         debug: Optional[Union[components.Debug, components.DebugTypedDict]] = None,
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
@@ -241,6 +291,11 @@ class Chat(BaseSDK):
         Sends a request for a model response for the given chat conversation. Supports both streaming and non-streaming modes.
 
         :param messages:
+        :param provider: When multiple model providers are available, optionally indicate your routing preference.
+        :param plugins: Plugins you want to enable for this request, including their settings.
+        :param route: Routing strategy for multiple models: \"fallback\" (default) uses secondary models as backups, \"sort\" sorts all endpoints together by routing criteria.
+        :param user:
+        :param session_id: A unique identifier for grouping related requests (e.g., a conversation or agent workflow) for observability. If provided in both the request body and the x-session-id header, the body value takes precedence. Maximum of 128 characters.
         :param model:
         :param models:
         :param frequency_penalty:
@@ -261,7 +316,6 @@ class Chat(BaseSDK):
         :param tool_choice:
         :param tools:
         :param top_p:
-        :param user:
         :param debug:
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -280,6 +334,15 @@ class Chat(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         request = components.ChatGenerationParams(
+            provider=utils.get_pydantic_model(
+                provider, OptionalNullable[components.ChatGenerationParamsProvider]
+            ),
+            plugins=utils.get_pydantic_model(
+                plugins, Optional[List[components.ChatGenerationParamsPluginUnion]]
+            ),
+            route=route,
+            user=user,
+            session_id=session_id,
             messages=utils.get_pydantic_model(messages, List[components.Message]),
             model=model,
             models=models,
@@ -310,7 +373,6 @@ class Chat(BaseSDK):
                 tools, Optional[List[components.ToolDefinitionJSON]]
             ),
             top_p=top_p,
-            user=user,
             debug=utils.get_pydantic_model(debug, Optional[components.Debug]),
         )
 
@@ -406,6 +468,21 @@ class Chat(BaseSDK):
         self,
         *,
         messages: Union[List[components.Message], List[components.MessageTypedDict]],
+        provider: OptionalNullable[
+            Union[
+                components.ChatGenerationParamsProvider,
+                components.ChatGenerationParamsProviderTypedDict,
+            ]
+        ] = UNSET,
+        plugins: Optional[
+            Union[
+                List[components.ChatGenerationParamsPluginUnion],
+                List[components.ChatGenerationParamsPluginUnionTypedDict],
+            ]
+        ] = None,
+        route: OptionalNullable[components.ChatGenerationParamsRoute] = UNSET,
+        user: Optional[str] = None,
+        session_id: Optional[str] = None,
         model: Optional[str] = None,
         models: Optional[List[str]] = None,
         frequency_penalty: OptionalNullable[float] = UNSET,
@@ -445,7 +522,6 @@ class Chat(BaseSDK):
             ]
         ] = None,
         top_p: OptionalNullable[float] = UNSET,
-        user: Optional[str] = None,
         debug: Optional[Union[components.Debug, components.DebugTypedDict]] = None,
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
@@ -457,6 +533,11 @@ class Chat(BaseSDK):
         Sends a request for a model response for the given chat conversation. Supports both streaming and non-streaming modes.
 
         :param messages:
+        :param provider: When multiple model providers are available, optionally indicate your routing preference.
+        :param plugins: Plugins you want to enable for this request, including their settings.
+        :param route: Routing strategy for multiple models: \"fallback\" (default) uses secondary models as backups, \"sort\" sorts all endpoints together by routing criteria.
+        :param user:
+        :param session_id: A unique identifier for grouping related requests (e.g., a conversation or agent workflow) for observability. If provided in both the request body and the x-session-id header, the body value takes precedence. Maximum of 128 characters.
         :param model:
         :param models:
         :param frequency_penalty:
@@ -477,7 +558,6 @@ class Chat(BaseSDK):
         :param tool_choice:
         :param tools:
         :param top_p:
-        :param user:
         :param debug:
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -491,6 +571,21 @@ class Chat(BaseSDK):
         self,
         *,
         messages: Union[List[components.Message], List[components.MessageTypedDict]],
+        provider: OptionalNullable[
+            Union[
+                components.ChatGenerationParamsProvider,
+                components.ChatGenerationParamsProviderTypedDict,
+            ]
+        ] = UNSET,
+        plugins: Optional[
+            Union[
+                List[components.ChatGenerationParamsPluginUnion],
+                List[components.ChatGenerationParamsPluginUnionTypedDict],
+            ]
+        ] = None,
+        route: OptionalNullable[components.ChatGenerationParamsRoute] = UNSET,
+        user: Optional[str] = None,
+        session_id: Optional[str] = None,
         model: Optional[str] = None,
         models: Optional[List[str]] = None,
         frequency_penalty: OptionalNullable[float] = UNSET,
@@ -530,7 +625,6 @@ class Chat(BaseSDK):
             ]
         ] = None,
         top_p: OptionalNullable[float] = UNSET,
-        user: Optional[str] = None,
         debug: Optional[Union[components.Debug, components.DebugTypedDict]] = None,
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
@@ -542,6 +636,11 @@ class Chat(BaseSDK):
         Sends a request for a model response for the given chat conversation. Supports both streaming and non-streaming modes.
 
         :param messages:
+        :param provider: When multiple model providers are available, optionally indicate your routing preference.
+        :param plugins: Plugins you want to enable for this request, including their settings.
+        :param route: Routing strategy for multiple models: \"fallback\" (default) uses secondary models as backups, \"sort\" sorts all endpoints together by routing criteria.
+        :param user:
+        :param session_id: A unique identifier for grouping related requests (e.g., a conversation or agent workflow) for observability. If provided in both the request body and the x-session-id header, the body value takes precedence. Maximum of 128 characters.
         :param model:
         :param models:
         :param frequency_penalty:
@@ -562,7 +661,6 @@ class Chat(BaseSDK):
         :param tool_choice:
         :param tools:
         :param top_p:
-        :param user:
         :param debug:
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -575,6 +673,21 @@ class Chat(BaseSDK):
         self,
         *,
         messages: Union[List[components.Message], List[components.MessageTypedDict]],
+        provider: OptionalNullable[
+            Union[
+                components.ChatGenerationParamsProvider,
+                components.ChatGenerationParamsProviderTypedDict,
+            ]
+        ] = UNSET,
+        plugins: Optional[
+            Union[
+                List[components.ChatGenerationParamsPluginUnion],
+                List[components.ChatGenerationParamsPluginUnionTypedDict],
+            ]
+        ] = None,
+        route: OptionalNullable[components.ChatGenerationParamsRoute] = UNSET,
+        user: Optional[str] = None,
+        session_id: Optional[str] = None,
         model: Optional[str] = None,
         models: Optional[List[str]] = None,
         frequency_penalty: OptionalNullable[float] = UNSET,
@@ -614,7 +727,6 @@ class Chat(BaseSDK):
             ]
         ] = None,
         top_p: OptionalNullable[float] = UNSET,
-        user: Optional[str] = None,
         debug: Optional[Union[components.Debug, components.DebugTypedDict]] = None,
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
@@ -626,6 +738,11 @@ class Chat(BaseSDK):
         Sends a request for a model response for the given chat conversation. Supports both streaming and non-streaming modes.
 
         :param messages:
+        :param provider: When multiple model providers are available, optionally indicate your routing preference.
+        :param plugins: Plugins you want to enable for this request, including their settings.
+        :param route: Routing strategy for multiple models: \"fallback\" (default) uses secondary models as backups, \"sort\" sorts all endpoints together by routing criteria.
+        :param user:
+        :param session_id: A unique identifier for grouping related requests (e.g., a conversation or agent workflow) for observability. If provided in both the request body and the x-session-id header, the body value takes precedence. Maximum of 128 characters.
         :param model:
         :param models:
         :param frequency_penalty:
@@ -646,7 +763,6 @@ class Chat(BaseSDK):
         :param tool_choice:
         :param tools:
         :param top_p:
-        :param user:
         :param debug:
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -665,6 +781,15 @@ class Chat(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         request = components.ChatGenerationParams(
+            provider=utils.get_pydantic_model(
+                provider, OptionalNullable[components.ChatGenerationParamsProvider]
+            ),
+            plugins=utils.get_pydantic_model(
+                plugins, Optional[List[components.ChatGenerationParamsPluginUnion]]
+            ),
+            route=route,
+            user=user,
+            session_id=session_id,
             messages=utils.get_pydantic_model(messages, List[components.Message]),
             model=model,
             models=models,
@@ -695,7 +820,6 @@ class Chat(BaseSDK):
                 tools, Optional[List[components.ToolDefinitionJSON]]
             ),
             top_p=top_p,
-            user=user,
             debug=utils.get_pydantic_model(debug, Optional[components.Debug]),
         )
 
