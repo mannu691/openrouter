@@ -7,6 +7,7 @@ from typing import Literal, Union
 
 OpenAIResponsesReasoningEffort = Union[
     Literal[
+        "xhigh",
         "high",
         "medium",
         "low",

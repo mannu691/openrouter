@@ -175,41 +175,41 @@ Ignore = TypeAliasType(
 )
 
 
-class MaxPriceTypedDict(TypedDict):
+class OpenResponsesRequestMaxPriceTypedDict(TypedDict):
     r"""The object specifying the maximum price you want to pay for this request. USD price per million tokens, for prompt and completion."""
 
-    prompt: NotRequired[Any]
-    r"""A value in string or number format that is a large number"""
-    completion: NotRequired[Any]
-    r"""A value in string or number format that is a large number"""
-    image: NotRequired[Any]
-    r"""A value in string or number format that is a large number"""
-    audio: NotRequired[Any]
-    r"""A value in string or number format that is a large number"""
-    request: NotRequired[Any]
-    r"""A value in string or number format that is a large number"""
+    prompt: NotRequired[str]
+    r"""A value in string format that is a large number"""
+    completion: NotRequired[str]
+    r"""A value in string format that is a large number"""
+    image: NotRequired[str]
+    r"""A value in string format that is a large number"""
+    audio: NotRequired[str]
+    r"""A value in string format that is a large number"""
+    request: NotRequired[str]
+    r"""A value in string format that is a large number"""
 
 
-class MaxPrice(BaseModel):
+class OpenResponsesRequestMaxPrice(BaseModel):
     r"""The object specifying the maximum price you want to pay for this request. USD price per million tokens, for prompt and completion."""
 
-    prompt: Optional[Any] = None
-    r"""A value in string or number format that is a large number"""
+    prompt: Optional[str] = None
+    r"""A value in string format that is a large number"""
 
-    completion: Optional[Any] = None
-    r"""A value in string or number format that is a large number"""
+    completion: Optional[str] = None
+    r"""A value in string format that is a large number"""
 
-    image: Optional[Any] = None
-    r"""A value in string or number format that is a large number"""
+    image: Optional[str] = None
+    r"""A value in string format that is a large number"""
 
-    audio: Optional[Any] = None
-    r"""A value in string or number format that is a large number"""
+    audio: Optional[str] = None
+    r"""A value in string format that is a large number"""
 
-    request: Optional[Any] = None
-    r"""A value in string or number format that is a large number"""
+    request: Optional[str] = None
+    r"""A value in string format that is a large number"""
 
 
-class ProviderTypedDict(TypedDict):
+class OpenResponsesRequestProviderTypedDict(TypedDict):
     r"""When multiple model providers are available, optionally indicate your routing preference."""
 
     allow_fallbacks: NotRequired[Nullable[bool]]
@@ -240,11 +240,15 @@ class ProviderTypedDict(TypedDict):
     r"""A list of quantization levels to filter the provider by."""
     sort: NotRequired[Nullable[ProviderSort]]
     r"""The sorting strategy to use for this request, if \"order\" is not specified. When set, no load balancing is performed."""
-    max_price: NotRequired[MaxPriceTypedDict]
+    max_price: NotRequired[OpenResponsesRequestMaxPriceTypedDict]
     r"""The object specifying the maximum price you want to pay for this request. USD price per million tokens, for prompt and completion."""
+    min_throughput: NotRequired[Nullable[float]]
+    r"""The minimum throughput (in tokens per second) required for this request. Only providers serving the model with at least this throughput will be used."""
+    max_latency: NotRequired[Nullable[float]]
+    r"""The maximum latency (in seconds) allowed for this request. Only providers serving the model with better than this latency will be used."""
 
 
-class Provider(BaseModel):
+class OpenResponsesRequestProvider(BaseModel):
     r"""When multiple model providers are available, optionally indicate your routing preference."""
 
     allow_fallbacks: OptionalNullable[bool] = UNSET
@@ -291,8 +295,14 @@ class Provider(BaseModel):
     ] = UNSET
     r"""The sorting strategy to use for this request, if \"order\" is not specified. When set, no load balancing is performed."""
 
-    max_price: Optional[MaxPrice] = None
+    max_price: Optional[OpenResponsesRequestMaxPrice] = None
     r"""The object specifying the maximum price you want to pay for this request. USD price per million tokens, for prompt and completion."""
+
+    min_throughput: OptionalNullable[float] = UNSET
+    r"""The minimum throughput (in tokens per second) required for this request. Only providers serving the model with at least this throughput will be used."""
+
+    max_latency: OptionalNullable[float] = UNSET
+    r"""The maximum latency (in seconds) allowed for this request. Only providers serving the model with better than this latency will be used."""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
@@ -308,6 +318,8 @@ class Provider(BaseModel):
             "quantizations",
             "sort",
             "max_price",
+            "min_throughput",
+            "max_latency",
         ]
         nullable_fields = [
             "allow_fallbacks",
@@ -320,6 +332,8 @@ class Provider(BaseModel):
             "ignore",
             "quantizations",
             "sort",
+            "min_throughput",
+            "max_latency",
         ]
         null_default_fields = []
 
@@ -351,18 +365,23 @@ class Provider(BaseModel):
 IDResponseHealing = Literal["response-healing",]
 
 
-class PluginResponseHealingTypedDict(TypedDict):
+class OpenResponsesRequestPluginResponseHealingTypedDict(TypedDict):
     id: IDResponseHealing
+    enabled: NotRequired[bool]
+    r"""Set to false to disable the response-healing plugin for this request. Defaults to true."""
 
 
-class PluginResponseHealing(BaseModel):
+class OpenResponsesRequestPluginResponseHealing(BaseModel):
     id: IDResponseHealing
+
+    enabled: Optional[bool] = None
+    r"""Set to false to disable the response-healing plugin for this request. Defaults to true."""
 
 
 IDFileParser = Literal["file-parser",]
 
 
-PdfEngine = Union[
+OpenResponsesRequestPdfEngine = Union[
     Literal[
         "mistral-ocr",
         "pdf-text",
@@ -372,34 +391,40 @@ PdfEngine = Union[
 ]
 
 
-class PdfTypedDict(TypedDict):
-    engine: NotRequired[PdfEngine]
+class OpenResponsesRequestPdfTypedDict(TypedDict):
+    engine: NotRequired[OpenResponsesRequestPdfEngine]
 
 
-class Pdf(BaseModel):
+class OpenResponsesRequestPdf(BaseModel):
     engine: Annotated[
-        Optional[PdfEngine], PlainValidator(validate_open_enum(False))
+        Optional[OpenResponsesRequestPdfEngine],
+        PlainValidator(validate_open_enum(False)),
     ] = None
 
 
-class PluginFileParserTypedDict(TypedDict):
+class OpenResponsesRequestPluginFileParserTypedDict(TypedDict):
     id: IDFileParser
+    enabled: NotRequired[bool]
+    r"""Set to false to disable the file-parser plugin for this request. Defaults to true."""
     max_files: NotRequired[float]
-    pdf: NotRequired[PdfTypedDict]
+    pdf: NotRequired[OpenResponsesRequestPdfTypedDict]
 
 
-class PluginFileParser(BaseModel):
+class OpenResponsesRequestPluginFileParser(BaseModel):
     id: IDFileParser
+
+    enabled: Optional[bool] = None
+    r"""Set to false to disable the file-parser plugin for this request. Defaults to true."""
 
     max_files: Optional[float] = None
 
-    pdf: Optional[Pdf] = None
+    pdf: Optional[OpenResponsesRequestPdf] = None
 
 
 IDWeb = Literal["web",]
 
 
-Engine = Union[
+OpenResponsesRequestEngine = Union[
     Literal[
         "native",
         "exa",
@@ -408,56 +433,71 @@ Engine = Union[
 ]
 
 
-class PluginWebTypedDict(TypedDict):
+class OpenResponsesRequestPluginWebTypedDict(TypedDict):
     id: IDWeb
+    enabled: NotRequired[bool]
+    r"""Set to false to disable the web-search plugin for this request. Defaults to true."""
     max_results: NotRequired[float]
     search_prompt: NotRequired[str]
-    engine: NotRequired[Engine]
+    engine: NotRequired[OpenResponsesRequestEngine]
 
 
-class PluginWeb(BaseModel):
+class OpenResponsesRequestPluginWeb(BaseModel):
     id: IDWeb
+
+    enabled: Optional[bool] = None
+    r"""Set to false to disable the web-search plugin for this request. Defaults to true."""
 
     max_results: Optional[float] = None
 
     search_prompt: Optional[str] = None
 
-    engine: Annotated[Optional[Engine], PlainValidator(validate_open_enum(False))] = (
-        None
-    )
+    engine: Annotated[
+        Optional[OpenResponsesRequestEngine], PlainValidator(validate_open_enum(False))
+    ] = None
 
 
 IDModeration = Literal["moderation",]
 
 
-class PluginModerationTypedDict(TypedDict):
+class OpenResponsesRequestPluginModerationTypedDict(TypedDict):
     id: IDModeration
 
 
-class PluginModeration(BaseModel):
+class OpenResponsesRequestPluginModeration(BaseModel):
     id: IDModeration
 
 
-PluginTypedDict = TypeAliasType(
-    "PluginTypedDict",
+OpenResponsesRequestPluginUnionTypedDict = TypeAliasType(
+    "OpenResponsesRequestPluginUnionTypedDict",
     Union[
-        PluginModerationTypedDict,
-        PluginResponseHealingTypedDict,
-        PluginFileParserTypedDict,
-        PluginWebTypedDict,
+        OpenResponsesRequestPluginModerationTypedDict,
+        OpenResponsesRequestPluginResponseHealingTypedDict,
+        OpenResponsesRequestPluginFileParserTypedDict,
+        OpenResponsesRequestPluginWebTypedDict,
     ],
 )
 
 
-Plugin = Annotated[
+OpenResponsesRequestPluginUnion = Annotated[
     Union[
-        Annotated[PluginModeration, Tag("moderation")],
-        Annotated[PluginWeb, Tag("web")],
-        Annotated[PluginFileParser, Tag("file-parser")],
-        Annotated[PluginResponseHealing, Tag("response-healing")],
+        Annotated[OpenResponsesRequestPluginModeration, Tag("moderation")],
+        Annotated[OpenResponsesRequestPluginWeb, Tag("web")],
+        Annotated[OpenResponsesRequestPluginFileParser, Tag("file-parser")],
+        Annotated[OpenResponsesRequestPluginResponseHealing, Tag("response-healing")],
     ],
     Discriminator(lambda m: get_discriminator(m, "id", "id")),
 ]
+
+
+OpenResponsesRequestRoute = Union[
+    Literal[
+        "fallback",
+        "sort",
+    ],
+    UnrecognizedStr,
+]
+r"""Routing strategy for multiple models: \"fallback\" (default) uses secondary models as backups, \"sort\" sorts all endpoints together by routing criteria."""
 
 
 class OpenResponsesRequestTypedDict(TypedDict):
@@ -491,10 +531,12 @@ class OpenResponsesRequestTypedDict(TypedDict):
     service_tier: NotRequired[ServiceTier]
     truncation: NotRequired[Nullable[Truncation]]
     stream: NotRequired[bool]
-    provider: NotRequired[Nullable[ProviderTypedDict]]
+    provider: NotRequired[Nullable[OpenResponsesRequestProviderTypedDict]]
     r"""When multiple model providers are available, optionally indicate your routing preference."""
-    plugins: NotRequired[List[PluginTypedDict]]
+    plugins: NotRequired[List[OpenResponsesRequestPluginUnionTypedDict]]
     r"""Plugins you want to enable for this request, including their settings."""
+    route: NotRequired[Nullable[OpenResponsesRequestRoute]]
+    r"""Routing strategy for multiple models: \"fallback\" (default) uses secondary models as backups, \"sort\" sorts all endpoints together by routing criteria."""
     user: NotRequired[str]
     r"""A unique identifier representing your end-user, which helps distinguish between different users of your app. This allows your app to identify specific users in case of abuse reports, preventing your entire app from being affected by the actions of individual users. Maximum of 128 characters."""
     session_id: NotRequired[str]
@@ -567,11 +609,17 @@ class OpenResponsesRequest(BaseModel):
 
     stream: Optional[bool] = False
 
-    provider: OptionalNullable[Provider] = UNSET
+    provider: OptionalNullable[OpenResponsesRequestProvider] = UNSET
     r"""When multiple model providers are available, optionally indicate your routing preference."""
 
-    plugins: Optional[List[Plugin]] = None
+    plugins: Optional[List[OpenResponsesRequestPluginUnion]] = None
     r"""Plugins you want to enable for this request, including their settings."""
+
+    route: Annotated[
+        OptionalNullable[OpenResponsesRequestRoute],
+        PlainValidator(validate_open_enum(False)),
+    ] = UNSET
+    r"""Routing strategy for multiple models: \"fallback\" (default) uses secondary models as backups, \"sort\" sorts all endpoints together by routing criteria."""
 
     user: Optional[str] = None
     r"""A unique identifier representing your end-user, which helps distinguish between different users of your app. This allows your app to identify specific users in case of abuse reports, preventing your entire app from being affected by the actions of individual users. Maximum of 128 characters."""
@@ -608,6 +656,7 @@ class OpenResponsesRequest(BaseModel):
             "stream",
             "provider",
             "plugins",
+            "route",
             "user",
             "session_id",
         ]
@@ -627,6 +676,7 @@ class OpenResponsesRequest(BaseModel):
             "safety_identifier",
             "truncation",
             "provider",
+            "route",
         ]
         null_default_fields = []
 

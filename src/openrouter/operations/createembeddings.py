@@ -18,7 +18,7 @@ from openrouter.types import (
 from openrouter.utils import get_discriminator, validate_open_enum
 from pydantic import Discriminator, Tag, model_serializer
 from pydantic.functional_validators import PlainValidator
-from typing import Any, List, Literal, Optional, Union
+from typing import List, Literal, Optional, Union
 from typing_extensions import Annotated, NotRequired, TypeAliasType, TypedDict
 
 
@@ -154,35 +154,35 @@ Ignore = TypeAliasType(
 class MaxPriceTypedDict(TypedDict):
     r"""The object specifying the maximum price you want to pay for this request. USD price per million tokens, for prompt and completion."""
 
-    prompt: NotRequired[Any]
-    r"""A value in string or number format that is a large number"""
-    completion: NotRequired[Any]
-    r"""A value in string or number format that is a large number"""
-    image: NotRequired[Any]
-    r"""A value in string or number format that is a large number"""
-    audio: NotRequired[Any]
-    r"""A value in string or number format that is a large number"""
-    request: NotRequired[Any]
-    r"""A value in string or number format that is a large number"""
+    prompt: NotRequired[str]
+    r"""A value in string format that is a large number"""
+    completion: NotRequired[str]
+    r"""A value in string format that is a large number"""
+    image: NotRequired[str]
+    r"""A value in string format that is a large number"""
+    audio: NotRequired[str]
+    r"""A value in string format that is a large number"""
+    request: NotRequired[str]
+    r"""A value in string format that is a large number"""
 
 
 class MaxPrice(BaseModel):
     r"""The object specifying the maximum price you want to pay for this request. USD price per million tokens, for prompt and completion."""
 
-    prompt: Optional[Any] = None
-    r"""A value in string or number format that is a large number"""
+    prompt: Optional[str] = None
+    r"""A value in string format that is a large number"""
 
-    completion: Optional[Any] = None
-    r"""A value in string or number format that is a large number"""
+    completion: Optional[str] = None
+    r"""A value in string format that is a large number"""
 
-    image: Optional[Any] = None
-    r"""A value in string or number format that is a large number"""
+    image: Optional[str] = None
+    r"""A value in string format that is a large number"""
 
-    audio: Optional[Any] = None
-    r"""A value in string or number format that is a large number"""
+    audio: Optional[str] = None
+    r"""A value in string format that is a large number"""
 
-    request: Optional[Any] = None
-    r"""A value in string or number format that is a large number"""
+    request: Optional[str] = None
+    r"""A value in string format that is a large number"""
 
 
 class CreateEmbeddingsProviderTypedDict(TypedDict):
@@ -216,6 +216,10 @@ class CreateEmbeddingsProviderTypedDict(TypedDict):
     r"""The sorting strategy to use for this request, if \"order\" is not specified. When set, no load balancing is performed."""
     max_price: NotRequired[MaxPriceTypedDict]
     r"""The object specifying the maximum price you want to pay for this request. USD price per million tokens, for prompt and completion."""
+    min_throughput: NotRequired[Nullable[float]]
+    r"""The minimum throughput (in tokens per second) required for this request. Only providers serving the model with at least this throughput will be used."""
+    max_latency: NotRequired[Nullable[float]]
+    r"""The maximum latency (in seconds) allowed for this request. Only providers serving the model with better than this latency will be used."""
 
 
 class CreateEmbeddingsProvider(BaseModel):
@@ -273,6 +277,12 @@ class CreateEmbeddingsProvider(BaseModel):
     max_price: Optional[MaxPrice] = None
     r"""The object specifying the maximum price you want to pay for this request. USD price per million tokens, for prompt and completion."""
 
+    min_throughput: OptionalNullable[float] = UNSET
+    r"""The minimum throughput (in tokens per second) required for this request. Only providers serving the model with at least this throughput will be used."""
+
+    max_latency: OptionalNullable[float] = UNSET
+    r"""The maximum latency (in seconds) allowed for this request. Only providers serving the model with better than this latency will be used."""
+
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
         optional_fields = [
@@ -287,6 +297,8 @@ class CreateEmbeddingsProvider(BaseModel):
             "quantizations",
             "sort",
             "max_price",
+            "min_throughput",
+            "max_latency",
         ]
         nullable_fields = [
             "allow_fallbacks",
@@ -299,6 +311,8 @@ class CreateEmbeddingsProvider(BaseModel):
             "ignore",
             "quantizations",
             "sort",
+            "min_throughput",
+            "max_latency",
         ]
         null_default_fields = []
 

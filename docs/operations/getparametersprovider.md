@@ -41,6 +41,7 @@
 | `INFERMATIC`        | Infermatic          |
 | `INFLECTION`        | Inflection          |
 | `LIQUID`            | Liquid              |
+| `MARA`              | Mara                |
 | `MANCER_2`          | Mancer 2            |
 | `MINIMAX`           | Minimax             |
 | `MODEL_RUN`         | ModelRun            |
@@ -69,6 +70,7 @@
 | `TOGETHER`          | Together            |
 | `VENICE`            | Venice              |
 | `WAND_B`            | WandB               |
+| `XIAOMI`            | Xiaomi              |
 | `X_AI`              | xAI                 |
 | `Z_AI`              | Z.AI                |
 | `FAKE_PROVIDER`     | FakeProvider        |
