@@ -5,8 +5,8 @@ management:
   docVersion: 1.0.0
   speakeasyVersion: 1.666.0
   generationVersion: 2.768.0
-  releaseVersion: 0.0.18
-  configChecksum: 1f58284fadb5b2b9029e9ef747f2a7e9
+  releaseVersion: 0.1.2
+  configChecksum: adb2f19d89b3fd68d890e4bad6beebbf
   repoURL: https://github.com/OpenRouterTeam/python-sdk.git
   installationURL: https://github.com/OpenRouterTeam/python-sdk.git
   published: true
