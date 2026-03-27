@@ -33,6 +33,7 @@
 | `TOGETHER_2`        | Together 2          |
 | `UBICLOUD`          | Ubicloud            |
 | `ONE_DOT_AI`        | 01.AI               |
+| `AKASH_ML`          | AkashML             |
 | `AI21`              | AI21                |
 | `AION_LABS`         | AionLabs            |
 | `ALIBABA`           | Alibaba             |
@@ -90,6 +91,7 @@
 | `PARASAIL`          | Parasail            |
 | `PERPLEXITY`        | Perplexity          |
 | `PHALA`             | Phala               |
+| `REKA`              | Reka                |
 | `RELACE`            | Relace              |
 | `SAMBA_NOVA`        | SambaNova           |
 | `SEED`              | Seed                |

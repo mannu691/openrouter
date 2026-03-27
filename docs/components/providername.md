@@ -5,6 +5,7 @@
 
 | Name                | Value               |
 | ------------------- | ------------------- |
+| `AKASH_ML`          | AkashML             |
 | `AI21`              | AI21                |
 | `AION_LABS`         | AionLabs            |
 | `ALIBABA`           | Alibaba             |
@@ -62,6 +63,7 @@
 | `PARASAIL`          | Parasail            |
 | `PERPLEXITY`        | Perplexity          |
 | `PHALA`             | Phala               |
+| `REKA`              | Reka                |
 | `RELACE`            | Relace              |
 | `SAMBA_NOVA`        | SambaNova           |
 | `SEED`              | Seed                |

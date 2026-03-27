@@ -9,3 +9,4 @@ Type of API used for the generation
 | ------------- | ------------- |
 | `COMPLETIONS` | completions   |
 | `EMBEDDINGS`  | embeddings    |
+| `VIDEO`       | video         |
