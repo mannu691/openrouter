@@ -3847,6 +3847,40 @@ components:
         error:
           code: 408
           message: Operation timed out. Please try again later.
+    GoneResponseErrorData:
+      type: object
+      properties:
+        code:
+          type: integer
+        message:
+          type: string
+        metadata:
+          type: object
+          nullable: true
+          additionalProperties:
+            nullable: true
+      required:
+        - code
+        - message
+      description: Error data for GoneResponse
+      example:
+        code: 410
+        message: The Coinbase APIs used by this endpoint have been deprecated, so the Coinbase Commerce credits API has been removed. Use the web credits purchase flow instead.
+    GoneResponse:
+      type: object
+      properties:
+        error:
+          $ref: '#/components/schemas/GoneResponseErrorData'
+        user_id:
+          type: string
+          nullable: true
+      required:
+        - error
+      description: Gone - Endpoint has been permanently removed or deprecated
+      example:
+        error:
+          code: 410
+          message: The Coinbase APIs used by this endpoint have been deprecated, so the Coinbase Commerce credits API has been removed. Use the web credits purchase flow instead.
     PayloadTooLargeResponseErrorData:
       type: object
       properties:
@@ -13347,29 +13381,6 @@ components:
         model: openai/gpt-4
         temperature: 0.7
         max_tokens: 150
-    CreateChargeRequest:
-      type: object
-      properties:
-        amount:
-          type: number
-        sender:
-          type: string
-        chain_id:
-          type: integer
-          enum:
-            - 1
-            - 137
-            - 8453
-          x-speakeasy-unknown-values: allow
-      required:
-        - amount
-        - sender
-        - chain_id
-      description: Create a Coinbase charge for crypto payment
-      example:
-        amount: 100
-        sender: '0x1234567890123456789012345678901234567890'
-        chain_id: 1
     ProviderPreferences:
       type: object
       properties:
@@ -14929,126 +14940,21 @@ paths:
       - $ref: "#/components/parameters/AppCategories"
   /credits/coinbase:
     post:
-      security:
-        - bearer: []
+      security: []
       x-speakeasy-name-override: createCoinbaseCharge
+      deprecated: true
       tags:
         - Credits
-      summary: Create a Coinbase charge for crypto payment
+      summary: Deprecated Coinbase Commerce charge endpoint
       operationId: createCoinbaseCharge
-      description: Create a Coinbase charge for crypto payment
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/CreateChargeRequest'
-        required: true
+      description: Deprecated. The Coinbase APIs used by this endpoint have been deprecated, so Coinbase Commerce charges have been removed. Use the web credits purchase flow instead.
       responses:
-        '200':
-          description: Returns the calldata to fulfill the transaction
+        '410':
+          description: Gone - Coinbase Commerce charge creation has been removed
           content:
             application/json:
               schema:
-                type: object
-                properties:
-                  data:
-                    type: object
-                    properties:
-                      id:
-                        type: string
-                      created_at:
-                        type: string
-                      expires_at:
-                        type: string
-                      web3_data:
-                        type: object
-                        properties:
-                          transfer_intent:
-                            type: object
-                            properties:
-                              call_data:
-                                type: object
-                                properties:
-                                  deadline:
-                                    type: string
-                                  fee_amount:
-                                    type: string
-                                  id:
-                                    type: string
-                                  operator:
-                                    type: string
-                                  prefix:
-                                    type: string
-                                  recipient:
-                                    type: string
-                                  recipient_amount:
-                                    type: string
-                                  recipient_currency:
-                                    type: string
-                                  refund_destination:
-                                    type: string
-                                  signature:
-                                    type: string
-                                required:
-                                  - deadline
-                                  - fee_amount
-                                  - id
-                                  - operator
-                                  - prefix
-                                  - recipient
-                                  - recipient_amount
-                                  - recipient_currency
-                                  - refund_destination
-                                  - signature
-                              metadata:
-                                type: object
-                                properties:
-                                  chain_id:
-                                    type: number
-                                  contract_address:
-                                    type: string
-                                  sender:
-                                    type: string
-                                required:
-                                  - chain_id
-                                  - contract_address
-                                  - sender
-                            required:
-                              - call_data
-                              - metadata
-                        required:
-                          - transfer_intent
-                    required:
-                      - id
-                      - created_at
-                      - expires_at
-                      - web3_data
-                required:
-                  - data
-        '400':
-          description: Bad Request - Invalid credit amount or request body
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/BadRequestResponse'
-        '401':
-          description: Unauthorized - Authentication required or invalid credentials
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/UnauthorizedResponse'
-        '429':
-          description: Too Many Requests - Rate limit exceeded
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/TooManyRequestsResponse'
-        '500':
-          description: Internal Server Error - Unexpected server error
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/InternalServerResponse'
+                $ref: '#/components/schemas/GoneResponse'
     parameters:
       - $ref: "#/components/parameters/AppIdentifier"
       - $ref: "#/components/parameters/AppDisplayName"

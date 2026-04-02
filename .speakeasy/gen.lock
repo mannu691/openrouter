@@ -1,19 +1,17 @@
 lockVersion: 2.0.0
-id: cfd52247-6a25-4c6d-bbce-fe6fce0cd69d
+id: c48cf606-fb42-4a45-9c23-8f0555307828
 management:
-  docChecksum: 543e6f0dabe30debf212a997d70dc069
+  docChecksum: 893ba77d8f0b95f17c64e730e742b555
   docVersion: 1.0.0
   speakeasyVersion: 1.680.0
   generationVersion: 2.788.4
-  releaseVersion: 0.8.0
-  configChecksum: 1a622905d45caac25e8ee5fb2739d219
-  repoURL: https://github.com/OpenRouterTeam/python-sdk.git
-  installationURL: https://github.com/OpenRouterTeam/python-sdk.git
+  releaseVersion: 0.8.1
+  configChecksum: 279b27abe296fa6bfe551f52239bab5f
   published: true
 persistentEdits:
-  generation_id: 774c44d3-ac63-4e07-89cd-c9a481c35da3
-  pristine_commit_hash: 73742f857dca51846a67a66cc19e0d8c012c9c38
-  pristine_tree_hash: a9067817353e27e37c7b7772671e970eb3a738f9
+  generation_id: 2c909214-6948-4db1-a5d8-a3102342af78
+  pristine_commit_hash: 8ad096495e3922d56a78c6eaedba33335dbcbf61
+  pristine_tree_hash: cba26443b885aefd901c33db387686b99ed1fd3a
 features:
   python:
     acceptHeaders: 3.0.0
@@ -50,8 +48,8 @@ features:
 trackedFiles:
   .devcontainer/README.md:
     id: b170c0f184ac
-    last_write_checksum: sha1:919a25ed5129d316f05a60131c164011763b7c54
-    pristine_git_object: c7d8d278438e7906fedb39d99151372b3324ea66
+    last_write_checksum: sha1:3c63dfd4dcea8df0d4add09e975a6887e6da4aab
+    pristine_git_object: 396929ab2e57cf09dd25ec83bd4496f733b95701
   .devcontainer/devcontainer.json:
     id: b34062a34eb1
     last_write_checksum: sha1:94309e8c8eab5ab063986bf625f513a59825e947
@@ -252,10 +250,6 @@ trackedFiles:
     id: 77f6aeeabc53
     last_write_checksum: sha1:e43f4beb0ce9189215ea930bd35771775bb8cb2c
     pristine_git_object: 07ddac012a71fbe21ac4b5ec94a63054a9cc8bb4
-  docs/components/chainid.md:
-    id: bed884f81fbb
-    last_write_checksum: sha1:2385b805aee407cd5dd2e9e0e302a51019fb7159
-    pristine_git_object: 11579fed5ec6618add73efbf35c16fde43eb2f73
   docs/components/chatassistantimages.md:
     id: f1f776b0c4ae
     last_write_checksum: sha1:05697e4bc0690cabd72965d01519102c149f6363
@@ -864,10 +858,6 @@ trackedFiles:
     id: 2e3d81b7a646
     last_write_checksum: sha1:298cb44901e7c50563597aae9e0606cf83edbc2b
     pristine_git_object: ada009ced29fcaf5d19e81bc67276fe9718ccfaa
-  docs/components/createchargerequest.md:
-    id: abed35916f72
-    last_write_checksum: sha1:a157ce1a0aa39b3efd07015508498c2e2ae90b12
-    pristine_git_object: e789e8f139c280cd256caef05c1561b0f9cefc3c
   docs/components/customtool.md:
     id: ff0ec1b8ea8b
     last_write_checksum: sha1:090abd129254120c6ebdff2d303c36bddc62b712
@@ -1116,6 +1106,10 @@ trackedFiles:
     id: 88a512c5f9ce
     last_write_checksum: sha1:611201e2dbd2c8fe1c501b5365bc06367bc5370c
     pristine_git_object: 2f4629220306ced5674a9ef70dbcbce1f908b93a
+  docs/components/goneresponseerrordata.md:
+    id: e0a6af2f3930
+    last_write_checksum: sha1:bb71aaa5536e5e1318be7ff336df76ef276acbe1
+    pristine_git_object: 87ee01d49d24f644cd8143ecd5435621fea20831
   docs/components/imagegencallcompletedevent.md:
     id: c26bc1b3854e
     last_write_checksum: sha1:3fbced46717f100511986724f16441ff0a081187
@@ -2580,6 +2574,10 @@ trackedFiles:
     id: 7decb227f487
     last_write_checksum: sha1:283f0f2a777f118448acd3bed2b98a879a8175a7
     pristine_git_object: 290d3a4196ed994d4c8637490aa1449fbe624724
+  docs/errors/goneresponseerror.md:
+    id: 526d816ed2ec
+    last_write_checksum: sha1:cb1bd47cc04da0d4b407ca3d561e8661da59deef
+    pristine_git_object: a2742e040c20f55cde9b6083eb38db64e8a4d4cb
   docs/errors/internalserverresponseerror.md:
     id: 7e8ff7f684b2
     last_write_checksum: sha1:7286bd98d0952f44d807965c284796fa8b271be4
@@ -2696,10 +2694,6 @@ trackedFiles:
     id: 6fa28513237c
     last_write_checksum: sha1:8880a7ac0b9223137e8debacabe38c594f6d0864
     pristine_git_object: 76e85b285366d5731dd1cb6cfc182907406fe741
-  docs/operations/calldata.md:
-    id: 950f75cd8fa0
-    last_write_checksum: sha1:b74cd6e7ef1233a3877dac00f473cd7c76bb775b
-    pristine_git_object: de7a031a64014b4578f0252e7ec088d4b09a68ff
   docs/operations/category.md:
     id: 694f17d9e80d
     last_write_checksum: sha1:6437eb7bd8c0df1767aee6a6522c5a67fdfaddcd
@@ -2740,26 +2734,14 @@ trackedFiles:
     id: 6c92952aa6b6
     last_write_checksum: sha1:c456860d3c44db9bd993e3e4371025d50be959f8
     pristine_git_object: acad71c0e6f4d79b6cc9a2e88e6b8a0f9af321a4
-  docs/operations/createcoinbasechargedata.md:
-    id: eb6f66eb47b3
-    last_write_checksum: sha1:bf75c37cdede3e9503cb76b52993f644037df322
-    pristine_git_object: 9363cdf6948ab92053e313ae48f4aa1c66a7c980
   docs/operations/createcoinbasechargeglobals.md:
     id: f991df871a9f
     last_write_checksum: sha1:75b0e35461d66b1eed488b9298219f71b85841b9
     pristine_git_object: dcc7d37f19107efe84f79941648b2902585d6e2a
   docs/operations/createcoinbasechargerequest.md:
     id: a448dd5ceebb
-    last_write_checksum: sha1:4635ba463628d2e79523db64c810cca47e0cf078
-    pristine_git_object: e6f030714c394386aa7f69d60532b01c3faa470a
-  docs/operations/createcoinbasechargeresponse.md:
-    id: 9fc6d8b1e3c2
-    last_write_checksum: sha1:9e9f224237128b82d1dba1b1b8de785067a06d3e
-    pristine_git_object: d9d4bd99972294e02ce27d09b940b829246c6891
-  docs/operations/createcoinbasechargesecurity.md:
-    id: e041c4c49e3d
-    last_write_checksum: sha1:0dd8c21a514db569ae6c073ac884fb44e66b5c31
-    pristine_git_object: 7d58a21f28426d40a0ae7d755b18580916911d08
+    last_write_checksum: sha1:78f9ba075a4cebcb45341f7b47715a0364ec96e6
+    pristine_git_object: 9a425d353ef0972e8555b1a45bffd0b5eef61e3f
   docs/operations/createembeddingsdata.md:
     id: b2123807ad9d
     last_write_checksum: sha1:6c7ca4ed9b4552bbafd6978b034bd2117d216574
@@ -3196,10 +3178,6 @@ trackedFiles:
     id: 14450e1d6614
     last_write_checksum: sha1:e432e29d3c7de8517cc16b59b958134ec561f09c
     pristine_git_object: 255d266cb4cee8057210f820e560bba25858b82c
-  docs/operations/metadata.md:
-    id: d37b5c1d5589
-    last_write_checksum: sha1:25049602671a379c289e2ca39d3097063aa509de
-    pristine_git_object: 87bf7e340fe3f01fac63933324afd2f25dda553b
   docs/operations/object.md:
     id: baee3544844d
     last_write_checksum: sha1:2fba5ecf3f93c90460a972666d6acdfb597cafad
@@ -3236,10 +3214,6 @@ trackedFiles:
     id: f89a67417d77
     last_write_checksum: sha1:3235dd5b19271fd86c2c03d79178948b1611e6ca
     pristine_git_object: 4c840446aba01bd1283151184a07c582786ad9da
-  docs/operations/transferintent.md:
-    id: b95f9f6bcc0a
-    last_write_checksum: sha1:b7256dce12dc3cad6356e72f1a8ea5afe936e59f
-    pristine_git_object: f068e9ae1c42b359259b7441d9cc452353526d8f
   docs/operations/typeimageurl.md:
     id: 433d2dc21947
     last_write_checksum: sha1:24b83d5212d95f5e5ee95d1b9e47059613126ea1
@@ -3308,26 +3282,22 @@ trackedFiles:
     id: f83f3fcb36f8
     last_write_checksum: sha1:9c272d9908a57fdbd2b376e13c8fd226e7d4ce65
     pristine_git_object: 0d9e7c83f5ae8bab7f5f5cfa6e48805c00f56f40
-  docs/operations/web3data.md:
-    id: d972a6efe20c
-    last_write_checksum: sha1:1d72084d83e1628573f14eaf096ce2d52cfe33dc
-    pristine_git_object: 18e0a9cb3ebb9d9dca10b0782fc08006b3c9e6d2
   docs/sdks/analytics/README.md:
     id: 4c84abb05030
-    last_write_checksum: sha1:bb8b0d3488aab3d9587698636b124bcb369cf327
-    pristine_git_object: f10b397f86b982441c1be23e81772b71a136904d
+    last_write_checksum: sha1:9b5a8b4b1d97befb1e2a21dfeb35dcff078c9627
+    pristine_git_object: 91805c7e8e111b3047ed8e69c7e687b1addafeba
   docs/sdks/apikeys/README.md:
     id: e2bd25998427
-    last_write_checksum: sha1:fc3b72b8aa77d20784989641717c5cb4df0fddcf
-    pristine_git_object: 7b325c0acd88da7c15dba00a4165ee858db26765
+    last_write_checksum: sha1:0f630ab49e573a34e13a589550e5dc22f11f9337
+    pristine_git_object: d072fdd1527e7c8a2bca61dbe46977222a96d135
   docs/sdks/chat/README.md:
     id: 393193527c2c
     last_write_checksum: sha1:95c783c0a34a00f3d6e12406a683635fc0714115
     pristine_git_object: c28f38d9890824ef84d5804b6916ab30005bfaed
   docs/sdks/credits/README.md:
     id: 81608135c0ff
-    last_write_checksum: sha1:61426e049087353ea55a2cb31fde922205e1c673
-    pristine_git_object: 0d32728478dec69768c308ec202eb5d3d9a6a335
+    last_write_checksum: sha1:c0cd734a1c3df6d92a010cf12a676506e8dfc280
+    pristine_git_object: 59bb0abe2d0b68677672b8fe536ff2aba408d46f
   docs/sdks/embeddings/README.md:
     id: 15b5b04486c1
     last_write_checksum: sha1:93409aad79adcad06e751cb1b48907c0b261c663
@@ -3366,16 +3336,12 @@ trackedFiles:
     pristine_git_object: 3e38f1a929f7d6b1d6de74604aa87e3d8f010544
   pyproject.toml:
     id: 5d07e7d72637
-    last_write_checksum: sha1:7593c9eb167e36e170a72aade862f43ab08045c3
-    pristine_git_object: 870fd0812919efc48010e6c7d9bbe46aa96c1416
-  scripts/prepare_readme.py:
-    id: e0c5957a6035
-    last_write_checksum: sha1:77f44b60b98bc126557ec27391f91dfba764bb54
-    pristine_git_object: 03e9f9b59063c73d6f24995a77cdb971f3318d30
+    last_write_checksum: sha1:77eb83db047dc7a0fee66142a4408efcab29f3f0
+    pristine_git_object: 71d7080bdd4204fe1367f7fc5195a5573fcddd82
   scripts/publish.sh:
     id: fe273b08f514
-    last_write_checksum: sha1:b290b25b36dca3d5eb1a2e66a2e1bcf2e7326cf3
-    pristine_git_object: c35748f360329c2bc370e9b189f49b1a360b2c48
+    last_write_checksum: sha1:adc9b741c12ad1591ab4870eabe20f0d0a86cd1a
+    pristine_git_object: ef28dc10c60d7d6a4bac0c6a1e9caba36b471861
   src/openrouter/__init__.py:
     id: 4514650f64eb
     last_write_checksum: sha1:da077c0bdfcef64a4a5aea91a17292f72fa2b088
@@ -3394,8 +3360,8 @@ trackedFiles:
     pristine_git_object: 07ace03229fd3267623c8f48665d2c3a67c3565d
   src/openrouter/_version.py:
     id: d8d15ad6c586
-    last_write_checksum: sha1:d8476683ff9a78259ad25f2dfc9e546390b188eb
-    pristine_git_object: 8d9fa361d452ddb180ae67eb92b63cb83abbca85
+    last_write_checksum: sha1:ab653d10128db3311e4804ef39828494efa4e115
+    pristine_git_object: 1057ee959bfaf7c2d9e26d8b6ce54bb153071ee3
   src/openrouter/analytics.py:
     id: cb406b5aaabb
     last_write_checksum: sha1:e395dc6b6403e7a37f8cb4be2d679cd151dc6780
@@ -3418,8 +3384,8 @@ trackedFiles:
     pristine_git_object: e7855d1f5531df21d376dc9448b1ceb2fe86fbe3
   src/openrouter/components/__init__.py:
     id: 81754e97b3f4
-    last_write_checksum: sha1:067a64296fd5042deb6a57d067706e428fd4fadd
-    pristine_git_object: c61c2a699275b5c80558014eb1b6868ac6b5836b
+    last_write_checksum: sha1:885c33350de6090e4476d00178f0087152a08b6a
+    pristine_git_object: f62b9c09ace5db9c90b06aae4533c94880faee3e
   src/openrouter/components/activityitem.py:
     id: 3bbe7d35f459
     last_write_checksum: sha1:08483b6fe216e4bb2fd7205b1f6d7394af826f26
@@ -3644,10 +3610,6 @@ trackedFiles:
     id: a3965275d07f
     last_write_checksum: sha1:8aeacab427a9277db44ef731fd7a38a58752a64f
     pristine_git_object: 7d5b6f700b28296f6879a4a87d65a794f3e96cb3
-  src/openrouter/components/createchargerequest.py:
-    id: 9d406657b75e
-    last_write_checksum: sha1:3f249e03468bb102ea8f9345828db7fab5a61612
-    pristine_git_object: 7fab3acdda03fa7a251cc290ed6cb818a261810d
   src/openrouter/components/customtool.py:
     id: e83b0c530680
     last_write_checksum: sha1:8c39362a8d105601a0a71d429580ac5a43ca94d9
@@ -3728,6 +3690,10 @@ trackedFiles:
     id: bf659aa04e7d
     last_write_checksum: sha1:0a12e07fb5148a167e32d96be37a98dcba3ebd36
     pristine_git_object: 5173384b7c17ab8bde006291251f101037146945
+  src/openrouter/components/goneresponseerrordata.py:
+    id: 41f97eceb29a
+    last_write_checksum: sha1:f2a9f26b6e724ddac1fd29963cdc01a5941e9fa9
+    pristine_git_object: 78177b848271cd74e44d0fc956ff8d15be5871de
   src/openrouter/components/imagegencallcompletedevent.py:
     id: cbf654faeb3e
     last_write_checksum: sha1:c09c72377699dfcb9030c7353f7b9db1b955a268
@@ -4198,8 +4164,8 @@ trackedFiles:
     pristine_git_object: 4ffc90b3f040fe0f18cad97cfa5220c7e5d26018
   src/openrouter/credits.py:
     id: cdc961937101
-    last_write_checksum: sha1:79ad92c18672321880a482bf32261488d9e48f32
-    pristine_git_object: 43b95ff543d311823595bcaa754fa833cc831a2e
+    last_write_checksum: sha1:96e0326da16cf82713a498c04485c879852c1472
+    pristine_git_object: c06e2ae01f025b9b2993ee92a28352921de1a7c3
   src/openrouter/embeddings.py:
     id: 0374ace39067
     last_write_checksum: sha1:a491c4af1fe4bff2400012c19dc35f52a8eaca68
@@ -4210,8 +4176,8 @@ trackedFiles:
     pristine_git_object: 09823d301c103f8e65e9fb2b2153ce7a1d424bd2
   src/openrouter/errors/__init__.py:
     id: 366154d0d60a
-    last_write_checksum: sha1:84e5bdd52a3e99fd8bbbd718fa4f075ae0df4f64
-    pristine_git_object: dc5ef68c20dea9461abf913779f5f0e21defc829
+    last_write_checksum: sha1:4765e4763f162d381bebb9b2ec284305fdf62707
+    pristine_git_object: 1695b737f1d19a4c63197a3b13f3307fdca1cea9
   src/openrouter/errors/badgatewayresponse_error.py:
     id: 818c3605ce23
     last_write_checksum: sha1:d9d2599c2be63be36d3891bc94e34535edb3f05a
@@ -4232,6 +4198,10 @@ trackedFiles:
     id: 4c1d3e6c95a4
     last_write_checksum: sha1:930eb57082f282587d05c77b243990d4bc32fdec
     pristine_git_object: f9fd3e58e09630c176f4868c6a962c96c630eb8b
+  src/openrouter/errors/goneresponse_error.py:
+    id: 13e8901c2c57
+    last_write_checksum: sha1:18df5a97e332bbca977222a4fdfd0c1509de32cc
+    pristine_git_object: 192dae529965ebc7ba7b5001b8bbc29b2b6a40b4
   src/openrouter/errors/internalserverresponse_error.py:
     id: a5ab5c4a53a9
     last_write_checksum: sha1:f91e21d4022b0ede924736ab9664e63d73e64b55
@@ -4322,8 +4292,8 @@ trackedFiles:
     pristine_git_object: b31df9fe79cf8e58d16e140e93e3ec2c358eb89e
   src/openrouter/operations/__init__.py:
     id: 9afcea1e7161
-    last_write_checksum: sha1:f524d3b5a390b8b1dd392ff99fb69ba43b1b46d7
-    pristine_git_object: f25347dbb31a15f83e8a12b8f3b05d87f8dd74ed
+    last_write_checksum: sha1:acdd42df97635d112197ac02a1d9c9b10d94d4ca
+    pristine_git_object: 154f41155799456d23702e5dfffb2efd547b5395
   src/openrouter/operations/bulkassignkeystoguardrail.py:
     id: 6d8435d51d9d
     last_write_checksum: sha1:f900853fa8060a8a78674a3e386e7107f0233a44
@@ -4346,8 +4316,8 @@ trackedFiles:
     pristine_git_object: 610f4463df8df044f109675109397462d4821660
   src/openrouter/operations/createcoinbasecharge.py:
     id: 7858e70dbf27
-    last_write_checksum: sha1:9e729386e447df3122387b004bc75a4cb34665eb
-    pristine_git_object: dc83233e579abe8fc6b644d12c5fe12300af0e07
+    last_write_checksum: sha1:d229f8ba547f2c124def12dda6892926e559f15e
+    pristine_git_object: 6e296e19bfdd8a1b84d9368b1d582c56a888a5a2
   src/openrouter/operations/createembeddings.py:
     id: fe1160a960e9
     last_write_checksum: sha1:d6e7e034971ff17128e1d6cc132fb85fa95cf685
@@ -4596,9 +4566,6 @@ examples:
           application/json: {"error": {"code": 529, "message": "Provider returned error"}}
   getUserActivity:
     speakeasy-default-get-user-activity:
-      parameters:
-        query:
-          date: "2025-08-24"
       responses:
         "200":
           application/json: {"data": [{"date": "2025-08-24", "model": "openai/gpt-4.1", "model_permaslug": "openai/gpt-4.1-2025-04-14", "endpoint_id": "550e8400-e29b-41d4-a716-446655440000", "provider_name": "OpenAI", "usage": 0.015, "byok_usage_inference": 0.012, "requests": 5, "prompt_tokens": 50, "completion_tokens": 125, "reasoning_tokens": 25}]}
@@ -4610,6 +4577,39 @@ examples:
           application/json: {"error": {"code": 403, "message": "Only management keys can perform this operation"}}
         "500":
           application/json: {"error": {"code": 500, "message": "Internal Server Error"}}
+  sendChatCompletionRequest:
+    speakeasy-default-send-chat-completion-request:
+      requestBody:
+        application/json: {"messages": [{"role": "system", "content": "You are a helpful assistant."}, {"role": "user", "content": "What is the capital of France?"}], "stream": false, "temperature": 0.7, "top_p": 1}
+      responses:
+        "200":
+          application/json: {"id": "chatcmpl-123", "choices": [{"finish_reason": "stop", "index": 0, "message": {"role": "assistant"}}], "created": 1677652288, "model": "openai/gpt-4", "object": "chat.completion", "system_fingerprint": "fp_44709d6fcb"}
+        "400":
+          application/json: {"error": {"code": 400, "message": "Invalid request parameters"}}
+        "401":
+          application/json: {"error": {"code": 401, "message": "Missing Authentication header"}}
+        "402":
+          application/json: {"error": {"code": 402, "message": "Insufficient credits. Add more using https://openrouter.ai/credits"}}
+        "404":
+          application/json: {"error": {"code": 404, "message": "Resource not found"}}
+        "408":
+          application/json: {"error": {"code": 408, "message": "Operation timed out. Please try again later."}}
+        "413":
+          application/json: {"error": {"code": 413, "message": "Request payload too large"}}
+        "422":
+          application/json: {"error": {"code": 422, "message": "Invalid argument"}}
+        "429":
+          application/json: {"error": {"code": 429, "message": "Rate limit exceeded"}}
+        "500":
+          application/json: {"error": {"code": 500, "message": "Internal Server Error"}}
+        "502":
+          application/json: {"error": {"code": 502, "message": "Provider returned error"}}
+        "503":
+          application/json: {"error": {"code": 503, "message": "Service temporarily unavailable"}}
+        "524":
+          application/json: {"error": {"code": 524, "message": "Request timed out. Please try again later."}}
+        "529":
+          application/json: {"error": {"code": 529, "message": "Provider returned error"}}
   getCredits:
     speakeasy-default-get-credits:
       responses:
@@ -4623,26 +4623,16 @@ examples:
           application/json: {"error": {"code": 500, "message": "Internal Server Error"}}
   createCoinbaseCharge:
     speakeasy-default-create-coinbase-charge:
-      requestBody:
-        application/json: {"amount": 100, "sender": "0x1234567890123456789012345678901234567890", "chain_id": 1}
       responses:
-        "200":
-          application/json: {"data": {"id": "<id>", "created_at": "1706396327532", "expires_at": "1739956049454", "web3_data": {"transfer_intent": {"call_data": {"deadline": "<value>", "fee_amount": "<value>", "id": "<id>", "operator": "<value>", "prefix": "<value>", "recipient": "<value>", "recipient_amount": "<value>", "recipient_currency": "<value>", "refund_destination": "<value>", "signature": "<value>"}, "metadata": {"chain_id": 3470.69, "contract_address": "<value>", "sender": "<value>"}}}}}
-        "400":
-          application/json: {"error": {"code": 400, "message": "Invalid request parameters"}}
-        "401":
-          application/json: {"error": {"code": 401, "message": "Missing Authentication header"}}
-        "429":
-          application/json: {"error": {"code": 429, "message": "Rate limit exceeded"}}
-        "500":
-          application/json: {"error": {"code": 500, "message": "Internal Server Error"}}
+        "410":
+          application/json: {"error": {"code": 410, "message": "The Coinbase APIs used by this endpoint have been deprecated, so the Coinbase Commerce credits API has been removed. Use the web credits purchase flow instead."}}
   createEmbeddings:
     speakeasy-default-create-embeddings:
       requestBody:
         application/json: {"input": "<value>", "model": "Taurus"}
       responses:
         "200":
-          application/json: {"object": "list", "data": [], "model": "Land Cruiser"}
+          application/json: {"object": "list", "data": [], "model": "Model S"}
           text/event-stream: "<value>"
         "400":
           application/json: {"error": {"code": 400, "message": "Invalid request parameters"}}
@@ -4680,7 +4670,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"data": {"id": "gen-3bhGkxlo4XFrqiabUM7NDtwDzWwG", "upstream_id": "chatcmpl-791bcf62-080e-4568-87d0-94c72e3b4946", "total_cost": 0.0015, "cache_discount": 0.0002, "upstream_inference_cost": 0.0012, "created_at": "2024-07-15T23:33:19.433273+00:00", "model": "sao10k/l3-stheno-8b", "app_id": 12345, "streamed": true, "cancelled": false, "provider_name": "Infermatic", "latency": 1250, "moderation_latency": 50, "generation_time": 1200, "finish_reason": "stop", "tokens_prompt": 10, "tokens_completion": 25, "native_tokens_prompt": 10, "native_tokens_completion": 25, "native_tokens_completion_images": 0, "native_tokens_reasoning": 5, "native_tokens_cached": 3, "num_media_prompt": 1, "num_input_audio_prompt": 0, "num_media_completion": 0, "num_search_results": 5, "origin": "https://openrouter.ai/", "usage": 0.0015, "is_byok": false, "native_finish_reason": "stop", "external_user": "user-123", "api_type": "completions", "router": "openrouter/auto", "provider_responses": [], "user_agent": "<value>", "http_referer": null}}
+          application/json: {"data": {"id": "gen-3bhGkxlo4XFrqiabUM7NDtwDzWwG", "upstream_id": "chatcmpl-791bcf62-080e-4568-87d0-94c72e3b4946", "total_cost": 0.0015, "cache_discount": 0.0002, "upstream_inference_cost": 0.0012, "created_at": "2024-07-15T23:33:19.433273+00:00", "model": "sao10k/l3-stheno-8b", "app_id": 12345, "streamed": true, "cancelled": false, "provider_name": "Infermatic", "latency": 1250, "moderation_latency": 50, "generation_time": 1200, "finish_reason": "stop", "tokens_prompt": 10, "tokens_completion": 25, "native_tokens_prompt": 10, "native_tokens_completion": 25, "native_tokens_completion_images": 0, "native_tokens_reasoning": 5, "native_tokens_cached": 3, "num_media_prompt": 1, "num_input_audio_prompt": 0, "num_media_completion": 0, "num_search_results": 5, "origin": "https://openrouter.ai/", "usage": 0.0015, "is_byok": false, "native_finish_reason": "stop", "external_user": "user-123", "api_type": "completions", "router": "openrouter/auto", "provider_responses": [], "user_agent": "<value>", "http_referer": "<value>"}}
         "401":
           application/json: {"error": {"code": 401, "message": "Missing Authentication header"}}
         "402":
@@ -4702,10 +4692,10 @@ examples:
       responses:
         "200":
           application/json: {"data": {"count": 150}}
-        "500":
-          application/json: {"error": {"code": 500, "message": "Internal Server Error"}}
         "400":
           application/json: {"error": {"code": 400, "message": "Invalid request parameters"}}
+        "500":
+          application/json: {"error": {"code": 500, "message": "Internal Server Error"}}
   getModels:
     speakeasy-default-get-models:
       responses:
@@ -4722,10 +4712,10 @@ examples:
           application/json: {"data": [{"id": "openai/gpt-4", "canonical_slug": "openai/gpt-4", "name": "GPT-4", "created": 1692901234, "pricing": {"prompt": "0.00003", "completion": "0.00006"}, "context_length": 8192, "architecture": {"modality": "text->text", "input_modalities": ["text"], "output_modalities": ["text"]}, "top_provider": {"is_moderated": true}, "per_request_limits": null, "supported_parameters": ["temperature", "top_p", "max_tokens", "frequency_penalty", "presence_penalty"], "default_parameters": null}]}
         "401":
           application/json: {"error": {"code": 401, "message": "Missing Authentication header"}}
-        "500":
-          application/json: {"error": {"code": 500, "message": "Internal Server Error"}}
         "404":
           application/json: {"error": {"code": 404, "message": "Resource not found"}}
+        "500":
+          application/json: {"error": {"code": 500, "message": "Internal Server Error"}}
   listEndpoints:
     speakeasy-default-list-endpoints:
       parameters:
@@ -4743,22 +4733,7 @@ examples:
     speakeasy-default-list-endpoints-zdr:
       responses:
         "200":
-          application/json: {"data": [{"name": "OpenAI: GPT-4", "model_id": "openai/gpt-4", "model_name": "GPT-4", "context_length": 8192, "pricing": {"prompt": "0.00003", "completion": "0.00006"}, "provider_name": "OpenAI", "tag": "openai", "quantization": "fp16", "max_completion_tokens": 4096, "max_prompt_tokens": 8192, "supported_parameters": ["temperature", "top_p", "max_tokens"], "uptime_last_30m": 99.5, "supports_implicit_caching": true, "latency_last_30m": {"p50": 25.5, "p75": 35.2, "p90": 48.7, "p99": 85.3}, "throughput_last_30m": {"p50": 25.5, "p75": 35.2, "p90": 48.7, "p99": 85.3}}]}
-        "500":
-          application/json: {"error": {"code": 500, "message": "Internal Server Error"}}
-  getParameters:
-    speakeasy-default-get-parameters:
-      parameters:
-        path:
-          author: "<value>"
-          slug: "<value>"
-      responses:
-        "200":
-          application/json: {"data": {"model": "openai/gpt-4", "supported_parameters": ["temperature", "top_p", "max_tokens"]}}
-        "401":
-          application/json: {"error": {"code": 401, "message": "Missing Authentication header"}}
-        "404":
-          application/json: {"error": {"code": 404, "message": "Resource not found"}}
+          application/json: {"data": [{"name": "OpenAI: GPT-4", "model_id": "openai/gpt-4", "model_name": "GPT-4", "context_length": 8192, "pricing": {"prompt": "0.00003", "completion": "0.00006"}, "provider_name": "OpenAI", "tag": "openai", "quantization": "fp16", "max_completion_tokens": 4096, "max_prompt_tokens": 8192, "supported_parameters": ["temperature", "top_p", "max_tokens"], "uptime_last_30m": 99.5, "supports_implicit_caching": true, "latency_last_30m": {"p50": 0.25, "p75": 0.35, "p90": 0.48, "p99": 0.85}, "throughput_last_30m": {"p50": 45.2, "p75": 38.5, "p90": 28.3, "p99": 15.1}}]}
         "500":
           application/json: {"error": {"code": 500, "message": "Internal Server Error"}}
   listProviders:
@@ -4770,10 +4745,6 @@ examples:
           application/json: {"error": {"code": 500, "message": "Internal Server Error"}}
   list:
     speakeasy-default-list:
-      parameters:
-        query:
-          include_disabled: "false"
-          offset: "0"
       responses:
         "200":
           application/json: {"data": [{"hash": "f01d52606dc8f0a8303a7b5cc3fa07109c2e346cec7c0a16b40de462992ce943", "name": "My Production Key", "label": "Production API Key", "disabled": false, "limit": 100, "limit_remaining": 74.5, "limit_reset": "monthly", "include_byok_in_limit": false, "usage": 25.5, "usage_daily": 25.5, "usage_weekly": 25.5, "usage_monthly": 25.5, "byok_usage": 17.38, "byok_usage_daily": 17.38, "byok_usage_weekly": 17.38, "byok_usage_monthly": 17.38, "created_at": "2025-08-24T10:30:00Z", "updated_at": "2025-08-24T15:45:00Z", "creator_user_id": "user_2dHFtVWx2n56w6HkM0000000000"}]}
@@ -4859,78 +4830,6 @@ examples:
           application/json: {"error": {"code": 401, "message": "Missing Authentication header"}}
         "500":
           application/json: {"error": {"code": 500, "message": "Internal Server Error"}}
-  exchangeAuthCodeForAPIKey:
-    speakeasy-default-exchange-auth-code-for-API-key:
-      requestBody:
-        application/json: {"code": "auth_code_abc123def456"}
-      responses:
-        "200":
-          application/json: {"key": "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", "user_id": "user_2yOPcMpKoQhcd4bVgSMlELRaIah"}
-        "400":
-          application/json: {"error": {"code": 400, "message": "Invalid request parameters"}}
-        "403":
-          application/json: {"error": {"code": 403, "message": "Only management keys can perform this operation"}}
-        "500":
-          application/json: {"error": {"code": 500, "message": "Internal Server Error"}}
-  createAuthKeysCode:
-    speakeasy-default-create-auth-keys-code:
-      requestBody:
-        application/json: {"callback_url": "https://myapp.com/auth/callback"}
-      responses:
-        "200":
-          application/json: {"data": {"id": "auth_code_xyz789", "app_id": 12345, "created_at": "2025-08-24T10:30:00Z"}}
-        "400":
-          application/json: {"error": {"code": 400, "message": "Invalid request parameters"}}
-        "401":
-          application/json: {"error": {"code": 401, "message": "Missing Authentication header"}}
-        "500":
-          application/json: {"error": {"code": 500, "message": "Internal Server Error"}}
-        "409":
-          application/json: {"error": {"code": 409, "message": "Resource conflict. Please try again later."}}
-  sendChatCompletionRequest:
-    speakeasy-default-send-chat-completion-request:
-      requestBody:
-        application/json: {"messages": [{"role": "system", "content": "You are a helpful assistant."}, {"role": "user", "content": "What is the capital of France?"}], "stream": false, "temperature": 0.7, "top_p": 1}
-      responses:
-        "200":
-          application/json: {"id": "chatcmpl-123", "choices": [{"finish_reason": "stop", "index": 0, "message": {"role": "assistant"}}], "created": 1677652288, "model": "openai/gpt-4", "object": "chat.completion", "system_fingerprint": "fp_44709d6fcb"}
-        "400":
-          application/json: {"error": {"code": 400, "message": "Invalid request parameters"}}
-        "500":
-          application/json: {"error": {"code": 500, "message": "Internal Server Error"}}
-        "401":
-          application/json: {"error": {"code": 401, "message": "Missing Authentication header"}}
-        "402":
-          application/json: {"error": {"code": 402, "message": "Insufficient credits. Add more using https://openrouter.ai/credits"}}
-        "404":
-          application/json: {"error": {"code": 404, "message": "Resource not found"}}
-        "408":
-          application/json: {"error": {"code": 408, "message": "Operation timed out. Please try again later."}}
-        "413":
-          application/json: {"error": {"code": 413, "message": "Request payload too large"}}
-        "422":
-          application/json: {"error": {"code": 422, "message": "Invalid argument"}}
-        "429":
-          application/json: {"error": {"code": 429, "message": "Rate limit exceeded"}}
-        "502":
-          application/json: {"error": {"code": 502, "message": "Provider returned error"}}
-        "503":
-          application/json: {"error": {"code": 503, "message": "Service temporarily unavailable"}}
-        "524":
-          application/json: {"error": {"code": 524, "message": "Request timed out. Please try again later."}}
-        "529":
-          application/json: {"error": {"code": 529, "message": "Provider returned error"}}
-  createCompletions:
-    speakeasy-default-create-completions:
-      requestBody:
-        application/json: {"prompt": [], "stream": false}
-      responses:
-        "200":
-          application/json: {"id": "<id>", "object": "text_completion", "created": 7524.07, "model": "Aventador", "choices": [{"text": "<value>", "index": 4622.44, "logprobs": {"tokens": [], "token_logprobs": [], "top_logprobs": [{"key": 6481.8, "key1": 6211.86, "key2": 4822.58}, {}, {"key": 6295.32, "key1": 8110.56, "key2": 5430.28}], "text_offset": [8533.93, 4728.06, 5798.08]}, "finish_reason": "length"}]}
-        "400":
-          application/json: {"error": {"code": "<value>", "message": "<value>"}}
-        "500":
-          application/json: {"error": {"code": "<value>", "message": "<value>"}}
   listGuardrails:
     speakeasy-default-list-guardrails:
       responses:
@@ -5117,937 +5016,32 @@ examples:
           application/json: {"error": {"code": 404, "message": "Resource not found"}}
         "500":
           application/json: {"error": {"code": 500, "message": "Internal Server Error"}}
+  exchangeAuthCodeForAPIKey:
+    speakeasy-default-exchange-auth-code-for-API-key:
+      requestBody:
+        application/json: {"code": "auth_code_abc123def456"}
+      responses:
+        "200":
+          application/json: {"key": "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", "user_id": "user_2yOPcMpKoQhcd4bVgSMlELRaIah"}
+        "400":
+          application/json: {"error": {"code": 400, "message": "Invalid request parameters"}}
+        "403":
+          application/json: {"error": {"code": 403, "message": "Only management keys can perform this operation"}}
+        "500":
+          application/json: {"error": {"code": 500, "message": "Internal Server Error"}}
+  createAuthKeysCode:
+    speakeasy-default-create-auth-keys-code:
+      requestBody:
+        application/json: {"callback_url": "https://myapp.com/auth/callback"}
+      responses:
+        "200":
+          application/json: {"data": {"id": "auth_code_xyz789", "app_id": 12345, "created_at": "2025-08-24T10:30:00Z"}}
+        "400":
+          application/json: {"error": {"code": 400, "message": "Invalid request parameters"}}
+        "401":
+          application/json: {"error": {"code": 401, "message": "Missing Authentication header"}}
+        "409":
+          application/json: {"error": {"code": 409, "message": "Resource conflict. Please try again later."}}
+        "500":
+          application/json: {"error": {"code": 500, "message": "Internal Server Error"}}
 examplesVersion: 1.0.2
-generatedFiles:
-  - .devcontainer/README.md
-  - .devcontainer/devcontainer.json
-  - .devcontainer/setup.sh
-  - .gitattributes
-  - .vscode/settings.json
-  - USAGE.md
-  - docs/components/activityitem.md
-  - docs/components/architecture.md
-  - docs/components/assistantmessage.md
-  - docs/components/assistantmessagecontent.md
-  - docs/components/assistantmessageimages.md
-  - docs/components/assistantmessageimagesimageurl.md
-  - docs/components/assistantmessagerole.md
-  - docs/components/badgatewayresponseerrordata.md
-  - docs/components/badrequestresponseerrordata.md
-  - docs/components/by.md
-  - docs/components/chainid.md
-  - docs/components/chatcompletionfinishreason.md
-  - docs/components/chatgenerationparams.md
-  - docs/components/chatgenerationparamsby.md
-  - docs/components/chatgenerationparamsidautorouter.md
-  - docs/components/chatgenerationparamsidfileparser.md
-  - docs/components/chatgenerationparamsidmoderation.md
-  - docs/components/chatgenerationparamsidresponsehealing.md
-  - docs/components/chatgenerationparamsidweb.md
-  - docs/components/chatgenerationparamsignore.md
-  - docs/components/chatgenerationparamsimageconfig.md
-  - docs/components/chatgenerationparamsmaxprice.md
-  - docs/components/chatgenerationparamsonly.md
-  - docs/components/chatgenerationparamsorder.md
-  - docs/components/chatgenerationparamspartition.md
-  - docs/components/chatgenerationparamspluginautorouter.md
-  - docs/components/chatgenerationparamspluginfileparser.md
-  - docs/components/chatgenerationparamspluginmoderation.md
-  - docs/components/chatgenerationparamspluginresponsehealing.md
-  - docs/components/chatgenerationparamspluginunion.md
-  - docs/components/chatgenerationparamspluginweb.md
-  - docs/components/chatgenerationparamsprovider.md
-  - docs/components/chatgenerationparamsprovidersort.md
-  - docs/components/chatgenerationparamsprovidersortconfig.md
-  - docs/components/chatgenerationparamsprovidersortconfigenum.md
-  - docs/components/chatgenerationparamsprovidersortconfigunion.md
-  - docs/components/chatgenerationparamssortenum.md
-  - docs/components/chatgenerationparamssortunion.md
-  - docs/components/chatgenerationparamstrace.md
-  - docs/components/chatgenerationtokenusage.md
-  - docs/components/chatmessagecontentitem.md
-  - docs/components/chatmessagecontentitem1.md
-  - docs/components/chatmessagecontentitemaudio.md
-  - docs/components/chatmessagecontentitemaudioinputaudio.md
-  - docs/components/chatmessagecontentitemaudiotype.md
-  - docs/components/chatmessagecontentitemcachecontrol.md
-  - docs/components/chatmessagecontentitemcachecontroltype.md
-  - docs/components/chatmessagecontentitemimage.md
-  - docs/components/chatmessagecontentitemimagedetail.md
-  - docs/components/chatmessagecontentitemimageimageurl.md
-  - docs/components/chatmessagecontentitemimagetype.md
-  - docs/components/chatmessagecontentitemtext.md
-  - docs/components/chatmessagecontentitemtexttype.md
-  - docs/components/chatmessagecontentitemvideo.md
-  - docs/components/chatmessagecontentitemvideolegacy.md
-  - docs/components/chatmessagecontentitemvideolegacytype.md
-  - docs/components/chatmessagecontentitemvideotype.md
-  - docs/components/chatmessagetokenlogprob.md
-  - docs/components/chatmessagetokenlogprobs.md
-  - docs/components/chatmessagetokenlogprobtoplogprob.md
-  - docs/components/chatmessagetoolcall.md
-  - docs/components/chatmessagetoolcallfunction.md
-  - docs/components/chatmessagetoolcalltype.md
-  - docs/components/chatresponse.md
-  - docs/components/chatresponsechoice.md
-  - docs/components/chatresponseobject.md
-  - docs/components/chatstreamingchoice.md
-  - docs/components/chatstreamingmessagechunk.md
-  - docs/components/chatstreamingmessagechunkrole.md
-  - docs/components/chatstreamingmessagetoolcall.md
-  - docs/components/chatstreamingmessagetoolcallfunction.md
-  - docs/components/chatstreamingmessagetoolcalltype.md
-  - docs/components/chatstreamingresponsechunk.md
-  - docs/components/chatstreamingresponsechunkobject.md
-  - docs/components/chatstreamoptions.md
-  - docs/components/code.md
-  - docs/components/completiontokensdetails.md
-  - docs/components/costdetails.md
-  - docs/components/createchargerequest.md
-  - docs/components/data.md
-  - docs/components/datacollection.md
-  - docs/components/debugoptions.md
-  - docs/components/defaultparameters.md
-  - docs/components/developermessage.md
-  - docs/components/developermessagecontent.md
-  - docs/components/developermessagerole.md
-  - docs/components/edgenetworktimeoutresponseerrordata.md
-  - docs/components/effort.md
-  - docs/components/endpointstatus.md
-  - docs/components/error.md
-  - docs/components/filecitation.md
-  - docs/components/filecitationtype.md
-  - docs/components/filepath.md
-  - docs/components/filepathtype.md
-  - docs/components/forbiddenresponseerrordata.md
-  - docs/components/imagegenerationstatus.md
-  - docs/components/inputmodality.md
-  - docs/components/inputtokensdetails.md
-  - docs/components/instructtype.md
-  - docs/components/internalserverresponseerrordata.md
-  - docs/components/jsonschemaconfig.md
-  - docs/components/listendpointsresponse.md
-  - docs/components/logprob.md
-  - docs/components/message.md
-  - docs/components/modality.md
-  - docs/components/model.md
-  - docs/components/modelarchitecture.md
-  - docs/components/modelarchitectureinstructtype.md
-  - docs/components/modelgroup.md
-  - docs/components/modelscountresponse.md
-  - docs/components/modelslistresponse.md
-  - docs/components/namedtoolchoice.md
-  - docs/components/namedtoolchoicefunction.md
-  - docs/components/namedtoolchoicetype.md
-  - docs/components/notfoundresponseerrordata.md
-  - docs/components/openairesponsesannotation.md
-  - docs/components/openairesponsesincludable.md
-  - docs/components/openairesponsesincompletedetails.md
-  - docs/components/openairesponsesinputcontent1.md
-  - docs/components/openairesponsesinputcontent2.md
-  - docs/components/openairesponsesinputcontent3.md
-  - docs/components/openairesponsesinputfunctioncall.md
-  - docs/components/openairesponsesinputfunctioncalloutput.md
-  - docs/components/openairesponsesinputmessage1.md
-  - docs/components/openairesponsesinputmessage2.md
-  - docs/components/openairesponsesinputroleassistant.md
-  - docs/components/openairesponsesinputroledeveloper1.md
-  - docs/components/openairesponsesinputroledeveloper2.md
-  - docs/components/openairesponsesinputrolesystem1.md
-  - docs/components/openairesponsesinputrolesystem2.md
-  - docs/components/openairesponsesinputroleunion1.md
-  - docs/components/openairesponsesinputroleunion2.md
-  - docs/components/openairesponsesinputroleuser1.md
-  - docs/components/openairesponsesinputroleuser2.md
-  - docs/components/openairesponsesinputtypefunctioncall.md
-  - docs/components/openairesponsesinputtypefunctioncalloutput.md
-  - docs/components/openairesponsesinputtypemessage1.md
-  - docs/components/openairesponsesinputtypemessage2.md
-  - docs/components/openairesponsesinputunion.md
-  - docs/components/openairesponsesinputunion1.md
-  - docs/components/openairesponsesprompt.md
-  - docs/components/openairesponsesreasoningconfig.md
-  - docs/components/openairesponsesreasoningeffort.md
-  - docs/components/openairesponsesrefusalcontent.md
-  - docs/components/openairesponsesrefusalcontenttype.md
-  - docs/components/openairesponsesresponsestatus.md
-  - docs/components/openairesponsesservicetier.md
-  - docs/components/openairesponsestoolchoice.md
-  - docs/components/openairesponsestoolchoiceauto.md
-  - docs/components/openairesponsestoolchoicefunction.md
-  - docs/components/openairesponsestoolchoicenone.md
-  - docs/components/openairesponsestoolchoicerequired.md
-  - docs/components/openairesponsestoolchoicetypefunction.md
-  - docs/components/openairesponsestoolchoicetypewebsearchpreview.md
-  - docs/components/openairesponsestoolchoicetypewebsearchpreview20250311.md
-  - docs/components/openairesponsestoolchoiceunion.md
-  - docs/components/openairesponsestruncation.md
-  - docs/components/openresponseseasyinputmessage.md
-  - docs/components/openresponseseasyinputmessagecontentinputimage.md
-  - docs/components/openresponseseasyinputmessagecontenttype.md
-  - docs/components/openresponseseasyinputmessagecontentunion1.md
-  - docs/components/openresponseseasyinputmessagecontentunion2.md
-  - docs/components/openresponseseasyinputmessagedetail.md
-  - docs/components/openresponseseasyinputmessageroleassistant.md
-  - docs/components/openresponseseasyinputmessageroledeveloper.md
-  - docs/components/openresponseseasyinputmessagerolesystem.md
-  - docs/components/openresponseseasyinputmessageroleunion.md
-  - docs/components/openresponseseasyinputmessageroleuser.md
-  - docs/components/openresponseseasyinputmessagetypemessage.md
-  - docs/components/openresponseserrorevent.md
-  - docs/components/openresponseserroreventtype.md
-  - docs/components/openresponsesfunctioncalloutput.md
-  - docs/components/openresponsesfunctioncalloutputtype.md
-  - docs/components/openresponsesfunctiontoolcall.md
-  - docs/components/openresponsesfunctiontoolcalltype.md
-  - docs/components/openresponsesimagegencallcompleted.md
-  - docs/components/openresponsesimagegencallcompletedtype.md
-  - docs/components/openresponsesimagegencallgenerating.md
-  - docs/components/openresponsesimagegencallgeneratingtype.md
-  - docs/components/openresponsesimagegencallinprogress.md
-  - docs/components/openresponsesimagegencallinprogresstype.md
-  - docs/components/openresponsesimagegencallpartialimage.md
-  - docs/components/openresponsesimagegencallpartialimagetype.md
-  - docs/components/openresponsesinput.md
-  - docs/components/openresponsesinput1.md
-  - docs/components/openresponsesinputmessageitem.md
-  - docs/components/openresponsesinputmessageitemcontentinputimage.md
-  - docs/components/openresponsesinputmessageitemcontenttype.md
-  - docs/components/openresponsesinputmessageitemcontentunion.md
-  - docs/components/openresponsesinputmessageitemdetail.md
-  - docs/components/openresponsesinputmessageitemroledeveloper.md
-  - docs/components/openresponsesinputmessageitemrolesystem.md
-  - docs/components/openresponsesinputmessageitemroleunion.md
-  - docs/components/openresponsesinputmessageitemroleuser.md
-  - docs/components/openresponsesinputmessageitemtypemessage.md
-  - docs/components/openresponseslogprobs.md
-  - docs/components/openresponsesnonstreamingresponse.md
-  - docs/components/openresponsesnonstreamingresponseobject.md
-  - docs/components/openresponsesnonstreamingresponsetoolfunction.md
-  - docs/components/openresponsesnonstreamingresponsetoolunion.md
-  - docs/components/openresponsesnonstreamingresponsetype.md
-  - docs/components/openresponsesreasoning.md
-  - docs/components/openresponsesreasoningconfig.md
-  - docs/components/openresponsesreasoningdeltaevent.md
-  - docs/components/openresponsesreasoningdeltaeventtype.md
-  - docs/components/openresponsesreasoningdoneevent.md
-  - docs/components/openresponsesreasoningdoneeventtype.md
-  - docs/components/openresponsesreasoningformat.md
-  - docs/components/openresponsesreasoningstatuscompleted.md
-  - docs/components/openresponsesreasoningstatusincomplete.md
-  - docs/components/openresponsesreasoningstatusinprogress.md
-  - docs/components/openresponsesreasoningstatusunion.md
-  - docs/components/openresponsesreasoningsummarypartaddedevent.md
-  - docs/components/openresponsesreasoningsummarypartaddedeventtype.md
-  - docs/components/openresponsesreasoningsummarytextdeltaevent.md
-  - docs/components/openresponsesreasoningsummarytextdeltaeventtype.md
-  - docs/components/openresponsesreasoningsummarytextdoneevent.md
-  - docs/components/openresponsesreasoningsummarytextdoneeventtype.md
-  - docs/components/openresponsesreasoningtype.md
-  - docs/components/openresponsesrequest.md
-  - docs/components/openresponsesrequestidautorouter.md
-  - docs/components/openresponsesrequestidfileparser.md
-  - docs/components/openresponsesrequestidmoderation.md
-  - docs/components/openresponsesrequestidresponsehealing.md
-  - docs/components/openresponsesrequestidweb.md
-  - docs/components/openresponsesrequestignore.md
-  - docs/components/openresponsesrequestimageconfig.md
-  - docs/components/openresponsesrequestmaxprice.md
-  - docs/components/openresponsesrequestonly.md
-  - docs/components/openresponsesrequestorder.md
-  - docs/components/openresponsesrequestpluginautorouter.md
-  - docs/components/openresponsesrequestpluginfileparser.md
-  - docs/components/openresponsesrequestpluginmoderation.md
-  - docs/components/openresponsesrequestpluginresponsehealing.md
-  - docs/components/openresponsesrequestpluginunion.md
-  - docs/components/openresponsesrequestpluginweb.md
-  - docs/components/openresponsesrequestprovider.md
-  - docs/components/openresponsesrequestsort.md
-  - docs/components/openresponsesrequesttoolfunction.md
-  - docs/components/openresponsesrequesttoolunion.md
-  - docs/components/openresponsesrequesttrace.md
-  - docs/components/openresponsesrequesttype.md
-  - docs/components/openresponsesresponsetext.md
-  - docs/components/openresponsesresponsetextverbosity.md
-  - docs/components/openresponsesstreamevent.md
-  - docs/components/openresponsesstreameventresponsecompleted.md
-  - docs/components/openresponsesstreameventresponsecontentpartadded.md
-  - docs/components/openresponsesstreameventresponsecontentpartdone.md
-  - docs/components/openresponsesstreameventresponsecreated.md
-  - docs/components/openresponsesstreameventresponsefailed.md
-  - docs/components/openresponsesstreameventresponsefunctioncallargumentsdelta.md
-  - docs/components/openresponsesstreameventresponsefunctioncallargumentsdone.md
-  - docs/components/openresponsesstreameventresponseincomplete.md
-  - docs/components/openresponsesstreameventresponseinprogress.md
-  - docs/components/openresponsesstreameventresponseoutputitemadded.md
-  - docs/components/openresponsesstreameventresponseoutputitemdone.md
-  - docs/components/openresponsesstreameventresponseoutputtextannotationadded.md
-  - docs/components/openresponsesstreameventresponseoutputtextdelta.md
-  - docs/components/openresponsesstreameventresponseoutputtextdone.md
-  - docs/components/openresponsesstreameventresponsereasoningsummarypartdone.md
-  - docs/components/openresponsesstreameventresponserefusaldelta.md
-  - docs/components/openresponsesstreameventresponserefusaldone.md
-  - docs/components/openresponsestoplogprobs.md
-  - docs/components/openresponsesusage.md
-  - docs/components/openresponseswebsearch20250826tool.md
-  - docs/components/openresponseswebsearch20250826toolfilters.md
-  - docs/components/openresponseswebsearch20250826tooltype.md
-  - docs/components/openresponseswebsearchpreview20250311tool.md
-  - docs/components/openresponseswebsearchpreview20250311tooltype.md
-  - docs/components/openresponseswebsearchpreviewtool.md
-  - docs/components/openresponseswebsearchpreviewtooltype.md
-  - docs/components/openresponseswebsearchtool.md
-  - docs/components/openresponseswebsearchtoolfilters.md
-  - docs/components/openresponseswebsearchtooltype.md
-  - docs/components/outputitemimagegenerationcall.md
-  - docs/components/outputitemimagegenerationcalltype.md
-  - docs/components/outputmessage.md
-  - docs/components/outputmessagecontent.md
-  - docs/components/outputmessagerole.md
-  - docs/components/outputmessagestatuscompleted.md
-  - docs/components/outputmessagestatusincomplete.md
-  - docs/components/outputmessagestatusinprogress.md
-  - docs/components/outputmessagestatusunion.md
-  - docs/components/outputmessagetype.md
-  - docs/components/outputmodality.md
-  - docs/components/outputtokensdetails.md
-  - docs/components/parameter.md
-  - docs/components/part1.md
-  - docs/components/part2.md
-  - docs/components/partition.md
-  - docs/components/payloadtoolargeresponseerrordata.md
-  - docs/components/paymentrequiredresponseerrordata.md
-  - docs/components/pdfparserengine.md
-  - docs/components/pdfparseroptions.md
-  - docs/components/percentilelatencycutoffs.md
-  - docs/components/percentilestats.md
-  - docs/components/percentilethroughputcutoffs.md
-  - docs/components/perrequestlimits.md
-  - docs/components/preferredmaxlatency.md
-  - docs/components/preferredminthroughput.md
-  - docs/components/pricing.md
-  - docs/components/prompttokensdetails.md
-  - docs/components/providername.md
-  - docs/components/provideroverloadedresponseerrordata.md
-  - docs/components/providerpreferences.md
-  - docs/components/providerpreferencesby.md
-  - docs/components/providerpreferencesignore.md
-  - docs/components/providerpreferencesmaxprice.md
-  - docs/components/providerpreferencesonly.md
-  - docs/components/providerpreferencesorder.md
-  - docs/components/providerpreferencespartition.md
-  - docs/components/providerpreferencesprovidersort.md
-  - docs/components/providerpreferencesprovidersortconfig.md
-  - docs/components/providerpreferencesprovidersortconfigenum.md
-  - docs/components/providerpreferencesprovidersortconfigunion.md
-  - docs/components/providerpreferencessortenum.md
-  - docs/components/providerpreferencessortunion.md
-  - docs/components/providersort.md
-  - docs/components/providersortconfig.md
-  - docs/components/publicendpoint.md
-  - docs/components/publicendpointquantization.md
-  - docs/components/publicpricing.md
-  - docs/components/quantization.md
-  - docs/components/reason.md
-  - docs/components/reasoning.md
-  - docs/components/reasoningdetailencrypted.md
-  - docs/components/reasoningdetailencryptedformat.md
-  - docs/components/reasoningdetailencryptedtype.md
-  - docs/components/reasoningdetailsummary.md
-  - docs/components/reasoningdetailsummaryformat.md
-  - docs/components/reasoningdetailsummarytype.md
-  - docs/components/reasoningdetailtext.md
-  - docs/components/reasoningdetailtextformat.md
-  - docs/components/reasoningdetailtexttype.md
-  - docs/components/reasoningdetailunion.md
-  - docs/components/reasoningsummarytext.md
-  - docs/components/reasoningsummarytexttype.md
-  - docs/components/reasoningsummaryverbosity.md
-  - docs/components/reasoningtextcontent.md
-  - docs/components/reasoningtextcontenttype.md
-  - docs/components/requesttimeoutresponseerrordata.md
-  - docs/components/responseformat.md
-  - docs/components/responseformatjsonobject.md
-  - docs/components/responseformatjsonobjecttype.md
-  - docs/components/responseformatjsonschema.md
-  - docs/components/responseformatjsonschematype.md
-  - docs/components/responseformattext.md
-  - docs/components/responseformattextconfig.md
-  - docs/components/responseformattextgrammar.md
-  - docs/components/responseformattextgrammartype.md
-  - docs/components/responseformattextpython.md
-  - docs/components/responseformattextpythontype.md
-  - docs/components/responseformattexttype.md
-  - docs/components/responseinputaudio.md
-  - docs/components/responseinputaudioformat.md
-  - docs/components/responseinputaudioinputaudio.md
-  - docs/components/responseinputaudiotype.md
-  - docs/components/responseinputfile.md
-  - docs/components/responseinputfiletype.md
-  - docs/components/responseinputimage.md
-  - docs/components/responseinputimagedetail.md
-  - docs/components/responseinputimagetype.md
-  - docs/components/responseinputtext.md
-  - docs/components/responseinputtexttype.md
-  - docs/components/responseinputvideo.md
-  - docs/components/responseinputvideotype.md
-  - docs/components/responseoutputtext.md
-  - docs/components/responseoutputtexttoplogprob.md
-  - docs/components/responseoutputtexttype.md
-  - docs/components/responseserrorfield.md
-  - docs/components/responsesformattext.md
-  - docs/components/responsesformattextjsonschemaconfig.md
-  - docs/components/responsesformattextjsonschemaconfigtype.md
-  - docs/components/responsesformattexttype.md
-  - docs/components/responsesimagegenerationcall.md
-  - docs/components/responsesimagegenerationcalltype.md
-  - docs/components/responsesoutputitem.md
-  - docs/components/responsesoutputitemfilesearchcall.md
-  - docs/components/responsesoutputitemfilesearchcalltype.md
-  - docs/components/responsesoutputitemfunctioncall.md
-  - docs/components/responsesoutputitemfunctioncallstatuscompleted.md
-  - docs/components/responsesoutputitemfunctioncallstatusincomplete.md
-  - docs/components/responsesoutputitemfunctioncallstatusinprogress.md
-  - docs/components/responsesoutputitemfunctioncallstatusunion.md
-  - docs/components/responsesoutputitemfunctioncalltype.md
-  - docs/components/responsesoutputitemreasoning.md
-  - docs/components/responsesoutputitemreasoningformat.md
-  - docs/components/responsesoutputitemreasoningstatuscompleted.md
-  - docs/components/responsesoutputitemreasoningstatusincomplete.md
-  - docs/components/responsesoutputitemreasoningstatusinprogress.md
-  - docs/components/responsesoutputitemreasoningstatusunion.md
-  - docs/components/responsesoutputitemreasoningtype.md
-  - docs/components/responsesoutputmessage.md
-  - docs/components/responsesoutputmessagecontent.md
-  - docs/components/responsesoutputmessagerole.md
-  - docs/components/responsesoutputmessagestatuscompleted.md
-  - docs/components/responsesoutputmessagestatusincomplete.md
-  - docs/components/responsesoutputmessagestatusinprogress.md
-  - docs/components/responsesoutputmessagestatusunion.md
-  - docs/components/responsesoutputmessagetype.md
-  - docs/components/responsesoutputmodality.md
-  - docs/components/responsessearchcontextsize.md
-  - docs/components/responseswebsearchcalloutput.md
-  - docs/components/responseswebsearchcalloutputtype.md
-  - docs/components/responseswebsearchuserlocation.md
-  - docs/components/responseswebsearchuserlocationtype.md
-  - docs/components/responsetextconfig.md
-  - docs/components/responsetextconfigverbosity.md
-  - docs/components/security.md
-  - docs/components/servicetier.md
-  - docs/components/serviceunavailableresponseerrordata.md
-  - docs/components/stop.md
-  - docs/components/systemmessage.md
-  - docs/components/systemmessagecontent.md
-  - docs/components/systemmessagerole.md
-  - docs/components/tokenizer.md
-  - docs/components/toolcallstatus.md
-  - docs/components/toolchoiceoption.md
-  - docs/components/toolchoiceoptionauto.md
-  - docs/components/toolchoiceoptionnone.md
-  - docs/components/toolchoiceoptionrequired.md
-  - docs/components/tooldefinitionjson.md
-  - docs/components/tooldefinitionjsonfunction.md
-  - docs/components/tooldefinitionjsontype.md
-  - docs/components/toolresponsemessage.md
-  - docs/components/toolresponsemessagecontent.md
-  - docs/components/toolresponsemessagerole.md
-  - docs/components/toomanyrequestsresponseerrordata.md
-  - docs/components/topproviderinfo.md
-  - docs/components/truncation.md
-  - docs/components/ttl.md
-  - docs/components/type.md
-  - docs/components/typeresponsecompleted.md
-  - docs/components/typeresponsecontentpartadded.md
-  - docs/components/typeresponsecontentpartdone.md
-  - docs/components/typeresponsecreated.md
-  - docs/components/typeresponsefailed.md
-  - docs/components/typeresponsefunctioncallargumentsdelta.md
-  - docs/components/typeresponsefunctioncallargumentsdone.md
-  - docs/components/typeresponseincomplete.md
-  - docs/components/typeresponseinprogress.md
-  - docs/components/typeresponseoutputitemadded.md
-  - docs/components/typeresponseoutputitemdone.md
-  - docs/components/typeresponseoutputtextannotationadded.md
-  - docs/components/typeresponseoutputtextdelta.md
-  - docs/components/typeresponseoutputtextdone.md
-  - docs/components/typeresponsereasoningsummarypartdone.md
-  - docs/components/typeresponserefusaldelta.md
-  - docs/components/typeresponserefusaldone.md
-  - docs/components/unauthorizedresponseerrordata.md
-  - docs/components/unprocessableentityresponseerrordata.md
-  - docs/components/urlcitation.md
-  - docs/components/urlcitationtype.md
-  - docs/components/usermessage.md
-  - docs/components/usermessagecontent.md
-  - docs/components/usermessagerole.md
-  - docs/components/variables.md
-  - docs/components/videoinput.md
-  - docs/components/websearchengine.md
-  - docs/components/websearchpreviewtooluserlocation.md
-  - docs/components/websearchpreviewtooluserlocationtype.md
-  - docs/components/websearchstatus.md
-  - docs/errors/badgatewayresponseerror.md
-  - docs/errors/badrequestresponseerror.md
-  - docs/errors/edgenetworktimeoutresponseerror.md
-  - docs/errors/forbiddenresponseerror.md
-  - docs/errors/internalserverresponseerror.md
-  - docs/errors/notfoundresponseerror.md
-  - docs/errors/payloadtoolargeresponseerror.md
-  - docs/errors/paymentrequiredresponseerror.md
-  - docs/errors/provideroverloadedresponseerror.md
-  - docs/errors/requesttimeoutresponseerror.md
-  - docs/errors/serviceunavailableresponseerror.md
-  - docs/errors/toomanyrequestsresponseerror.md
-  - docs/errors/unauthorizedresponseerror.md
-  - docs/errors/unprocessableentityresponseerror.md
-  - docs/models/internal/globals.md
-  - docs/models/utils/retryconfig.md
-  - docs/operations/apitype.md
-  - docs/operations/bulkassignkeystoguardrailglobals.md
-  - docs/operations/bulkassignkeystoguardrailrequest.md
-  - docs/operations/bulkassignkeystoguardrailrequestbody.md
-  - docs/operations/bulkassignkeystoguardrailresponse.md
-  - docs/operations/bulkassignmemberstoguardrailglobals.md
-  - docs/operations/bulkassignmemberstoguardrailrequest.md
-  - docs/operations/bulkassignmemberstoguardrailrequestbody.md
-  - docs/operations/bulkassignmemberstoguardrailresponse.md
-  - docs/operations/bulkunassignkeysfromguardrailglobals.md
-  - docs/operations/bulkunassignkeysfromguardrailrequest.md
-  - docs/operations/bulkunassignkeysfromguardrailrequestbody.md
-  - docs/operations/bulkunassignkeysfromguardrailresponse.md
-  - docs/operations/bulkunassignmembersfromguardrailglobals.md
-  - docs/operations/bulkunassignmembersfromguardrailrequest.md
-  - docs/operations/bulkunassignmembersfromguardrailrequestbody.md
-  - docs/operations/bulkunassignmembersfromguardrailresponse.md
-  - docs/operations/calldata.md
-  - docs/operations/category.md
-  - docs/operations/content.md
-  - docs/operations/contentimageurl.md
-  - docs/operations/contenttext.md
-  - docs/operations/createauthkeyscodecodechallengemethod.md
-  - docs/operations/createauthkeyscodedata.md
-  - docs/operations/createauthkeyscodeglobals.md
-  - docs/operations/createauthkeyscoderequest.md
-  - docs/operations/createauthkeyscoderequestbody.md
-  - docs/operations/createauthkeyscoderesponse.md
-  - docs/operations/createcoinbasechargedata.md
-  - docs/operations/createcoinbasechargeglobals.md
-  - docs/operations/createcoinbasechargerequest.md
-  - docs/operations/createcoinbasechargeresponse.md
-  - docs/operations/createcoinbasechargesecurity.md
-  - docs/operations/createembeddingsdata.md
-  - docs/operations/createembeddingsglobals.md
-  - docs/operations/createembeddingsrequest.md
-  - docs/operations/createembeddingsrequestbody.md
-  - docs/operations/createembeddingsresponse.md
-  - docs/operations/createembeddingsresponsebody.md
-  - docs/operations/createguardraildata.md
-  - docs/operations/createguardrailglobals.md
-  - docs/operations/createguardrailrequest.md
-  - docs/operations/createguardrailrequestbody.md
-  - docs/operations/createguardrailresetintervalrequest.md
-  - docs/operations/createguardrailresetintervalresponse.md
-  - docs/operations/createguardrailresponse.md
-  - docs/operations/createkeysdata.md
-  - docs/operations/createkeysglobals.md
-  - docs/operations/createkeyslimitreset.md
-  - docs/operations/createkeysrequest.md
-  - docs/operations/createkeysrequestbody.md
-  - docs/operations/createkeysresponse.md
-  - docs/operations/createresponsesglobals.md
-  - docs/operations/createresponsesrequest.md
-  - docs/operations/createresponsesresponse.md
-  - docs/operations/createresponsesresponsebody.md
-  - docs/operations/deleteguardrailglobals.md
-  - docs/operations/deleteguardrailrequest.md
-  - docs/operations/deleteguardrailresponse.md
-  - docs/operations/deletekeysglobals.md
-  - docs/operations/deletekeysrequest.md
-  - docs/operations/deletekeysresponse.md
-  - docs/operations/embedding.md
-  - docs/operations/encodingformat.md
-  - docs/operations/exchangeauthcodeforapikeycodechallengemethod.md
-  - docs/operations/exchangeauthcodeforapikeyglobals.md
-  - docs/operations/exchangeauthcodeforapikeyrequest.md
-  - docs/operations/exchangeauthcodeforapikeyrequestbody.md
-  - docs/operations/exchangeauthcodeforapikeyresponse.md
-  - docs/operations/getcreditsdata.md
-  - docs/operations/getcreditsglobals.md
-  - docs/operations/getcreditsrequest.md
-  - docs/operations/getcreditsresponse.md
-  - docs/operations/getcurrentkeydata.md
-  - docs/operations/getcurrentkeyglobals.md
-  - docs/operations/getcurrentkeyrequest.md
-  - docs/operations/getcurrentkeyresponse.md
-  - docs/operations/getgenerationdata.md
-  - docs/operations/getgenerationglobals.md
-  - docs/operations/getgenerationrequest.md
-  - docs/operations/getgenerationresponse.md
-  - docs/operations/getguardraildata.md
-  - docs/operations/getguardrailglobals.md
-  - docs/operations/getguardrailrequest.md
-  - docs/operations/getguardrailresetinterval.md
-  - docs/operations/getguardrailresponse.md
-  - docs/operations/getkeydata.md
-  - docs/operations/getkeyglobals.md
-  - docs/operations/getkeyrequest.md
-  - docs/operations/getkeyresponse.md
-  - docs/operations/getmodelsglobals.md
-  - docs/operations/getmodelsrequest.md
-  - docs/operations/getuseractivityglobals.md
-  - docs/operations/getuseractivityrequest.md
-  - docs/operations/getuseractivityresponse.md
-  - docs/operations/imageurl.md
-  - docs/operations/input.md
-  - docs/operations/inputunion.md
-  - docs/operations/listdata.md
-  - docs/operations/listembeddingsmodelsglobals.md
-  - docs/operations/listembeddingsmodelsrequest.md
-  - docs/operations/listendpointsglobals.md
-  - docs/operations/listendpointsrequest.md
-  - docs/operations/listendpointsresponse.md
-  - docs/operations/listendpointszdrglobals.md
-  - docs/operations/listendpointszdrrequest.md
-  - docs/operations/listendpointszdrresponse.md
-  - docs/operations/listglobals.md
-  - docs/operations/listguardrailkeyassignmentsdata.md
-  - docs/operations/listguardrailkeyassignmentsglobals.md
-  - docs/operations/listguardrailkeyassignmentsrequest.md
-  - docs/operations/listguardrailkeyassignmentsresponse.md
-  - docs/operations/listguardrailmemberassignmentsdata.md
-  - docs/operations/listguardrailmemberassignmentsglobals.md
-  - docs/operations/listguardrailmemberassignmentsrequest.md
-  - docs/operations/listguardrailmemberassignmentsresponse.md
-  - docs/operations/listguardrailsdata.md
-  - docs/operations/listguardrailsglobals.md
-  - docs/operations/listguardrailsrequest.md
-  - docs/operations/listguardrailsresetinterval.md
-  - docs/operations/listguardrailsresponse.md
-  - docs/operations/listkeyassignmentsdata.md
-  - docs/operations/listkeyassignmentsglobals.md
-  - docs/operations/listkeyassignmentsrequest.md
-  - docs/operations/listkeyassignmentsresponse.md
-  - docs/operations/listmemberassignmentsdata.md
-  - docs/operations/listmemberassignmentsglobals.md
-  - docs/operations/listmemberassignmentsrequest.md
-  - docs/operations/listmemberassignmentsresponse.md
-  - docs/operations/listmodelscountglobals.md
-  - docs/operations/listmodelscountrequest.md
-  - docs/operations/listmodelsuserglobals.md
-  - docs/operations/listmodelsuserrequest.md
-  - docs/operations/listmodelsusersecurity.md
-  - docs/operations/listprovidersdata.md
-  - docs/operations/listprovidersglobals.md
-  - docs/operations/listprovidersrequest.md
-  - docs/operations/listprovidersresponse.md
-  - docs/operations/listrequest.md
-  - docs/operations/listresponse.md
-  - docs/operations/metadata.md
-  - docs/operations/object.md
-  - docs/operations/objectembedding.md
-  - docs/operations/providername.md
-  - docs/operations/providerresponse.md
-  - docs/operations/ratelimit.md
-  - docs/operations/sendchatcompletionrequestglobals.md
-  - docs/operations/sendchatcompletionrequestrequest.md
-  - docs/operations/sendchatcompletionrequestresponse.md
-  - docs/operations/sendchatcompletionrequestresponsebody.md
-  - docs/operations/transferintent.md
-  - docs/operations/typeimageurl.md
-  - docs/operations/typetext.md
-  - docs/operations/updateguardraildata.md
-  - docs/operations/updateguardrailglobals.md
-  - docs/operations/updateguardrailrequest.md
-  - docs/operations/updateguardrailrequestbody.md
-  - docs/operations/updateguardrailresetintervalrequest.md
-  - docs/operations/updateguardrailresetintervalresponse.md
-  - docs/operations/updateguardrailresponse.md
-  - docs/operations/updatekeysdata.md
-  - docs/operations/updatekeysglobals.md
-  - docs/operations/updatekeyslimitreset.md
-  - docs/operations/updatekeysrequest.md
-  - docs/operations/updatekeysrequestbody.md
-  - docs/operations/updatekeysresponse.md
-  - docs/operations/usage.md
-  - docs/operations/usagelimittype.md
-  - docs/operations/web3data.md
-  - docs/sdks/analytics/README.md
-  - docs/sdks/apikeys/README.md
-  - docs/sdks/chat/README.md
-  - docs/sdks/credits/README.md
-  - docs/sdks/embeddings/README.md
-  - docs/sdks/endpoints/README.md
-  - docs/sdks/generations/README.md
-  - docs/sdks/guardrails/README.md
-  - docs/sdks/models/README.md
-  - docs/sdks/oauth/README.md
-  - docs/sdks/providers/README.md
-  - docs/sdks/responses/README.md
-  - py.typed
-  - pyproject.toml
-  - scripts/prepare_readme.py
-  - scripts/publish.sh
-  - src/openrouter/__init__.py
-  - src/openrouter/_hooks/__init__.py
-  - src/openrouter/_hooks/sdkhooks.py
-  - src/openrouter/_hooks/types.py
-  - src/openrouter/_version.py
-  - src/openrouter/analytics.py
-  - src/openrouter/api_keys.py
-  - src/openrouter/basesdk.py
-  - src/openrouter/beta.py
-  - src/openrouter/chat.py
-  - src/openrouter/components/__init__.py
-  - src/openrouter/components/activityitem.py
-  - src/openrouter/components/assistantmessage.py
-  - src/openrouter/components/assistantmessageimages.py
-  - src/openrouter/components/badgatewayresponseerrordata.py
-  - src/openrouter/components/badrequestresponseerrordata.py
-  - src/openrouter/components/chatcompletionfinishreason.py
-  - src/openrouter/components/chatgenerationparams.py
-  - src/openrouter/components/chatgenerationtokenusage.py
-  - src/openrouter/components/chatmessagecontentitem.py
-  - src/openrouter/components/chatmessagecontentitemaudio.py
-  - src/openrouter/components/chatmessagecontentitemcachecontrol.py
-  - src/openrouter/components/chatmessagecontentitemimage.py
-  - src/openrouter/components/chatmessagecontentitemtext.py
-  - src/openrouter/components/chatmessagecontentitemvideo.py
-  - src/openrouter/components/chatmessagecontentitemvideolegacy.py
-  - src/openrouter/components/chatmessagetokenlogprob.py
-  - src/openrouter/components/chatmessagetokenlogprobs.py
-  - src/openrouter/components/chatmessagetoolcall.py
-  - src/openrouter/components/chatresponse.py
-  - src/openrouter/components/chatresponsechoice.py
-  - src/openrouter/components/chatstreamingchoice.py
-  - src/openrouter/components/chatstreamingmessagechunk.py
-  - src/openrouter/components/chatstreamingmessagetoolcall.py
-  - src/openrouter/components/chatstreamingresponsechunk.py
-  - src/openrouter/components/chatstreamoptions.py
-  - src/openrouter/components/createchargerequest.py
-  - src/openrouter/components/datacollection.py
-  - src/openrouter/components/debugoptions.py
-  - src/openrouter/components/defaultparameters.py
-  - src/openrouter/components/developermessage.py
-  - src/openrouter/components/edgenetworktimeoutresponseerrordata.py
-  - src/openrouter/components/endpointstatus.py
-  - src/openrouter/components/filecitation.py
-  - src/openrouter/components/filepath.py
-  - src/openrouter/components/forbiddenresponseerrordata.py
-  - src/openrouter/components/imagegenerationstatus.py
-  - src/openrouter/components/inputmodality.py
-  - src/openrouter/components/instructtype.py
-  - src/openrouter/components/internalserverresponseerrordata.py
-  - src/openrouter/components/jsonschemaconfig.py
-  - src/openrouter/components/listendpointsresponse.py
-  - src/openrouter/components/message.py
-  - src/openrouter/components/model.py
-  - src/openrouter/components/modelarchitecture.py
-  - src/openrouter/components/modelgroup.py
-  - src/openrouter/components/modelscountresponse.py
-  - src/openrouter/components/modelslistresponse.py
-  - src/openrouter/components/namedtoolchoice.py
-  - src/openrouter/components/notfoundresponseerrordata.py
-  - src/openrouter/components/openairesponsesannotation.py
-  - src/openrouter/components/openairesponsesincludable.py
-  - src/openrouter/components/openairesponsesincompletedetails.py
-  - src/openrouter/components/openairesponsesinput_union.py
-  - src/openrouter/components/openairesponsesprompt.py
-  - src/openrouter/components/openairesponsesreasoningconfig.py
-  - src/openrouter/components/openairesponsesreasoningeffort.py
-  - src/openrouter/components/openairesponsesrefusalcontent.py
-  - src/openrouter/components/openairesponsesresponsestatus.py
-  - src/openrouter/components/openairesponsesservicetier.py
-  - src/openrouter/components/openairesponsestoolchoice_union.py
-  - src/openrouter/components/openairesponsestruncation.py
-  - src/openrouter/components/openresponseseasyinputmessage.py
-  - src/openrouter/components/openresponseserrorevent.py
-  - src/openrouter/components/openresponsesfunctioncalloutput.py
-  - src/openrouter/components/openresponsesfunctiontoolcall.py
-  - src/openrouter/components/openresponsesimagegencallcompleted.py
-  - src/openrouter/components/openresponsesimagegencallgenerating.py
-  - src/openrouter/components/openresponsesimagegencallinprogress.py
-  - src/openrouter/components/openresponsesimagegencallpartialimage.py
-  - src/openrouter/components/openresponsesinput.py
-  - src/openrouter/components/openresponsesinputmessageitem.py
-  - src/openrouter/components/openresponseslogprobs.py
-  - src/openrouter/components/openresponsesnonstreamingresponse.py
-  - src/openrouter/components/openresponsesreasoning.py
-  - src/openrouter/components/openresponsesreasoningconfig.py
-  - src/openrouter/components/openresponsesreasoningdeltaevent.py
-  - src/openrouter/components/openresponsesreasoningdoneevent.py
-  - src/openrouter/components/openresponsesreasoningsummarypartaddedevent.py
-  - src/openrouter/components/openresponsesreasoningsummarytextdeltaevent.py
-  - src/openrouter/components/openresponsesreasoningsummarytextdoneevent.py
-  - src/openrouter/components/openresponsesrequest.py
-  - src/openrouter/components/openresponsesresponsetext.py
-  - src/openrouter/components/openresponsesstreamevent.py
-  - src/openrouter/components/openresponsestoplogprobs.py
-  - src/openrouter/components/openresponsesusage.py
-  - src/openrouter/components/openresponseswebsearch20250826tool.py
-  - src/openrouter/components/openresponseswebsearchpreview20250311tool.py
-  - src/openrouter/components/openresponseswebsearchpreviewtool.py
-  - src/openrouter/components/openresponseswebsearchtool.py
-  - src/openrouter/components/outputitemimagegenerationcall.py
-  - src/openrouter/components/outputmessage.py
-  - src/openrouter/components/outputmodality.py
-  - src/openrouter/components/parameter.py
-  - src/openrouter/components/payloadtoolargeresponseerrordata.py
-  - src/openrouter/components/paymentrequiredresponseerrordata.py
-  - src/openrouter/components/pdfparserengine.py
-  - src/openrouter/components/pdfparseroptions.py
-  - src/openrouter/components/percentilelatencycutoffs.py
-  - src/openrouter/components/percentilestats.py
-  - src/openrouter/components/percentilethroughputcutoffs.py
-  - src/openrouter/components/perrequestlimits.py
-  - src/openrouter/components/preferredmaxlatency.py
-  - src/openrouter/components/preferredminthroughput.py
-  - src/openrouter/components/providername.py
-  - src/openrouter/components/provideroverloadedresponseerrordata.py
-  - src/openrouter/components/providerpreferences.py
-  - src/openrouter/components/providersort.py
-  - src/openrouter/components/providersortconfig.py
-  - src/openrouter/components/publicendpoint.py
-  - src/openrouter/components/publicpricing.py
-  - src/openrouter/components/quantization.py
-  - src/openrouter/components/reasoningdetailencrypted.py
-  - src/openrouter/components/reasoningdetailsummary.py
-  - src/openrouter/components/reasoningdetailtext.py
-  - src/openrouter/components/reasoningdetailunion.py
-  - src/openrouter/components/reasoningsummarytext.py
-  - src/openrouter/components/reasoningsummaryverbosity.py
-  - src/openrouter/components/reasoningtextcontent.py
-  - src/openrouter/components/requesttimeoutresponseerrordata.py
-  - src/openrouter/components/responseformatjsonobject.py
-  - src/openrouter/components/responseformatjsonschema.py
-  - src/openrouter/components/responseformattext.py
-  - src/openrouter/components/responseformattextconfig.py
-  - src/openrouter/components/responseformattextgrammar.py
-  - src/openrouter/components/responseformattextpython.py
-  - src/openrouter/components/responseinputaudio.py
-  - src/openrouter/components/responseinputfile.py
-  - src/openrouter/components/responseinputimage.py
-  - src/openrouter/components/responseinputtext.py
-  - src/openrouter/components/responseinputvideo.py
-  - src/openrouter/components/responseoutputtext.py
-  - src/openrouter/components/responseserrorfield.py
-  - src/openrouter/components/responsesformattext.py
-  - src/openrouter/components/responsesformattextjsonschemaconfig.py
-  - src/openrouter/components/responsesimagegenerationcall.py
-  - src/openrouter/components/responsesoutputitem.py
-  - src/openrouter/components/responsesoutputitemfilesearchcall.py
-  - src/openrouter/components/responsesoutputitemfunctioncall.py
-  - src/openrouter/components/responsesoutputitemreasoning.py
-  - src/openrouter/components/responsesoutputmessage.py
-  - src/openrouter/components/responsesoutputmodality.py
-  - src/openrouter/components/responsessearchcontextsize.py
-  - src/openrouter/components/responseswebsearchcalloutput.py
-  - src/openrouter/components/responseswebsearchuserlocation.py
-  - src/openrouter/components/responsetextconfig.py
-  - src/openrouter/components/security.py
-  - src/openrouter/components/serviceunavailableresponseerrordata.py
-  - src/openrouter/components/systemmessage.py
-  - src/openrouter/components/toolcallstatus.py
-  - src/openrouter/components/toolchoiceoption.py
-  - src/openrouter/components/tooldefinitionjson.py
-  - src/openrouter/components/toolresponsemessage.py
-  - src/openrouter/components/toomanyrequestsresponseerrordata.py
-  - src/openrouter/components/topproviderinfo.py
-  - src/openrouter/components/unauthorizedresponseerrordata.py
-  - src/openrouter/components/unprocessableentityresponseerrordata.py
-  - src/openrouter/components/urlcitation.py
-  - src/openrouter/components/usermessage.py
-  - src/openrouter/components/videoinput.py
-  - src/openrouter/components/websearchengine.py
-  - src/openrouter/components/websearchpreviewtooluserlocation.py
-  - src/openrouter/components/websearchstatus.py
-  - src/openrouter/credits.py
-  - src/openrouter/embeddings.py
-  - src/openrouter/endpoints.py
-  - src/openrouter/errors/__init__.py
-  - src/openrouter/errors/badgatewayresponse_error.py
-  - src/openrouter/errors/badrequestresponse_error.py
-  - src/openrouter/errors/edgenetworktimeoutresponse_error.py
-  - src/openrouter/errors/forbiddenresponse_error.py
-  - src/openrouter/errors/internalserverresponse_error.py
-  - src/openrouter/errors/no_response_error.py
-  - src/openrouter/errors/notfoundresponse_error.py
-  - src/openrouter/errors/openrouterdefaulterror.py
-  - src/openrouter/errors/openroutererror.py
-  - src/openrouter/errors/payloadtoolargeresponse_error.py
-  - src/openrouter/errors/paymentrequiredresponse_error.py
-  - src/openrouter/errors/provideroverloadedresponse_error.py
-  - src/openrouter/errors/requesttimeoutresponse_error.py
-  - src/openrouter/errors/responsevalidationerror.py
-  - src/openrouter/errors/serviceunavailableresponse_error.py
-  - src/openrouter/errors/toomanyrequestsresponse_error.py
-  - src/openrouter/errors/unauthorizedresponse_error.py
-  - src/openrouter/errors/unprocessableentityresponse_error.py
-  - src/openrouter/generations.py
-  - src/openrouter/guardrails.py
-  - src/openrouter/httpclient.py
-  - src/openrouter/models/__init__.py
-  - src/openrouter/models/internal/__init__.py
-  - src/openrouter/models/internal/globals.py
-  - src/openrouter/models_.py
-  - src/openrouter/oauth.py
-  - src/openrouter/operations/__init__.py
-  - src/openrouter/operations/bulkassignkeystoguardrail.py
-  - src/openrouter/operations/bulkassignmemberstoguardrail.py
-  - src/openrouter/operations/bulkunassignkeysfromguardrail.py
-  - src/openrouter/operations/bulkunassignmembersfromguardrail.py
-  - src/openrouter/operations/createauthkeyscode.py
-  - src/openrouter/operations/createcoinbasecharge.py
-  - src/openrouter/operations/createembeddings.py
-  - src/openrouter/operations/createguardrail.py
-  - src/openrouter/operations/createkeys.py
-  - src/openrouter/operations/createresponses.py
-  - src/openrouter/operations/deleteguardrail.py
-  - src/openrouter/operations/deletekeys.py
-  - src/openrouter/operations/exchangeauthcodeforapikey.py
-  - src/openrouter/operations/getcredits.py
-  - src/openrouter/operations/getcurrentkey.py
-  - src/openrouter/operations/getgeneration.py
-  - src/openrouter/operations/getguardrail.py
-  - src/openrouter/operations/getkey.py
-  - src/openrouter/operations/getmodels.py
-  - src/openrouter/operations/getuseractivity.py
-  - src/openrouter/operations/list.py
-  - src/openrouter/operations/listembeddingsmodels.py
-  - src/openrouter/operations/listendpoints.py
-  - src/openrouter/operations/listendpointszdr.py
-  - src/openrouter/operations/listguardrailkeyassignments.py
-  - src/openrouter/operations/listguardrailmemberassignments.py
-  - src/openrouter/operations/listguardrails.py
-  - src/openrouter/operations/listkeyassignments.py
-  - src/openrouter/operations/listmemberassignments.py
-  - src/openrouter/operations/listmodelscount.py
-  - src/openrouter/operations/listmodelsuser.py
-  - src/openrouter/operations/listproviders.py
-  - src/openrouter/operations/sendchatcompletionrequest.py
-  - src/openrouter/operations/updateguardrail.py
-  - src/openrouter/operations/updatekeys.py
-  - src/openrouter/providers.py
-  - src/openrouter/py.typed
-  - src/openrouter/responses.py
-  - src/openrouter/sdk.py
-  - src/openrouter/sdkconfiguration.py
-  - src/openrouter/types/__init__.py
-  - src/openrouter/types/basemodel.py
-  - src/openrouter/utils/__init__.py
-  - src/openrouter/utils/annotations.py
-  - src/openrouter/utils/datetimes.py
-  - src/openrouter/utils/enums.py
-  - src/openrouter/utils/eventstreaming.py
-  - src/openrouter/utils/forms.py
-  - src/openrouter/utils/headers.py
-  - src/openrouter/utils/logger.py
-  - src/openrouter/utils/metadata.py
-  - src/openrouter/utils/queryparams.py
-  - src/openrouter/utils/requestbodies.py
-  - src/openrouter/utils/retries.py
-  - src/openrouter/utils/security.py
-  - src/openrouter/utils/serializers.py
-  - src/openrouter/utils/unmarshal_json_response.py
-  - src/openrouter/utils/url.py
-  - src/openrouter/utils/values.py

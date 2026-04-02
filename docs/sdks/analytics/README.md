@@ -27,7 +27,7 @@ with OpenRouter(
     api_key=os.getenv("OPENROUTER_API_KEY", ""),
 ) as open_router:
 
-    res = open_router.analytics.get_user_activity(date_="2025-08-24")
+    res = open_router.analytics.get_user_activity()
 
     # Handle response
     print(res)

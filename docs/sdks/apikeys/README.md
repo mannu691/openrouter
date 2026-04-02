@@ -32,7 +32,7 @@ with OpenRouter(
     api_key=os.getenv("OPENROUTER_API_KEY", ""),
 ) as open_router:
 
-    res = open_router.api_keys.list(include_disabled="false", offset="0")
+    res = open_router.api_keys.list()
 
     # Handle response
     print(res)
