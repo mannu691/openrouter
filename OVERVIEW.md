@@ -1,6 +1,6 @@
 # OpenRouter Python SDK
 
-The OpenRouter Python SDK is a type-safe toolkit for building AI applications with access to 300+ language models through a unified API.
+The OpenRouter Python SDK is a type-safe toolkit for building AI applications with access to 400+ language models through a unified API.
 
 ## Why use the OpenRouter SDK?
 
