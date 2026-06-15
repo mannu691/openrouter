@@ -9,6 +9,10 @@ from .anthropiccachecontroldirective import (
     AnthropicCacheControlDirective,
     AnthropicCacheControlDirectiveTypedDict,
 )
+from .subagentservertool_openrouter import (
+    SubAgentServerToolOpenRouter,
+    SubAgentServerToolOpenRouterTypedDict,
+)
 from .applypatchservertool import ApplyPatchServerTool, ApplyPatchServerToolTypedDict
 from .applypatchservertool_openrouter import (
     ApplyPatchServerToolOpenRouter,
@@ -225,9 +229,10 @@ ResponsesRequestToolUnionTypedDict = TypeAliasType(
         ApplyPatchServerToolOpenRouterTypedDict,
         WebSearchServerToolOpenRouterTypedDict,
         ImageGenerationServerToolOpenRouterTypedDict,
-        FusionServerToolOpenRouterTypedDict,
         DatetimeServerToolTypedDict,
         AdvisorServerToolOpenRouterTypedDict,
+        SubAgentServerToolOpenRouterTypedDict,
+        FusionServerToolOpenRouterTypedDict,
         CustomToolTypedDict,
         ComputerUseServerToolTypedDict,
         ResponsesRequestToolFunctionTypedDict,
@@ -261,6 +266,7 @@ ResponsesRequestToolUnion = Annotated[
         Annotated[ApplyPatchServerTool, Tag("apply_patch")],
         Annotated[CustomTool, Tag("custom")],
         Annotated[AdvisorServerToolOpenRouter, Tag("openrouter:advisor")],
+        Annotated[SubAgentServerToolOpenRouter, Tag("openrouter:subagent")],
         Annotated[DatetimeServerTool, Tag("openrouter:datetime")],
         Annotated[FusionServerToolOpenRouter, Tag("openrouter:fusion")],
         Annotated[

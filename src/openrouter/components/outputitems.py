@@ -5,6 +5,10 @@ from .outputadvisorservertoolitem import (
     OutputAdvisorServerToolItem,
     OutputAdvisorServerToolItemTypedDict,
 )
+from .outputsubagentservertoolitem import (
+    OutputSubAgentServerToolItem,
+    OutputSubAgentServerToolItemTypedDict,
+)
 from .outputapplypatchcallitem import (
     OutputApplyPatchCallItem,
     OutputApplyPatchCallItemTypedDict,
@@ -138,6 +142,7 @@ OutputItemsTypedDict = TypeAliasType(
         OutputReasoningItemTypedDict,
         OutputFusionServerToolItemTypedDict,
         OutputAdvisorServerToolItemTypedDict,
+        OutputSubAgentServerToolItemTypedDict,
     ],
 )
 r"""An output item from the response"""
@@ -154,6 +159,8 @@ OutputItems = Annotated[
         Annotated[OutputImageGenerationCallItem, Tag("image_generation_call")],
         Annotated[OutputMessageItem, Tag("message")],
         Annotated[OutputAdvisorServerToolItem, Tag("openrouter:advisor")],
+        Annotated[OutputSubAgentServerToolItem, Tag("openrouter:subagent")],
+        Annotated[OutputFusionServerToolItem, Tag("openrouter:fusion")],
         Annotated[OutputApplyPatchServerToolItem, Tag("openrouter:apply_patch")],
         Annotated[OutputBashServerToolItem, Tag("openrouter:bash")],
         Annotated[OutputBrowserUseServerToolItem, Tag("openrouter:browser_use")],
@@ -166,7 +173,6 @@ OutputItems = Annotated[
             Tag("openrouter:experimental__search_models"),
         ],
         Annotated[OutputFileSearchServerToolItem, Tag("openrouter:file_search")],
-        Annotated[OutputFusionServerToolItem, Tag("openrouter:fusion")],
         Annotated[
             OutputImageGenerationServerToolItem, Tag("openrouter:image_generation")
         ],

@@ -23,6 +23,21 @@ if TYPE_CHECKING:
         AdvisorServerToolConfig,
         AdvisorServerToolConfigTypedDict,
     )
+    from .subagentnestedtool import SubAgentNestedTool, SubAgentNestedToolTypedDict
+    from .subagentreasoning import (
+        SubAgentReasoning,
+        SubAgentReasoningEffort,
+        SubAgentReasoningTypedDict,
+    )
+    from .subagentservertool_openrouter import (
+        SubAgentServerToolOpenRouter,
+        SubAgentServerToolOpenRouterType,
+        SubAgentServerToolOpenRouterTypedDict,
+    )
+    from .subagentservertoolconfig import (
+        SubAgentServerToolConfig,
+        SubAgentServerToolConfigTypedDict,
+    )
     from .annotationaddedevent import (
         AnnotationAddedEvent,
         AnnotationAddedEventType,
@@ -1635,6 +1650,11 @@ if TYPE_CHECKING:
         OutputAdvisorServerToolItemType,
         OutputAdvisorServerToolItemTypedDict,
     )
+    from .outputsubagentservertoolitem import (
+        OutputSubAgentServerToolItem,
+        OutputSubAgentServerToolItemType,
+        OutputSubAgentServerToolItemTypedDict,
+    )
     from .outputapplypatchcallitem import (
         OutputApplyPatchCallItem,
         OutputApplyPatchCallItemType,
@@ -2450,6 +2470,16 @@ __all__ = [
     "AdvisorServerToolOpenRouter",
     "AdvisorServerToolOpenRouterType",
     "AdvisorServerToolOpenRouterTypedDict",
+    "SubAgentNestedTool",
+    "SubAgentNestedToolTypedDict",
+    "SubAgentReasoning",
+    "SubAgentReasoningEffort",
+    "SubAgentReasoningTypedDict",
+    "SubAgentServerToolConfig",
+    "SubAgentServerToolConfigTypedDict",
+    "SubAgentServerToolOpenRouter",
+    "SubAgentServerToolOpenRouterType",
+    "SubAgentServerToolOpenRouterTypedDict",
     "AllowedTools",
     "AllowedToolsTypedDict",
     "AllowedToolsUnion",
@@ -3580,6 +3610,9 @@ __all__ = [
     "OutputAdvisorServerToolItem",
     "OutputAdvisorServerToolItemType",
     "OutputAdvisorServerToolItemTypedDict",
+    "OutputSubAgentServerToolItem",
+    "OutputSubAgentServerToolItemType",
+    "OutputSubAgentServerToolItemTypedDict",
     "OutputApplyPatchCallItem",
     "OutputApplyPatchCallItemType",
     "OutputApplyPatchCallItemTypedDict",
@@ -4228,6 +4261,16 @@ _dynamic_imports: dict[str, str] = {
     "AdvisorServerToolOpenRouterTypedDict": ".advisorservertool_openrouter",
     "AdvisorServerToolConfig": ".advisorservertoolconfig",
     "AdvisorServerToolConfigTypedDict": ".advisorservertoolconfig",
+    "SubAgentNestedTool": ".subagentnestedtool",
+    "SubAgentNestedToolTypedDict": ".subagentnestedtool",
+    "SubAgentReasoning": ".subagentreasoning",
+    "SubAgentReasoningEffort": ".subagentreasoning",
+    "SubAgentReasoningTypedDict": ".subagentreasoning",
+    "SubAgentServerToolOpenRouter": ".subagentservertool_openrouter",
+    "SubAgentServerToolOpenRouterType": ".subagentservertool_openrouter",
+    "SubAgentServerToolOpenRouterTypedDict": ".subagentservertool_openrouter",
+    "SubAgentServerToolConfig": ".subagentservertoolconfig",
+    "SubAgentServerToolConfigTypedDict": ".subagentservertoolconfig",
     "AnnotationAddedEvent": ".annotationaddedevent",
     "AnnotationAddedEventType": ".annotationaddedevent",
     "AnnotationAddedEventTypedDict": ".annotationaddedevent",
@@ -5435,6 +5478,9 @@ _dynamic_imports: dict[str, str] = {
     "OutputAdvisorServerToolItem": ".outputadvisorservertoolitem",
     "OutputAdvisorServerToolItemType": ".outputadvisorservertoolitem",
     "OutputAdvisorServerToolItemTypedDict": ".outputadvisorservertoolitem",
+    "OutputSubAgentServerToolItem": ".outputsubagentservertoolitem",
+    "OutputSubAgentServerToolItemType": ".outputsubagentservertoolitem",
+    "OutputSubAgentServerToolItemTypedDict": ".outputsubagentservertoolitem",
     "OutputApplyPatchCallItem": ".outputapplypatchcallitem",
     "OutputApplyPatchCallItemType": ".outputapplypatchcallitem",
     "OutputApplyPatchCallItemTypedDict": ".outputapplypatchcallitem",
